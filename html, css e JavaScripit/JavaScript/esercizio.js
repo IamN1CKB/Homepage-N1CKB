@@ -66,7 +66,7 @@ console.log(true);
 //altro esempio
 console.log("dispositivo caricato:");
 console.log(false);
-//in certi casi di codice di è utile sapere l'opposto del valore true o false
+//in certi casi di codice ci è utile sapere l'opposto del valore true o false
 //per questo motivo si utilizza l'operatore "!" davanti al valore del boolean oppure davanti alla variabile con il valore boolean
 const IS_MORNIG=true;
 console.log(!IS_MORNIG);
@@ -96,22 +96,22 @@ const CHARGED = BATTERY_LEVEL === 100;
 console.log(CHARGED);
 
 console.log("")    //questa linea di codice serve a fare una riga di spazio nella console (inutile in un vero file e non un manuale)
-//questi due operatori di identità e non identità stretta (=== e !==) hanno 2 corrispettivi operativi con alcune differenze ossia =! e ==
+//questi due operatori di identità e non identità stretta (=== e !==) hanno 2 corrispettivi operatori con alcune differenze ossia =! e ==
 //definiamoli meglio:
 //1) operatore di identità stretta ===, verifica non solo che i due valori siano uguali, ma anche che siano del medesimo tipo di dati
-console.log(1 === '1');      //false, perchè hanno lo stesso valore ma hanno tipi di dati diversi (stringa e numero)
+console.log('1' === 1);      //false, perchè hanno lo stesso valore ma hanno tipi di dati diversi (stringa e numero)
 console.log(1 === 1);        //true, perchè hanno sia lo stesso valore che tipo di dati
 
 //2) operatore di uguaglianza ==, verifica che i 2 valori siano uguali, senza considerare il tipo di dati
-console.log(1 == "1");       //true, siccome hanno lo stesso valore (sticazzi del tipo di dati)
+console.log("1" == 1);       //true, siccome hanno lo stesso valore (sticazzi del tipo di dati)
 console.log(1 == 1);         //true, siccome hanno lo stesso valore (anche il tipo di variabile è lo stesso, ma non ce ne fotte)
 
 //3) operatore di non identità stretta !==, verifica non solo che i due valori siano diversi, ma anche che siano del diverso tipo di dati. quindi per riportare true deve essere sia il valore che il tipo di dati diverso
-console.log(1 !== "1");      //true, perchè hanno diverso tipo di dati (stringa e numero), (il valore è lo stesso, ma non va bene per il tipo di dati)
+console.log("1" !== 1);      //true, perchè hanno diverso tipo di dati (stringa e numero), (il valore è lo stesso, ma non va bene per il tipo di dati)
 console.log(1 !== 1);        //false, perchè hanno lo stesso valore che tipo di variabile
 
 //4) operatore di disuguaglianza !=, verifica che i 2 valori siano diversi, senza considerare il tipo di variabile
-console.log(1 != "1");       //false, siccome hanno lo stesso valore (anche lo stesso tipo di variabile)
+console.log("1" != 1);       //false, siccome hanno lo stesso valore (anche lo stesso tipo di variabile)
 console.log(1 != 1);         //false, siccome hanno lo stesso valore (anche il tipo di variabile è lo stesso, ma non ce ne fotte)
 console.log(1 != 2);         //true, siccome hanno diverso valore
 console.log("")    //questa linea di codice serve a fare una riga di spazio nella console (inutile in un vero file e non un manuale)
@@ -119,7 +119,7 @@ console.log("")    //questa linea di codice serve a fare una riga di spazio nell
 
 //possiamo anche comparare diversi tipi di valori, ma daranno sempre come risultato diverso
 //infatti se compariamo il valore numerico 1 con la stringa "1", darà come risultato che sono diversi
-console.log(1 === "1");        //darà come valore false perchè sono sono 2 tipi di valori diversi
+console.log("1" === 1);        //darà come valore false perchè sono sono 2 tipi di valori diversi
 //se invece compariamo 2 valori con lo stesso tipo (non numerico), possiamo controllare se i valori sono gli stessi
 console.log("apple" === "apple");
 console.log("apple" === "orange");
@@ -334,7 +334,12 @@ console.log(variabile);
 variabile -= 2.2;       //sottrae 2.2 al valore precedente della variable, quindi 10 - 2.2 = 7.8
 console.log(variabile);
 //allo stesso modo sono gli operatori *= e /=
-
+variabile = 5;
+variabile *= 2;         //moltiplica 2 al valore precedente della variabile, quindi 5 * 2 = 10
+console.log(variabile);
+variabile /= 10;        //divide per 10 il valore precedente della variabile, quindi 10/10 = 1
+console.log(variabile)   
+  
 //l'operatore ++ non ha bisogno di nessun numero dopo averlo scritto, infatti aggiunge 1 al valore della varibile
 //è l'equivalente di scrivere += 1
 variabile = 5;
