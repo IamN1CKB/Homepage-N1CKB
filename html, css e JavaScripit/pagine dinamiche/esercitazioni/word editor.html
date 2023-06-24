@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Editor</title>
+    <style>
+        footer {
+            position: fixed;     /*fissa il footer nella parte bassa della pagina*/
+            bottom: 0;
+            right: 5px;
+            left: 5px;
+            text-align: center;
+            border: solid 2px;
+            padding: 5px;
+            margin: 5px;
+        }
+        img {
+            width: 250px;
+        }
+
+        body {
+            height: 500px;
+        }
+
+        main {
+            border-radius: 5px;
+            margin: 5px;
+            height: auto;
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        button {
+            border-radius: 5px;
+            margin: 5px;
+            font-weight: bold;
+            color: #4D4D87;
+            border: 1px solid;
+            background-color: #D9E8FB;
+        }
+
+        #impostazioni {
+            display: flex;
+            flex-wrap: wrap;
+            border: solid;
+            flex-direction: column;
+        }
+
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        Word Editor
+    </h1>
+    <div id="impostazioni">
+        <div> <!--parte del cambio colore testo-->
+            <button onclick="setColor()">Cambia colore al testo</button>
+            <input type="value" placeholder="inserisci il colore del testo in inglese" style="width: 220px;">
+        </div>
+        <div>
+            <button>
+
+            </button>
+        </div> <!--parte del cambio link dell'immagine-->
+        <div>
+            <button>
+
+            </button>
+        </div> <!--parte del cambio font-->
+        <div>
+            <button>
+                
+            </button>
+        </div>
+    </div>
+    <main> <!--questa è la parte di cui modificheremo i valori-->
+        <img src="https://mimo.app/i/clock-tower-night.png">
+        <p>
+            scopri come cambiare lo stile di questo paragrafo con eventi javascript
+        </p>
+    </main>
+
+
+
+    <footer>
+        link alla pagina di lezione: <a href="../index1.html">qui</a>
+    </footer>
+
+
+    <script>
+        const PAGINA_MAIN = document.querySelector("main");
+
+        function setColor() {
+            const VALORE_DEL_COLORE = document.querySelectorAll("input")[0];
+            PAGINA_MAIN.style.color = VALORE_DEL_COLORE.value;
+        }
+    </script>
+</body>
+</html>

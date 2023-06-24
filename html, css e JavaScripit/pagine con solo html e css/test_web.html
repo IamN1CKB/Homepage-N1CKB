@@ -1,0 +1,613 @@
+<!DOCTYPE html>    <!--in questi segni qui si scrivono i commenti in un file html-->
+<html lang="it">
+    <head>
+        <title>
+            Esempio di file HTMl   <!--nel tag title c'è il titolo della scheda che comparirà in alto a sinistra sul browser-->
+        </title>
+    </head>
+    <body>
+        <h1>TITOLO PRIMARIO</h1>
+        <h2>TITOLO SECONDARIO (puoi vedere fino a h6)</h2>
+        
+
+        <p>
+            Paragrafo 1 e anche altre funzioni:<i>corsivo di primo tipo</i>
+        </p>
+        <p>
+            Paragrafo 2 e <em>corsivo di secondo tipo</em>
+        </p>
+        <p>
+            pargarafo e <b>grassetto di primo tipo</b>
+        </p>
+        <p>
+            parafrafo e <strong>grassetto di secondo tipo</strong>
+        </p>
+        <p>
+            paragrafo e <ins>testo sottolineato</ins>
+            <br>
+            <del>testo barrato</del>
+            <br>
+            <sup>testo in pedice</sup>: esempio base<sup>esponente</sup> => 5<sup>3</sup>
+        </p>
+
+
+
+        <ul>Elenco non numerato     <!-- ul sta ler unorderer list -->
+            <li>sei</li>            <!-- li sta per list item -->
+            <li>popo</li>
+            <li>un</li>
+            <li>grande</li>
+        </ul>
+        
+        
+        <ol> Elenco numerato     <!-- ol sta per orderer list -->
+            <li>idiota</li>
+            <li>stronzo</li>
+        </ol>
+
+        <ol reversed>  Elenco numerato al contrario
+            <li>eh capit eh?</li>
+            <li>io non prendo nè la pensione nè la centoequattro</li>
+         </ol>
+
+        
+        lista non numerata in una lista numerata
+        <ol>lista numerata
+            <li>sto</li>
+            <li>sto</li>
+            <li>facendo</li>
+            <li>un video</li>
+            <li>lista non numerata
+                <ul>
+                    <li> ahia</li>
+                    <li> HAIAAAA</li>
+                </ul>
+            </li>
+        </ol>
+
+
+        <h2>TABELLE <a href="tabelle HTML.html">vedi qui</a> </h2> <!--il tag a serve a creare link (poi vedrai)-->
+    
+        
+        <strong> <em> br serve per mandare a capo </em> </strong> 
+        <br>
+        così
+        <br>
+        <br>
+
+        <p>
+            <button><a href="https://paveldogreat.github.io/WebGL-Fluid-Simulation/"> bottone con link URL </a> </button>
+            <br>
+            <button>bottone senza link</button> 
+            <br>
+            <a href="https://thispersondoesnotexist.com/"> link senza bottone (collegato ad un URL) </a>
+            <br>
+            inoltre nel tag a si possono collegare anche email e numeri di telefono tramite le proprietà "mailto:" e "tel:" 
+            <br>
+            <a href="mailto:nicolabelardo005@gmail.com">email di Nicola</a>
+            <br>
+            <a href="tel:+393510630348">numero di un Playboy</a>
+        </p>
+
+        <p>
+            il valore dell'attributo href (Hypertext REFerence) può essere un url dal web, oppure un collegamento dal locale
+            <br>
+            come prima cosa specifichiamo la differenza tra URL e link.
+            <br>
+            Il link è un collegamento a un elemento, che può essere sul web (quindi come una pagina web in formato html) oppure
+            può essere sul server locale. Se il link riporta a un elemento sul web, allora è un percoso sul web detto URL.
+            <br>
+            Nel caso del link che abbiamo messo sopra "<i>link senza bottone (collegato ad un URL)</i>" il link era un URL. Gli URL 
+            sono usati principalemente per collegare pagine esterne al progetto web creato.
+            Ma se si deve collegare una pagina dello stesso progetto, allora si collega "in locale".
+        </p>
+        <p>
+            Per collegare un elemento in locole si usano i percosi relativi o assoluti, che servono a muoverci tra le cartelle.
+            <ul>
+                <li>
+                    I percorsi assoluti partono dalla radice del computer o del server per arrivare ad ogni file. Sono scomodi da usare per
+                    i file locali perchè con il movimento di una minima cartella, il percorso si perde.
+                    <br>
+                    Vengono usati principalmente negli URL e non molto in locale
+                </li>
+                <li>
+                    I percorsi relativi fanno riferimento alla directory (cartella) in cui si trova il file da cui si parte.
+                    <br>
+                    Ci sono 3 casi per i percosi relativi: 
+                    <ul>
+                        <li>
+                            il caso in cui i file sono nella stessa cartella. La sintassi è semplice: si deve solo inserire il nome del file
+                            <br>
+                            <i>href="filedellastessacartella.html"</i>
+                        </li>
+                        <br>
+                        <li>
+                            il caso in cui i file partono da una directory superiore fino ad arrivare a quella inferiore
+                            <br>
+                            dobbiamo usare la sintassi
+                            <br>
+                            <i>href="prima sottocartella/seconda sottocartella/altre sottocartelle/file da collegare.html"</i>
+                            <br>
+                            <!--adesso inserisco un immagine, la sintassi per come inserire un immagine la capire più avanti-->
+                            <img src="percorso1.jpg">
+                            <br>
+                            in quest'esempio il valore di href per collegare il file interna.html sarebbe <i>href="prima/interna/interna.html"</i>
+                        </li>
+                        <br>
+                        <li>
+                            il caso in cui i file partono da una directory inferiore fino ad arrivare a quella superiore
+                            <br>
+                            in questo caso la sintassi è tot 2 punti quanti sono i livelli da "scalare", separati da /, e poi il file da collegare:
+                            <br>
+                            <i>href="../file da collegare.html"</i>
+                            <br>
+                            in questo esempio salgo di 1 livell0 per collegare il file
+                            <br>
+                            <img src="percorso2.jpg">
+                            <br>
+                            nell'esempio della foto si deve salire di 2 livelli => <i>href="../../index.html"</i>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <br>
+            Quando si ha un hosting web disponibile (il servizio che permette di mettere online un sito web), i 
+            vari file html si inseriscono in varie cartelle o nella stessa cartella di un server a seconda di 
+            come sono indirazzati i link.
+        </p>
+        <p>
+            I nomi dei file html sono personalizzabili, ma di solito la homepage ha sempre il nome di index.html
+            <br>
+            esempio <a href="\percorso\assoluto\completamente\a\caso\index.html">link al file della homepage</a>
+            <br>
+            Il link al file in questo caso è un percorso assoluto, che quasi sicurmente non andrà, perche sarà 
+            cambiata la posizione del file.
+            <br>
+        </p>
+        
+        <!-- immagine ed immagine con link -->
+        <h4 id="terra"> La Terra. <em> (titolo di tipo 4) </em> </h4>   <!--l'attributo id lo capirai dopo col css-->
+        <img src="https://mimo.app/i/earth.png" width="200" height="200" border="1" alt="non sei connesso coglione">
+        <!--src sta per source e può indicare sia un URL che un percorso relativo o assoluto di un file-->
+        <!--width (larghezza) e height (altezza) sono attributi che regolano le dimensioni (presente anche nel css che vedrai più in là)-->
+        <!--border regola lo spessore del bordo (presente anche nel css che vedrai più in là)--> 
+        <!--alt è un attributo che mostra un testo alternativo nel caso in cui l'immagine non si caricasse -->
+        <br> 
+        
+        <h4>
+            prendi immagine da <a href="https://imgbb.com/"> qui (imgbb)</a> o da <a href="https://www.mediafire.com/">mediafire</a> (con link diretto)
+        </h4>
+        <a href="https://ibb.co/gPRRNz6">
+            <img src="https://i.ibb.co/5nRRmB2/Earth-Eastern-Hemisphere.jpg" alt="Earth-Eastern-Hemisphere" border="0">
+        </a>
+        <br>
+        <a href="http://wa.me/393291899607">
+            <img src="https://i.ibb.co/kh2C1Rk/STK-20220112-WA0033.webp" alt="STK-20220112-WA0033" border="0">
+        </a>
+
+
+
+        <h3>Questo é un esempio di inserimento testo! Inoltre ci sono anche vari attributi</h3>
+
+        <form>
+            <input type="text" name="email" placeholder="Qui devi scrivere COGLIONE!">
+        </form>
+        <br>
+        <!-- gli attributi width e height non funzionanano per gli input testo-->
+
+        <!-- type si utilizza per specificare che tipo di input vuoi inserire (text, password, range, checkbox, date, color) -->
+        <!-- vediamo i vari valori di type:-->
+        <!-- 1)text indica solo testo (si può omettere perche di defualt)-->             <input type="text" placeholder="testo normale"> <br>
+        <!-- 2)password nasconde il contenuto scritto -->                                <input type="password" placeholder="testo nascosto"><br>
+        <!-- 3)range (intervallo) indica tipo un regolatore di livello -->               <input type="range"><br>
+        <!-- 4)checkbox indica un quadrino da segnare con la crocetta -->                <input type="checkbox"><br>
+        <!-- 5)date (data) indica una data -->                                           <input type="date"><br>
+        <!-- 6)color indica la selezione di un colore -->                                <input type="color"><br>
+        <!-- 7)email fa in modo (principalemente nel dispositivi mobili)
+        di impostare la tasiera per scrivere un email
+        (quindi con la @ prensente nella prima sezione della tastiera) -->           <input type="email" placeholder="testo email">
+        <!-- 8)ci sono molti altri valori da vedere, come tel ecc-->    
+        <!-- per raccogliere i dati scritti nel tag input bisogna usare il javascript (lo vedremo molto in futuro)-->
+    
+        <p>
+            inoltre esiste anche un tag per gli input in multiriga, detto textarea, con il quale possiamo anche regolare la grandezza 
+            dell'inserimento testo dalla pagina web.
+            <ul>Abbiamo gli attributi:
+                <li>
+                    rows per decidere quante righe debba essere alto (almeno inizialmente, prima che sia modificato nella pagina)
+                    <br>
+                    le righe di default sono 2
+                </li>
+                <li>
+                    cols per decidere quante colonne debba essere lungo (almeno inizialmente, prima che sia modificato nella pagina)
+                    <br>
+                    le colonne di default sono 20
+                </li>
+                <li>
+                    name per identificare un elemento HTML all'interno di un modulo o di una richiesta HTTP.
+                    Questo attributo consente di inviare dati al server in modo strutturato e prevedibile. (lo vedremo molto in futuro)
+                </li>
+            </ul>
+        </p>
+        <textarea name="testo a caso" cols="30" rows="10">questo testo viene scritto di default e puoò essere cancellato</textarea>
+        <p>
+            il tag textarea ha come suo valore interno al tag di apertura e di chiusura il valore che viene scritto di default
+            nell'inserimento testo. Può essere modificato a piacere, a meno che non venga messo l'attributo readonly, che rende impossibile 
+            la modifica del testo.
+        </p>
+        <textarea readonly cols="40" rows="2">testo di default non modificabile</textarea>
+        <h3>form tag e i suoi sotto tag</h3>
+        <!-- form sarebbe una specie di gruppo div specializzato per raggruppare un modulo (form), che può contenere un tag input e un botton,
+        e anche vari altri possibili elementi di un modulo-->
+        <form>
+            Username: <input type="text">
+            <br>
+            Password: <input type="password">
+            <br>
+            <button>Login</button>
+        </form>
+        <!-- il tag fieldset permette di raggruppare più tag input e raffigurare un bordo attorno ai vari gruppi-->
+        <form>
+            <fieldset>
+                Nome: <input type="text">
+                <br>
+                Email: <input type="email">
+                <br>
+                Telefono: <input type="tel">
+                <br>
+            </fieldset>
+            <fieldset>
+                Username: <input type="text">
+                <br>
+                Password: <input type="password">
+                <br>
+            </fieldset>
+            <button>Registrati</button>
+        </form>
+        <br>
+        <!-- possiamo poi mettere il tag legend come primo sottotag di fieldset, in modo da far comparire la scritta come titolo del gruppo-->
+        <form>
+            <fieldset>
+                <legend>Informazioni personali</legend>
+                Nome: <input type="text">
+                <br>
+                Email: <input type="email">
+                <br>
+                Telefono: <input type="tel">
+                <br>
+            </fieldset>
+            <fieldset>
+                <legend>Informazioni del Login</legend>
+                Username: <input type="text">
+                <br>
+                Password: <input type="password">
+                <br>
+            </fieldset>
+            <button>Registrati</button>
+        </form>
+        <!-- inoltre c'è anche il tag label, che è usato per raggruppare le parole che aiutano gli utenti a sapere cosa scrivere nell'input-->
+        <!-- l'attributo for del tag label serve a connettere il tag label con il suo corrispondente tag input-->
+        <!-- il valore dell'attributo for deve corrispondere con il valore dell'attributo id del tag input, per potersi connettere-->
+        <!-- i label connessi con i tag input possono aiutare l'utente con l'accessibiità. Infatti il lettore quando cliccherà sul tag label
+        verrà focusato il tag input corrispondente. Se invece i tag label e input non sono connessi, ciò non succederà-->     
+        <form>
+            <fieldset>
+                <legend>Informazioni personali</legend>
+                <label for="nome">Nome:</label>
+                <input id="nome" type="text">
+                <br>
+                <label for="email">Email:</label>
+                <input id="email" type="email">
+                <br>
+                <label for="telefono">Telefono:</label>
+                <input id="telefono" type="tel">
+                <br>
+            </fieldset>
+            <fieldset>
+                <legend>Informazioni del Login</legend>
+                <label for="username">Username:</label>
+                <input id="username" type="text">
+                <br>
+                <label for="password">Password:</label>
+                <input id="password" type="password">
+                <br>
+            </fieldset>
+            <button>Registrati</button>
+        </form>
+        <!-- un ottimo sostitto di label è l'attributo "placeholder" prensente in input-->
+        <!-- placeholder si utilizza per scrivere il testo sullo sfondo dell'input (indica di solito email, username o password) -->
+        <form>
+            <fieldset>
+                <legend>
+                    testo a caso
+                </legend>
+                <input type="text" placeholder="testo normale"> <br>
+                <input type="password" placeholder="testo nascosto"><br>
+            </fieldset>
+        </form>
+    
+        
+        
+        <p>
+            <a href="mailto:siiiiiuuuuuuuummm@gmail.com">갑자기?!</a> 
+        </p>
+
+        per indicare che un testo nel nostro file HTML è un indicazione di data o ora si utilizza il tag time (non cambia la forma della parola)
+        <br>
+        Rapporto missione <time>16 dicembre 1991</time>
+        <br>
+        invece per indicare un indirizzo stradale si usa il tag address, che rende il testo in corsivo e manda a capo (in inglese italic)
+        <br>
+        il mio indirizzo di casa è: <address>via fratelli Capocchia n 104</address>
+        <br>
+        per indicare un abbreviazione nel codice HTML si utilizza il tag abbr. L'attributo title indica il nome completo della parola
+        <br>
+        <abbr title="Sono porci questi Romani">SPQR</abbr>
+        <br>
+        <h3>scrivere codice come testo in un file HTLM</h3>
+        <ul>
+            nel caso dobbiamo far vedere nella pagina web più spazi (il broswer interpreta solo il primo spazio, e quelli
+            successivi li ignora) oppure proprio la scrittura del codice, ma viene interpretato dal browser, come 
+            parte del codice stesso, possiamo usare vari metodi:
+            <li>
+                <ul>
+                    scrivere i caratteri speciali in codice HTML: sostituire i caratteri speciali che vengono interpretati come codice,
+                    in altri modi, seguendo queste traduzioni (fai finta che i caratteri non sono divisi da spazi)
+                    <li>
+                        lo spazio &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; => &nbsp; &nbsp; &nbsp; &nbsp; & n b s p ;
+                        <!--nella linea di codice precedente già è stato usato questo codice speciale-->
+                    </li>
+                    <li>
+                        " &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;=>   &nbsp; &nbsp; &nbsp; &nbsp; & q u o t ;
+                    </li>
+                    <li>
+                        &lt; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; =>   &nbsp; &nbsp; &nbsp; &nbsp; & l t ;
+                    </li>
+                    <li>
+                        &gt; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; =>   &nbsp; &nbsp; &nbsp; &nbsp; & g t ;
+                    </li>
+                    <li>
+                        - &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;=>   &nbsp; &nbsp; &nbsp; &nbsp; & n d a s h ;
+                    </li>
+                </ul>
+                ad esempio per scrivere il codice di un paragrafo facciamo così:
+                <br>
+                <i>    &lt;p&gt;Paragrafo a caso&lt;/p&gt;    </i>
+                <br>
+                Il codice lo metto in corsivo per distinguerlo meglio.
+            </li>
+            <br>
+            <li>
+                scrivere il codice all'interno del tag &lt;textarea&gt;. É l'opzione più comoda
+                <br>
+                <textarea readonly><div>cose a caso</div></textarea>
+                <br>
+                <ul>
+                    usiamo inoltre 4 attributi associati al textarea
+                    <li>
+                        name = definiamo il nome della’aerea di testo.
+                    </li>
+                    <li>
+                        readonly = con valore readonly gli abbiamo detto che deve essere di sola lettura, se lo omettiamo diventerà un aria di testo con possibilità di scrittura.
+                    </li>
+                    <li>
+                        cols = con valore numerico di 50 gli stiamo specificando la larghezza visibile dell’area di testo.
+                    </li>
+                    <li>
+                        rows = con valore numerico di 10 gli specifichiamo il numero visibile di linee dell’area di testo.
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    
+
+
+        <h2>tag semantici</h2>
+        la maggior parte dei file semantici non modifacano l'aspetto della pagina, ma possono essere utili per le CSS rule 
+        <!--div viene usata per raggruppare vari elementi in modo da essere meglio gestiti--> 
+         <div>
+            <p id="siuuum"> SIIUUUUUUUUUUUUUUUMMMM</p>
+            <a href="tel:666">SIIUUUUUUUUUUUUUUUMMMM ma in blu</a>
+        </div>
+        
+        <!--al posto di div possono essere usati molti altri tag che sono più specifici-->
+        
+        <!--il primo tag che sostituisce il tag div è header, utilizzato per le intestazioni-->
+        <header>
+            <h5>
+                il cuore ha le sue ragioni che la ragione non conosce
+            </h5>
+        </header>
+        
+        <!--altro tag che sostituisce div è il tag footer, utilizato per informazioni a fine pagina, come informazioni di contatto e di visita-->
+        <footer>
+            numero di telefono: <a href="tel:+393442726457">pensaci sei carina</a>
+        </footer>
+        
+        <!--inoltre c'è il tag main che contiene il contenuto principale della pagina web-->
+        <main>
+            senz e te nu post stà, pcchè tu m'appartiennnnn, pcchè m piac tuuu
+        </main>
+        
+        <!--col tag section si può contenere un gruppo di contenuti con lo stesso tema-->
+        <section>
+            tras indo local, tutt Gucci e Ferragam, sold e fierr inde man
+        </section>
+        
+        <!--nav è un tag che contiene un gruppo di elementi che sono sati per navigare in pagine web, come gruppi di link-->
+        <nav>
+            <a href="mailto:checcapocchia@gmail.com">delly</a>
+            <a href="mailto:scimmiaincazzata@gmail.com">è</a>
+            <a href="mailto:palestratoperlafiga@gmail.com">una scimmia</a>
+        </nav>
+        
+        <!--inotre possiamo sostituire anche il tag p del paragrafo per rendere il codice più leggibile-->
+        <!--possiamo cambiare p con h1 che modifica anche le dimensioni del testo-->
+        
+        <!--poi c'è il tag details che serve a nascondere descrizioni dettaggliate nella parola dettagli-->
+        <details>
+            <p>
+                me piccat o cor, ma poi t na vai e nu sacc ancor
+            </p>
+            sheeeeeeeeeeeeee
+        </details>
+        <!--per poter dare una piccola descizione della descrizione si inserisce il tag summary nel tag details-->
+        <details>
+            <summary>
+                sheeeeeeeeeeeeee
+            </summary>
+            me piccat o cor, ma poi t na vai e nu sacc ancor       
+        </details>
+        <!--il tag details è molto utile in un bottone-->
+        <button>
+            <details>
+                <summary>
+                    e vuò cliccà o scè
+                </summary>
+                aaaaaaaaaaaaaazpegnaaaaaaa
+            </details>
+        </button>
+        
+        <!--per raggruppare un immagine e il testo a lui collegato si utilizza il tag figure-->
+        <figure>
+            <img src="https://s.yimg.com/fz/api/res/1.2/xmgYi4M01WDngH1olFyBvw--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpdDtoPTI0MDtxPTgwO3c9MjQw/https://s.yimg.com/zb/imgv1/576ce588-66b3-3980-8984-71cffd276a9c/t_500x300" alt="oooo ma che cazz, nu s caric" height="100">
+            <figcaption>        <!--il tag figcaption contiene il testo vicino l'immagine, ossia la didascalia (caption in inglese)-->
+                youporn
+            </figcaption>
+        </figure>
+
+        <br>
+        <br>
+        <br>
+        <h2>ACCESSIBILITÁ HTML</h2>
+        <p>
+            Per rendere accessibile le pagine web al maggior numero di utenti, dobbiamo ricordarci tecnologie di assistenza.
+            Queste tecnologie sono usate da utenti con diversi dispositivi o con una connessione lenta, oppure con disabilità.
+            Alcune di queste tecnologie di assistenza sono lettori di schermo (per i ciechi), dispositivi di zoom, ecc...
+            Un modo per aiutare queste tecnologie, e quindi questi utenti, è usare un codice semantico HTML: al posto di usare
+            i generici div e span, che non hanno alcun contesto, possiamo usare i tag semantici, come "h1" "ul" o "p".
+            Infatti tramite questi tag semantici il lettore di schermo riesce a interpretare meglio gli elementi HTML.
+        </p>
+        <ul>
+            Ecco alcune regole che si dovrebbero rispettare per una migliore accessibilità:
+            <li>
+                ci deve essere un ordine tra i titoli, dai più grandi ai più piccoli
+            </li>
+            <li>
+                ci deve essere un unico titolo "h1"
+            </li>
+            <li>
+                si deve usare il giusto tag per ogni scopo: il tag "a" per reindirizzare altre pagine, il tag "button" per compiere azioni
+            </li>
+        </ul>
+        <p>
+            Altro modo per migliorare l'accessibiità è il WAI-ARIA.
+            Il WAI-ARIA (Web Accessibility Initiative - Accessible Rich Internet Applications) è un insieme di specifiche
+            sviluppate dal W3C (World Wide Web Consortium) per migliorare l'accessibilità dei contenuti Web per le persone
+            con disabilità, in particolare per quelle che utilizzano tecnologie assistive come screen reader, tastiere, ecc.
+            <br>
+            Infatti nei casi in cui i tag semantici non sono abbastanza, possiamo usare diversi attributi del WAI-ARIA.
+        </p>
+        <p>
+            Il più importante di questi è l'attributo <strong>role</strong>:
+            <br>
+            L'attributo role viene utilizzato per fornire informazioni aggiuntive sull'identità o sulla funzione di un
+            elemento HTML. In altre parole, l'attributo role viene utilizzato per specificare il ruolo semantico di un
+            elemento all'interno della pagina.
+            <br>
+            L'attributo role può essere utilizzato su qualsiasi elemento HTML, ma è particolarmente utile per gli elementi
+            non semantici, come ad esempio un div o un span.
+            <br>            
+            Ecco un esempio di come utilizzare l'attributo role su un elemento HTML:
+            <div role="button" aria-label="Click me">Click me</div>
+            <textarea cols="100" rows="1" readonly><div role="button" aria-label="Click me">Click me</div></textarea>
+            <br><br>
+            In questo esempio, l'attributo role viene utilizzato per indicare che l'elemento div ha il ruolo di pulsante.
+            L'attributo aria-label viene utilizzato per fornire una descrizione testuale dell'elemento per gli utenti che
+            utilizzano screen reader. L'attributo role può essere utilizzato in combinazione con altri attributi, come ad
+            esempio aria-label, aria-labelledby, aria-describedby, aria-owns, aria-haspopup, aria-expanded, aria-selected,
+            aria-checked, e molti altri ancora.
+        </p>
+        <ul>
+            Facciamo alcuni esempi di role:
+            <li>
+                role="banner" => fa interpretare un elemento come l'intestazione della pagina.
+            </li>
+            <br>
+            <li>Per far considerare al lettore di schermo vari elementi come un unico elemento, dobbiamo usare role al conteiner di questi elementi,
+                dando il valore del tag.
+                <br>
+                <i>
+                    &lt;div role="img">
+                    <br>
+                    &nbsp; &nbsp; &lt;img src="image1.png">
+                    <br>
+                    &nbsp; &nbsp; &lt;img src="image2.png">
+                    <br>
+                    &lt;/div>
+                </i>
+            </li>
+            <li>
+                role="comment" => fa interpretare un elemento come una reazione a un certo contenuto.
+            </li>
+            <br>
+            <li>
+                role="contentinfo" => indica l'elemento come footer, ossia informazione del contenuto come il copyright
+            </li>
+            <li>
+                role="alert" => indica l'elemento come un avviso per eventi o cambiamenti nella pagina
+            </li>
+        </ul>
+        <p>
+            Sui tag semantici non si deve usare l'attributo role, siccome è inutile e superfuo
+            Ricorda, tra un tag semantico e un attributo role, è meglio usare il tag semantico, siccome è più accessbile.
+        </p>
+        <p>
+            Altro attributo ARIA utile è aria-hidden.
+            <br>
+            aria-hidden: nasconde dal lettore di schermo elementi visivi superflui (non si deve inserire valore dell'attributo)
+            <br>
+            questo attributo non deve essere usato su elementi interattivi, come bottoni o link, perchè non rende possibile per il lettore di schermo interagire con loro
+        </p>
+        
+        <br>
+        <br>
+        <br>
+        <header>
+            <h2>CSS stilying</h2>
+        </header>
+
+        <!--per poter dare uno stile agli elementi HTML ci sono vari modi con il linguaggio CSS-->
+        
+        <!--1)un modo per dare stile a un elemento è aggiungere l'attributo style nel tag di apertura (detto style in line)-->
+        <!--poi dall'attributo style si sceglie l'aspetto che si vuole modificare (come color) e poi si aggiungono :-->
+        <!--dopo i 2 punti si sceglie la modifica dell'aspetto-->
+        <!--questi elementi sono chiamati declarations (dichiarazioni), formati da una proprietà (color) e un valore (brown)-->
+        <!--possiamo aggiungere quante proprietà vogliamo ma devono essere seperate da un ;-->
+        <a href="Proprietà dei CSS.html">Proprietà CSS link percorso</a>
+        <br>
+        <a href="http://www.hotwebguide.com/content/programmazione-web/css-propriety.asp#:~:text=I%20valori%20predefiniti%20sono%20le,numeri%20interi%20seguiti%20da%20px">Proprietà CSS URL</a>
+        <br>
+        <p style="color:brown;">
+            We are VENOW
+        </p>
+        <!--ci sono tantissime proprietà in CSS, come backgrond-color, che sceglie il colore dello sfondo di un testo-->
+        <p style="color: cornflowerblue; background-color: darkblue;">
+            BRINGG MEE THAAANOOOSSSS
+        </p>
+        <!--altra prorpietà è il font-size (dimensione del carattere), con i valori che si possonon misurare in vari modi: pixel, percentuale,-->
+        <a href="tel:+393473528378" style="font-size: 60px;">Allora l'ho farò da solo</a>
+        <!--si può scegliere il tipo di carattere, con la proprietà font-family. i valori di questa proprietà sono molteplici-->
+        <div style="font-family:'Courier New', Courier, monospace;">
+            Io sono INELLUTABILE
+        </div>
+        <!--font-style è una proprietà che può far diventare corsivo delle parole, similmente al tag em-->
+        <!--font-weight invece ha valori che permettono di far diventare il testo grasseto (to bold), similmente al tag strong-->
+        <section style="font-style: italic; font-weight:bold;">
+            Peter, chiamami Strange
+        </section>
+       <!--2)secondo modo per dare stile agli elementi HTML è col il tag style nel tag head a inizio file-->
+       <!--per fare ciò creiamo una nuova pagina in un altro file-->
+       <a href="index-esercizio.html">continuo della pagina link percorso</a>
+    </body>
+</html>

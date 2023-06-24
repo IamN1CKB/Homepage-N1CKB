@@ -1,0 +1,11 @@
+per tracciare le versioni dei nostri progetti possiamo usare la version control.
+Questo è utile per recuperare una versione di un file prima che lo modificassimo, inserendo per errore un bug.
+ciò potrebbe essere utile anche per far lavorare più programmatori sullo stesso progetto
+
+Git è un tipo di version control, che ci permette di creare istantenei del nostro progetto a diversi punti nel tempo
+
+il terminale è uno strumento che da comandi al computer, e possiamo dare comandi a GIT tramite il terminale.
+in visual studio si trova di solito nella finestra sotto a questo testo, vicino alla console di debug.
+
+il terminale è aperto nella cartella radice impostata nella finestra a sinistra, nel mio caso, la cartella "PROGRAMMATORE"
+

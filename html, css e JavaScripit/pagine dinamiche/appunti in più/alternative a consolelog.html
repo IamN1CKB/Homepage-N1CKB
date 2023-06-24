@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>alternative a console.log</title>
+</head>
+<body>
+    <h1>altri metodi di visualizzazione della console</h1>
+    <p>
+        come si puuò vedere all'inizio viene visualizzato il messaggio di alert.
+        <br>
+        viene mostrato come un messaggio pop-up.
+    </p>
+    <button onclick="alertBottone()">avviso alert</button>
+    <br>
+    <button onclick="promptBottone()">avviso prompt</button>
+    <br>
+    <button onclick="promptBottone2()">avviso prompt 2</button>
+    <br>
+    <button onclick="confermaBottone()">clicca qui (conferma bottone)</button>
+    <br>
+    ora vedi gli esempi di esercitazione
+
+
+    <script>
+        /*tutti i broswer moderni, Node.js (che poi vedremo cos'è) e quasi tutti i supporti per Javascript supportano la scrittura di messaggi
+        su una console tramite metodi di registrazione, nell'ambiente (environment) del browser il più comune metodo è console.log()
+        questo metodo è usato maggiormente per il debugging
+        il debugging è la ricerca e la correzione degli errori di funzionamento di un sistema o di un programma.
+         */
+        //ora vediamo un metodo per pulire la console
+        /*In JavaScript, è possibile utilizzare il metodo console.clear() per cancellare i contenuti della console.
+        Questo metodo elimina tutti i messaggi e i comandi dalla console e consente di iniziare con una console pulita.
+         */
+        //Il metodo console.clear() è supportato dalla maggior parte dei browser moderni, tra cui Chrome, Firefox, Edge e Safari.
+        console.log(`messaggio che verrà cancellato`);
+        console.clear();     //questo metodo non supporta e non ha bisogno di argomenti
+        /*Nota che in alcuni browser come Firefox, l'utilizzo di console.clear() può essere disattivato dalle impostazioni degli sviluppatori,
+        per questo motivo è meglio utilizzare console.clear() solo in ambienti di sviluppo e non in produzione,
+        per evitare problemi per l'utente finale.
+
+        Inoltre, alcuni browser come Internet Explorer non supportano console.clear(), per questo motivo si può utilizzare console.log('\033c');
+        per pulire la console in questi casi.
+         */
+
+        
+
+        //altre alternative a console.log sono altri metodi che vengono visualizzati nella pagina HTML
+        //uno di questi metodi è window.aletr() method
+        window.alert("questo viene visualizzato non appena caricata la pagina");
+        //siccome window è un oggetto globale, si può utilizzare anche la forma contratta
+        alert("secondo avviso a caso");
+        //fin quando non si conferma la visualizzazione dell'avviso alert, non verrà eseguito eseguito il successivo codice JavaScript
+        //solo dopo la conferma, verrà esegito il codice e visualizzata la pagina
+        //per questo motivo è sempre consigliato inserire l'instruzione alert in una funzione per essere eseguita tramite un bottone o altro
+        function alertBottone() {
+            alert("avviso eseguito da un bottone")
+        }
+
+        //un altro modo per visualizzare altro tramite JavaScript è window.prompt(), con la forma contratta prompt()
+        //lo inseriamo in una funzione per eseguirlo tramite un bottone
+        //prompt permette anche di ricevere un input che può essere salvato nel codice
+        //questo metodo riporta il valore che viene inserito
+        function promptBottone() {
+            const RISPOSTA = prompt(`scrivi "a"`);
+            if (RISPOSTA === "a") {
+                alert(`Bravo, hai scritto bene`);               
+            }
+            else { //se non scrivi niente, riporta ""; se invece clicci annulla, riporta null
+                alert(`coglione, non sai manco scrivere`);
+            }
+        }
+        //si può inserire anche un altro parametro opzionale, che sarebbe il valore riportato di default, come risposta già pronta
+        function promptBottone2() {
+            const RISPOSTA = prompt(`prova a non scrivere nulla oppure ad annullare`, "questo valore viene visalizzato come risposta di default: cancellala");
+            alert(RISPOSTA);  //qui vedi che valore assume prompt
+        }
+
+        function confermaBottone() {
+            const CONFERMA = confirm("hai cliccato il bottone?")
+            if (CONFERMA) {
+                alert("bravo, non hai mentito");
+            }
+            else {
+                alert("che cazzo dici, coglione. L'hai cliccato");
+            }
+        }
+    </script>
+</body>
+</html>

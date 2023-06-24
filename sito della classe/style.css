@@ -1,0 +1,59 @@
+body {
+    background: cornsilk;
+    font-family:'Times New Roman', Times, serif;
+    color: black
+}
+h2 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: moccasin;
+}
+header {
+    background: linear-gradient(black, gray);
+    margin: 1%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sottobody {
+    border: solid black;
+    margin: 1%;
+    background: linear-gradient(45deg, rebeccapurple, white);
+    font-size: 20px;
+    text-align: justify;
+}
+.element-sottobody {  /*questo è un gruppo div che contiene tutti gli elementi del sottobody*/
+    margin: 10px;
+}
+.liste {   /*container di 1 livello*/
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-around;
+}
+details {   /*container di 2 livello*/
+    margin: 0.5%;
+    flex-basis: auto;
+    flex-grow: 1;
+}
+ol {    /*container di 3 livello*/
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+li {    /*flex-items*/
+    text-align: start;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+td, th {
+    border: 1px solid black;
+    margin: 10px;
+}

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aggiungi alla carta funzione</title>
+    <style>
+        body {
+            color: midnightblue;   /*questo sarebbe il colore del testo in tutta la pagina*/
+            font-family: Helvetica Neue;
+            background-color: antiquewhite;
+        }
+
+        .prodotti {
+            display: inline-block;  /*questo ci permette di mettere i prodotti uno affianco all'altro*/
+            margin: 5px;
+        }
+
+        #immagineCarrello {
+            position: absolute;
+            right: 16px;
+            top: 16px;
+        }
+
+        #articoliCounter {
+            position: absolute;
+            right: 56px;
+            top: 0px;
+        }
+
+        .img-product {
+            border-radius: 10px;
+            width: 200px;
+            aspect-ratio: 1;     /*questo permette di avere un rapporto preciso, di 1/1, oppure 16/9, ecc*/
+            border: 1px dashed;
+        }
+
+        #ordiniTotali {
+            margin-right: 16px;
+            text-align: right;
+            position: absolute;    /*questo è un valore che appare tramite un bottone*/
+            top: 50px;             /*grazie alla position: absolte; non sposta gli altri elementi quando appare*/
+            right: 10px;
+        }
+
+        #shippingTotal {
+            margin-right: 16px;  /**/
+            text-align: right;
+        }
+
+        #parent-sconto {
+            display: flex;
+            position: relative;
+            top: 50px;
+            flex-direction: column;
+            align-items: center;      /*si allineano verso il cross axis (in orizontale) al centro*/
+            text-align: center;    /*il prompt-sconto si allinea a centro*/
+        }
+
+        #sconto-button {
+            padding: 5px;
+        }
+
+        .figli-footer {
+            margin: 5px;
+        }
+
+        footer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;   /*si allineano verso il cross axis (in orizontale) al centro*/
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            left: 10px;
+            margin: 30px 5px 5px 5px; 
+            border: solid 2px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Negozio Online</h1>
+    <img id="immagineCarrello" src="https://mimo.app/i/cart.png" onclick="vediTotale()">
+    <div>
+        <h2 id="articoliCounter">0</h2>
+        <p id="ordiniTotali"></p>
+    </div>
+
+    <div class="prodotti">
+        <img src="https://mimo.app/i/backpack.png" class="img-product" alt="nun t va a connession sce">
+        <h3>Zaino: 400€</h3>
+        <button onclick="aggiungiAlCarrello(zaino)">Add to Cart</button>
+    </div>
+  
+    <div class="prodotti">
+        <img src="https://mimo.app/i/camera.png" class="img-product" alt="nun t va a connession sce">
+        <h3>Camera: 300€</h3>
+        <button onclick="aggiungiAlCarrello(camera)">Add to Cart</button>
+    </div>
+
+    <div class="prodotti">
+        <img src="https://mimo.app/i/phone.png" class="img-product" alt="nun t va a connession sce">
+        <h3>Telefono: 300€</h3>
+        <button onclick="aggiungiAlCarrello(telefono)">Add to Cart</button>
+    </div>
+
+    <div id="parent-sconto">
+        <button onclick="calcolaSconto(calcolaTotale())" id="sconto-button">Calcola Sconto</button>
+        <p id="prompt-sconto"></p>
+    </div>
+
+    <footer>
+        <div class="figli-footer">
+            About Us
+        </div>
+        <div class="figli-footer">
+            Contact
+        </div>
+    </footer>
+    
+    <script>
+
+        const ARTICOLI_CARRELLO = [];    //array del carello
+        let totaleVisibile = false;    //inizialmente i totali non sono visibili
+
+        const zaino = {
+            name: "Zaino",
+            price: 400
+        };
+        const camera = {
+            name: "Camera",
+            price: 300
+        };
+        const telefono = {
+            name: "Telefono",      //informazioni dei prodotti
+            price: 300
+        };
+        const ARTICOLI_COUNTER = document.getElementById("articoliCounter");     //numero degli articoli nel carrello in altro a destra
+
+        function aggiungiAlCarrello(item) {
+            ARTICOLI_CARRELLO.push(item);      //aggiungiamo il prodotto al carrello
+            ARTICOLI_COUNTER.innerHTML = ARTICOLI_CARRELLO.length;       //aggiorniamo il numero degli articoli nel carrello    
+            calcolaTotale();
+        }
+
+        function vediTotale() {
+            totaleVisibile = !totaleVisibile;
+            calcolaTotale();
+        }
+
+        function calcolaTotale() {
+            let prezzoTotale = 0;
+            for (let i = 0; i < ARTICOLI_CARRELLO.length; i++) {
+                prezzoTotale += ARTICOLI_CARRELLO[i].price;     //sommiamo i totali di tutti gli articoli del carrello
+            }
+            
+            if (totaleVisibile) {
+                document.getElementById("ordiniTotali").innerHTML = `Totale: € ${prezzoTotale}`;
+            }
+            else {
+                document.getElementById("ordiniTotali").innerHTML = "";
+            }
+            return prezzoTotale;
+        }
+
+        function calcolaSconto(totale) {    //il parametro sarà il valore riporatato dalla funzione calcolaTotale()
+            let sconto;
+            const PROMPT_SCONTO = document.getElementById("prompt-sconto");
+
+            if (totale >= 1000 & totale < 2000) {
+                sconto = 0.2;   //sconto del 20%
+                const PREZZO_SCONTATO = totale - (totale * sconto);
+                PROMPT_SCONTO.innerHTML = `Il prezzo è scontato del ${sconto * 100}%, da ${totale}€ diventa ${PREZZO_SCONTATO}€`;
+            }
+            else if (totale >= 2000) {
+                sconto = 0.3;   //sconto del 30%
+                const PREZZO_SCONTATO = totale - (totale * sconto);
+                PROMPT_SCONTO.innerHTML = `Il prezzo è scontato del ${sconto * 100}%, da ${totale}€ diventa ${PREZZO_SCONTATO}€`;
+            }
+            else {
+                PROMPT_SCONTO.innerHTML = `Il prezzo non può essere scontato perchè non supera i 1000€`;
+            }
+        }
+
+    </script>
+</body>
+</html>
+</body>
+</html>

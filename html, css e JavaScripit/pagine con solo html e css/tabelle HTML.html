@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <title>tabelle HTML</title>
+</head>
+<body>
+    <h2>
+        TABELLA SENZA BORDI
+    </h2>
+    Questo é un esempio di tabella senza bordi
+    <br>
+    <br>
+    <table>                               <!--per creare una tabella usiamo il tag table, ma senza l'attributo border, non ci saranno bordi-->
+        <tr>                              <!--il tag tr sta per table row, e serve per creare una riga-->
+            <th>intestazione</th>            
+            <!--il tag th sta per table header, e contiene i titoli di ogni colonna della tabella-->
+            <!--di default il contenuto del tag th, è in grasseto ed è posizionato al centro della tabella, ma questo può essere cambiato con il CSS-->
+        </tr>
+        <tr>
+            <td>dato 1</td>            <!--il tag td sta per table data e raggruppa il contenuto della cella-->
+            <td>dato 2</td>
+        </tr>
+        <tr>
+            <td>dato 3</td>
+            <td>dato 4</td>
+            <td>dato 5</td>
+        </tr>
+    </table>
+    <!--le righe possono contenere diversi numero di colonne, lasciando spazi vuoti all'interno della tabella-->
+    <br>
+
+
+    <h2>TABELLA CON BORDI</h2>
+    <table border=1> <!--border è un attributo che decide lo spessore (numero di pixel) del bordo--> 
+        <caption>    <!--il tag caption è un tag facoltativo che ci permette di dare una contestualizzazione ai dati, per rendere più chiari i loro significati-->
+            questa è una tabella con i bordi
+        </caption>   <!--il tag caption ha come default il testo centrato, ma questo si può cambiare con il CSS-->
+
+
+        <thead>      <!--il tag thead è un tag facoltativo, che serve a raggruppare le righe che rappresentano l'intestazione-->
+            <tr>
+                <th colspan="3" style="background-color: red;">intestazione</th>      <!--l'attributo colspan nei tag th e td fa espandere la tabella di tot colonne-->
+    </tr>                                                                               <!--l'attributo style serve per applicare il CSS (in futuro vedremo), in questo caso ho applicato il colore rosso alla cella-->
+        </thead>
+        <tbody>     <!--tbody è un tag facoltativo che serve a raggruppare le righe che contengono il corpo della tabella, con i dati che interessano-->
+            <tr>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+            </tr>
+            <tr>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+            </tr>
+        </tbody>
+        <tfoot>     <!--tfoot è un tag facoltativo che serve a raggruppare le righe finali di una tabella che fungono da footer, dove possono essere inseriti dati di riepilogo come somme, medie, ecc..-->
+            <tr>
+                <td colspan="3">footer della tabella</td>
+            </tr>
+        </tfoot>
+    </table>
+    <br>
+    <br>
+    <br>
+
+    ora vediamo dei tag che servono per raggruppare gli elementi e gestirli in CSS E Javascript
+    <br>
+    <br>
+    <table border=1>
+        <caption>   
+            Possiamo raggruppare le celle della tabella anche per colonna grazie al tag coroup e col
+        </caption>   
+
+        <colgroup class="colgroup1" span="2" style="background-color: green;">        <!--l'attributo class lo vedremo più avanti e serve per il CSS. Va inserito sempre prima di scrivere il contenuto delle righe-->
+                                                                                        <!--l'attributo span decide quante colonne raggruppare il tag colgroup-->
+                                                                                        <!--in questo caso ho messo il colore verde alle prime 2 colonne-->
+        </colgroup>                                                                     <!--i tag colgroup ragruppano le colonne a partire da destra e le sccessive vanno progressivamente a sinistra-->
+        <colgroup class="colgroup2" style="background-color: brown;">                 <!--possiamo anche non mettere il tag span e invece inseriamo nel tag colgroup tov tag col-->
+            <col style="font-size: smaller;">
+            <col span="2">
+            <col span="3">
+            <col span="4">
+        </colgroup>
+
+        <thead>      
+            <tr>
+                <th colspan="12" style="background-color: red;">intestazione</th>      
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+            </tr>
+            <tr>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+            </tr>
+            <tr>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="12">footer della tabella</td>
+            </tr>
+        </tfoot>
+    </table>
+    da approfondire <a target="-blank" href="https://www.html.it/pag/16055/tabella-struttura-di-base/">qui</a>
+
+    dopo aver fatto il CSS vedi pure questa tabella: <a href="TABELLE HTML CON CSS.html">Qui</a> 
+
+
+
+
+   
+</body>
+</html>

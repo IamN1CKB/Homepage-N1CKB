@@ -1,0 +1,1072 @@
+time {
+    color: yellow;
+}
+
+/*per poter modiciare i tag contraddistinti dall'attributo class (class selector), dobbiamo scivere . e il valore inserito nell'attribuuto class*/
+/*in questo caso ho modificato il tag p, in cui c'è scitto 안녕!*/
+/*possiamo agginngere lo stesso valore class a più tag in mod da modificare più tag diversi tra loro*/
+.antonietta {
+    color: blue;
+}
+#boh {
+    color: green;
+}
+.back {
+    color: rgb(255, 123, 0);
+}
+/*il font-family che preferisco per parti normali del sito è 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif*/
+
+/*per modificare le dimensioni = proprietà height e width*/
+.terra {
+    height: 100px; width: 100px;
+}
+/*per modificare la posizione del testo si usa text-align*/
+.text {
+    text-align: right;
+    width: 1000px;
+}
+/*per dare un bordo a un elemento si utilizza la proprietà border e inserire il valore solid per farlo vedere*/
+/*poi inserire lo spessore dello bordo e il colore*/
+img {
+    border:solid 10px red;
+}
+/*al posto di solid si può anche scrivere dashed (trattegiato) per far vedere il bordo tratteggiato*/
+
+/*invece per poter squadrare gli angoli di un elemento si aggiunge la proprietà border-radius con il valore in px o altre misure*/
+figcaption {
+    text-align: center;
+    width: 500px;
+    border: solid 3px green;
+    border-radius: 10px;
+}
+/*se inserisci il valore che è pari alla metà di una dimensione, l'elemento diventa rotondo*/
+.John {
+    width: 800px;
+    border-radius: 400px;
+}
+/*se vuoi modificare solo un angolo dell'elemento con border-radius, puoi inserire 4 valori che modificano in senso orario rispettivamente i valori
+il primo= in alto a sinistra
+il secondo= in altro a destra
+il terzo= in basso a destra
+il quarto= in basso a sinistra*/
+.thanos-logica {
+    border-radius: 250px 500px 0 70px;
+}
+/*possiamo usare il border radius per far diventare più esteticamente belle le immagine o altri elementi*/
+.paesaggio {
+    width: 250px;
+    border: solid 5px gray;
+    border-radius: 0px 80px 0 80px;
+}
+
+/*
+tutti gli elementi di un sito sono formati da 4 strati (layers), ossia: 
+content (il contenuto dell'elemento),
+padding (l'imbottitura, cioè lo spezio tra il contenuto e il bordo)
+border (il bordo)
+margins (i margini, cioè lo spazio tra il bordo e gli altri elementi del sito)
+*/
+/*
+per il paddind c'è la proprietà padding (valida per tutti e 4 i lati), e le proprietà padding-left, padding-right, padding-top, padding-bottom (validi un lato ciascuuno)
+*/
+.layers {
+    border: solid 3px blue;
+    padding: 30px;
+    border-radius: 75px;
+}
+.thanos-logica {
+    font-size: 50px;
+    border: solid blueviolet 5px;
+
+    width: 1250px;
+    padding-top: 100px;
+    padding-right: 200px;
+    padding-bottom: 150px;
+    padding-left: 50px;
+}
+/*per velocizzare il tutto si può modificare il padding anche solo con la proprietà padding*/
+/*si inseriscono 4 valori alla proprietà in senso orario:
+la prima è quella sopra,
+la seconda quella a destra,
+la terza quella in basso
+la quarta quella a sinistra*/
+/*se un valore è pari a 0 si può anche omettere l'unità di misura*/
+.ordine {
+    padding: 10px 50px 100px 0; 
+}
+/*poi c'è la proprietà margin, che si usa similmente alla proprietà padding, ma indica lo spazio tra l'elemento desiderato e gli altri elementi*/
+/*la proprietà margins si puo usare con le altre proprieà margin-top, margin-right..., oppure con i 4 valori, una per ogni lato*/
+figure {
+    margin: 0 100px 300px 0;
+}
+/*alcune proprietà possono accettare come valori delle funzioni (functions). uno di queste funzioni sono possibili nella proprietà transform*/
+/*possiamo usare la funzione rotate () con il valore da inserire nelle parentesi, che fa ruotare in senso orario*/
+/*il valore deve avere preferibilmente l'unità di misura dei gradi in deg (ossia il sistema sessagesimale), ma anche in rad (radianti)*/
+.besticiola {
+    margin: 50px;
+    transform: rotate(70deg);
+}
+/*per ruotare in senso antiorario si può inserire il simbolo -, ossia meno*/
+.pensaci {
+    margin: 30px;
+    transform: rotate(-45deg);
+}
+
+/*altra funzione utile può essere blur (sfocatura) presente nella proprietà filter (filtro)*/
+/*il valore in pixel indica quanti pixel devono fondersi insieme. Anche valori bassi fanno una grande sfocatura, quindi usa anche valori decimali come 0.5*/
+.besticiolaa {
+    filter: blur(5px);
+    margin: 20px;
+}
+.roccia {
+    filter: blur(4px);
+}
+.pensaci {
+    filter: blur(0.5px);
+}
+/*con la proprietà filter si può modificare molti aspetti visivi degli elementi*/
+/* 1)con la funzione grayscale, che fa diventare l'immagine in diverse sfumature di grigio*/
+/*si misura in percentuale, con 0% come immagine invariata e 100% come immagine in bianco e nero (valore massimo)*/
+.grrr {
+    filter: grayscale(100%);
+    margin: 20px;
+}
+/*altra funzione della proprietà filter è opacity, misurato sempre in percentuale, con 0% come immagine invisibile e 100% come immagine opaca (valore massimo)*/
+.miao {
+    filter: opacity(90%);
+    margin: 20px;
+}
+.miaoo {
+    filter: opacity(10%);
+    margin: 20px;
+}
+.strange {
+    filter: opacity(20%);
+}
+/*altre funzioni di filter sono:
+saturate (saturazione), cioè quanto sono vividi gli elementi, in cui 100% è l'immagine di default (modificabile maggiore o minore di 100%)
+brightness (luminosità), in cui 100% è l'immagine di default e 0% è l'immagine scura (modificabile maggiore o minore di 100%)
+contrast (contrastro), che indica il contrasto tra parti chiare e parti scure, di cui 100% è l'immagine di default */
+.nonna {
+    margin: 20px;
+    height: 300px;
+    filter: saturate(200%) brightness(30%) contrast(100%);
+}
+.nonnaa {
+    margin: 20px;
+    height: 300px;
+    filter: saturate(50%) brightness(200%) contrast(50%);
+}
+.lampdin {
+    margin: 20px;
+    height: 300px;
+    filter: brightness(500%);
+}
+.zebra {
+    margin: 20px;
+    height: 300px;
+    filter: contrast(300%);
+}
+/*non solo la prorpietà filter supporta le funzioni ma molte altre, come background (sfondo)*/
+/*ricordiama la funzione linear-gradient, che permette di cambiare gradualmente colore dello sfondo da una parte all'altra*/
+.hulk {
+    color: greenyellow;
+    text-align: center;
+    font-size: 20px;
+    width: 600px;
+    border: solid 1px gray;
+    padding: 30px;
+    background: linear-gradient(red, black); /*per aggiuhngere i colori basta scriverli separati da una virgola*/
+}
+/*se vuoi cambiare la direzione del cambiamento di colore si può aggingere un valore in deg, per ruotare la direzione in senzo orario, o anti-orario col segno -*/
+.vision {
+    font-family: cursive;
+    text-align: center;
+    font-size: 15px;
+    width: 500px;
+    border: solid 1px gray;
+    padding: 25px;
+    background: linear-gradient(70deg, blue, white, green);
+}
+/*per modicare con CSS una sola parte di una tag, che si deve contraddistinguere solo per quell'aspetto, si usa il tag span, che non modifica la pagina web senza CSS rule*/
+span {
+    font-family: monospace;
+}
+/*in una pagina HTML ogni cosa è come una scatola dentro un'altra scatola, con un rapporto genitore-figlio*/
+/*infatti un elemento contenitore si chiama parent element, invece un elemento contenuto si chiama child element*/
+/*ad esempio in un pezzo di codice html come questo
+<div>
+    <p> ciao </p>
+</div>
+div è il parent element e invece p è il child element*/
+/*nell'inserire stile in una pagina quando diamo stile a un parent element può influenzare i suoi child element*/
+/*infatti ci sono 2 tipi di proprietà: ereditabili e non ereditabili (eridità=inheritence; ereditato=inherited)
+1) le proprietà ereditabili influenzano le child element, come color, font-size, font-family, 
+2) le proprietà non ereditabili restano al padre, come border, padding e margin. queste proprietà non sono ereditabili*/
+
+/*i colori nelle proprietà possono essere visalizzate come parole ma anche come valore esadecimale dei colori (inzia sempre con # e può includere lettere o numeri)*/
+.vision {
+    color: #000; /*ogni numero corrisponde a un valore, ad esempio #000 corrisponde al nero*/
+}
+/*grazie ai valori esadecimali ci sono 16 milioni di colori possibili*/
+
+/*le dimensioni degli elementi possono essere misurati in percentuale, selezionando la percentuale di grandezza del suo parent element*/
+/*in questo modo si può creare un sito con stile simile sia su pc che su mobile*/
+.loki {  /*parent element*/
+    font-size: 20px;
+    font-family: fantasy;
+    width: 1000px;
+    background: linear-gradient(aqua, green);
+}
+.LOKI {  /*child element*/
+    width: 50%;   /*50% del parent element, ossia il 50% di 1000px= 500px*/
+}
+/*per dare lo stesso stile a più elementi insieme, si possono usare i grouping selector, mettendo più tag o class selctor insieme, basta che siano separati da una ,*/
+.loki, .vision {
+    color: black;
+}
+
+/*display è una prorpietà che indica se gli elementi appaiono sullo stesso rigo*/
+/*i valori di display possono essere: 
+1)inline, ossia sullo stesso rigo (preimpostato per alcuni elementi come a, em, strong). negli elementi inline
+  non funzionano le proprietà height e width
+2)block, ossia su righe differenti, (preimpostato per alcuni elementi come p, h1, div, section) in elementi 
+  che prendono l'intera larghezza del parent element, a meno che non siano modifiati con la proprietà height e width
+3)inline-block, ossia elementi sulla stessa riga ma con le grandezze modificabili (preimpostato in img e button)*/
+.pensaci {
+    display: inline-block;
+    height: 80px;
+}
+/*c'è un altro valore di display che consente di adattare le dimensoni di un elemento allo spazio del browser, che può cambiare */
+
+/*per adattare un testo ad un immagine, bisogna inserire il testo dopo l'immagine nel codice html*/
+/*poi impostare la proprietà float (gallegiante: in un il testo galleggia nell'immmagine), col valore right o left a seconda di dove si vuole posizionare l'immagine*/
+.best {
+    width: 30%;
+    float: right;
+}
+/*se si vuole che un testo non si adatti alla foto si deve aggiungere la prorpietà clear al testo, con il valore right o left (che sarebbe la parte da tenere pulita, a seconda se l'immagine è a destra o a sinistra)*/
+.simp {
+    font-family: cursive;
+    clear: right;
+}
+/*per cambiare la posizione degli elementi dobbiamo prima di tutto impostare la proprietà position: relative; o con il valore absolute*/
+/*nel caso di relative tu sposti gli elementi basandoti sulla loro posizione nel normal flow (normale flusso della pagina)*/
+/*nel caso di absolute invece si spostano gli elementi in base alla pagina*/
+/*poi usare le proprietà top, bottom, right e left per impostare quanto a [proprietà] mettere l'elemento rispetto alla posizione originale nel caso di reletive, o rispetto alla pagina nel caso di absolute*/
+.wanda {
+    position: relative;
+    left: 150px;  /*150px più a sinistra rispetto alla posizione iniziale*/
+    top: 50px;
+}
+.peter {
+    position: absolute;
+    right: 5px;   /*5px dal lato destro della pagina*/
+}
+.peter, .wanda {
+    font-family: monospace;
+}
+.hulkk {
+    position: absolute;
+    right: 12px;       /*in questo modo con absolute si può sovrapporre (overlapping) più elementi*/
+    transform: rotate(45deg);
+}
+/*se la pagina viene scrollata gli elementi (sia in relative, che in absolute) si muovono assieme ad essa;
+Per evitare che gli elementi si muovano quando la pagina viene scrollata in CSS, è possibile utilizzare la proprietà CSS 
+"position: fixed" per fissare l'elemento nella sua posizione originale, indipendentemente dallo scrolling della pagina. Ad esempio:
+.my-element {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+Questo farà sì che l'elemento denominato ".my-element" sia posizionato in cima a sinistra della finestra del browser e
+rimarrà fisso anche quando lo scrolling verrà effettuato. 
+*/
+
+/*per decidere quale elemento si sovrappone su un altro si usa la proprietà z-index*/
+/*di default si sovrappongono gli elementi scritti dopo nel codice, su quelli scritti prima*/
+/*con la proprietà z-index invece si da un valore numerico (che deve essere intero e può essere anche negativo) agli elemtnti, secondo cui gli elementi con il numero maggiore si trovano in primo piano*/
+/*il valore di default della proprietà z-index è 0*/
+.first-photo {
+    z-index: -1;
+}
+.third-photo {
+    z-index: 1;
+    left: 80px;    bottom: 50px;
+}
+.second-photo {
+    z-index: 3;
+    bottom: 25px;
+    right: 6px;
+}
+.gattini {
+    position: relative;
+    width: 150px;
+    border: solid 0px;
+    margin: 0px;
+}
+
+.spazio {
+    position: absolute;
+    border: solid 0px;
+    z-index: 0;
+    left: 10px;   
+}
+   
+.logo {
+    position: absolute;
+    z-index: 1;
+    border:solid 0px;
+}
+
+
+
+/*FLEXBOX                                            FLEXBOX*/
+/*per rappresentare dei gruppi parents e figli, in modo diverso a seconda del dispositivo che apre il sito web, possiamo usare il Flexbox*/
+/*nel Flexbox gli elementi parent sono detti flex container, gli element child sono detti flex items*/
+/*per applicare il flexbox, aggiungiamo la proprietà "display: flex" al flex container*/
+/*per visualizzare meglio come sono ordinati gli elementi applichiamo anche un bordo*/
+.container {
+    border: solid 2px green;
+    display: flex;
+}
+/*applichiamo anche i margini agli elementi child, per distanziarli tra loro*/
+.item {
+    border: solid 2px blue;
+    margin: 10px;
+}
+/*i flex items si adattano all'altezza dei loro flex container*/
+.container {
+   height: 150px;   /*disattiva questa linea di codice per vedere i cambiamenti*/
+}
+/*invece la larghezza si adatta al contenuto del flex items (possono avere larghezze diverse tra loro)*/
+/*se la larghezza dei flex items supera quella del flex container, gli elementi del flex items (come le parole) si dispongono in 2 righe*/
+.container {
+    width: 500px;
+}
+/*il  flexbox caratterizza nello stesso modo sia inline che block elements*/
+.coontainer {
+    border: solid 2px green;
+    display: flex;
+    height: 200px;
+}
+.ittem {
+    border: solid 2px blue;
+    margin: 10px;
+}
+
+/*il flexbox può essere usato in 2 direzioni: in colonna (column) e in riga (row)*/
+/*per controllare la direzione usiamo la proprietà "flex-direction" sul flex container*/
+.padre {
+    border: solid 2px green;
+    display: flex;
+    flex-direction: column;
+    height: 250px;
+    width: 300px;
+}
+/*il valore di default della proprietà "flex-direction" è row*/
+/*nel caso del valore "row" la lunghezza diventa una proprietà non ereditaria, e l'altezza ereditaria*/
+/*nel caso del valore "column" l'altezza diventa una proprietà non ereditaria, e la larghezza ereditaria*/
+.figlio {
+    border: solid 2px blue;
+    margin: 10px;
+}
+
+/*i valori di flex-direction possono essere anche in reverse, in modo che il primo elemento diventi l'ultimo e viceversa*/
+/*gli elementi in reverse partono da destra o dal basso del container*/
+.contenitore {
+    border: solid 2px green;
+    display: flex;
+    flex-direction: row-reverse;
+}
+.elemento-contenuto {
+    border: solid 2px blue;
+    margin: 5px;
+    width: 100px;
+}
+/*la direzione in cui si sviluppa una pagina web è detta main axis (asse principale), orizzontale nel caso di row,
+e verticale nel caso di column*/
+/*poi c'è un altra linea immaginaria detta cross axis (asse trasversale), che è perpendicolare al main axis*/
+
+/*per raggruppare e spaziare i flex items lungo il main axis, si utilizza la proprietà justify-content*/
+/*tutti i valori della proprietà justify-content sono:
+1) flex-start (default), ossia con tutti gli elementi raggruppati all'inizio del container
+2) flex-end, ossia con tutti gli elementi raggruppati alla fine
+3) center, ossia con tutti gli elementi posizionati al centro
+4) space-around, ossia con tutti gli elementi posizionati lungo tutto l'asse, con i due elementi estremi abbastanza centrati
+5) space-between, ossia con tutti gli elementi posizionati lungo tutto l'asse, con i due elementi estremi che toccanco il container*/
+
+
+.flex-start {
+    border: solid 2px #806868;
+    display: flex;
+    margin: 10px;
+    flex-direction: row;
+/*  flex-direction: column;       /*cambia questa linea di codice per vedere la differenza con una colonna*/
+
+    justify-content: flex-start;    /*di default*/
+}
+.flex-end {
+    border: solid 2px #806868;
+    display: flex;
+    margin: 10px;
+    flex-direction: row;
+/*  flex-direction: column;    /**/
+
+    justify-content: flex-end; 
+}
+.center {
+    border: solid 2px #806868;
+    display: flex;
+    margin: 10px;
+    flex-direction: row;
+/*  flex-direction: column;    /**/
+
+    justify-content: center;
+}
+.space-around {
+    border: solid 2px #806868;
+    display: flex;
+    margin: 10px;
+    flex-direction: row;
+/*  flex-direction: column;     /**/
+
+justify-content: space-around;
+}
+.space-between {
+    border: solid 2px #806868;
+    display: flex;
+    margin: 10px;
+    flex-direction: row;
+/*  flex-direction: column;    /**/
+
+    justify-content: space-between;
+}
+
+.itemm {
+    border: 2px solid #457081;
+    margin: 10px;
+    width: 100px;
+    text-align: center;
+}
+/*per gestire gli elementi nella cross axis si usa la proprietà align-items nel container*/
+/*i vari valori della proprietà sono:
+1) stretch, che dispone gli elementi lungo tutta la cross axis
+2) flex-start, che dispone gli elementi lungo solo la parte inziale della cross axis
+3) flex-end, che dispone gli elementi lungo solo la parte finale della cross axis
+4) center, che dispone gli elementi lungo solo la parte centrale della cross axis*/
+
+.stretchh {
+    border: solid 2px #806868;
+    display: flex;
+    margin: 10px;
+    height: 200px;
+    flex-direction: row;
+/*  flex-direction: column;    /**/
+
+    align-items: stretch;
+}
+.flex-startt {
+    border: solid 2px #806868;
+    display: flex;
+    margin: 10px;
+    height: 200px;
+    flex-direction: row;
+/*  flex-direction: column;    /**/
+
+    align-items: flex-start;
+}
+.flex-endd {
+    border: solid 2px #806868;
+    display: flex;
+    margin: 10px;
+    height: 200px;
+    flex-direction: row;
+/*  flex-direction: column;    /**/
+
+    align-items: flex-end;
+}
+.centerr {
+    border: solid 2px #806868;
+    display: flex;
+    margin: 10px;
+    height: 200px;
+    flex-direction: row;
+/*  flex-direction: column;     /**/
+
+    align-items: center;
+}
+
+/*la proprietà flex-wrap consente di disporre gli elementi che superano il container in righe differenti*/
+/*wrap in inglese vuol dire avvolgere, confezionare, impacchettare*/
+/*i valori della proprietà sono:
+1) nowrap (default), ciò vuol dire che se gli elementi del container sono tanti usciranno fuori dal container
+2) wrap, ciò vuol dire che gli elementi se sono troppi si dispongono in righe successive o colonne
+3) wrap-reverse, ciò vuol dire che gli elemetni si dispongono in righe successive o colonne ma partendo al contrario*/
+
+.nowrap {
+    border: solid 2px #806868;
+    display: flex;
+    margin: 10px;
+    width: 150px;
+    flex-direction: row;
+/*  flex-direction: column;    /**/
+
+    flex-wrap: nowrap;  /*default*/
+}
+.wrap {
+    border: solid 2px #806868;
+    display: flex;
+    margin: 10px;
+    width: 150px;
+    flex-direction: row;
+/*  flex-direction: column;    /**/
+
+    flex-wrap: wrap;
+}
+.wrap-reverse {
+    border: solid 2px #806868;
+    display: flex;
+    margin: 10px;
+    width: 150px;
+    flex-direction: row;
+/*  flex-direction: column;    /**/
+
+    flex-wrap: wrap-reverse;
+}
+.itemmm {
+    border: 2px solid #457081;
+    margin: 10px;
+    text-align: center;
+}
+
+/*ora vediamo le PROPRIETÀ DEI FLEX ITEMS*/
+/*per impostare la lunghezza iniziale di un flex item lungo il main axis si usa la proprietà flex-basis*/
+/*queste lunghezze vengono poi accorciate o allungate in base alle proprietà "shrink" e "grow"*/
+/*possiamo dare anche valori in percentuale in modo che l'elemento occupi una parte precisa del container*/
+#containerrr {
+    display: flex;
+    flex-direction: row;
+    border: 1px blue solid;
+    flex-wrap: wrap;       /*così dato che gli elementi superano il contenitore, si aggiunge un nuovo rigo*/
+}
+.flex-itemm {
+    margin: 10px;
+    border: solid 1px red;
+    flex-basis: 100px;
+}
+#flex-item-percentuale {
+    margin: 10px;
+    border: 1px solid red;
+    flex-basis: 40%;
+}
+/*il valore di default di flex-basis è auto, ossia solo la grandezza del contenuto*/
+#flex-item-particolare {
+    margin: 10px;
+    border: 1px solid red;
+    flex-basis: auto;
+}
+/*se tutti gli elementi con il flex basis impostato hanno una grandezza maggiore del container, il valore di ogni elemeto si adatterà ad esso*/
+/*infatti gli elementi non usciranno fuori dal containet*/
+#flex-item-too-larg {
+    margin: 10px;
+    border: 1px solid red;
+    flex-basis: 50%   /*occupa una grandezza che supera quella del container, quindi va a capo*/
+}
+/*invece se non ci fosse stata la proprietà "flex-wrap: wrap;" nel container, tutti gli elementi si accorciano in proporzione
+per risparimare spazio, fino a quando non rientrano tutti in un unica riga*/
+/*facciamo un altro esempio*/
+#containerrrr {
+    display: flex;
+    flex-direction: row;
+    border: 1px blue solid;
+    flex-wrap: nowrap;          /*valore di default, cosi gli elementi che dovrebbero superare il container si accorciano in proporzione*/
+                                /*fino a quando non si racchiudono tutti in un solo rigo*/
+}
+
+
+/*per decidere quanto si deve allungare un elemento quando c'è spazio disponibile nel container, si usa la proprietà flex-grow*/
+/*per non confonderci useremo sempre il valore di "flex-basis" settato a 100 px (è solo la lunghezza iniziale)*/
+/*il valore di defaut è 0, ossia che un elemento non si adatti, e resta della sua dimensione*/
+.flex-itemmm {
+    margin: 10px;
+    border: 1px red solid;
+    flex-basis: 100px;
+    flex-grow: 0;    /*settato di default*/
+}
+/*se invece vogliamo che l'elemento si ingrandisca occupando tutto lo spazio rimanente del container diamo un valore
+intero maggiore di 0 (non numeri negativi)*/
+#flex-item-1 {
+    margin: 10px;
+    border: 1px red solid;
+    flex-basis: 100px;
+    flex-grow: 1;
+}
+/*se invece si vuole che ogni elemento figlio prenda lo stesso spazio rimanente in modo da essere tutto proporzionato, si dà ad ogni
+elemento lo stesso flex-grow*/
+
+/*poi se vogliamo che alcuni elementi prendano più spazio rimante di altri, si danno valori in modo che lo spazio aggiunto sia in
+proporzione con i valori*/
+/*ad esempio se ad un elemento settiamo il valore 1 in flex-grow, invece in un altro elemento settiamo 2; il secondo elemento prendera il 
+doppio dello spazio del primo elemento*/
+#flex-item-2 {
+    margin: 10px;
+    border: 1px solid red;
+    flex-grow: 2
+}
+#flex-item-3 {
+    margin: 10px;
+    border: 1px solid red;
+    flex-grow: 3
+}
+/*siccome i valori di flex-grow sono rapporti. allora possono essere anche valori enormi, ma con gli stessi risultati dei valori piccoli*/
+/*ad esempio se i flex-item hanno come valori 100 200 300, sarà l'equivalente di 1 2 3*/
+
+
+/*per decidere fino a quando un elemento in flexbox deve accorciarsi quando non c'è più spazio disponibile nel container,
+si usa la proprietà "flex-shkink", che funziona similmente a flex-grow, sempre in proporzione*/
+/*siccome non si nota quanto un elemento si accorcia, mostrerò 2 volte il contenitore: quando è allungato, e quando è accorciato.*/
+
+/*Useremo anche la proprietà "flex-wrap:wrap" nel primo caso, per far andare a capo gli elementi che superano la lunghezza del
+container; e la propretà "flex-wrap: nowrap" nel secondo caso, per fare entrare tutti gli elementi in un rigo (in modo che si accorcino)*/
+#container-flex-shrink {
+    display: flex;
+    border: 1px blue solid;
+    flex-wrap: wrap;
+}
+.flex-shrink-0 {
+    flex-basis: 30%;
+    border: 1px red solid;
+    margin: 10px;
+    flex-shrink: 0;            /*il valore 0 fa in modo che l'elemento non si accorci, e resta col valore di flex-basis, andando a capo*/
+}
+
+#container-flex-shrink-nowrap {
+    display: flex;
+    border: 1px blue solid;
+    flex-wrap: nowrap;
+}
+/*in questo caso, con nowrap (non va al rigo successivo) e "flex-shrink: 0;" (non si accorcia), gli elementi escono fuori il conteiner*/
+
+/*ora vediamo il caso in cui non va al rigo successivo (nowrap) e si accorcia al valore default (flex-shrink: 1;)*/
+
+.flex-shrink-1 {
+    flex-basis: 30%;
+    border: 1px red solid;
+    margin: 10px;
+    flex-shrink: 1;             /*il valore 1 è di default, e fa in modo che l'elemento si accorci in proporzione con gli altri elementi figli,
+                                basandosi sugli altri valori di flex-shrink, fino a quando non restano tutti gli elementi su un unico rigo*/
+}
+/*se tutti i valori di flex-shrink sono uguali, allora tutti gli elementi cederanno la stessa percentuale di spazio*/
+/*se invece sono numeri diversi, cederanno la porzione di spazio proporzionale al valore di flex-shrink*/
+/*ad esempio un elemento con il valore 1 cederà tot spazio, un elemento con valore 2 cederà 2tot spazio*/
+#flex-shrink-1 {
+    flex-basis: 60%;
+    border: 1px red solid;
+    margin: 10px;
+    flex-shrink: 1;
+}
+#flex-shrink-2 {
+    flex-basis: 60%;
+    border: 1px red solid;
+    margin: 10px;
+    flex-shrink: 2;
+}
+#flex-shrink-3 {
+    flex-basis: 60%;
+    border: 1px red solid;
+    margin: 10px;
+    flex-shrink: 3;
+}
+
+/*abbiamo dunque imparato che i valori di default sono "flex-grow: 0;" "flex-shrink: 1;" "flex-basis: auto;" */
+/*possiamo racchiudere queste 3 proprietà nella proprietà shorthand "flex"*/
+/*il primo valore di flex è il flex-grow, il secondo valore è il flex-shrink, il terzo valore è il flex-basis*/
+#flex-1 {
+    border: 1px solid red;
+    margin: 10px;
+    flex: 0 1 auto;
+}
+#flex-2 {
+    border: 1px solid red;
+    margin: 10px;
+    flex: 1 2 100px;
+}
+#flex-3 {
+    border: 1px solid red;
+    margin: 10px;
+    flex: 2 3 100px;
+}
+#flex-4 {
+    border: 1px solid red;
+    margin: 10px;
+    flex: 3 4 100px;
+}
+
+/*CSS GRID*/
+/*per sviluppare meglio uno schema in 2 dimensioni possiamo usare il CSS grid (griglia)*/
+/*per strutturare un css grid bisogna sempre creare un tag div con un attributo class o id*/
+.grid-container {
+    display: grid;
+    border: 1px dashed blue;
+    background-color: aqua;
+    width: 500px;
+}
+.grid-item {
+    background-color: brown;
+    margin: 2px;
+    color: white;
+    text-align: center;
+}
+
+.grid-container1 {
+    display: grid;
+    border: 1px dashed blue;
+    background-color: aqua;
+    grid-template-columns: 50px 50px 120px;
+    width: 220px;      /*50px + 50px + 120px*/
+}
+
+.grid-container2 {
+    display: grid;
+    border: 1px dashed blue;
+    background-color: aqua;
+    grid-template-columns: 50px auto 120px;
+    width: 1000px;
+}
+
+.grid-container3 {
+    display: grid;
+    border: 1px dashed blue;
+    background-color: aqua;
+    grid-template-columns: 50px auto 120px auto;
+    width: 1000px;
+}
+
+.grid-container4 {
+    display: grid;
+    border: 1px dashed blue;
+    background-color: aqua;
+    grid-template-columns: 1fr 2fr 1fr;
+    width: 500px;
+}
+.grid-container5 {
+    display: grid;
+    border: 1px dashed blue;
+    background-color: aqua;
+    grid-template-columns: 1fr 2fr 1fr auto 100px;
+}
+
+.grid-container6 {
+    display: grid;
+    border: 1px dashed blue;
+    background-color: aqua;
+    grid-template-columns: repeat(7, 10%);
+}
+
+.grid-container7 {
+    display: grid;
+    border: 1px dashed blue;
+    background-color: aqua;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: 10% 20% 80px 1fr 2fr;
+    height: 500px;
+    width: 70%;
+}
+
+.grid-container8 {
+    display: grid;
+    border: 1px dashed blue;
+    background-color: aqua;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    height: 500px;
+    width: 70%;
+}
+.grid-container9 {
+    display: grid;
+    border: 1px dashed blue;
+    background-color: aqua;
+    grid-template: 70px 150px 1fr 2fr 3fr auto / 200px 300px 50px auto auto;
+    height: 500px;
+    width: 70%;
+}
+
+.grid-item-no-margin {
+    background-color: brown;
+    color: white;
+    text-align: center;
+}
+.grid-container10 {
+    display: grid;
+    border: 1px dashed blue;
+    background-color: aqua;
+    grid-template: repeat(7, 1fr) / repeat(6, 1fr);
+    height: 500px;
+    width: 70%;
+}
+.grid-container11 {
+    display: grid;
+    border: 1px dashed blue;
+    background-color: aqua;
+    grid-template: repeat(7, 1fr) / repeat(6, 1fr);
+    height: 500px;
+    width: 70%;
+    row-gap: 5px;
+}
+.grid-container12 {
+    display: grid;
+    border: 1px dashed blue;
+    background-color: aqua;
+    grid-template: repeat(7, 1fr) / repeat(6, 1fr);
+    height: 500px;
+    width: 70%;
+    column-gap: 5px;
+}
+.grid-container13 {
+    display: grid;
+    border: 1px dashed blue;
+    background-color: aqua;
+    grid-template: repeat(7, 1fr) / repeat(6, 1fr);
+    height: 500px;
+    width: 70%;
+    gap: 5px;
+}
+.grid-container14 {
+    display: grid;
+    border: 1px dashed blue;
+    background-color: aqua;
+    grid-template: repeat(7, 1fr) / repeat(6, 1fr);
+    height: 500px;
+    width: 70%;
+    gap: 5px;
+    padding: 20px;
+}
+
+.grid-container15 {
+    display: grid;
+    border: 1px dashed blue;
+    background-color: aqua;
+    grid-template: repeat(7, 1fr) / repeat(6, 1fr);
+    height: 500px;
+    width: 70%;
+    gap: 5px;
+    padding: 5px;
+}
+.grid-item-1 {
+    grid-column: span 3;
+}
+.grid-item-2 {
+    grid-row: span 2;
+}
+.grid-item-20 {
+    grid-column: span 2;
+    grid-row: span 4;
+}
+
+
+.grid-items-1 {
+    grid-area: item1;
+}
+.grid-items-2 {
+    grid-area: item2;
+}
+.grid-items-3 {
+    grid-area: item3;
+}
+.grid-items-4 {
+    grid-area: item4;
+}
+.grid-items-5 {
+    grid-area: item5;
+}
+.grid-items-6 {
+    grid-area: item6;
+}
+.grid-items-7 {
+    grid-area: item7;
+}
+.grid-items-8 {
+    grid-area: item8;
+}
+.grid-items-9 {
+    grid-area: item9;
+}
+.grid-items-10 {
+    grid-area: item10;
+}
+.grid-items-11 {
+    grid-area: item11;
+}
+.grid-items-12 {
+    grid-area: item12;
+}
+.grid-items-13 {
+    grid-area: item13;
+}
+.grid-items-14 {
+    grid-area: item14;
+}
+.grid-items-15 {
+    grid-area: item15;
+}
+.grid-items-16 {
+    grid-area: item16;
+}
+.grid-container16 {
+    display: grid;
+    border: 1px dashed blue;
+    background-color: aqua;
+    width: auto;
+    gap: 5px;
+    padding: 5px;
+    grid-template-areas:
+    "item1  item2  item2    .   "
+    "item1    .    item4    .   "
+    "item3  item5  item6  item7 "
+    "item8  item9  item9    .   "
+    "  .    item10 item11 item12"
+    "item13 item13 item15 item14"
+    "item13 item13 item17 item16";
+}
+
+.grid-titolo {
+    grid-area: titolo;
+}
+.grid-foto{
+    grid-area: foto;
+}
+.grid.main {
+    grid-area: main;
+}
+.grid-footer {
+    grid-area: footer;
+    text-align: center;
+}
+.grid-container17 {
+    display: grid;
+    border: 2px solid red;
+    background-color: aliceblue;
+    gap: 5px;
+    padding: 5px;
+    grid-template-areas:
+    "titolo titolo"
+    "foto   main"
+    "footer footer";
+}
+
+.grid-item19 {
+    background-color: brown;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border: groove black;   /*groove vuol dire scalanatura, dando un effetto del bordo 3D*/
+}
+.grid-container18 {
+    display: grid;
+    border: 2px solid red;
+    background-color: aliceblue;
+    gap: 5px;
+    padding: 5px;
+    grid-template: repeat(6, 100px) / repeat(7, 1fr);
+    justify-items: stretch;
+}
+.grid-container19 {
+    display: grid;
+    border: 2px solid red;
+    background-color: aliceblue;
+    gap: 5px;
+    padding: 5px;
+    grid-template: repeat(6, 100px) / repeat(7, 1fr);
+    justify-items: start;
+}
+.grid-container20 {
+    display: grid;
+    border: 2px solid red;
+    background-color: aliceblue;
+    gap: 5px;
+    padding: 5px;
+    grid-template: repeat(6, 100px) / repeat(7, 1fr);
+    justify-items: end;
+}
+.grid-container21 {
+    display: grid;
+    border: 2px solid red;
+    background-color: aliceblue;
+    gap: 5px;
+    padding: 5px;
+    grid-template: repeat(6, 100px) / repeat(7, 1fr);
+    justify-items: center;
+}
+
+.grid-container22 {
+    display: grid;
+    border: 2px solid red;
+    background-color: aliceblue;
+    gap: 5px;
+    padding: 5px;
+    grid-template: repeat(6, 100px) / repeat(7, 1fr);
+    align-items: stretch;
+}
+.grid-container23 {
+    display: grid;
+    border: 2px solid red;
+    background-color: aliceblue;
+    gap: 5px;
+    padding: 5px;
+    grid-template: repeat(6, 100px) / repeat(7, 1fr);
+    align-items: start;
+}
+.grid-container24 {
+    display: grid;
+    border: 2px solid red;
+    background-color: aliceblue;
+    gap: 5px;
+    padding: 5px;
+    grid-template: repeat(6, 100px) / repeat(7, 1fr);
+    align-items: end;
+}
+.grid-container25 {
+    display: grid;
+    border: 2px solid red;
+    background-color: aliceblue;
+    gap: 5px;
+    padding: 5px;
+    grid-template: repeat(6, 100px) / repeat(7, 1fr);
+    align-items: center;
+}
+
+.grid-container26 {
+    display: grid;
+    border: outset black 2px;
+    background-color: aliceblue;
+    gap: 5px;
+    padding: 10px;
+    grid-template: repeat(3, 1fr)/ repeat(3, 1fr)
+}
+.navigationbar26 {
+    display: flex;
+    justify-content: flex-end;
+    grid-column: span 3;
+    background-color: brown;
+    color: white;
+    padding: 10px;
+    border: groove black;
+}
+.a-nav {
+    margin: 10px;
+    color: white;
+    border: dashed black 1px;
+}
+.grid-item26 {
+    background-color: brown;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border: groove black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*FINE FILE, SI VA CON LO JAVASCRIPT*/
