@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8"> <!--questi tag mete poi vedremo a che servono-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orario della classe</title>
+    <link rel="stylesheet" href="style-esercizio.css">
+    <style>
+        body {
+            font-size: medium;
+            background-color: antiquewhite;
+        }
+        .ora1 {
+            grid-area: ora1;
+        }
+        .ora2 {
+            grid-area: ora2;
+        }
+        .ora3 {
+            grid-area: ora3;
+        }
+        .ora4 {
+            grid-area: ora4;
+        }
+        .ora5 {
+            grid-area: ora5;
+        }
+        .ora6 {
+            grid-area: ora6;
+        }
+        .inglese {
+            grid-area: inglese;
+        }
+        .scienze {
+            grid-area: scienze;
+        }
+        .fisica {
+            grid-area: fisica;
+        }
+        .ed-fisica {
+            grid-area: ed-fisica;
+        }
+        .filosofia {
+            grid-area: filosofia;
+        }
+        .filosofia1 {
+            grid-area: filosofia1;
+        }
+        .fisica1 {
+            grid-area: fisica1;
+        }
+        .matematica {
+            grid-area: matematica;
+        }
+        .arte {
+            grid-area: arte;
+        }
+        .italiano {
+            grid-area: italiano;
+        }
+        .italiano1 {
+            grid-area: italiano1;
+        }
+        .storia {
+            grid-area: storia;
+        }
+        .arte1 {
+            grid-area: arte1;
+        }
+        .ed-fisica1 {
+            grid-area: ed-fisica1;
+        }
+        .latino {
+            grid-area: latino;
+        }
+        .religione {
+            grid-area: religione;
+        }
+        .storia1 {
+            grid-area: storia1;
+        }
+        .matematica1 {
+            grid-area: matematica1;
+        }
+        .inglese1 {
+            grid-area: inglese1;
+        }
+        .matematica2 {
+            grid-area: matematica2;
+        }
+        .italiano2 {
+            grid-area: italiano2;
+        }
+        .scienze1 {
+            grid-area: scienze1;
+        }
+        .lunedi {
+            grid-area: lunedi;
+        }
+        .martedi {
+            grid-area: martedi;
+        }
+        .mercoledi {
+            grid-area: mercoledi;
+        }
+        .giovedi {
+            grid-area: giovedi;
+        }
+        .venerdi {
+            grid-area: venerdi;
+        }
+        .grid-item69 {
+            border: 1px solid black;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container-orario {
+            display: grid;
+            padding: 2px;
+            border: 2px solid red;
+            background-color: aliceblue;
+            grid-template: repeat(1fr, 6)/1fr 3fr 3fr 3fr 3fr 3fr;
+            grid-template-areas:
+            ".    lunedi     martedi     mercoledi    giovedi     venerdi" 
+            "ora1 italiano   inglese     scienze      latino      filosofia1"
+            "ora2 matematica fisica1     filosofia    latino      filosofia1"
+            "ora3 matematica italiano1   inglese1     latino      italiano2"
+            "ora4 ed-fisica  italiano1   inglese1     storia1     scienze1"
+            "ora5 arte       ed-fisica1  fisica       religione   scienze1"
+            "ora6 storia     arte1       fisica       matematica1 matematica2";
+        }
+    </style>
+</head>
+<body>
+    <div class="container-orario">
+        <div class="ora1 grid-item69">
+            1°ora
+        </div>
+        <div class="ora2 grid-item69">
+            2°ora
+        </div>
+        <div class="ora3 grid-item69">
+            3°ora
+        </div>
+        <div class="ora4 grid-item69">
+            4°ora
+        </div>
+        <div class="ora5 grid-item69">
+            5°ora
+        </div>
+        <div class="ora6 grid-item69">
+            6°ora
+        </div>
+        <div class="lunedi grid-item69">
+            Lunedì
+        </div>
+        <div class="martedi grid-item69">
+            Martedì
+        </div>
+        <div class="mercoledi grid-item69">
+            Mercoledì
+        </div>
+        <div class="giovedi grid-item69">
+            Giovedì
+        </div>
+        <div class="venerdi grid-item69">
+            Venerdì
+        </div>
+        <div class="inglese grid-item69">
+            inglese
+        </div>
+        <div class="scienze grid-item69">
+            scienze
+        </div>
+        <div class="fisica grid-item69">
+            fisica
+        </div>
+        <div class="ed-fisica grid-item69">
+            Ed.fisica
+        </div>
+        <div class="filosofia grid-item69">
+            filosofia
+        </div>
+        <div class="filosofia1 grid-item69">
+            filosofia
+        </div>
+        <div class="fisica1 grid-item69">
+            fisica
+        </div>
+        <div class="matematica grid-item69">
+            matematica
+        </div>
+        <div class="arte grid-item69">
+            arte
+        </div>
+        <div class="italiano grid-item69">
+            italiano
+        </div>
+        <div class="italiano1 grid-item69">
+            italiano
+        </div>
+        <div class="storia grid-item69">
+            storia
+        </div>
+        <div class="arte1 grid-item69">
+            arte
+        </div>
+        <div class="ed-fisica1 grid-item69">
+            Ed.fisica
+        </div>
+        <div class="latino grid-item69">
+            latino
+        </div>
+        <div class="religione grid-item69">
+            religione
+        </div>
+        <div class="storia1 grid-item69">
+            storia
+        </div>
+        <div class="matematica1 grid-item69">
+            matematica
+        </div>
+        <div class="inglese1 grid-item69">
+            inglese
+        </div>
+        <div class="matematica2 grid-item69">
+            matematica
+        </div>
+        <div class="italiano2 grid-item69">
+            italiano
+        </div>
+        <div class="scienze1 grid-item69">
+            scienze
+        </div>
+    </div>
+</body>
+</html>

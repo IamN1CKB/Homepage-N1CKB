@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina dinamica</title>
+    <style>
+    footer {
+        position: absolute;
+        left: 10px;
+        right: 10px;
+        top: 1000px;
+        background-color: antiquewhite;
+        padding: 5px;
+        border: solid 1px red;
+        text-align: center;
+    }
+    </style>
+</head>
+<body>
+    <header id="parent-titolo">
+
+    </header>
+    <p id="console">output iniziale</p>
+    <p id="console1">valore aggiunto con codice HTML</p>
+    <p id="rimuovi">elemento p da rimuovere</p>
+    <button id="bottone-inutile">bottone senza funzioni</button> <span id="span-tag">no attributo onclick</span>
+    <br>
+    <button onclick="diciHello`Nicolaaaa`" id="bottone-dedica">bottone con funzione</button>   
+    <!--il valore del parametro scrivilo sempre con i backtick (se in stringhe), per evitare errori con le " dell'attributo"-->
+    <div id="dedica-parent"></div>
+    <p id="prompt"></p>    <!--usa sempre prompt come id se ci sono dei tag vuoti che devono essere aggiornati dall'output di JavaScript-->
+    <button onclick="diciCiao()" id="bottone-per-dire-ciao">display Ciao</button>
+    <br>
+    <button onclick="cancellaTutto()" id="bottone-gomma">rinnova Pagina</button>
+    <br>
+    <br>
+    <div id="che-tag-e">
+        elemento da verificare il tag
+    </div>
+    <br>
+    <br>
+    <form>
+        <input type="text" name="text" id="input-element">
+        <br>
+        <textarea name="text" id="textarea-element" cols="30" rows="10" placeholder="scrivi il testo qui">Cancella questo testo</textarea>
+    </form>
+    <button onclick="inputValue()">Vedi che hai scritto in input</button>
+    <br>
+    <button onclick="textareaValue()">Vedi che hai scritto in textarea</button>
+    
+    <footer>
+        vedi questi esempi quando hai finito: sono stati fatti per esercitazione
+        <a href="esercitazioni/upvote and downvote feature.html">Nuovo social</a>
+        <a href="esercitazioni/Add to Card Feature.html">Nuovo Amazon</a>
+        <a href="esercitazioni/pizza delivery website.html">Pizza Delivery Website</a>
+        <br>
+
+        <div>
+            dopodichè vedi queste altre spiegazioni: 
+            <a href="appunti in più/alternative a consolelog.html">alternative a console.log</a>
+            <a href="index1.html">prossima lezione</a>
+        </div>
+    </footer>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

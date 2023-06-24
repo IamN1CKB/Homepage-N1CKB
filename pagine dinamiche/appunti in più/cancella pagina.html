@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cancella pagina</title>
+</head>
+<body>
+    <h1>titolo da cancellare: primo elemento da cancellare</h1>
+    <p>elementi in mezzo</p>
+    <p>a</p>
+    <div>cosa a caso da eliminare</div>
+    <p>elementi in mezzo</p>
+    <p>a</p>
+    <div>cosa a caso da eliminare</div>
+    <p>elementi in mezzo</p>
+    <p>a</p>
+    <div>cosa a caso da eliminare</div>
+    <p>elementi in mezzo</p>
+    <p>a</p>
+    <div>cosa a caso da eliminare</div>
+    <p>elementi in mezzo</p>
+    <p>a</p>
+    <div>cosa a caso da eliminare</div>
+    <p>elementi in mezzo</p>
+    <p>a</p>
+    <div>cosa a caso da eliminare</div>
+    <p id="non-cancellare">elemento da non cancellare, da qui in poi (con id="non-cancellare")</p>
+    <button onclick="cancellaElementiDallaPaginaPezzotto()">Cancella elementi pezzotto</button>
+    <p>
+        Per cancellare gli elementi tramite il bottone sopra bisogna cliccare più volte perchè il ciclo for si interrompe.
+        <br>
+        Se vuoi capire perchè vedi codice JavaScript.
+    </p>
+    <button onclick="cancellaElementiDallaPaginaMedio()">cancella Elementi Medio</button>
+    <button onclick="creaElementi()">Crea elementi</button>
+    
+    <script>
+        function cancellaElementiDallaPaginaPezzotto() {
+            for (let i = 0; i < (document.body.children.length - 8); i++) { 
+            console.log(document.body.children[0]);
+            document.body.removeChild(document.body.children[0]);
+            }
+        }
+        /*
+        La funzione cancellaElementiDallaPagina() rimuove tutti gli elementi figli del tag <body> della pagina HTML, eccetto gli ultimi 8 elementi.
+        La funzione utilizza un ciclo for per iterare su tutti gli elementi della collezione document.body.children tranne gli ultimi 8.
+        Per ogni elemento, utilizza il metodo removeChild() per rimuovere l'elemento dal DOM.
+        
+        Però ci sono alcuni problemi con questa funzione:
+            Utilizzando removeChild() all'interno del ciclo for, si sta modificando la lunghezza della collezione mentre si sta iterando su di essa,
+            questo causa problemi di indicizzazione e può causare un comportamento imprevisto.
+            Utilizzando console.log(document.body.children[0]); all'interno del ciclo for, si sta stampando gli elementi prima di rimuoverli,
+            quindi gli elementi non sono più presenti nel DOM quando si vuole verificare il loro valore.
+        Per risolvere questi problemi, si può utilizzare un ciclo while invece di for e utilizzare la proprietà childElementCount
+        (children.length ==== childElementCount) per verificare quanti elementi sono presenti nel body.
+        In questo modo si può evitare di utilizzare l'indice i, e non si modifica la lunghezza della collezione mentre si sta iterando su di essa.
+         */
+        function cancellaElementiDallaPaginaMedio() {
+            while (document.body.children.length > 9) { 
+                //facciamo il paragone con 8, perchè devono rimanere gli ultimi 8 tag ossia:
+                    //6 sono gli elementi creati dal live server che non possono essere eliminati,
+                        //quando metti su un server reale non ci sono questi elementi quindi non togliere questi 6 da lenght
+                    //1 è il nostro elemento script situato alla fine della pagina html (prima della chiusura di body)
+                    //1 è il bottone che stiamo usando e che vogliamo usare ancora
+                    //1 è il bottone che poi dopo vedremo a cosa serve (Crea elementi)
+                let element = document.body.children[0];  //eliminiamo il primo elemento
+                console.log(element);   //in questo modo vediamo nella console cosa viene eliminato
+                document.body.removeChild(element);
+            }
+        }//ricarica la pagina per continuare e non cancellare nulla fino al prossimo bottone
+        //se però ci sono elementi dopo il bottone che non vuoi cancellare dovresti saperne il numero e aggiungerlo agli 8 della condizione while.
+        //questo è molto scomodo, perchè si dovrebbe modificare il numero ogni volta che modifichiamo il file html
+        //infatti se tramite il bottone crea elementi si aggiungono degli elementi, il bottone stesso viene eliminato
+
+        function creaElementi() {
+            const ELEMENTO_FASTIDIOSO = document.createElement("p");
+            document.body.appendChild(ELEMENTO_FASTIDIOSO);
+            ELEMENTO_FASTIDIOSO.innerHTML = `elemento in più per dar fastidio a bottone: cancella Elementi Medio
+            <br>
+            <button onclick="cancellaElementiDallaPaginaOttimo()">Cancella Elementi Buono</button>`;  
+            //ho fatto un casino, si lo so, ma stanno cose che ancora devo studiare come l'aggiunta dell'attributo onclick
+        }
+        //per questo motivo è meglio raggruppare in un gruppo div gli elementi che vorresti eliminare con una semplice funzione
+        //che elimina solo questo gruppo div.
+        //però proviamo a capire come cancellare gli elementi da un punto ad un altro punto
+
+        //devi contare e sapere da che punto a che punto cancellare gli elementi
+        function cancellaElementiDallaPaginaOttimo() {
+            const ELEMENTO_DA_NON_CANCELLARE = document.querySelector("#non-cancellare");
+            //modifica l'id dell'elemento da cui non vuoi cancellare nulla
+            console.clear();
+            console.log(`per ancora maggiore pulizia ho cancellato anche gli elementi della console`);
+
+            console.log(`gli elementi cancellati sono:`)
+            while (document.body.children.length > 0) {
+                if (ELEMENTO_DA_NON_CANCELLARE === document.body.children[0]) {
+                    console.log("sono arrivato all'ultimo elemento")
+                    break;     //questa instruzione stoppa il while loop
+                }
+                else if (document.body.children[0].matches("script")) {
+                    console.log(`non ho cancellato il tag script`);
+                    break;
+                }
+                console.log(document.body.children[0]);
+                document.body.removeChild(document.body.children[0]);
+            }
+            //dopo l'esecuzione di break, verrebbe eseguito il codice qui
+            console.log(`cosa a caso, dopo aver finito di eseguire il while loop`);
+        }
+        //quindi questa è la funzione definitiva per cancellare gli elementi fino a un certo punto
+    </script>
+</body>
+</html>
