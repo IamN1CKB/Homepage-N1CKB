@@ -1,0 +1,191 @@
+body {
+    background-color: antiquewhite;
+}
+#container-iniziale {
+    display: flex;
+    border: 2px black solid;
+    margin: 20px;
+    background-color: #ff00006c;
+}
+.link-ai-paragrafi {
+    flex-basis: 20%;
+    flex-grow: 1;
+    border-left: 1px black solid;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.codici {
+    width: 200px;
+    border-radius: 10px;
+}
+#logo {
+    flex-basis: 20%;
+    flex-grow: 1;
+    font-family: 'Courier New', Courier, monospace;
+}
+#sottobody {
+    margin: 20px;
+}
+figure {
+    text-align: center;
+}
+#codice-QR {
+    float: right;
+    margin: 25px;
+}
+#introduzione {
+    margin: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.aaa {
+    float: right;
+    margin: 10px;
+    width: 150px;
+}
+#container-versi-audio {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+#audiolibro {
+    display: flex;
+    flex-direction: column;
+    margin: 4px;
+    border: 1px black;
+    justify-content: flex-start;
+}
+.info-audio {
+    text-align: center;
+}
+#spiegazione {
+    display: flex;
+    flex-direction: column;
+}
+.versi {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    margin: 4px;
+    justify-content: space-around;
+    border: 1px black;
+    padding: 0%;
+}
+.numero-versi {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 4px;
+    border: 1px black;
+}
+.container-versi-numeri {
+    display: flex;
+    flex-direction: row;
+    border: 1px red;
+}
+p {
+    border: 1px green;
+}
+.audio-spiegazione {
+    border: 1px solid black;
+    border-radius: 30px;
+}
+.venticinque-57 {
+    position: relative;
+    top: 12.5%;
+}
+.cinquantotto-75 {
+    position: relative;
+    top: 32%;
+}
+.settantasei-78 {
+    position: relative;
+    top: 41.5%;
+}
+.settantanove-84 {
+    position: relative;
+    top: 41.9%;
+}
+.ottantacinque-87 {
+    position: relative;
+    top: 42.5%;
+}
+.ottantotto-90 {
+   position: relative;
+   top: 42.6%;
+}
+.novantuno-96 {
+    position: relative;
+    top: 42.8%;
+}
+.novantasette-117 {
+    position: relative;
+    top: 44%;
+}
+.centodiciotto-126 {
+    position: relative;
+    top: 55.5%;
+}
+.centoventisette-151 {
+    position: relative;
+    top: 59.5%;
+}
+footer {
+    display: flex;
+    flex-direction: column;
+    border: 2px blue;
+    background-color: blue;
+}
+#persone-elenco { /*container*/
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 30px;
+}
+#svolto-da {
+    flex-grow:1;
+    margin: 3px;
+    align-items: center;
+    color: white;
+}
+.persona {
+    flex-grow:1;
+	margin: 3px;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+#informazioni-finali {
+    margin: 10px;
+    color: white;
+}
+.container-versi {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+    border-top: 1px solid black;
+}
+.f1-24 {
+    flex-basis: 30%;
+    flex-grow: 1;
+    font-size: 130%;
+    margin: 20px 20px 20px 100px;
+}
+.spigazione {
+    flex-grow: 1;
+    margin: 20px;
+}
+.container-versi-numeri-1 {
+    flex-grow: 1;
+}
+#Dante-nero{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    display: block;
+}
+figure {
+    border: 1px black solid;
+    border-radius: 25px;
+}
