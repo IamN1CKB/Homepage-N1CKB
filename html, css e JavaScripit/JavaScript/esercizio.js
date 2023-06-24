@@ -24,15 +24,15 @@ siccome si devono rsgistrare le informazioni nel liguaggio, lo JavaScript (come 
 per creare variabili noi usiamo le parole chiavi "let" e "const" (c'è anche un terzo modo, con "var", che vedremo molto più in là) */
 // let crea delle variabili che possono essere aggiornate succesivamente, con l'operator assign "="
 //la forma per creare variabili è: let NomeDellaVaribile= valore dell variabile
-let VaraibileModificabile = "valore della variabile non costante (let)";
-console.log(VaraibileModificabile);      
+let VariabileModificabile = "valore della variabile non costante (let)";
+console.log(VariabileModificabile);      
 //questa instruzione ci permette di stampare l'output del contenuto tra parentesi in un area chiamata console 
 //(simile alla funzione print di python)
 /*per poter visualizzare l'output abbiamo bisogno di collegarci a un file html (capiremo meglio queste cose in futuro)
 ora vedi il file della stessa directory "console.html"*/
 
-VaraibileModificabile = "cambio valore della variabile (let)";   //per aggiornare una variabile creata con let si deve solo riscrivere il nome della variabile dando un nuovo valore (senza usare nessuna parola chiave)
-console.log(VaraibileModificabile);
+VariabileModificabile = "cambio valore della variabile (let)";   //per aggiornare una variabile creata con let si deve solo riscrivere il nome della variabile dando un nuovo valore (senza usare nessuna parola chiave)
+console.log(VariabileModificabile);
 //invece le variabili con la parola chiave const sono delle variabili costanti che non varieranno neanche sccessivamente.
 //per scrivere queste variabili la forma è la stessa di let: const NOME_DELLA_VARIABILE= valore della varibile
 const VARIBILE_COSTANTE = "valore della variabile costante (const)";
@@ -339,7 +339,7 @@ variabile *= 2;         //moltiplica 2 al valore precedente della variabile, qui
 console.log(variabile);
 variabile /= 10;        //divide per 10 il valore precedente della variabile, quindi 10/10 = 1
 console.log(variabile)   
-  
+
 //l'operatore ++ non ha bisogno di nessun numero dopo averlo scritto, infatti aggiunge 1 al valore della varibile
 //è l'equivalente di scrivere += 1
 variabile = 5;
