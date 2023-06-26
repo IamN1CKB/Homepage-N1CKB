@@ -540,6 +540,17 @@ justify-content: space-around;
     margin: 10px;
     text-align: center;
 }
+/*per gestire come si dispongono i flex-item lungo il cross axis con gli elementi diposte in più righe*/
+.align-content {   /*STUDIA MEGLIO*/
+    display: flex;
+    border: solid 2px red;
+    width: 10%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content:center
+}
+
+
 
 /*ora vediamo le PROPRIETÀ DEI FLEX ITEMS*/
 /*per impostare la lunghezza iniziale di un flex item lungo il main axis si usa la proprietà flex-basis*/
