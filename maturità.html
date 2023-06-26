@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage Maturità</title>
+    <style>
+        :root {
+            --border: 3px solid aquamarine;
+        }
+        body {
+            background-color: #222;
+            color: aquamarine;
+            font-size: larger;
+        }
+        #sottobody {
+            display: flex;
+            justify-content: center;
+        }
+        #main {
+            display: flex;
+            gap: 30px;
+        }
+        .item {
+            width: 100%;
+            height: 30px;
+            position: relative;
+            cursor: pointer;
+        }
+        .item::before{
+            content: '';
+            position: absolute;
+            width: 1px;
+            height: 80%;
+            border-radius: 20%;
+        }
+        .item:hover::before{
+            animation: animateIn 400ms ease-in-out forwards;
+        }
+        .item::before{
+            animation: animateOut 400ms ease-in-out forwards;
+        }
+        @keyframes animateIn {
+            0% {
+                border-radius: var(--border);
+                border-left: var(--border);
+                border-right: var(--border);
+                width: 0%;
+                left: 50%;
+            }
+            100% {
+                border-radius: var(--border);
+                border-left: var(--border);
+                border-right: var(--border);
+                width: 130%;
+                left: -20%;
+            }
+        }
+        @keyframes animateOun {
+            0% {
+                border-radius: var(--border);
+                border-left: var(--border);
+                border-right: var(--border);
+                width: 130%;
+                left: -20%;
+            }
+            60% {
+                border-radius: var(--border);
+                border-left: var(--border);
+                border-right: var(--border);
+                width: 0%;
+                left: 50%;
+            }
+            100% {
+                width: 0%;
+                left: 50%;
+            }
+        }
+
+        h1 {
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+            background: linear-gradient(90deg, red 0%, blue 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: hueRotate 5s alternate infinite;
+        }
+        @keyframes hueRotate {
+            0% {
+                filter: hue-rotate(279deg);
+            }
+            50% {
+                filter: hue-rotate(197deg);
+            }
+            100% {
+                filter: hue-rotate(12deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        QUESTA É LA HOMEPAGE PER LA MATURITÁ DI NICOLA BELARDO
+    </h1>
+    <div id="sottobody">
+        <div id="main">
+            <div class="item">Home</div>
+            <div class="item">Home</div>
+            <div class="item">Home</div>
+            <div class="item">Home</div>
+            <div class="item">Home</div>
+        </div>
+
+    </div>
+</body>
+</html>
