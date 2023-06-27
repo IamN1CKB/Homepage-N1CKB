@@ -41,7 +41,7 @@ def eye(x, y):
     t.left(90)
 def big_Circle(size):
     t.speed(20)
-    for i in range(150):
+    for _ in range(150):
         t.forward(size)
         t.right(0.3)
 def line(size):
@@ -49,7 +49,7 @@ def line(size):
     t.forward(51 * size)
 def small_Circle(size):
     t.speed(20)
-    for i in range(210):
+    for _ in range(210):
         t.forward(size)
         t.right(0.786)
 def heart(x, y, size):
@@ -70,6 +70,6 @@ def main():
     head(-120, 100, 100)
     heart (250, -80, 1)
     go_to(100, -300)
-    t.write("Gabby sei speciale, non scordarlo mai", move=True)
+    t.write("Booooos, ti voglio tantisssimo all'esame", move=True)
     t.done()
 main()
