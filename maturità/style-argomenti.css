@@ -1,0 +1,19 @@
+h1 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+body {
+    background-color: antiquewhite;
+    color: cornflowerblue;
+    padding: 20px;
+}
+figcaption {
+    font-size: larger;
+    font-weight: bold;
+}
+#Panthalassa {
+    width: 60%;
+}
+#struttura-interna-Terra {
+    width: 60%;
+}

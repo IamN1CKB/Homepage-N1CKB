@@ -78,7 +78,7 @@ per il paddind c'è la proprietà padding (valida per tutti e 4 i lati), e le pr
     font-size: 50px;
     border: solid blueviolet 5px;
 
-    width: 1250px;
+    width: 1000px;
     padding-top: 100px;
     padding-right: 200px;
     padding-bottom: 150px;
@@ -258,6 +258,7 @@ div è il parent element e invece p è il child element*/
     position: relative;
     left: 150px;  /*150px più a sinistra rispetto alla posizione iniziale*/
     top: 50px;
+    width: 50%;
 }
 .peter {
     position: absolute;

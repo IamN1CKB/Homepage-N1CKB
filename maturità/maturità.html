@@ -20,12 +20,17 @@
         #main {
             display: flex;
             gap: 30px;
+            width: 100%;
+            border: solid;
+            position: relative;
+            top: 10px;
         }
         .item {
             width: 100%;
             height: 30px;
             position: relative;
             cursor: pointer;
+            text-align: center;
         }
         .item::before{
             content: '';
@@ -79,7 +84,8 @@
 
         h1 {
             font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
-            background: linear-gradient(90deg, red 0%, blue 100%);
+            background: linear-gradient(90deg, red 0%, white 100%);
+            background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             animation: hueRotate 5s alternate infinite;
@@ -95,19 +101,50 @@
                 filter: hue-rotate(12deg);
             }
         }
+        a {
+            color: aquamarine;
+        }
+        section {
+            text-align: center;
+        }
     </style>
 </head>
 <body>
     <h1>
-        QUESTA É LA HOMEPAGE PER LA MATURITÁ DI NICOLA BELARDO
+        <strong>
+            QUESTA É LA HOMEPAGE PER LA MATURITÁ DI NICOLA BELARDO
+        </strong>
     </h1>
+    <p>
+        <ul>
+            LE VARIE TEMATICHE ESPOSTE ALL'ESAME POSSONO ESSERE: 
+            <li>
+                Rapporto Uomo-Natura
+            </li>
+            <li>
+                Scienza etica e responsabilità
+            </li>
+            <li>
+                Passioni
+            </li>
+            <li>
+                Tempo
+            </li>
+            <li>
+                Donna
+            </li>
+        </ul>
+    </p>
+    <section>
+        Di seguito si possono notare i link a siti esterni utili durante l'esposizione
+    </section>
     <div id="sottobody">
         <div id="main">
-            <div class="item">Home</div>
-            <div class="item">Home</div>
-            <div class="item">Home</div>
-            <div class="item">Home</div>
-            <div class="item">Home</div>
+            <a href="scienze.html" class="item" target="_blank">tettoniche a placche</a>
+            <a href="Les Demoiselles d’Avignon.html" class="item" target="_blank">Les Demoiselles d’Avignon</a>
+            <a href="" class="item" target="_blank">Home</a>
+            <a href="" class="item" target="_blank">Home</a>
+            <a href="https://www.desmos.com/calculator/kh8930mzal" class="item" target="_blank">circuiti rlc</a>
         </div>
 
     </div>
