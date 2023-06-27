@@ -5,20 +5,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tettonica a placche</title>
     <link rel="stylesheet" href="style-argomenti.css">
+    <style>
+        #galleria  {
+            display: flex;
+            height: 20rem;
+            gap: 1rem;
+        }
+        #galleria > div {
+            flex: 1;
+            border-radius: 1rem;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: auto 100%;
+            transition: all .8s cubic-bezier(.25, .4, .45, 1.4);
+        }
+        #galleria > div:hover {
+            flex: 5;
+        }
+        .foto {
+            border: solid;
+        }
+        #foto1 {
+            background-image: url("Panthalassa.jpg");
+        }
+        #foto2 {
+            background-image: url("stuttura\ interna\ della\ terrra.jpg");
+        }
+        #foto3 {
+            background-image: url("terrastruttura.jpg");
+        }
+        #foto4 {
+            background-image: url("Placche-tettoniche.webp");
+        }
+        #foto5 {
+            background-image: url("tettonica-a-placche.png");
+        }
+        figcaption {
+            position: relative;
+            top: 21rem;
+            border: solid;
+        }
+    </style>
 </head>
 <body>
     <h1>
         IN QUESTO SITO MOSTRIAMO DELLE IMMAGINI PER SPIEGARE AL MEGLIO LA TEORIA DELLA TETTONICA A PLACCHE
     </h1>
-    <figure>
-        <img src="Panthalassa.jpg" alt="Panthalassa" id="Panthalassa">
-        <figcaption>
-            La Terra 250 milioni di anni fa secondo la teoria della deriva dei contineni
-        </figcaption>
-    </figure>
-    <figure>
-        <img src="stuttura interna della terrra.jpg" alt="Terra" id="struttura-interna-Terra">
-        <figcaption>s</figcaption>
-    </figure>
+    <div id="galleria">
+        <div id="foto1" class="foto">
+            <figcaption>
+                La Terra 250 milioni di anni fa
+            </figcaption>
+        </div>
+        <div id="foto2" class="foto">
+            <figcaption>
+                I vari strati principali della Terra
+            </figcaption>
+        </div>
+        <div id="foto3" class="foto">
+            <figcaption>
+                Le discontinuità tra gli strati della Terra
+            </figcaption>
+        </div>
+        <div id="foto4" class="foto">
+            <figcaption>
+                Le placche tettoniche
+            </figcaption>
+        </div>
+        <div id="foto5" class="foto">
+            <figcaption>
+                Il movimento convettivo dell'astenosfera
+            </figcaption>
+        </div>
+    </div>
 </body>
 </html>

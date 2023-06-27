@@ -5,15 +5,11 @@ h1 {
 body {
     background-color: antiquewhite;
     color: cornflowerblue;
-    padding: 20px;
+    padding-top: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 figcaption {
-    font-size: larger;
+    font-size: 190%;
     font-weight: bold;
-}
-#Panthalassa {
-    width: 60%;
-}
-#struttura-interna-Terra {
-    width: 60%;
 }
