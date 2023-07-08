@@ -5,7 +5,7 @@
         Regole CSS
     </title>
     <!--per aggiungere stile agli elementi html bisogna creare un tag style nel tag head-->
-    <!--poi si scrive il tag senza ">" o "<", crando delle CSS regole per lo stile, rispettate in tutta la pagina per quei tipi di tag-->
+    <!--poi si scrive il tag senza ">" o "<", creando delle CSS regole per lo stile, rispettate in tutta la pagina per quei tipi di tag-->
     <style>
         h1 {
             font-size: 50px; font-family:Georgia, 'Times New Roman', Times, serif; font-style: italic; color: maroon;
@@ -17,13 +17,13 @@
         body {
             background-color: cornsilk;
         }
-        /* per fare delle note su CSS bisogna aggingere questi simboli => /*...*/ /*(questa è una nota su CSS)*/
+        /* per fare delle note su CSS bisogna aggiungere questi simboli => /*...*/ /*(questa è una nota su CSS)*/
     </style>
     <!--3) terzo modo per usare CSS è tramite un file di stile esterno, collegato al file html-->
     <!--in questo modo si organizzano meglio le CSS rule (regole) in un foglio di stile (style sheet) come un file separato dal file HTML -->
-    <!--poi si collega ad esso tramite il tag link, usato prorpio per fogli di stile-->            
+    <!--poi si collega ad esso tramite il tag link, usato proprio per fogli di stile-->            
     <link rel="stylesheet" type="text/css" href="style-esercizio.css">
-    <!--rel è un attributo che specifica il rapporto tra il documento correnete e quello linkato-->
+    <!--rel è un attributo che specifica il rapporto tra il documento corrente e quello linkato-->
     <!--type invece specifica il tipo di file collegato, se html (text/html) o css (text/css)-->
     <!--altre cose che si possono collegare al file html con il tag link sono le immagini della scheda-->
     <!--nel tag head ci possono essere link ad altri file che servono come fogli di stile o altro-->
@@ -46,10 +46,10 @@
     <!--per modificare lo stile di un elemento html ma non tutti gli elementi con lo stesso tag possiamo differenziarlo col l'attributo class-->
     <!--in questo modo possiamo dargli un etichetta da usare nel foglio css-->
     <!--possiamo contrassegnare anche più elementi con la stessa classe, e con più class-->
-    <p class="antonietta">
+    <p class="Antonietta">
         안녕!
     </p>
-    <!--dare un etichetta che sia univocua per un elemento (non riutilizzabile in altre elementi) possiamo usare l'attributo id-->
+    <!--dare un etichetta che sia univoca per un elemento (non riutilizzabile in altre elementi) possiamo usare l'attributo id-->
     <p id="boh">
         attributo id
     </p>
@@ -81,7 +81,7 @@
     </button>
     <br>
     <img src="https://mimo.app/r/lighthouse.png" class="paesaggio">
-    <img src="https://mimo.app/r/edd.png" class="besticiola" alt="connesione di mmerda">
+    <img src="https://mimo.app/r/edd.png" class="besticiola" alt="connessione di mmerda">
     <img src="https://mimo.app/r/edd.png" class="besticiolaa" alt="popo de merda">
     <img src="https://mimo.app/i/tiger.png" width="300" class="grrr">
     <img src="https://mimo.app/i/cat.png" class="miao">
@@ -99,13 +99,13 @@
     <img src="https://mimo.app/i/b&w-stairs.png" class="zebra">
     <img src="https://i.ibb.co/jRTvfVs/IMG-20220126-135929.jpg" alt="IMG-20220126-135929" class="roccia">
     <br>
-    <h1 class="hulk">
+    <h1 class="Hulk">
         Questo è il mio segreto: Io sono sempre arrabbiato
     </h1>
     <h2 class="vision">
         Cos'è il dolore, <span>se non amore perseverante?</span>
     </h2>
-    <section class="loki">
+    <section class="Loki">
         <p class="LOKI">
             Sono Loki, da Asgard, e sono ricolmo di GLORIOSI PROPOSITI
         </p>
@@ -119,7 +119,7 @@
     <p class="simp">
         simp
     </p>
-    <div class="wanda">
+    <div class="Wanda">
         io so chi sono
     </div>
     <div class="peter">
@@ -377,7 +377,7 @@
     </div>
     <br>
     invece se non ci fosse stata la proprietà "flex-wrap: wrap;" nel container, tutti gli elementi si accorciano in proporzione
-    (secondo la proprietà "flex-shrink", vedi sotto) per risparimare spazio, fino a quando non rientrano tutti in un unica riga,
+    (secondo la proprietà "flex-shrink", vedi sotto) per risparmiare spazio, fino a quando non rientrano tutti in un unica riga,
     come in questo caso
     <div id="containerrrr">
         <div class="flex-itemm">100px</div>
@@ -421,7 +421,7 @@
     poi se vogliamo che alcuni elementi prendano più spazio rimante di altri, si danno valori in modo che lo spazio aggiunto sia in
     proporzione con i valori
     <br>
-    ad esempio se ad un elemento settiamo il valore 1 in flex-grow, invece in un altro elemento settiamo 2; il secondo elemento prendera il 
+    ad esempio se ad un elemento settiamo il valore 1 in flex-grow, invece in un altro elemento settiamo 2; il secondo elemento prenderà il 
     doppio dello spazio del primo elemento
     <div id="containerrr">
         <div id="flex-item-1">flex-grow: 1;</div>
@@ -442,7 +442,7 @@
     siccome non si nota quanto un elemento si accorcia, mostrerò 2 volte il contenitore: quando è allungato, e quando è accorciato.
     <br>
     Useremo anche la proprietà "flex-wrap:wrap" nel primo caso, per far andare a capo gli elementi che superano la lunghezza del
-    container; e la propretà "flex-wrap: nowrap" nel secondo caso, per fare entrare tutti gli elementi in un rigo (in modo che si
+    container; e la proprietà "flex-wrap: nowrap" nel secondo caso, per fare entrare tutti gli elementi in un rigo (in modo che si
     accorcino)
     <br>
     <strong>flex-wrap: wrap; (va al rigo successivo)</strong>       
@@ -460,7 +460,7 @@
         <div class="flex-shrink-0">flex-shrink: 0; valore in cui l'elemento non si accorcia</div>
         <div class="flex-shrink-0">flex-shrink: 0; valore in cui l'elemento non si accorcia</div>
     </div>       
-    in questo caso, con nowrap (non va al rigo successivo) e "flex-shrink: 0;" (non si accorcia), gli elementi escono fuori il conteiner
+    in questo caso, con nowrap (non va al rigo successivo) e "flex-shrink: 0;" (non si accorcia), gli elementi escono fuori il container
     <br>
     <br>
     ora vediamo il caso in cui non va al rigo successivo <strong>(nowrap)</strong> e si accorcia al valore 
@@ -489,7 +489,7 @@
     <br>
     <div id="soluzione-flex-basis">
         per la soluzione di come non far andare su 2 righe solo un elemento figlio, (vedi sopra a flex-basis, o 
-        <a href="#flex-item-particolare">clicca qui</a>), si può usare la proprieta "flex-shrink: 0" per non far accorciare l'elemento,
+        <a href="#flex-item-particolare">clicca qui</a>), si può usare la proprietà "flex-shrink: 0" per non far accorciare l'elemento,
         in modo che non si crei un altro rigo nell'elemento figlio.
     </div>
     <div id="containerrrr">

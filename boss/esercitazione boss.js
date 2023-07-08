@@ -1,14 +1,14 @@
-let etàboss = 15
+let etàBoss = 15
 
-while (etàboss < 20) {
-    console.log("Emanuela ha " + etàboss  + " anni")
+while (etàBoss < 20) {
+    console.log("Emanuela ha " + etàBoss  + " anni")
 
-    if (etàboss < 18) {
+    if (etàBoss < 18) {
         console.log("la boss è ancora minorenne")
-    } else if (etàboss == 18) {
+    } else if (etàBoss == 18) {
         console.log("LA BOSS HA FATTO DICIOTTO ANNI")
     }
-    etàboss++
+    etàBoss++
 }
 
 console.log("boss")
@@ -44,7 +44,7 @@ function haLaPatente(patente, nome) {
     }
     gymbro("salvatore")
 }
-haLaPatente(true, "d'aniello")
+haLaPatente(true, "D'Aniello")
 
 
 function èPariODispari(numero) {

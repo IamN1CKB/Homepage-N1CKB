@@ -1,15 +1,15 @@
-//questo è un file JavaScript, con l'estenzione terminante in .js
-//le frasi che sto scrivendo non verranno interpretate dall'interprete JavaScript, perchè sono commenti
+//questo è un file JavaScript, con l'estensione terminante in .js
+//le frasi che sto scrivendo non verranno interpretate dall'interprete JavaScript, perché sono commenti
 //esistono 2 tipi di commenti nello JavaScript: quello per la riga singola e quello multiriga
 //quello a riga singola si applica con il doppio slash: tutto ciò che sta nella riga a destra del doppio slash è un commento
 //quindi questo ci consente di scrivere i commenti affianco alle istruzioni
-/*i commenti multiriga sono delimitati da uno slesh e un asterisco
+/*i commenti multiriga sono delimitati da uno slash e un asterisco
 infatti questo è un commento multiriga,
 e sono uguali ai commenti nel foglio di stile CSS
 */
 //inoltre ricordiamoci che gli spazi vuoti (ossia quelli del tasto space) non influenzano nulla a meno che non siano all'interno di stringhe (dopo vedremo cosa sono)
-/*invece alla fine di ogni linea di codice è solito usare il ; in modo da facilitare al compilatore la capacità di riconscere che sono 2 linee di codice diverse
-utilizzando il punto e virgola inoltre possiamo scrivere 2 instruzioni nella stessa linea di codice
+/*invece alla fine di ogni linea di codice è solito usare il ; in modo da facilitare al compilatore la capacità di riconoscere che sono 2 linee di codice diverse
+utilizzando il punto e virgola inoltre possiamo scrivere 2 istruzioni nella stessa linea di codice
 il ; non è obbligatorio ma è molto consigliato
 es:
 InstruzioneACaso= Valore a caso; AltraInstruzioneACaso= Altro valore a caso 
@@ -19,29 +19,29 @@ in caso di linee di codice diverse possiamo anche omettere il ;
 
 /*Ora introduciamo meglio lo JavaScript
 è un linguaggio di programmazione che ci permette di creare app dinamiche e siti web dinamici.
-siccome si devono rsgistrare le informazioni nel liguaggio, lo JavaScript (come la maggior parte dei lunguaggi di programmazione), ha le variabili*/
+siccome si devono registrare le informazioni nel linguaggio, lo JavaScript (come la maggior parte dei linguaggi di programmazione), ha le variabili*/
 /*le variabili sono dunque come scatole con un contenuto e con un nome.
 per creare variabili noi usiamo le parole chiavi "let" e "const" (c'è anche un terzo modo, con "var", che vedremo molto più in là) */
-// let crea delle variabili che possono essere aggiornate succesivamente, con l'operator assign "="
+// let crea delle variabili che possono essere aggiornate successivamente, con l'operator assign "="
 //la forma per creare variabili è: let NomeDellaVaribile= valore dell variabile
 let VariabileModificabile = "valore della variabile non costante (let)";
 console.log(VariabileModificabile);      
-//questa instruzione ci permette di stampare l'output del contenuto tra parentesi in un area chiamata console 
+//questa istruzione ci permette di stampare l'output del contenuto tra parentesi in un area chiamata console 
 //(simile alla funzione print di python)
 /*per poter visualizzare l'output abbiamo bisogno di collegarci a un file html (capiremo meglio queste cose in futuro)
 ora vedi il file della stessa directory "console.html"*/
 
 VariabileModificabile = "cambio valore della variabile (let)";   //per aggiornare una variabile creata con let si deve solo riscrivere il nome della variabile dando un nuovo valore (senza usare nessuna parola chiave)
 console.log(VariabileModificabile);
-//invece le variabili con la parola chiave const sono delle variabili costanti che non varieranno neanche sccessivamente.
-//per scrivere queste variabili la forma è la stessa di let: const NOME_DELLA_VARIABILE= valore della varibile
+//invece le variabili con la parola chiave const sono delle variabili costanti che non varieranno neanche successivamente.
+//per scrivere queste variabili la forma è la stessa di let: const NOME_DELLA_VARIABILE= valore della variabile
 const VARIBILE_COSTANTE = "valore della variabile costante (const)";
 console.log(VARIBILE_COSTANTE);
 
 //il nome delle variabili non possono contenere spazi tra di essi, ed è accettato solo il simbolo _ come parte del nome di una variabile
 //il nome delle variabili possono contenere dei numeri, ma non possono stare come primo carattere del nome della variabile
 const var1abile_a_cas0 = "boh";
-//per rendere tutto più leggibile (è una convenzione), possiamo indicare con tutte lettere maiscole i nomi delle variabili constanti (const), invece con lettere minuscole i nomi delle variabili non constanti (let)
+//per rendere tutto più leggibile (è una convenzione), possiamo indicare con tutte lettere maiuscole i nomi delle variabili constanti (const), invece con lettere minuscole i nomi delle variabili non constanti (let)
 /*per le variabili con nomi di più parole usiamo:
 1) il trattino basso per le variabili costanti (es: NOME_DELLA_VARIABILE),
 2) la prima lettera maiuscola di ogni parola per il nome delle variabili non constanti (es: NomeDellaVariabile)*/
@@ -49,7 +49,7 @@ const var1abile_a_cas0 = "boh";
 
 //VALORI DELLE VARIABILI
 //ci sono vari tipi (types) di valori delle variabili:
-const STRINGA = "valore della striga";        //1)le stringhe (strings), sono valori con qualsiasi carattere racchiso tra le virgolette ""
+const STRINGA = "valore della stringa";        //1)le stringhe (strings), sono valori con qualsiasi carattere racchiuso tra le virgolette ""
 const NUMERO = 25;                            //2)i numeri (numbers), che non hanno bisogno di nessun segno che li descriva
                                                 //differentemente da altri linguaggi, lo JavaScript non differenzia vari tipi di numeri come i decimali, gli interi ecc...
                                                 //possiamo scrivere i numeri anche in notazione scientifica
@@ -59,7 +59,7 @@ const NUMERO = 25;                            //2)i numeri (numbers), che non ha
                                                 console.log(numero1);
 const BOOLEAN_TRUE = true;                   //3)i boolean, ossia i valori true e false
                                                 console.log(BOOLEAN_TRUE);
-//i valori true e false sono molto utili per verificare se un qualcosa è attivo o menuo
+//i valori true e false sono molto utili per verificare se un qualcosa è attivo o meno
 // ad esempio:
 console.log("allow update:");
 console.log(true);
@@ -68,10 +68,10 @@ console.log("dispositivo caricato:");
 console.log(false);
 //in certi casi di codice ci è utile sapere l'opposto del valore true o false
 //per questo motivo si utilizza l'operatore "!" davanti al valore del boolean oppure davanti alla variabile con il valore boolean
-const IS_MORNIG=true;
-console.log(!IS_MORNIG);
+const IS_MORNING=true;
+console.log(!IS_MORNING);
 //possiamo anche salvare i valori con l'operatore "!"
-const IS_EVENING=!IS_MORNIG;
+const IS_EVENING=!IS_MORNING;
 console.log(IS_EVENING);
 
 //un altro operatore è l'operatore di identità stretta ossia "==="
@@ -99,16 +99,16 @@ console.log("")    //questa linea di codice serve a fare una riga di spazio nell
 //questi due operatori di identità e non identità stretta (=== e !==) hanno 2 corrispettivi operatori con alcune differenze ossia =! e ==
 //definiamoli meglio:
 //1) operatore di identità stretta ===, verifica non solo che i due valori siano uguali, ma anche che siano del medesimo tipo di dati
-console.log('1' === 1);      //false, perchè hanno lo stesso valore ma hanno tipi di dati diversi (stringa e numero)
-console.log(1 === 1);        //true, perchè hanno sia lo stesso valore che tipo di dati
+console.log('1' === 1);      //false, perché hanno lo stesso valore ma hanno tipi di dati diversi (stringa e numero)
+console.log(1 === 1);        //true, perché hanno sia lo stesso valore che tipo di dati
 
 //2) operatore di uguaglianza ==, verifica che i 2 valori siano uguali, senza considerare il tipo di dati
 console.log("1" == 1);       //true, siccome hanno lo stesso valore (sticazzi del tipo di dati)
 console.log(1 == 1);         //true, siccome hanno lo stesso valore (anche il tipo di variabile è lo stesso, ma non ce ne fotte)
 
 //3) operatore di non identità stretta !==, verifica non solo che i due valori siano diversi, ma anche che siano del diverso tipo di dati. quindi per riportare true deve essere sia il valore che il tipo di dati diverso
-console.log("1" !== 1);      //true, perchè hanno diverso tipo di dati (stringa e numero), (il valore è lo stesso, ma non va bene per il tipo di dati)
-console.log(1 !== 1);        //false, perchè hanno lo stesso valore che tipo di variabile
+console.log("1" !== 1);      //true, perché hanno diverso tipo di dati (stringa e numero), (il valore è lo stesso, ma non va bene per il tipo di dati)
+console.log(1 !== 1);        //false, perché hanno lo stesso valore che tipo di variabile
 
 //4) operatore di disuguaglianza !=, verifica che i 2 valori siano diversi, senza considerare il tipo di variabile
 console.log("1" != 1);       //false, siccome hanno lo stesso valore (anche lo stesso tipo di variabile)
@@ -119,7 +119,7 @@ console.log("")    //questa linea di codice serve a fare una riga di spazio nell
 
 //possiamo anche comparare diversi tipi di valori, ma daranno sempre come risultato diverso
 //infatti se compariamo il valore numerico 1 con la stringa "1", darà come risultato che sono diversi
-console.log("1" === 1);        //darà come valore false perchè sono sono 2 tipi di valori diversi
+console.log("1" === 1);        //darà come valore false perché sono sono 2 tipi di valori diversi
 //se invece compariamo 2 valori con lo stesso tipo (non numerico), possiamo controllare se i valori sono gli stessi
 console.log("apple" === "apple");
 console.log("apple" === "orange");
@@ -128,7 +128,7 @@ console.log("apple" !== "orange");
 //possiamo comparare i valori numerici anche con altri valori numeri tramite gli operatori minore (<) e maggiore (>)
 console.log(2 < 3);
 console.log(2 > 3);
-console.log(2 > 2);   //questo valore sarà false perchè non è compresa l'uguaglianza
+console.log(2 > 2);   //questo valore sarà false perché non è compresa l'uguaglianza
 //per comprendere l'uguaglianza dobbiamo usare gli operatori minore o uguale (<=) oppure maggiore o uguale (>=)
 console.log(2 <= 3);
 console.log(2 >= 3);
@@ -149,7 +149,7 @@ console.log(10 + 10);
 //1) nel caso di un espressione tra 2 valori numerici, il risultato sarà il risultato dell'addizione tra i due numeri
 const ADDIZIONE = 2 + 3.5;
 console.log(ADDIZIONE);
-//2) nel caso di un espressioni tra 2 stringhe, il risultato sarà l'accostamento delle 2 strighe nell'ordine dell'espressione
+//2) nel caso di un espressioni tra 2 stringhe, il risultato sarà l'accostamento delle 2 stringhe nell'ordine dell'espressione
 console.log("io" + "sono" + "NICOLA");      //dato che di solito si mettono in un espressione di stringhe delle parole da unire, dobbiamo inserire gli spazi vuoti tra le parole
 console.log("io " + "sono " + "NICOLA");
 //3) nel caso di un espressione tra una stringa e un valore numerico, il valore numerico si converte automaticamente in stringa, quindi il risultato sarà l'accostamento tra i 2
@@ -174,7 +174,7 @@ console.log(true - 2);             //1 - 2 = -1
 console.log(2*3 - 5/4 + false);    //per ordinare meglio le espressioni possiamo inserire le parentesi
 //inoltre c'è anche l'operatore della potenza **
 console.log(2**3);      // 2 alla 3 = 8
-//se usiamo questi operatori matematici (escluso +) con valori di stringhe, o altry types che vedremo in futuro che non sono solo numeri e boolean, allora il risultato sarà NaN (not a number)
+//se usiamo questi operatori matematici (escluso +) con valori di stringhe, o altri types che vedremo in futuro che non sono solo numeri e boolean, allora il risultato sarà NaN (not a number)
 console.log("stringa" / true);
 console.log("")    //questa linea di codice serve a fare una riga di spazio nella console (inutile in un vero file e non un manuale)
 
@@ -196,8 +196,8 @@ console.log("il dispositivo può essere scollegato? " + ScollegoDispositivo);
 let costi = 50;
 let PrezzoDiVendita = 60;
 const PROFITTI = PrezzoDiVendita - costi;
-const RISULTAT1 = (costi < PrezzoDiVendita) && (PROFITTI > 0);
-console.log("profitti fatti? "+ RISULTAT1);
+const RISULTATI = (costi < PrezzoDiVendita) && (PROFITTI > 0);
+console.log("profitti fatti? "+ RISULTATI);
 //ultimo esempio di and operator
 let età = 19;
 let ScuolaGuidaFatta = false;
@@ -210,7 +210,7 @@ console.log("puoi guidare: " + PATENTE);
 let AttrazioneFisica = true;
 let AttrazioneCaratteriale = false;
 const AMORE = AttrazioneCaratteriale || AttrazioneFisica;     //un valore è true e l'altro è false => valore true
-console.log("sei attratto da gertrude? " + AMORE);
+console.log("sei attratto da Gertrude? " + AMORE);
 //esempio di !:
 let doped = true;
 let testosterone = true;
@@ -233,12 +233,12 @@ if (true) {        //il codice dell'if statement si inserisce dentro le parentes
     console.log("Hello, World!");
 }
 if (false) {
-    console.log("codice non esegito");   //questo codice non viene eseguito perchè la condizione dell'if statement è false
+    console.log("codice non eseguito");   //questo codice non viene eseguito perché la condizione dell'if statement è false
 }
-//per velocità di lettura possiamo scrivere tutto in una sola linea di codice, se il codice dell'if statement è di una sola istruzione, altimenti mandiamo a capo per maggiore leggibilità
+//per velocità di lettura possiamo scrivere tutto in una sola linea di codice, se il codice dell'if statement è di una sola istruzione, altrimenti mandiamo a capo per maggiore leggibilità
 if (true) console.log("if statement a una sola istruzione"); //se mettiamo tutto in una sola riga le parentesi graffe non sono necessarie
 
-//il code block può avere infinite linee di codice e instruzioni
+//il code block può avere infinite linee di codice e istruzioni
 //come condizioni possiamo usare anche le variabili che hanno come valore, i booleans
 const condition = true;
 if (condition) {
@@ -258,14 +258,14 @@ const RISPOSTA_GIUSTA = risposta === "Picasso"
 if (!RISPOSTA_GIUSTA) {
     console.log("la risposta " + risposta + " è sbagliata");
 }
-//ricodiamo che possiamo usare qualsiasi operatore (< > >= <= || && !) per creare condizioni
+//ricordiamo che possiamo usare qualsiasi operatore (< > >= <= || && !) per creare condizioni
 
 //ora introduciamo un supporto per l'if statement: else (altrimenti)
 //else fa in modo di eseguire un altro code block nel caso in cui la condizione dell'if statement sia false
 età = 17;
 if (età >= 18) {
     console.log("sei maggiorenne");
-} else {                              //per una maggiore leggibilità lo poniamo subito dopo la chisura del code block dell'if statement
+} else {                              //per una maggiore leggibilità lo poniamo subito dopo la chiusura del code block dell'if statement
     console.log("sei minorenne");
 }
 //altri esempi
@@ -279,7 +279,7 @@ if ((MacchinaDisponibile && SoldiDisponibili >= CostoMacchina) || regalo) {
     console.log("non compriamo la macchina");
 }
 
-//altro supporto per l'if statement è l'else if statement, che agginge una condizione opzionale all'if statement
+//altro supporto per l'if statement è l'else if statement, che aggiunge una condizione opzionale all'if statement
 let hour = 19;
 if (hour <= 12 && hour > 6) {
     console.log("buongiorno");
@@ -292,11 +292,11 @@ if (hour <= 12 && hour > 6) {
 } else {                     //se l'if statement e l'else if statement hanno la condizione false, allora viene eseguito l'else statement
     console.log("buonanotte");
 }
-//possiamo aggiugere infiniti numeri di else if in un if statement
+//possiamo aggiungere infiniti numeri di else if in un if statement
 /*possiamo scrivere il codice come vogliamo
 infatti possiamo mettere gli else if subito dopo la chiusura del codice precedente
 oppure possiamo scrivere gli else o else if alla riga successiva alla chiusura del code block
-io preferisco mettere gli else statement alla riga successiva alla chiusra del code block
+io preferisco mettere gli else statement alla riga successiva alla chiusura del code block
 inoltre ricorda di non dover usare nessun ; dopo la chiusura del code block
 */
 
@@ -311,7 +311,7 @@ while (true) {               //in queste linee di codice c'è un infite loop, ch
 //per far si che la condizione non sia più true in un certo momento, dobbiamo fare in modo di modificarla nel code block del while loop
 let condizioneWhileLoop = true;
 while (condizioneWhileLoop) {
-    console.log("while loop esegito solo una volta");
+    console.log("while loop eseguito solo una volta");
     condizioneWhileLoop = false;
 }
 //per far eseguire un tot numero di volte un while loop dobbiamo modificare con precisione la condizione
@@ -557,8 +557,9 @@ function displayNomeCognome(nome, cognome, annoDiNascita) {
 }
 const annoNicola = 2005;
 displayNomeCognome("Nicola", "Belardo", annoNicola);
+displayNomeCognome("Enza", "Belardo", 2004)
 
-//RETURNIG VALUES
+//RETURNING VALUES
 //le funzioni possono riportare anche dei valori grazie alla parola chiave return
 //infatti inserendo questo nel code block, con un valore vicino (che sia una variabile, un valore di una variabile, un espressone o una comparazione)
 function getAffermazioneLampadinaAccesa(lampadina) {

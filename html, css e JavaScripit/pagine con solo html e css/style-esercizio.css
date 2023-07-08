@@ -2,10 +2,10 @@ time {
     color: yellow;
 }
 
-/*per poter modiciare i tag contraddistinti dall'attributo class (class selector), dobbiamo scivere . e il valore inserito nell'attribuuto class*/
-/*in questo caso ho modificato il tag p, in cui c'è scitto 안녕!*/
-/*possiamo agginngere lo stesso valore class a più tag in mod da modificare più tag diversi tra loro*/
-.antonietta {
+/*per poter modificare i tag contraddistinti dall'attributo class (class selector), dobbiamo scrivere . e il valore inserito nell'attributo class*/
+/*in questo caso ho modificato il tag p, in cui c'è scritto 안녕!*/
+/*possiamo aggiungere lo stesso valore class a più tag in mod da modificare più tag diversi tra loro*/
+.Antonietta {
     color: blue;
 }
 #boh {
@@ -30,7 +30,7 @@ time {
 img {
     border:solid 10px red;
 }
-/*al posto di solid si può anche scrivere dashed (trattegiato) per far vedere il bordo tratteggiato*/
+/*al posto di solid si può anche scrivere dashed (tratteggiato) per far vedere il bordo tratteggiato*/
 
 /*invece per poter squadrare gli angoli di un elemento si aggiunge la proprietà border-radius con il valore in px o altre misure*/
 figcaption {
@@ -169,16 +169,16 @@ contrast (contrastro), che indica il contrasto tra parti chiare e parti scure, d
 }
 /*non solo la prorpietà filter supporta le funzioni ma molte altre, come background (sfondo)*/
 /*ricordiama la funzione linear-gradient, che permette di cambiare gradualmente colore dello sfondo da una parte all'altra*/
-.hulk {
+.Hulk {
     color: greenyellow;
     text-align: center;
     font-size: 20px;
     width: 600px;
     border: solid 1px gray;
     padding: 30px;
-    background: linear-gradient(red, black); /*per aggiuhngere i colori basta scriverli separati da una virgola*/
+    background: linear-gradient(red, black); /*per aggiungere i colori basta scriverli separati da una virgola*/
 }
-/*se vuoi cambiare la direzione del cambiamento di colore si può aggingere un valore in deg, per ruotare la direzione in senzo orario, o anti-orario col segno -*/
+/*se vuoi cambiare la direzione del cambiamento di colore si può aggiungere un valore in deg, per ruotare la direzione in senso orario, o anti-orario col segno -*/
 .vision {
     font-family: cursive;
     text-align: center;
@@ -188,7 +188,7 @@ contrast (contrastro), che indica il contrasto tra parti chiare e parti scure, d
     padding: 25px;
     background: linear-gradient(70deg, blue, white, green);
 }
-/*per modicare con CSS una sola parte di una tag, che si deve contraddistinguere solo per quell'aspetto, si usa il tag span, che non modifica la pagina web senza CSS rule*/
+/*per modificare con CSS una sola parte di una tag, che si deve contraddistinguere solo per quell'aspetto, si usa il tag span, che non modifica la pagina web senza CSS rule*/
 span {
     font-family: monospace;
 }
@@ -200,11 +200,11 @@ span {
 </div>
 div è il parent element e invece p è il child element*/
 /*nell'inserire stile in una pagina quando diamo stile a un parent element può influenzare i suoi child element*/
-/*infatti ci sono 2 tipi di proprietà: ereditabili e non ereditabili (eridità=inheritence; ereditato=inherited)
+/*infatti ci sono 2 tipi di proprietà: ereditabili e non ereditabili (eredità=inheritance; ereditato=inherited)
 1) le proprietà ereditabili influenzano le child element, come color, font-size, font-family, 
 2) le proprietà non ereditabili restano al padre, come border, padding e margin. queste proprietà non sono ereditabili*/
 
-/*i colori nelle proprietà possono essere visalizzate come parole ma anche come valore esadecimale dei colori (inzia sempre con # e può includere lettere o numeri)*/
+/*i colori nelle proprietà possono essere visualizzate come parole ma anche come valore esadecimale dei colori (inizia sempre con # e può includere lettere o numeri)*/
 .vision {
     color: #000; /*ogni numero corrisponde a un valore, ad esempio #000 corrisponde al nero*/
 }
@@ -212,7 +212,7 @@ div è il parent element e invece p è il child element*/
 
 /*le dimensioni degli elementi possono essere misurati in percentuale, selezionando la percentuale di grandezza del suo parent element*/
 /*in questo modo si può creare un sito con stile simile sia su pc che su mobile*/
-.loki {  /*parent element*/
+.Loki {  /*parent element*/
     font-size: 20px;
     font-family: fantasy;
     width: 1000px;
@@ -221,31 +221,31 @@ div è il parent element e invece p è il child element*/
 .LOKI {  /*child element*/
     width: 50%;   /*50% del parent element, ossia il 50% di 1000px= 500px*/
 }
-/*per dare lo stesso stile a più elementi insieme, si possono usare i grouping selector, mettendo più tag o class selctor insieme, basta che siano separati da una ,*/
-.loki, .vision {
+/*per dare lo stesso stile a più elementi insieme, si possono usare i grouping selector, mettendo più tag o class selector insieme, basta che siano separati da una ,*/
+.Loki, .vision {
     color: black;
 }
 
-/*display è una prorpietà che indica se gli elementi appaiono sullo stesso rigo*/
+/*display è una proprietà che indica se gli elementi appaiono sullo stesso rigo*/
 /*i valori di display possono essere: 
 1)inline, ossia sullo stesso rigo (preimpostato per alcuni elementi come a, em, strong). negli elementi inline
   non funzionano le proprietà height e width
 2)block, ossia su righe differenti, (preimpostato per alcuni elementi come p, h1, div, section) in elementi 
-  che prendono l'intera larghezza del parent element, a meno che non siano modifiati con la proprietà height e width
+  che prendono l'intera larghezza del parent element, a meno che non siano modificati con la proprietà height e width
 3)inline-block, ossia elementi sulla stessa riga ma con le grandezze modificabili (preimpostato in img e button)*/
 .pensaci {
     display: inline-block;
     height: 80px;
 }
-/*c'è un altro valore di display che consente di adattare le dimensoni di un elemento allo spazio del browser, che può cambiare */
+/*c'è un altro valore di display che consente di adattare le dimensioni di un elemento allo spazio del browser, che può cambiare */
 
 /*per adattare un testo ad un immagine, bisogna inserire il testo dopo l'immagine nel codice html*/
-/*poi impostare la proprietà float (gallegiante: in un il testo galleggia nell'immmagine), col valore right o left a seconda di dove si vuole posizionare l'immagine*/
+/*poi impostare la proprietà float (galleggiante: in un il testo galleggia nell'immagine), col valore right o left a seconda di dove si vuole posizionare l'immagine*/
 .best {
     width: 30%;
     float: right;
 }
-/*se si vuole che un testo non si adatti alla foto si deve aggiungere la prorpietà clear al testo, con il valore right o left (che sarebbe la parte da tenere pulita, a seconda se l'immagine è a destra o a sinistra)*/
+/*se si vuole che un testo non si adatti alla foto si deve aggiungere la proprietà clear al testo, con il valore right o left (che sarebbe la parte da tenere pulita, a seconda se l'immagine è a destra o a sinistra)*/
 .simp {
     font-family: cursive;
     clear: right;
@@ -254,7 +254,7 @@ div è il parent element e invece p è il child element*/
 /*nel caso di relative tu sposti gli elementi basandoti sulla loro posizione nel normal flow (normale flusso della pagina)*/
 /*nel caso di absolute invece si spostano gli elementi in base alla pagina*/
 /*poi usare le proprietà top, bottom, right e left per impostare quanto a [proprietà] mettere l'elemento rispetto alla posizione originale nel caso di reletive, o rispetto alla pagina nel caso di absolute*/
-.wanda {
+.Wanda {
     position: relative;
     left: 150px;  /*150px più a sinistra rispetto alla posizione iniziale*/
     top: 50px;
@@ -264,7 +264,7 @@ div è il parent element e invece p è il child element*/
     position: absolute;
     right: 5px;   /*5px dal lato destro della pagina*/
 }
-.peter, .wanda {
+.peter, .Wanda {
     font-family: monospace;
 }
 .hulkk {
