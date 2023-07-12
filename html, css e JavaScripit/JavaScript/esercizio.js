@@ -12,7 +12,7 @@ e sono uguali ai commenti nel foglio di stile CSS
 utilizzando il punto e virgola inoltre possiamo scrivere 2 istruzioni nella stessa linea di codice
 il ; non è obbligatorio ma è molto consigliato
 es:
-InstruzioneACaso= Valore a caso; AltraInstruzioneACaso= Altro valore a caso 
+IstruzioneACaso= Valore a caso; AltraIstruzioneACaso= Altro valore a caso 
 in caso di linee di codice diverse possiamo anche omettere il ;
 */
 
@@ -302,9 +302,9 @@ inoltre ricorda di non dover usare nessun ; dopo la chiusura del code block
 
 //altra funzionalità dello JavaScript sono i WHILE LOOP, che ti consentono di eseguire un pezzo di codice svariate volte
 //se la condizione del while loop è vera, essa sarà eseguita, fino a quando quella condizione sarà falsa
-//se la condizione è sempre vera, vuol dire che il codice verrà eseguito all'infinito. In questo caso abbiamo un infite loop
+//se la condizione è sempre vera, vuol dire che il codice verrà eseguito all'infinito. In questo caso abbiamo un infinite loop
 /*
-while (true) {               //in queste linee di codice c'è un infite loop, che viene eseguito fin quando il programma non va in crash
+while (true) {               //in queste linee di codice c'è un infinite loop, che viene eseguito fin quando il programma non va in crash
     console.log(1)           //per provare togli i simboli di apertura e di chiusura dei commenti
 }
 */
@@ -318,7 +318,7 @@ while (condizioneWhileLoop) {
 //il modo per farlo è tramite a counter variable (ossia una variabile numerica)
 let counter = 1;
 while (counter <= 5) {
-    console.log("questa è la " + counter + "° volta che viene esegito questo pezzo di codice");
+    console.log("questa è la " + counter + "° volta che viene eseguito questo pezzo di codice");
     counter = counter + 1;
 }
 //per modificare la counter variable possiamo usare dei nuovi operatori (+= -= ++ --)
@@ -340,7 +340,7 @@ console.log(variabile);
 variabile /= 10;        //divide per 10 il valore precedente della variabile, quindi 10/10 = 1
 console.log(variabile)   
 
-//l'operatore ++ non ha bisogno di nessun numero dopo averlo scritto, infatti aggiunge 1 al valore della varibile
+//l'operatore ++ non ha bisogno di nessun numero dopo averlo scritto, infatti aggiunge 1 al valore della variabile
 //è l'equivalente di scrivere += 1
 variabile = 5;
 console.log(variabile);
@@ -439,11 +439,11 @@ for (let i = 0; i < 4; i++) {
 //gli array sono dunque delle liste di valori, contenute in una sola variabile
 const ARRAY = ["valore1", "valore2", "valore3"];   //gli array sono racchiusi in parentesi quadre, e possono contenere infiniti valori e di vario tipo
 console.log(ARRAY);
-const ARRAYY = [true, 2, false, "stringa", 2.4];
-console.log(ARRAYY);
+const ARRAY11 = [true, 2, false, "stringa", 2.4];
+console.log(ARRAY11);
 const OPZIONI = [false, true];
 console.log(OPZIONI);
-//i valori di array si c,hiamano elements
+//i valori di array si chiamano elements
 //possiamo creare anche un array vuoto, per poi modificarlo successivamente
 const ARRAY_EMPTY = [];
 console.log(ARRAY_EMPTY);
@@ -462,23 +462,23 @@ console.log(TEMPERATURE);
 TEMPERATURE[3] = 25;
 console.log(TEMPERATURE);
 
-//inoltre ci sono anche altre instruzioni che possono modificare gli array
-//le instruzioni per modificare gli array sono     .push()    .pop()            (ora le presentiamo e facciamo vedere come funziona, ma successivamente vediamo meglio)
+//inoltre ci sono anche altre istruzioni che possono modificare gli array
+//le istruzioni per modificare gli array sono     .push()    .pop()            (ora le presentiamo e facciamo vedere come funziona, ma successivamente vediamo meglio)
 //.push() si usa per aggiungere un elemento alla fine della lista
 TEMPERATURE.push(15);
 console.log(TEMPERATURE);
 //.pop() si usa per rimuovere l'ultimo elemento della lista
 TEMPERATURE.pop();     //dentro le parentesi non va messo nessun valore
 console.log(TEMPERATURE);
-//l'instruzione .pop() riporta un valore (ossia il valore dell'elemento che eliminiamo), che può essere salvato in una variabile
+//l'istruzione .pop() riporta un valore (ossia il valore dell'elemento che eliminiamo), che può essere salvato in una variabile
 let ultimoGradoEliminato = TEMPERATURE.pop();
 console.log(ultimoGradoEliminato);
 console.log(TEMPERATURE);
 
-//c'è inoltre l'instruzione .lenght (lunghezza), che consente di riportare un valore numerico, ossia quanti elementi ci sono in un array
+//c'è inoltre l'istruzione .length (lunghezza), che consente di riportare un valore numerico, ossia quanti elementi ci sono in un array
 const ARRAY_VUOTO = [];
-console.log(ARRAY_VUOTO.length);    //0
-//possiamo usare qest'instruzione come condizione per un if statement o per un while loop o for loop
+console.log(ARRAY_VUOTO.length);
+//possiamo usare quest'istruzione come condizione per un if statement o per un while loop o for loop
 //esempio:
 const tasks = ["lavare i piatti", "lavare le finestre", "preparare la tavola"];
 if (tasks.length > 0) {
@@ -490,6 +490,7 @@ else {
 
 while (tasks.length > 0) {
     console.log("ho fatto una task");
+    console.log("ho fatto la task " + tasks[tasks.length - 1])
     tasks.pop();
 }
 
@@ -511,20 +512,20 @@ for (let i = 0; LISTA_DA_FARE.length > i; i++) {
     console.log("ho fatto la task numero " + (i + 1) + ", ossia: " + LISTA_DA_FARE[i]);
 }
 //altro esempio:
-const LISTA_AMICI = ["gabby", "pio", "peppe", "amica", "delly", "gionnie"];
+const LISTA_AMICI = ["Gabby", "Pio", "Peppe", "amica", "Delly", "Gionnie"];
 for (let i = 0; LISTA_AMICI.length > i; i++) {
     console.log(LISTA_AMICI[i]);
 }
 
-//lenght è un instruzione che si può usare anche con altri tipi di variabili che non siano array
+//length è un istruzione che si può usare anche con altri tipi di variabili che non siano array
 //con le stringhe determina la loro lunghezza, ossia da quanti caratteri è composta la stringa
 const STRINGA_LUNGA = "Questi sono 24 caratteri";
 console.log(STRINGA_LUNGA.length);   //24
 //invece con i numeri e con i boolean il valore è undefined
-const NUMEROOO = 345;
-console.log(NUMEROOO.length);     //undefined
-const BOOLEANNN = false;
-console.log(BOOLEANNN.length);    //undefined
+const NUMERO_PT2 = 345;
+console.log(NUMERO_PT2.length);     //undefined
+const BOOLEAN_PT2 = false;
+console.log(BOOLEAN_PT2.length);    //undefined
 
 
 //ora vediamo cosa sono le funzioni
@@ -551,7 +552,7 @@ displayNome("Enza");
 //infatti sono variabili che non hanno un valore definito
 //console.log(nome)          //questa linea di codice darebbe errore
 //siccome sono validi solo all'interno del code block a cui appartengono, possono essere riutilizzati in altri code block di funzioni come parametri
-//i parametri possono essere di qualsiati type e possono essere molteplici (separati da una ,)
+//i parametri possono essere di qualsiasi type e possono essere molteplici (separati da una ,)
 function displayNomeCognome(nome, cognome, annoDiNascita) {
     console.log("Ciao, mi chiamo " + nome + " " + cognome + ", e sono nato nel " + annoDiNascita + ".");
 }
@@ -591,8 +592,8 @@ const NUMERO_A_CASO = 3;
 console.log(èPiùGrandeDi10(3));
 
 //nel caso in cui la funzione non ha la parola return, allora riporta il valore undefined
-function FunzioneNoReturn(boooo) {
-    const BOOOH = "A caso" + boooo;
+function FunzioneNoReturn(parametro) {
+    const A_CASO = "A caso" + parametro;
 }
 console.log(FunzioneNoReturn(2));
 
@@ -600,7 +601,7 @@ console.log(FunzioneNoReturn(2));
 function createID(nome, anno) {
     return nome + anno + "@hutmail.com";
 }
-const email = createID("nicola", "2005");
+const email = createID("Nicola", "2005");
 console.log(email);
 
 function mediaAritmetica(numero1, numero2) {
@@ -608,10 +609,10 @@ function mediaAritmetica(numero1, numero2) {
 }
 console.log(mediaAritmetica(3, 8));
 
-//ora vediamo come nominare le funizoni in base alla loro utilità (per convenzione)
+//ora vediamo come nominare le funzioni in base alla loro utilità (per convenzione)
 //infatti il nome di una funzione deve essere descrittivo, facendo capire già cosa fa la funzione
-//per convenzione si una il camel case (ossia la prima inziale maiuscola), ma si può usare anche i trattino basso per separare le parole
-//le funzion i sono dunque azioni, e il loro nome dovrebbe contenere un verbo
+//per convenzione si una il camel case (ossia la prima iniziale maiuscola), ma si può usare anche i trattino basso per separare le parole
+//le funzioni i sono dunque azioni, e il loro nome dovrebbe contenere un verbo
 //per convenzione si usa il verbo come prefisso in una funzione con parole multiple
 function sumTotal(prezzo, tasse) {
     console.log(prezzo + tasse);
@@ -680,9 +681,9 @@ const CANE = {
     razza: "labrador"
 };
 //ora richiamiamo la funzione
-CANE.abbaiare("aooo");
+CANE.abbaiare("ao");
 //se il method non ha nessun parametro dobbiamo comunque mettere le parentesi
-//se invece non viene definita il paremetro, al posto del parametro viene presentato di default "undefined"
+//se invece non viene definita il parametro, al posto del parametro viene presentato di default "undefined"
 CANE.abbaiare();     //undefined, bau bau
 
 //possiamo usare la keyword "this" in una funzione method, per indicare una proprietà dell'object
@@ -691,15 +692,15 @@ const GATTO = {
     nome: "Cioccolato",
     miagolare: function(parola) {
         console.log(this.nome + ", " + parola + ", miao miao")         //this.nome sarebbe dunque il valore della proprietà nome
-    },      //la keyword this può essere usata per predere il valore di una proprietà solo nella funzione method stessa
+    },      //la keyword this può essere usata per prendere il valore di una proprietà solo nella funzione method stessa
 };
-GATTO.miagolare("miciooo");
+GATTO.miagolare("micio");
 
 //una volta imparato cos'è un JS object, conosciamo cos'è JSON.
 /*JSON (JavaScript Object Notation) è un formato di scambio dati leggero e basato su testo.
 È utilizzato per rappresentare dati strutturati come oggetti e array, ed è comunemente utilizzato per la trasmissione di dati
 tra un client e un server su Internet.*/
-//per creare un oggetto JSON bisogna usare la singola virgoletta per racchidere le parentesi graffe, che costituiranno l'oggetto
+//per creare un oggetto JSON bisogna usare la singola virgoletta per racchiudere le parentesi graffe, che costituiranno l'oggetto
 //inoltre le proprietà devono essere racchiuse tra le virgolette
 const jsonVariable = '{"name": "Nicola", "surname": "Belardo", "age": 18, "dead": false}';
 //i valori possono essere stringhe, numeri o boolean, ma non possono includere funzioni all'interno.
@@ -737,7 +738,7 @@ function esempio() {
     console.log("questo viene eseguito");
     return "a caso"
     console.log("questo non viene eseguito");
-    return "questo valore non verrà riportato";    //infatti ci può essere solo un instruzione return
+    return "questo valore non verrà riportato";    //infatti ci può essere solo un istruzione return
 }
 esempio();
 //facciamo altri esempi
@@ -752,7 +753,7 @@ const NICK = {
     cognome: "Belardo"
 }
 puòGuidare(NICK.patente, NICK.nome);
-//dato che l'instruzione return blocca l'esecuzione del code block, invece di else, possiamo inserire return dentro e dopo l'if statement
+//dato che l'istruzione return blocca l'esecuzione del code block, invece di else, possiamo inserire return dentro e dopo l'if statement
 //in questo modo il codice è più snello e veloce
 function PuòGuidare(patente, nome) {
     console.log("controllo patente");
@@ -769,7 +770,7 @@ PuòGuidare(false, "Luca");
 function giorniMancantiDelMese(oggi) {
     console.log("i giorni mancanti sono:")
     for (let i = oggi; i < 31; i++) {
-        console.log(i + 1)       //i + 1 perchè contiamo dal giorno dopo
+        console.log(i + 1)       //i + 1 perché contiamo dal giorno dopo
     }
 }
 giorniMancantiDelMese(23);
@@ -777,7 +778,7 @@ console.log("") //facciamo spazio nella console
 //scriviamo questa funzione ma valido per tutto l'anno
 function GiorniMancantiDelMese(mese, giornoDelMese, annoBisestile) {
     console.log("Al mese di " + mese + " mancano:")
-    let totGiorniMancanti = 0;        //questa varibile va creato fuori dal blocco if e for perchè poi perderebbe validità al di fuori del loro block code
+    let totGiorniMancanti = 0;        //questa variabile va creato fuori dal blocco if e for perché poi perderebbe validità al di fuori del loro block code
     if (mese === "gennaio" || mese === "marzo" || mese === "maggio" || mese === "luglio" || mese === "agosto" || mese === "ottobre" || mese === "dicembre") {
         for (let i = giornoDelMese; i < 31; i++) {    //mesi con 31 giorni
             console.log(i + 1);
@@ -854,7 +855,7 @@ elementiConLoStessoIndice_ComuniTra2Array(ARRAY1, ARRAY2);
 //ora vediamo un operatore che serve a indicare che tipo di variabile abbiamo davanti
 //utilizzerò variabili già usate
 //quest'operatore è typeof(), si inserisce la variabile nella parentesi
-//prima di vedere qesto, capiamo meglio i valori delle varibili
+//prima di vedere questo, capiamo meglio i valori delle variabili
 /*In JavaScript ci sono 5 differenti types di dati che possono contenere diversi valori:
 string
 number
@@ -912,7 +913,7 @@ for (const color of COLORS) {     //Il codice sopra stamperà ogni elemento dell
   console.log(color);
 }
 //utilizziamo color (può essere usato qualsiasi parola) in questo caso come variabile che prende il valore di ogni elemento dell'array. Per convenzione usiamo sempre la variabile element
-//si pùò usare molteplici volte perchè ha valenza solo nel code block del suo for...of loop
+//si pùò usare molteplici volte perché ha valenza solo nel code block del suo for...of loop
 let indice = 0     //per scrivere anche l'indice degli elementi di un array, creiamo questa variabile
 for (const element of COLORS) {    //usiamo sempre element per convenzione
     console.log("il valore del " + (indice + 1) + "° elemento è: " + element)
@@ -963,8 +964,8 @@ for (let index in COLORS1_ITALIANI) {
     console.log("Il " + index + "° elemento è " + COLORS1_ITALIANI[index] + ".");
 }
 console.log("")    //questa linea di codice serve a fare una riga di spazio nella console (inutile in un vero file e non un manuale)
-//però non viene viualizzato bene perchè anche l'indice nell'ultima esecuzione viene cambiato, andando oltre l'indice dell'array
-//per questo motivo per scrivere una frase del genere dobbiamo usare i type convertion che vedremo in futuro
+//però non viene visualizzato bene perché anche l'indice nell'ultima esecuzione viene cambiato, andando oltre l'indice dell'array
+//per questo motivo per scrivere una frase del genere dobbiamo usare i type conversion che vedremo in futuro
 
 //i for...in loop possono essere usati anche con gli object
 //al posto dell'indice degli array, viene riportato il nome della proprietà
@@ -987,12 +988,12 @@ for (const proprietà in OBJECT_ITERABLE) {
 console.log("")    //questa linea di codice serve a fare una riga di spazio nella console (inutile in un vero file e non un manuale)
 
 //usiamo anche una frase per meglio capirci
-for (const proprietà in OBJECT_ITERABLE) {     //la variabile counter è sempre una striga ma viene trasformata automaticamente in numero con la scrittra 
+for (const proprietà in OBJECT_ITERABLE) {     //la variabile counter è sempre una stringa ma viene trasformata automaticamente in numero con la scrittura 
     console.log("il valore della proprietà " + proprietà + " è " + OBJECT_ITERABLE[proprietà]);
 }
-//la parte OBJECT_ITERABLE[proprietà] di solito negli object si usa il punto, quindi sarebbe questra scrittura: OBJECT_ITERABLE.proprietà
-//in questo caso non si usa questa scrittura perchè proprietà non è il nome della proprietà ma è una variabile.
-//Quindi per considerare il valore della variabile propretà (ossia il nome delle proprietà), si usano le []
+//la parte OBJECT_ITERABLE[proprietà] di solito negli object si usa il punto, quindi sarebbe questa scrittura: OBJECT_ITERABLE.proprietà
+//in questo caso non si usa questa scrittura perché proprietà non è il nome della proprietà ma è una variabile.
+//Quindi per considerare il valore della variabile proprietà (ossia il nome delle proprietà), si usano le []
 
 //approfondisci gli altri tipi di for...of loop qui https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of?retiredLocale=it
 
@@ -1050,7 +1051,7 @@ displayNumeroTra0e9(8853254)
 
 //ora capiamo meglio come funzionano le teoria delle variabili
 //lo JavaScript è un linguaggio in continua evoluzione
-//nel 2015 e stato rivisiaonato e sono state introdotte molte novità
+//nel 2015 è stato revisionato e sono state introdotte molte novità
 //questo aggiornamento è detto ECMAScript 2015 (con la sigla ES6)
 //nell'ES6 sono state aggiunte i metodi per creare le variabile che già conosciamo, ossia let e const, ma in realtà il metodo per fare variabile era var (variable)
 //var infatti crea un altro tipo di variabile
@@ -1064,25 +1065,25 @@ console.log(variabileVar);
 //  una variabile con let può essere dichiarata una sola volta. Quando viene dichiarata non deve essere per forza anche inizializzata
     //possiamo scrivere senza avere errori il codice:
       let variabileSoloDichiarata;
-    //let variabileSoloDichiarata;     //questa linea di codice darebbe errore perchè può essere dichiarata solo una volta
-      console.log(variabileSoloDichiarata);      //il valore è undefined perchè ancora deve essere inizializzata
+    //let variabileSoloDichiarata;     //questa linea di codice darebbe errore perché può essere dichiarata solo una volta
+      console.log(variabileSoloDichiarata);      //il valore è undefined perché ancora deve essere inizializzata
       variabileSoloDichiarata = "valore inizializzato dopo la dichiarazione";   //per essere usata deve essere inizializzata, anche in seguito alla dichiarazione
-    //può essere aggiornata in seguito tramite l'assigment operator
+    //può essere aggiornata in seguito tramite l'assignment operator
       variabileSoloDichiarata = "nuovo valore";
 
 //una variabile con const può essere dichiarata e inizializzata una sola volta (come let), e deve essere anche inizializzata insieme alla dichiarazione
-    //const VARIABILE_SOLO_DICHIARATA;        //questa linea di codice darebbe errore, perchè deve essere anche inizializzata
+    //const VARIABILE_SOLO_DICHIARATA;        //questa linea di codice darebbe errore, perché deve essere anche inizializzata
       const VARIABILE_SIA_DICHIARATA_CHE_INIZIALIZZATA = "valore";
-    //const VARIABILE_SIA_DICHIARATA_CHE_INIZIALIZZATA = "valore"     //questa linea di codice darebbe errore perchè non può essere dichiarata più volte
+    //const VARIABILE_SIA_DICHIARATA_CHE_INIZIALIZZATA = "valore"     //questa linea di codice darebbe errore perché non può essere dichiarata più volte
     //È importante notare che, anche se il valore di una costante non può essere modificato, il contenuto di un oggetto o di un array costanti può essere modificato. Ad esempio:
       const arr = [1, 2, 3];
       arr.push(4); // arr ora è [1, 2, 3, 4]
       //In questo esempio, anche se arr è stata dichiarata con const, il contenuto dell'array può essere modificato utilizzando metodi come push.
       //Tuttavia, non è possibile assegnare un nuovo array o oggetto a arr, poiché ciò implicherebbe la modifica della costante stessa.
 
-//  una variabile con var può essere dichiarata e inzializzata più volte e anche separatamente senza avere errori.
+//  una variabile con var può essere dichiarata e inizializzata più volte e anche separatamente senza avere errori.
       var variabileVarSoloDichiarata;
-      console.log(variabileVarSoloDichiarata)       //undefined perchè ancora deve essere inizializzata
+      console.log(variabileVarSoloDichiarata)       //undefined perché ancora deve essere inizializzata
       variabileVarSoloDichiarata = 69;
       console.log(variabileVarSoloDichiarata);      //69
       var variabileVarSoloDichiarata = 70;          //può essere dichiarata nuovamente senza errori
@@ -1101,19 +1102,18 @@ console.log(variabileVar);
 function funzionePerLocalScope() {
     const VARIABILE_CON_LOCAL_SCOPE = "oh yes";     //può essere usata solo all'interno di questa funzione
     console.log(VARIABILE_CON_LOCAL_SCOPE);
-    var variaaabile = 23
-    let variaaabileLet = variaaabile + 1
+    var variabile1 = 23
+    let variabile1Let = variabile1 + 1
 }
-/*
-console.log(VARIABILE_CON_LOCAL_SCOPE)       //questa linea di codice dà errore
-console.log(variaaabile);                    //questa linea di codice dà errore
-console.log(variaaabileLet);                 //questa linea di codice dà errore
-*/
+
+//console.log(VARIABILE_CON_LOCAL_SCOPE)       //questa linea di codice dà errore
+//console.log(variabile1);                    //questa linea di codice dà errore
+//console.log(variabile1Let);                 //questa linea di codice dà errore
 //con qualsiasi tipo di variabile proviamo (let, const e var), la sua validità resta sempre solo nella funzione
 //se vogliamo far passare un valore dalla funzione, dobbiamo per forza usare la keyword return
 
 //il global scope si riferisce allo spazio al di fuori della funzione
-let cittàDaVisitare = ["Napoli", "Roma", "Tokyo", "Parigi"]      //questa variabile è accesibile in tutto il codice successivo alla sua inizializzazione (anche in una funzione)
+let cittàDaVisitare = ["Napoli", "Roma", "Tokyo", "Parigi"]      //questa variabile è accessibile in tutto il codice successivo alla sua inizializzazione (anche in una funzione)
 function displayViaggi() {
     console.log("Andiamo a " + cittàDaVisitare[1]);
 }
@@ -1129,7 +1129,7 @@ if (true) {
     const z = 30;
 }
 //console.log(x);        // Errore: "x" non è definito
-console.log(y);          // 20
+console.log(y);
 //console.log(z);        // Errore: "z" non è definito
 //il block scope è presente anche in variabili counter, che sono visibili solo all'interno del block code a cui appartengono
 for (let index = 1; index <= 3; index++) {
@@ -1141,7 +1141,7 @@ for (let index = 1; index <= 3; index++) {
 //errori di sintassi (SyntaxError): questi errori si verificano quando il codice non è scritto in modo corretto e il motore JavaScript non riesce a interpretarlo.
     //Ad esempio, può esserci un errore di sintassi se si dimentica di chiudere una parentesi o se si utilizza una parola chiave in modo non corretto.
     /*if (true {                          //la mancanza della parentesi di chiusura provoca un errore
-        console.log("seeeee");
+        console.log("seh");
     }*/
 //Errori di tipo (TypeError): questi errori si verificano quando si tenta di eseguire un'operazione non valida su un tipo di dati.
     //Ad esempio, può esserci un errore di tipo se si tenta di aggiornare il valore di una proprietà all'indefinito.
@@ -1151,12 +1151,12 @@ for (let index = 1; index <= 3; index++) {
 //Errori di referenziamento (ReferenceError): questi errori si verificano quando si fa riferimento a una variabile o a una proprietà che non esiste.
     //Ad esempio, può esserci un errore di referenziamento se si fa riferimento a una variabile che non è stata dichiarata o che in quella parte di codice non è attendibile.
     if (true) {
-        let oggettoo = "a"
+        let oggetto = "a"
     }
-    //console.log(oggettoo)    //ReferenceError: ogggettoo is not defined
+    //console.log(oggetto)    //ReferenceError: oggetto is not defined
     //questo errore dunque fa capire che abbiamo sbagliato qualcosa con lo scope
 //Errori di range (RangeError): questi errori si verificano quando si tenta di assegnare un valore fuori dal range consentito a una variabile o a una proprietà.
-    //si potrebbe verificare in alcuni browser si e in altri no con lo stesso codice, perchè alcuni browser supportano dei valori e altri no
+    //si potrebbe verificare in alcuni browser si e in altri no con lo stesso codice, perché alcuni browser supportano dei valori e altri no
 //Errori di runtime (Runtime Errors): questi errori si verificano durante l'esecuzione del programma e possono essere causati da diverse ragioni, come ad esempio la mancanza di memoria o un'operazione non valida su un oggetto.
     //non sono dovuti a errori nel codice, ma al crush dell'app, per la pesantezza del codice
 
@@ -1172,28 +1172,28 @@ function double(x) {
   
 // Arrow function
 const double_arrow = (x) => x * 2;
-//le arrow function vengono dichiarate come variabili (per convenzione si usa const perchè non si dovrebbe modificare la funzione, ma si può usare anche let, oppure var se si vuole un global scope anche all'interno di un block code)
+//le arrow function vengono dichiarate come variabili (per convenzione si usa const perché non si dovrebbe modificare la funzione, ma si può usare anche let, oppure var se si vuole un global scope anche all'interno di un block code)
 //le arrow function non hanno bisogno della keyword function, e manco il nome della funzione (dato che il nome è la variabile stessa)
-//dunque la prima cosa che scriviamo sono le parentesi con gli eventali parametri, si usa l'arrow operator (=>) e infine il corpo della funzione
-//il simbolo { } per racchiudere il corpo della funzione può essere anche omesso nel caso di una sola instruzione
-//ultima cosa che possiamo omettere è anche la keyword return, nel caso di una sola instruzione che è appunto return, infatti il valore di quell'instruzione sarà riportato all'arrow function
+//dunque la prima cosa che scriviamo sono le parentesi con gli eventuali parametri, si usa l'arrow operator (=>) e infine il corpo della funzione
+//il simbolo { } per racchiudere il corpo della funzione può essere anche omesso nel caso di una sola istruzione
+//ultima cosa che possiamo omettere è anche la keyword return, nel caso di una sola istruzione che è appunto return, infatti il valore di quell'istruzione sarà riportato all'arrow function
 //Ad esempio, prima abbiamo mostrato la sintassi di una funzione tradizionale e di una arrow function che restituisce il doppio di un numero
 const ARROW_FUNCTION = (parametro) => "valore che verrà riportato, con il parametro: " + parametro;
 console.log(ARROW_FUNCTION(2));
 console.log("")    //questa linea di codice serve a fare una riga di spazio nella console (inutile in un vero file e non un manuale)
-//ora vediamo una funzione arrow multilinea e multi-instruzione
-const GET_DISPAY_ARROW_FUNCTION = (parametro) => {     //La nomenclatra degli arrow function per convenzione deve essere descrittiva e simile alla funzione tradizionale
-    console.log("questa è la prima instruzione dell'arrow functino");
+//ora vediamo una funzione arrow multi-linea e multi-istruzione
+const GET_DISPLAY_ARROW_FUNCTION = (parametro) => {     //La nomenclatura degli arrow function per convenzione deve essere descrittiva e simile alla funzione tradizionale
+    console.log("questa è la prima istruzione dell'arrow function");
     console.log("questo è il parametro: " + parametro);
-    return "le arrow function si usano principalmente come alternativa di funzione molto corte, ma nel caso di funzioni più complesse, si usa la funzione tradizionale"; //nel caso di più instruzioni dobbiamo inserire anche la keyword return
+    return "le arrow function si usano principalmente come alternativa di funzione molto corte, ma nel caso di funzioni più complesse, si usa la funzione tradizionale"; //nel caso di più istruzioni dobbiamo inserire anche la keyword return
 }
-GET_DISPAY_ARROW_FUNCTION("Osanna");  //si richiama l'arrow function in questo modo per eseguire il codice
-console.log(GET_DISPAY_ARROW_FUNCTION("Osanna"));     //così facendo vediamo solo il valore return
-//inoltre ci sono alcune accortenze che possiamo fare con i parametri
+GET_DISPLAY_ARROW_FUNCTION("Osanna");  //si richiama l'arrow function in questo modo per eseguire il codice
+console.log(GET_DISPLAY_ARROW_FUNCTION("Osanna"));     //così facendo vediamo solo il valore return
+//inoltre ci sono alcune precisazioni che possiamo fare con i parametri
 //si possono omettere le parentesi nel caso di un solo parametro
 const MOLTIPLICA_PER_2 = numero => numero * 2;
 //se ci sono più parametri ci devono essere le parentesi
-//const MOLTIPLICA_NUMERO = numero, numeroo => numero * numeroo;       //questo dà SyntaxError
+//const MOLTIPLICA_NUMERO = numero, numero1 => numero * numero1;       //questo dà SyntaxError
 const MOLTIPLICA_NUMERI = (numero1, numero2) => numero1 * numero2;       //con le parentesi non dà errore
 console.log(MOLTIPLICA_NUMERI(7, 3));     //21
 console.log("")    //questa linea di codice serve a fare una riga di spazio nella console (inutile in un vero file e non un manuale)
@@ -1219,9 +1219,9 @@ console.log(GET_PREZZO2());     //200 - (0.03 * 200) = 200 - 6 = 194
 //DUNQUE QUESTI ARROW FUNCTION RENDONO IL CODICE PIù COMPATTO E CONCISO, E CI SARà ESSENZIALE IN UN CODICE PIù COMPLESSO COME REACT (CHE VEDREMO MOLTO DOPO)
 
 //Altra novità dell'ES6 sono i template literals, che possono sostituire i template classici (ossia le espressioni tra stringhe e altri types che si accostano)
-/*I "template literals" sono una caratteristica di JavaScript che permette di creare stringhe facilmente leggibili e manutenibili, utilizzando una sintassi simile a quella dei template.
+/*I "template literals" sono una caratteristica di JavaScript che permette di creare stringhe facilmente leggibili, utilizzando una sintassi simile a quella dei template.
 Sono indicati dai caratteri backtick (`) e possono contenere espressioni interne, racchiuse tra dollaro e parentesi graffe (${ }`).
-i caratteri backtick (ossia una specie di virgolette però singole) non sono presenti nella tastire e per scirverle usiamo o i tasti di scelta rapida Unicode
+i caratteri backtick (ossia una specie di virgolette però singole) non sono presenti nella tastiera e per scriverle usiamo o i tasti di scelta rapida Unicode
 i tasti per i backtick sono ALT + 96 = `
 */
 
@@ -1241,8 +1241,8 @@ multilinea.`;
 const DISPLAY_WORD = parola => console.log(`la parola stampata è ${parola}`);
 DISPLAY_WORD(`fraaaatm`);      //possiamo scrivere l'argomento tra parentesi
 DISPLAY_WORD`fraaaatm`;        //possiamo anche omettere le parentesi
-/*I template literals sono molto utili per creare stringhe facilmente leggibili e manutenibili, specialmente quando si hanno molte espressioni da inserire all'interno della stringa.
-Inoltre, sono anche più performanti delle stringhe concatenate, poiché vengono compilate direttamente in codice JavaScript durante il processo di build.
+/*I template literals sono molto utili per creare stringhe facilmente leggibili e mantenibili, specialmente quando si hanno molte espressioni da inserire all'interno della stringa.
+Inoltre, sono anche più performante delle stringhe concatenate, poiché vengono compilate direttamente in codice JavaScript durante il processo di build.
 */
 console.log("")    //questa linea di codice serve a fare una riga di spazio nella console (inutile in un vero file e non un manuale)
 
@@ -1256,7 +1256,7 @@ console.log("")    //questa linea di codice serve a fare una riga di spazio nell
     let uppercase = string.toUpperCase();  // Converte la stringa in maiuscolo
     console.log(uppercase);        //'HELLO WORLD'
     //questo metodo riporta il valore in maiuscolo, ma non converte la stringa originale
-//2)toLowerCase(): il metodo toLowerCase() in JavaScript consente di convertire una stringa in miniscolo
+//2)toLowerCase(): il metodo toLowerCase() in JavaScript consente di convertire una stringa in minuscolo
     //la sintassi è: string.toLowerCase()
     //non ci sono parametri
     string = 'HELLO WORLD';
@@ -1294,7 +1294,7 @@ console.log("")    //questa linea di codice serve a fare una riga di spazio nell
     //console.log(a.localCompare(b));     //TypeError: a.localeCompare is not a function
     
     //la funzione localeCompare può avere risultati diversi a seconda della lingua (italiano, inglese, tedesco...) che si utilizza
-    //per questo motivo si può usare un ulteriore argomento, ossia local, che speifica 
+    //per questo motivo si può usare un ulteriore argomento, ossia local, che specifica la lingua 
     console.log("ä".localeCompare("z", "de")); // -1: in tedesco, ä viene prima di z
     console.log("ä".localeCompare("z", "sv")); // 1: in svedese, ä viene dopo di z
 
@@ -1340,7 +1340,7 @@ console.log("")    //questa linea di codice serve a fare una riga di spazio nell
     let array = [1, 2, 3];
     array.push(4);        //Aggiunge 4 alla fine dell'array:        diventa [1, 2, 3, 4]
     let nuovaLunghezzaArray = array.push(5, 6);     //Aggiunge 5 e 6 alla fine dell'array:    diventa [1, 2, 3, 4, 5, 6]
-    console.log(nuovaLunghezzaArray);       //6 => il valore è il lenght dell'array modificato (QUESTA PARTICOLARITà NON C'è NEGLI APPUNTI PRECEDENTI)
+    console.log(nuovaLunghezzaArray);       //6 => il valore è il length dell'array modificato (QUESTA PARTICOLARITà NON C'è NEGLI APPUNTI PRECEDENTI)
 
 //2)pop(): Rimuove l'ultimo elemento di un array e restituisce il valore rimosso.
     let array1 = [1, 2, 3];
@@ -1367,8 +1367,8 @@ console.log("")    //questa linea di codice serve a fare una riga di spazio nell
     let array3 = [1, 2, 3];
 
     array3.unshift(0);              // Aggiunge 0 all'inizio dell'array:              diventa [0, 1, 2, 3]
-    let newLenght = array3.unshift(-3, -2, -1);  // Aggiunge -3 -2 e -1 all'inizio dell'array:   diventa [-3, -2, -1, 0, 1, 2, 3]
-    console.log(newLenght);
+    let newLength = array3.unshift(-3, -2, -1);  // Aggiunge -3 -2 e -1 all'inizio dell'array:   diventa [-3, -2, -1, 0, 1, 2, 3]
+    console.log(newLength);
     console.log("")    //questa linea di codice serve a fare una riga di spazio nella console (inutile in un vero file e non un manuale)
 
 //5)sort(): Ordina gli elementi di un array in modo crescente o decrescente (riporta valore dell'array ordinato, ma è inutile salvarlo in una nuova variabile).
@@ -1377,7 +1377,7 @@ console.log("")    //questa linea di codice serve a fare una riga di spazio nell
     array4.sort();  //Ordina gli elementi dell'array in modo crescente:   diventa [1, 2, 3]
     console.log(array4);
     //il modo di default secondo cui sort riordina gli elementi è in ordine del codice UNICODE, ossia come vengono interpretati i vari caratteri dalla macchina
-    //questa instruzione non fa distinzioni tra i vari types ma considera tutto come delle stringhe (true == "true")
+    //questa istruzione non fa distinzioni tra i vari types ma considera tutto come delle stringhe (true == "true")
     array4 = [true, 2, 3, 1, false, "true", true, false, "a", "ehy","zebra", "gionnie", "0", "2", "5", ",", "+", "£"];
     array4.sort();
     console.log(array4);
@@ -1390,7 +1390,7 @@ console.log("")    //questa linea di codice serve a fare una riga di spazio nell
     //inoltre essa riporta un valore, che è stabilito da un espressione scritta da noi
     //se il valore riportato è maggiore di 1, allora ordina il primo elemento "a" dopo del secondo elemento "b"
     //se il valore riportato è minore di 1, allora ordina il primo elemento "a" prima al secondo elemento "b"
-    //la sintassi è quella di un arrow function di una sola linea e una sola instruzione (ossia return, che viene omesso)
+    //la sintassi è quella di un arrow function di una sola linea e una sola istruzione (ossia return, che viene omesso)
     let array5 = [10, 2, 5, 1, 9];
     array5.sort((a, b) => b - a);              //Ordina gli elementi (numeri) dell'array in modo decrescente (il valore riportato dalla funzione di confronto è negativo)
     //vediamo come funziona la funzione di confronto
@@ -1405,7 +1405,7 @@ console.log("")    //questa linea di codice serve a fare una riga di spazio nell
     console.log(array6);       //['c', 'b', 'a']
     //l'ordine crescente di localCompare non ha alcuna differenza con il valore di default di sort()
 
-    //possiamo ordiare gli elementi anche in base alla loro lunghezza (funziona solo su stringhe)
+    //possiamo ordinare gli elementi anche in base alla loro lunghezza (funziona solo su stringhe)
     let arrayConStringhe = ["parola", "supercalifragilisichespiralitoso", "ok", "siuum", "è"];
     arrayConStringhe.sort((a, b) => a.length - b.length);      //ordine crescente della lunghezza
     console.log(arrayConStringhe);
@@ -1417,13 +1417,13 @@ console.log("")    //questa linea di codice serve a fare una riga di spazio nell
 
     let arrayInvertito = array7.reverse();     //inverte l'ordine
     console.log(array7);                       //array originale
-    console.log(arrayInvertito);               //valore riportato dall'instruzione
+    console.log(arrayInvertito);               //valore riportato dall'istruzione
 
-    //si può usare questa funzione per ordinare in ordine descrescente un array, usando prima sort() e poi reverse()
+    //si può usare questa funzione per ordinare in ordine decrescente un array, usando prima sort() e poi reverse()
     let array8 = [1, 2, 3, "b", 6, "c", 8, "a"];
     array7.sort().reverse();       //viene prima ordinato e poi invertito l'ordine
     console.log(array8);
-    //dunque, invece di usare una funzione nell'argomento di sort per mettere l'ordine descrescente, si invertire in questo modo più veloce
+    //dunque, invece di usare una funzione nell'argomento di sort per mettere l'ordine decrescente, si invertire in questo modo più veloce
     //FAI MOLTO PRIMA COSì
     
     //questa funzione può essere usata anche con le stringhe ma si usano funzioni per non generare errori STUDIA MEGLIO
@@ -1433,20 +1433,20 @@ console.log("")    //questa linea di codice serve a fare una riga di spazio nell
 
 //7)indexOf(): Restituisce l'indice della prima occorrenza di un elemento specificato in un array, o -1 se l'elemento non è presente.
     //la sintassi è: array.indexOf(item, start)
-    //la ricerca dunuque è da sinistra verso destra
+    //la ricerca dunque è da sinistra verso destra
     let array9 = ["salumi", true, "python", 3, "£", false, true];
-    console.log(array9.indexOf(true));                        //nell'indice 1 c'è la prima occorrenza di true
-    console.log(array9.indexOf(3));                           //nell'indice 3 c'è la prima occorrenza di 3
-    console.log(array9.indexOf("£"));                         //nell'indice 4 c'è la prima occorrenza di "£"
+    console.log(array9.indexOf(true));                        //nell'indice 1 c'è la prima occorrenza di true    
+    console.log(array9.indexOf(3));                           //nell'indice 3 c'è la prima occorrenza di 3       
+    console.log(array9.indexOf("£"));                         //nell'indice 4 c'è la prima occorrenza di "£"     
     console.log(array9.indexOf("python"));                    //nell'indice 2 c'è la prima occorrenza di "python"
-    console.log(array9.indexOf("questo valore non c'è"));     //non c'è un occorrenza di questo valore: -1
+    console.log(array9.indexOf("questo valore non c'è"));     //non c'è un occorrenza di questo valore: -1       
 
-    //questa funzione accetta un opzionale argomento detto fromIndex, che sarebbe il secondo argomento e indica da quale indice inziare la ricerca
+    //questa funzione accetta un opzionale argomento detto fromIndex, che sarebbe il secondo argomento e indica da quale indice iniziare la ricerca
     //di default è l'indice 0
     console.log(array9.indexOf(true, 2))           //dall'indice 2, la prima occorrenza di true si trova all'ultimo indice, ossia 6
     console.log(array9.indexOf("salumi", 1))       //dall'indice 1, non ci sono occorrenze di "salumi", quindi il valore riportato è -1
 
-    //il valore del parametro start può essere anche negativo, infatti -n indicherebbe array.lenght - n, ossia - 1 indica l'ultimo indice, -2 il penultimo, e così via
+    //il valore del parametro start può essere anche negativo, infatti -n indicherebbe array.length - n, ossia - 1 indica l'ultimo indice, -2 il penultimo, e così via
     console.log(array9.indexOf("£", -2));     //la ricerca parte dal penultimo indice e va fino all'ultimo: in questo range non c'è il valore "£" => -1
 
     console.log("")    //questa linea di codice serve a fare una riga di spazio nella console (inutile in un vero file e non un manuale)
@@ -1457,12 +1457,12 @@ console.log("")    //questa linea di codice serve a fare una riga di spazio nell
     console.log(array10.lastIndexOf("Apple"));       //nell'indice 2 c'è l'ultima occorrenza di "Apple"
     //come indexOf(), riporta -1 se non c'è il valore
     //ci possono essere 2 parametri: item, ossia il valore da ricercare (obbligatorio); e start, ossia l'indice da cui partire (opzionale)
-    //ricordati che questa instruzione cerca i valori di default dall'ultimo indice (array.lenght - 1) fino all'indice 0
-    //la ricerca dunuque è da destra verso sinistra
+    //ricordati che questa istruzione cerca i valori di default dall'ultimo indice (array.length - 1) fino all'indice 0
+    //la ricerca dunque è da destra verso sinistra
 
     let array11 = ["Orange", "Apple", "Mango", "Apple", "Banana", "Apple"];
     console.log(array11.lastIndexOf("Apple", 4));       //partendo dall'indice 4 (Banana), e andando verso sinistra, la prima ricorrenza di Apple si ha all'indice 3
-    //i valori del parametro start possono essere anche negativi, indicando con -1 l'ultimo index (array.lenght - 1), con -2 il penultimo index (array.lenght - 2) e così via
+    //i valori del parametro start possono essere anche negativi, indicando con -1 l'ultimo index (array.length - 1), con -2 il penultimo index (array.length - 2) e così via
     let array12 = ["Orange", "Apple", "Mango", "Apple", "Banana", "Apple", "Mango", "Banana"]
     console.log(array12.lastIndexOf("Banana", -2));     //la ricerca parte dal penultimo elemento e va fino al primo => indice 4
 
@@ -1484,39 +1484,39 @@ console.log("")    //questa linea di codice serve a fare una riga di spazio nell
 //10)concat(): Unisce due o più array e restituisce un nuovo array.
     //la sintassi è: array1.concat(array2, array3, ..., arrayX)    
     //il metodo concat() non modifica gli array originali, ma restituisce un nuovo array con gli elementi concatenati.
-    //dunque bosogna salvare il valore restitito in una nuova variabile
-    let arrayy1 = [1, 6, 7, 4];
-    let arrayy2 = [4, 5, 6];
+    //dunque bisogna salvare il valore restituito in una nuova variabile
+    let array111 = [1, 6, 7, 4];
+    let array22 = [4, 5, 6];
     
-    let concatenated = arrayy1.concat(arrayy2);  // Unisce arrayy1 e arrayy2 in un unico array
+    let concatenated = array111.concat(array22);  // Unisce array111 e array22 in un unico array
     console.log(concatenated);      //[1, 6, 7, 4, 4, 5, 6]
     
-    let arrayy3 = [7, 8, 9];
+    let array33 = [7, 8, 9];
     
-    concatenated = arrayy1.concat(arrayy2, arrayy3);  // Unisce arrayy1, arrayy2 e arrayy3 in un unico array
+    concatenated = array111.concat(array22, array33);  // Unisce array111, array22 e array33 in un unico array
     console.log(concatenated);          //[1, 6, 7, 4, 4, 5, 6, 7, 8, 9]
 
-    concatenated = arrayy1.concat([4, 5], 6, [7, 8]);  // Unisce gli elementi di arrayy1 con altri elementi e array
+    concatenated = array111.concat([4, 5], 6, [7, 8]);  // Unisce gli elementi di array111 con altri elementi e array
     console.log(concatenated);          //[1, 6, 7, 4, 4, 5, 6, 7, 8]
 
 //11)join(): Unisce tutti gli elementi di un array in una stringa e restituisce il risultato.
     //il metodo join() non modifica l'array originale, ma restituisce una stringa con gli elementi dell'array uniti.
     //la sintassi è: array.join(separator)
-    let arrayyy = ['a', 'b', 'c', 'd'];
+    let array222 = ['a', 'b', 'c', 'd'];
 
-    let joined = arrayyy.join();  // Unisce gli elementi dell'array in una stringa, separandoli con una virgola
+    let joined = array222.join();  // Unisce gli elementi dell'array in una stringa, separandoli con una virgola
     console.log(joined);
     //infatti il valore di default di separator è una virgola (,)
     
-    joined = arrayyy.join('');  // Unisce gli elementi dell'array in una stringa, senza utilizzare alcun delimitatore
+    joined = array222.join('');  // Unisce gli elementi dell'array in una stringa, senza utilizzare alcun delimitatore
     console.log(joined);
     
-    joined = arrayyy.join('-');  // Unisce gli elementi dell'array in una stringa, separandoli con il simbolo meno
+    joined = array222.join('-');  // Unisce gli elementi dell'array in una stringa, separandoli con il simbolo meno
     console.log(joined);
     console.log("")    //questa linea di codice serve a fare una riga di spazio nella console (inutile in un vero file e non un manuale)
 
 //12)map(): Crea un nuovo array in cui ogni elemento è il risultato di una funzione specificata applicata a ogni elemento dell'array originale.
-    //se vogliamo cambiare tutti i valori di un array secondo un cirterio specifico, possiamo usare i for...of loop, oppure il metodo map()
+    //se vogliamo cambiare tutti i valori di un array secondo un criterio specifico, possiamo usare i for...of loop, oppure il metodo map()
     const FAHRENHEIT = [72, 68, 70, 74, 77, 75, 79];   //questi sono dei valori in gradi Fahrenheit, e li vogliamo trasformare in gradi celsius
     //vediamo come possiamo cambiare i valori della variabile tramite i for...of loop
     let celsius = [];    //creiamo un array vuoto che poi riempiamo man mano
@@ -1525,11 +1525,11 @@ console.log("")    //questa linea di codice serve a fare una riga di spazio nell
         celsius.push(valoreCelsius);       //in questo modo aggiungiamo ogni valore all'array vuoto creato precedentemente
     } 
     console.log(celsius);
-    //se vogliamo usare invece il metodo map(), sviluppiamo l'instruzioni cosi
+    //se vogliamo usare invece il metodo map(), sviluppiamo l'istruzioni cosi
     //la sintassi è: array.map(function(currentElement, index, array), thisValue)     //thisValue è UNA COSA CHE ANCORA DEVO STUDIARE: STUDIA MEGLIO
     //il metodo map() non modifica l'array originale, ma restituisce un nuovo array con gli elementi trasformati.
     celsius = FAHRENHEIT.map(function (element) {     //l'unico parametro obbligatorio è currentElement, che per convenzione scriviamo con element
-        return (element - 32) * (5/9);     //la funzione all'interno di map deve per forza ripotare un valore, che sarà i valori del nuovo array riportato
+        return (element - 32) * (5/9);     //la funzione all'interno di map deve per forza riportare un valore, che sarà i valori del nuovo array riportato
     });
     
     //possiamo scrivere questo in modo più veloce con un arrow function
@@ -1540,10 +1540,10 @@ console.log("")    //questa linea di codice serve a fare una riga di spazio nell
     GENTE_IN_CODA = GENTE_IN_CODA.map((element, index) => `${index + 1}: ${element}`);  //siccome map non aggiorna l'array originale, per farlo (nel caso di let o var, non const) possiamo fare array = array.map(function())
     console.log(GENTE_IN_CODA);
     //possiamo aggiungere anche un terzo parametro alla funzione, che sarebbe l'array stesso
-    //con questo parametro possiamo gestire il lenght di tutto l'array oppure un elemento preciso dell'array
+    //con questo parametro possiamo gestire il length di tutto l'array oppure un elemento preciso dell'array
     let array14 = [1, 2, 3, 4];
 
-    let mapped = array14.map((x, i, arr) => x * i + arr.length);  // Crea un nuovo array con gli elementi del vecchio array trasformati in base alla funzione
+    let mapped = array111.map((x, i, arr) => x * i + arr.length);  // Crea un nuovo array con gli elementi del vecchio array trasformati in base alla funzione
     console.log(mapped);       //mapped è [1*0 + 4, 2*1 + 4, 3*2 + 4, 4*3 + 4] => [4, 6, 10, 16]
 
     let people = [    //questo è un array in cui gli elementi sono delle variabili object
@@ -1560,9 +1560,9 @@ console.log("")    //questa linea di codice serve a fare una riga di spazio nell
       
     //vediamo altri esempi di map()
     let array15 = ['one', 'two', 'three', 'four']
-    array15 = array15.map(value => value.length);      //converte i valori nel numero di caratteri che hanno le stringhe ("one" => 3, "two" => 3, )
+    array111 = array111.map(value => value.length);      //converte i valori nel numero di caratteri che hanno le stringhe ("one" => 3, "two" => 3, )
     //per aggiornare l'array e non crearlo un altro possiamo dare un nuovo assegnamento alla variabile let
-    console.log(array15);        // [3, 3, 5, 4]
+    console.log(array111);        // [3, 3, 5, 4]
 
     const CITTà_LETTERA_MINUSCOLA = [ 
         {nome: "Caserta", sigla: "ce"},
@@ -1582,7 +1582,7 @@ console.log("")    //questa linea di codice serve a fare una riga di spazio nell
     console.log("")    //questa linea di codice serve a fare una riga di spazio nella console (inutile in un vero file e non un manuale)
 
 //13)filter(): Crea un nuovo array contenente solo gli elementi che soddisfano una determinata condizione.
-    //per filtrare solo gli elementi di un array che soddifano una condizione si possono usare i for...of loop
+    //per filtrare solo gli elementi di un array che soddisfano una condizione si possono usare i for...of loop
     const PUNTEGGI = [72, 95, 90, 71, 75, 79];
     let punteggiMaggioriDi90 = [];
     for (const element of PUNTEGGI) {
@@ -1621,7 +1621,7 @@ console.log("")    //questa linea di codice serve a fare una riga di spazio nell
     //il terzo parametro dell'inline function è l'array stesso
     const ARRAY_A_CASO = ["123456789-10", "123456789-10", "123", "1", "12", "1234", "123456789-10-11-12", "indice 7", "indice 8"];
     console.log(ARRAY_A_CASO);
-    const ARRAY_FILTRATO = ARRAY_A_CASO.filter((element, indice, array) => element.length >= array.length);   //paragona la lunghezza di ogni elemento con il numero di elementi nell'array (element.lenght >= 9)
+    const ARRAY_FILTRATO = ARRAY_A_CASO.filter((element, indice, array) => element.length >= array.length);   //paragona la lunghezza di ogni elemento con il numero di elementi nell'array (element.length >= 9)
     console.log(ARRAY_FILTRATO);
 
     console.log("")    //questa linea di codice serve a fare una riga di spazio nella console (inutile in un vero file e non un manuale)
@@ -1641,11 +1641,11 @@ console.log("")    //questa linea di codice serve a fare una riga di spazio nell
         return total + element
     });
     console.log(finalScore);
-    //i 2 parametri vengono solitamente indicati con prev (ossia previous reduction = precendente riduzione) e curr (ossia current value = valore corrente)
+    //i 2 parametri vengono solitamente indicati con prev (ossia previous reduction = precedente riduzione) e curr (ossia current value = valore corrente)
     //il valore di prev è inizialmente il primo elemento dell'array (se non è settato nessun valore per il parametro fuori dalla funzione initialValue)
     //il valore di curr sarebbe ogni elemento dell'array (uno ad uno)
-    const arrayyyy = [1, 2, 3, 4, 5];
-    total = arrayyyy.reduce((prev, curr) => prev + (curr/2));
+    const array444 = [1, 2, 3, 4, 5];
+    total = array444.reduce((prev, curr) => prev + (curr/2));
     console.log(total);       //quindi quest'operazione equivale a questa sotto
     console.log(1 + (2/2) + (3/2) + (4/2) + (5/2));    //8
     /*in realtà farebbe l'operazione uno alla volta per ogni elemento
@@ -1656,11 +1656,11 @@ console.log("")    //questa linea di codice serve a fare una riga di spazio nell
     */
 
     //invece se diamo anche un valore all parametro initialValue, nella prima operazione prev non è il primo elemento ma è questo valore
-    total = arrayyyy.reduce((prev, curr) => prev + (curr/2), 0);
+    total = array444.reduce((prev, curr) => prev + (curr/2), 0);
     console.log(total); 
     console.log(0 + (1/2) + (2/2) + (3/2) + (4/2) + (5/2));  //7.5
     //vediamo il caso in cui initialValue è 1
-    total = arrayyyy.reduce((prev, curr) => prev + (curr/2), 1);
+    total = array444.reduce((prev, curr) => prev + (curr/2), 1);
     console.log(total); 
     console.log(1 + (1/2) + (2/2) + (3/2) + (4/2) + (5/2));  //8.5
 
@@ -1694,7 +1694,7 @@ console.log("")    //questa linea di codice serve a fare una riga di spazio nell
     const numbers = [1, 2, 3, 4];
     const sum = numbers.reduce(function(accumulator, currentValue) {
         return accumulator + currentValue;
-    }, 0);    //0 è il valore di intialValue
+    }, 0);    //0 è il valore di initialValue
     console.log(sum); // Output: 10
     //In questo esempio, la funzione passata a reduce() somma l'accumulatore con il valore corrente dell'array.
     //L'accumulatore inizia con un valore iniziale di 0 e ad ogni iterazione l'accumulatore viene aggiornato con la somma dell'accumulatore e del valore corrente dell'array.
