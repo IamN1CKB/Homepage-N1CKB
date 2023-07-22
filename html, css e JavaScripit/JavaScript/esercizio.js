@@ -1464,7 +1464,7 @@ console.log("")    //questa linea di codice serve a fare una riga di spazio nell
     console.log(array11.lastIndexOf("Apple", 4));       //partendo dall'indice 4 (Banana), e andando verso sinistra, la prima ricorrenza di Apple si ha all'indice 3
     //i valori del parametro start possono essere anche negativi, indicando con -1 l'ultimo index (array.length - 1), con -2 il penultimo index (array.length - 2) e così via
     let array12 = ["Orange", "Apple", "Mango", "Apple", "Banana", "Apple", "Mango", "Banana"]
-    console.log(array12.lastIndexOf("Banana", -2));     //la ricerca parte dal penultimo elemento e va fino al primo => indice 4
+    console.log(array12.lastIndexOf("Banana", -2));     //la ricerca parte dal penultimo elemento e va fino al primo =>
 
 //9)slice(): Estrae una porzione di un array e restituisce un nuovo array. Non modifica l'array originale
     //la sintassi è: array.slice(start, end)
@@ -1489,15 +1489,15 @@ console.log("")    //questa linea di codice serve a fare una riga di spazio nell
     let array22 = [4, 5, 6];
     
     let concatenated = array111.concat(array22);  // Unisce array111 e array22 in un unico array
-    console.log(concatenated);      //[1, 6, 7, 4, 4, 5, 6]
+    console.log(concatenated);
     
     let array33 = [7, 8, 9];
     
     concatenated = array111.concat(array22, array33);  // Unisce array111, array22 e array33 in un unico array
-    console.log(concatenated);          //[1, 6, 7, 4, 4, 5, 6, 7, 8, 9]
+    console.log(concatenated);
 
     concatenated = array111.concat([4, 5], 6, [7, 8]);  // Unisce gli elementi di array111 con altri elementi e array
-    console.log(concatenated);          //[1, 6, 7, 4, 4, 5, 6, 7, 8]
+    console.log(concatenated);
 
 //11)join(): Unisce tutti gli elementi di un array in una stringa e restituisce il risultato.
     //il metodo join() non modifica l'array originale, ma restituisce una stringa con gli elementi dell'array uniti.
@@ -1544,7 +1544,7 @@ console.log("")    //questa linea di codice serve a fare una riga di spazio nell
     let array14 = [1, 2, 3, 4];
 
     let mapped = array111.map((x, i, arr) => x * i + arr.length);  // Crea un nuovo array con gli elementi del vecchio array trasformati in base alla funzione
-    console.log(mapped);       //mapped è [1*0 + 4, 2*1 + 4, 3*2 + 4, 4*3 + 4] => [4, 6, 10, 16]
+    console.log(mapped);       //mapped è [1*0 + 4, 2*1 + 4, 3*2 + 4, 4*3 + 4] =>
 
     let people = [    //questo è un array in cui gli elementi sono delle variabili object
         {name: 'Alice', age: 30},
@@ -1553,16 +1553,16 @@ console.log("")    //questa linea di codice serve a fare una riga di spazio nell
     ];
       
     let names = people.map(person => person.name);  // Crea un nuovo array con i nomi delle persone
-    console.log(names);          //['Alice', 'Bob', 'Charlie']
+    console.log(names);
 
     let strings = people.map(person => `${person.name} (${person.age} anni)`);  // Crea un nuovo array con le stringhe formattate
-    console.log(strings);         //['Alice (30 anni)', 'Bob (35 anni)', 'Charlie (40 anni)']
+    console.log(strings);
       
     //vediamo altri esempi di map()
     let array15 = ['one', 'two', 'three', 'four']
-    array111 = array111.map(value => value.length);      //converte i valori nel numero di caratteri che hanno le stringhe ("one" => 3, "two" => 3, )
+    array111 = array15.map(value => value.length);      //converte i valori nel numero di caratteri che hanno le stringhe ("one" => 3, "two" => 3, )
     //per aggiornare l'array e non crearlo un altro possiamo dare un nuovo assegnamento alla variabile let
-    console.log(array111);        // [3, 3, 5, 4]
+    console.log(array111);
 
     const CITTà_LETTERA_MINUSCOLA = [ 
         {nome: "Caserta", sigla: "ce"},
@@ -1647,7 +1647,7 @@ console.log("")    //questa linea di codice serve a fare una riga di spazio nell
     const array444 = [1, 2, 3, 4, 5];
     total = array444.reduce((prev, curr) => prev + (curr/2));
     console.log(total);       //quindi quest'operazione equivale a questa sotto
-    console.log(1 + (2/2) + (3/2) + (4/2) + (5/2));    //8
+    console.log(1 + (2/2) + (3/2) + (4/2) + (5/2));
     /*in realtà farebbe l'operazione uno alla volta per ogni elemento
     1 + (2/2) = 2     questo diventa il valore del nuovo prev
     2 + (3/2) = 3.5
@@ -1658,18 +1658,18 @@ console.log("")    //questa linea di codice serve a fare una riga di spazio nell
     //invece se diamo anche un valore all parametro initialValue, nella prima operazione prev non è il primo elemento ma è questo valore
     total = array444.reduce((prev, curr) => prev + (curr/2), 0);
     console.log(total); 
-    console.log(0 + (1/2) + (2/2) + (3/2) + (4/2) + (5/2));  //7.5
+    console.log(0 + (1/2) + (2/2) + (3/2) + (4/2) + (5/2));
     //vediamo il caso in cui initialValue è 1
     total = array444.reduce((prev, curr) => prev + (curr/2), 1);
     console.log(total); 
-    console.log(1 + (1/2) + (2/2) + (3/2) + (4/2) + (5/2));  //8.5
+    console.log(1 + (1/2) + (2/2) + (3/2) + (4/2) + (5/2));
 
     //c'è ancora un altro parametro che possiamo avere, ossia index, che è il terzo parametro della funzione
     const PREZZI = [17.50, 20.25, 24.75, 13.50, 8.50];
     const SCONTI_PER_ARTICOLO = [0.9, 0.9, 1.0, 1.0, 0.9];
     total = PREZZI.reduce((prevVal, currVal, index) => prevVal + (currVal * SCONTI_PER_ARTICOLO[index]), 0);
     console.log(total);
-    console.log(0 + (17.50 * 0.9) + (20.25 * 0.9) + (24.75 * 1.0) + (13.50 * 1.0) + (8.50 * 0.9));  //79.875
+    console.log(0 + (17.50 * 0.9) + (20.25 * 0.9) + (24.75 * 1.0) + (13.50 * 1.0) + (8.50 * 0.9));
 
     //vediamo alcuni esempi 
     const PAROLE = ["The", "house", "is", "red"];
@@ -1695,7 +1695,7 @@ console.log("")    //questa linea di codice serve a fare una riga di spazio nell
     const sum = numbers.reduce(function(accumulator, currentValue) {
         return accumulator + currentValue;
     }, 0);    //0 è il valore di initialValue
-    console.log(sum); // Output: 10
+    console.log(sum);
     //In questo esempio, la funzione passata a reduce() somma l'accumulatore con il valore corrente dell'array.
     //L'accumulatore inizia con un valore iniziale di 0 e ad ogni iterazione l'accumulatore viene aggiornato con la somma dell'accumulatore e del valore corrente dell'array.
     //Alla fine del ciclo, l'accumulatore avrà la somma di tutti i valori dell'array. 
