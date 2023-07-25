@@ -1,30 +1,30 @@
 //adesso vediamo come far reagire una pagina a interazioni diverse da bottoni
 //le pagine web sanno quando reagire all'interazione di un utente grazie agli eventi (events)
-//Noi infatti ogni volta che creavamo un bottone, inderivamo l'attributo onclick, che crea il click event,
+//Noi infatti ogni volta che creavamo un bottone, inserivamo l'attributo onclick, che crea il click event,
 //attivato ogni volta che si preme quel bottone
 //l'evento che usavamo era dunque un HTML event
 //gli HTML event sono facili da usare ma difficili da maneggiare per grandi pezzi di codice
 //Infatti gli attributi rendono il codice più difficile da controllare
 
 //un altro modo per aggiungere eventi è tramite gli event properties, ossia proprietà che si aggiungono nel codice JavaScript
-//le proprietà degli eventi sono molteplici e si riferiscono sempre all'elemeno con cui interagiscono
-//ad esempio se vogliamo insereire la proprietà dell'evento click su un immagine, per prima cosa scriviamo la funzione che verrà esegita quando clicchiamo l'immagine
+//le proprietà degli eventi sono molteplici e si riferiscono sempre all'elemento con cui interagiscono
+//ad esempio se vogliamo inserire la proprietà dell'evento click su un immagine, per prima cosa scriviamo la funzione che verrà eseguita quando clicchiamo l'immagine
 function clickImmagine() {
     console.log("l'immagine gatto è stata cliccata");
 }
-//poi salviamo l'immagine in una variabile, e infine alla variabile applichiamo la proprieta onclick, con il valore della funzione
+//poi salviamo l'immagine in una variabile, e infine alla variabile applichiamo la proprietà onclick, con il valore della funzione
 var immagineClick = document.querySelector("img#gatto");
 immagineClick.onclick = clickImmagine;     //la funzione deve essere scritta senza parentesi
 //la funzione richiamata dopo un evento viene nominata event handler
 
-//possiamo aggingere eventi anche agli altri tipi di elementi, come div, h1, p, ecc
+//possiamo aggiungere eventi anche agli altri tipi di elementi, come div, h1, p, ecc
 //ad esempio vediamo come cambia il colore del gruppo div quando ci clicchiamo sopra
 var divCambioColore = document.querySelector("div#div-cambio-colore");
-function cambiocoloreDiv() {
+function cambioColoreDiv() {
     divCambioColore.classList.toggle("blu");
     divCambioColore.classList.toggle("rosa");
 }
-divCambioColore.onclick = cambiocoloreDiv;
+divCambioColore.onclick = cambioColoreDiv;
 
 //ci sono vari tipi di eventi; quello che già conosciamo è l'evento click, che si avvia quando clicchiamo su un elemento
 //poi c'è l'evento double click, che si avvia quando facciamo un doppio click su un elemento, che ha la ondblclick property
@@ -54,7 +54,7 @@ function valoreDellaDataInConsole() {
 }
 data.onchange = valoreDellaDataInConsole;
 //facciamo un altro esempio, con un input di tipo text, che conta quanti caratteri ci sono.
-//però l'evento onchange si triggera solo quando la modifica è finita, quindi bisogna mandare invio alla fine per farlo avviare
+//però l'evento onchange si esegue solo quando la modifica è finita, quindi bisogna mandare invio alla fine per farlo avviare
 var inputText = document.querySelector("input#conta-caratteri-pezzotto");
 var paragrafoPromptInputText = document.querySelector("p#prompt-input");
 function contaCaratteri() {
@@ -136,7 +136,7 @@ DIV_CAMBIO_COLORE.addEventListener("click", function () {
     //per farlo avviare sul computer, tieni premuto l'elemento e poi clicca il tasto windows oppure il tasto destro del mouse
     var paragrafoTouchcancel = document.querySelector("p#touchcancel");
     paragrafoTouchcancel.addEventListener("touchcancel", function() {
-        this.innerHTML = "si avvia quando porti il dito fuori dall'area dello schermo, oppure si interrome l'interazione per qualche altro motivo";
+        this.innerHTML = "si avvia quando porti il dito fuori dall'area dello schermo, oppure quando si interrompe l'interazione per qualche altro motivo";
         console.log("si è interrotto per qualche errore con l'interazione dell'elemento")
     })
 

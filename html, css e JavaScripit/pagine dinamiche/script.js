@@ -1,9 +1,9 @@
-//adesso capiamo come funzionano le interazioni tra pagina HTLM e file JavaScript
+//adesso capiamo come funzionano le interazioni tra pagina HTML e file JavaScript
 //dietro ogni pagina dinamica c'è sempre del codice JavaScript
 //per aggiungere il codice a un pagina HTML si inserisce il tag <script></script>
-//questo taga deve essere l'ultimo tag contenente in body
+//questo tag deve essere l'ultimo tag contenente in body
 //il codice JavaScript funziona solo se situato all'interno del tag
-//le instruzioni JavaScript vengono eseguite automaticamente quando la pagina viene visualizzata
+//le istruzioni JavaScript vengono eseguite automaticamente quando la pagina viene visualizzata
 
 
 //si può interagire con la pagina html grazie a vari modi
@@ -16,7 +16,7 @@ console.log(output);
 console.log(document);
 
 //come si vede l'output è il codice del file html
-//per riportare il contenuto IN OGNI CASO di un tag bisogna usare l'intruzione alla fine .innerHTML
+//per riportare il contenuto IN OGNI CASO di un tag bisogna usare l'istruzione alla fine .innerHTML
 var output1 = document.getElementById("console").innerHTML;
 console.log(output1);
 console.log(output.innerHTML);   //possiamo anche scrivere innerHTML dopo la variabile, sono la stessa cosa
@@ -33,13 +33,13 @@ console.log(nuovoValore);
 const TITOLO = document.createElement("h1");
 TITOLO.innerHTML = "questo è il titolo";
 console.log(document); //come possiamo vedere, questo elemento non è ancora presente nella pagina HTML
-//questo perchè non abbiamo specificato dove inserirlo
+//questo perché non abbiamo specificato dove inserirlo
 //per fare ciò dobbiamo dare e trovare l'id del tag parent in cui vogliamo inserirlo
 //salviamo il tag del parente in una variabile
 const HEADER = document.getElementById("parent-titolo");
 HEADER.appendChild(TITOLO);
-//la sintassi è: parent.appendChiild(child)
-//per body possiamo anche non inserire un id siccome il suo ripettivo valore in JavaScript si trova con document.body
+//la sintassi è: parent.appendChild(child)
+//per body possiamo anche non inserire un id siccome il suo rispettivo valore in JavaScript si trova con document.body
 //stessa cosa per head: document.head
 const BODY_ELEMENT = document.body;
 const PARAGRAFO = document.createElement("p");
@@ -71,7 +71,7 @@ function diciCiao() {
 //siccome prompt potrebbe servirci in futuro, salviamolo in una variabile
 const PROMPT = document.getElementById("prompt")
 
-//per renndere la pagina più pulita cancelliamo tutto tramite un bottone
+//per rendere la pagina più pulita cancelliamo tutto tramite un bottone
 function cancellaTutto() {
     BODY_ELEMENT.removeChild(output);
     BODY_ELEMENT.removeChild(document.getElementById("console1"));   //siccome successivamente questi elementi non ci servono più, non li salviamo manco in variabili
@@ -83,10 +83,10 @@ function cancellaTutto() {
     BODY_ELEMENT.removeChild(document.getElementById("bottone-gomma"));
     PROMPT.innerHTML = "";   //con il prompt non ho tolto il tag, ma solo cancellato il suo contenuto: ci può essere utile
     TITOLO.innerHTML = "Interazioni con JavaScript: input";    //titolo per il prossimo argomento
-    //DEDICA_PARENT.removeChild(dedica);    //questo non funziona, perchè dedica è una funzione con scope locale
+    //DEDICA_PARENT.removeChild(dedica);    //questo non funziona, perché dedica è una funzione con scope locale
     BODY_ELEMENT.removeChild(DEDICA_PARENT);   //per questo rimuoviamo il suo parent che ha una variabile con scope globale
 }
-//ok, in qesto caso ho rimasto solo il titolo
+//ok, in questo caso ho rimasto solo il titolo
 
 //ora vediamo come verificare se un elemento salvato in una variabile è un certo tag
 //Per verificare se un elemento di una collezione HTML è un certo tag in JavaScript, si può utilizzare il metodo element.tagName,
@@ -103,10 +103,10 @@ console.log(document.getElementById("che-tag-e").matches("div"));    //output: t
 //i tag input permetto di scrivere caratteri o di selezionare un range di elementi  (date, colori, ecc)
 //il valore che viene scritto inserito può essere gestito in JavaScript
 //per ora gestiamo i valori in text, quindi con l'attributo type="text"
-//se invece vogliamo un elemento input multilinee, usiamo il textarea
+//se invece vogliamo un elemento input multiline, usiamo il textarea
 //vedi il file html con anche gli attributi necessari per gestire la grandezza e il tipo
 
-//per accedere al valore inserito in un input o textarea usiamo l'instuzione .value
+//per accedere al valore inserito in un input o textarea usiamo l'istruzione .value
 function inputValue() {
     const VALUE_INPUT = document.getElementById("input-element").value;
     //questo se si trova fuori da una funzione viene eseguita non appena è visualizzata la pagina
@@ -119,4 +119,4 @@ function textareaValue() {
 }
 
 //ora vedi gli esempi tramite i link sul footer per vedere le esercitazioni
-//dopodichè vedi i nuovi file script1.js e index1.html (dal footer della pagina)
+//dopodiché vedi i nuovi file script1.js e index1.html (dal footer della pagina)

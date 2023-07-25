@@ -529,7 +529,7 @@
         <div class="grid-item">4</div>
     </div>
     <p>
-        Per iniziare con la griglia, nel foglio di stile dobbiamo applicare nel grid-containerla propretà "display: grid;"
+        Per iniziare con la griglia, nel foglio di stile dobbiamo applicare nel grid-container la proprietà "display: grid;"
         <br>
         Inoltre inseriamo anche le proprietà border, background-color, color, margin e tex-align (center) 
         per capire meglio come sono disposti gli elementi
@@ -541,7 +541,7 @@
     <p>
         Per organizzare i grid items in colonne useremo la proprietà "grid-template-columns" nel tag del grid container
         <br>
-        Setttiamo la grandezza di ogni colonna mettendo tot valori (della proprietà template...) quante sono le colonne 
+        Settiamo la grandezza di ogni colonna mettendo tot valori (della proprietà template...) quante sono le colonne 
         e ogni valore corrisponde a alla grandezza di una colonna
     </p>
     <p>
@@ -557,7 +557,7 @@
         <div class="grid-item">4</div>
     </div>
     <p>
-        <ins>RICRODA:</ins> la grandezza delle colonne e delle righe si setta sul parent element (in questo caso il grid container)
+        <ins>RICORDA:</ins> la grandezza delle colonne e delle righe si setta sul parent element (in questo caso il grid container)
     </p>
     <ol>I valori che possiamo mettere nel grid-template-columns sono:
         <li>valori in px</li>
@@ -619,7 +619,7 @@
         In questo caso c'è una nuova unità di misura: fr (fractional unit).
         <br>
         Questa unità indica quanto spazio rimanente della griglia totale devono racchiudere le varie colonne, dando quindi valori in rapporto tra loro
-        (similemente a come succedeva nei valori di flex-grow e flex-shrink)
+        (similmente a come succedeva nei valori di flex-grow e flex-shrink)
         <br>
         Ovviamente se tutti i valori delle colonne sono in fr, lo spazio che viene messo in rapporto è tutta la griglia
     </p>
@@ -695,10 +695,10 @@
         Ad esempio vogliamo impostare 7 colonne con il valore di 10%, scriviamo "grid-template-columns: repeat(7, 10%)"
         <br>
         <br>
-        Questa funione è utilizzabile con ogni tipo di valore in qualsiasi unità (fr, px, auto, %)
+        Questa funzione è utilizzabile con ogni tipo di valore in qualsiasi unità (fr, px, auto, %)
     </p>
     <p>
-        Stesse cose per organizzare in righe con la propretà "grid-template-rows"
+        Stesse cose per organizzare in righe con la proprietà "grid-template-rows"
         <br>
         <ul>
             Poche cose cambiano:
@@ -756,7 +756,7 @@
         <div class="grid-item">33</div>
         <div class="grid-item">34</div>
         <div class="grid-item">35</div>
-        <div class="grid-item">36 (riga estra)</div>
+        <div class="grid-item">36 (riga extra)</div>
         <div class="grid-item">37</div>
         <div class="grid-item">38</div>
         <div class="grid-item">39</div>
@@ -804,7 +804,7 @@
         <div class="grid-item">33</div>
         <div class="grid-item">34</div>
         <div class="grid-item">35</div>
-        <div class="grid-item">36 (riga estra)</div>
+        <div class="grid-item">36 (riga extra)</div>
         <div class="grid-item">37</div>
         <div class="grid-item">38</div>
         <div class="grid-item">39</div>
@@ -813,11 +813,11 @@
     ricorda: il valore auto occupa tutto lo spazio restante a meno che non sia già occupato dagli altri elementi, in questo caso occupa solo la grandezza del contenuto.
     <br>
     <h2>grid-template</h2>
-    possiamo contrarre il tutto  (grid-template-row e grid-template-colunms) posssiamo usare anche la funzione grid-template
+    possiamo contrarre il tutto  (grid-template-row e grid-template-columns) possiamo usare anche la funzione grid-template
     <br>
     i valori di "grid template" sono separati da uno slash (/).
     <br>
-    I valori prima di questo / sono i valori di grid-template-row. I valori dopo sono i valori di grid-template-colunm
+    I valori prima di questo / sono i valori di grid-template-row. I valori dopo sono i valori di grid-template-column
     <br>
     grid-template: 70px 150px 1fr 2fr 3fr auto / 200px 300px 50px auto auto;
     <br>
@@ -853,7 +853,7 @@
         <div class="grid-item">28</div>
         <div class="grid-item">29</div>
         <div class="grid-item">30</div>
-        <div class="grid-item">31 (riga estra)</div>
+        <div class="grid-item">31 (riga extra)</div>
         <div class="grid-item">32</div>
         <div class="grid-item">33</div>
     </div>
@@ -863,7 +863,7 @@
     <br>
     ora utilizziamo una nuova proprietà (con una nuova classe di grid-item) in cui usiamo le varie funzione gap (contratte o meno).
     <br>
-    dunque la differenza tra le funzioni gap e la funzione margin è che con margin possiamo modificare gli spazi tra un elemento e l'estreno, e invece con la funzione gap modifichiamo gli spazi tra i grid items
+    dunque la differenza tra le funzioni gap e la funzione margin è che con margin possiamo modificare gli spazi tra un elemento e l'esterno, e invece con la funzione gap modifichiamo gli spazi tra i grid items
     <br>
     ad esempio se tutti i grid item hanno i margini di 5px, lo spazio tra gli elementi sarà 10px, siccome è la somma dei margini di uno e di un altro grid item
     <br>
@@ -1055,7 +1055,7 @@
     </div>
     come si può vedere inoltre, altra differenza dei margin con i gap sono i grid items sui alti e agli angoli del grid container.
     <br>
-    infatti, con i margin questi elemeti hanno tutti e quattro i lati con lo spazio impostato (quindi anche con lo spazio tra il lato del grid container e il grid item)
+    infatti, con i margin questi elementi hanno tutti e quattro i lati con lo spazio impostato (quindi anche con lo spazio tra il lato del grid container e il grid item)
     <br>
     invece con le funzioni gap c'è spazio solo tra i grid items, ma non c'è spazio tra il lato del grid container e i grid items.
     <br>
@@ -1200,16 +1200,16 @@
         <br>
         poi dobbiamo aggiungere nel grid container la proprietà "grid-template-areas"
         <br>
-        i valori di grid-template-areas devono essere i valori di grid-area dei vari grid items, scritti nell'ordine in cui verrano visti nella pagina.
+        i valori di grid-template-areas devono essere i valori di grid-area dei vari grid items, scritti nell'ordine in cui verranno visti nella pagina.
         <br>
-        in questo modo potrebbe pure non servire la proprità grid-template
+        in questo modo potrebbe pure non servire la proprietà grid-template
     </p>
     <p>
         ora stabiliamo alcune regole nelle quali devono essere scritti i valori di grid-template-areas
         <ul>
             <li>se vogliamo far estendere un grid item in più caselle, ripetiamo il suo valore grid-area</li>
             <li>se vogliamo lasciare degli spazi vuoti scriviamo . tra le grid area che vogliamo lasciare fuori</li>
-            <li>se vogliamo diprorre gli elementi in righe diverse possiamo scrivere più valori in più ""</li>
+            <li>se vogliamo disporre gli elementi in righe diverse possiamo scrivere più valori in più ""</li>
             <li>per comodità nel foglio di stile scriviamo i valori tra le "" in linee di codice successivi</li>
             <li>tutte le linee di codice devono avare lo stesso numero di colonne (inserisci . dove non vuoi nulla), altrimenti errore</li>
             <li>non ci devono essere valori ripetuti se non sono adiacenti (si trovano vicino verticalmente o orizzontalmente), altrimenti errore</li>
@@ -1249,7 +1249,7 @@
     ora possiamo usare queste informazioni per creare una webpage selection precisa
     <div class="grid-container17">
         <div class="grid-titolo grid-item-no-margin">
-            <h3>Malattie sessualmente trasmittibili</h3>
+            <h3>Malattie sessualmente trasmissibili</h3>
         </div>
         <div class="grid-foto grid-item-no-margin">
             <img width="200px" src="https://i.ibb.co/pwmBZQw/Cranach-Cupid-Complaining-to-Venus.jpg" alt="cazzo guardi">
@@ -1260,7 +1260,7 @@
         <div class="grid-footer grid-item-no-margin">
             informazioni prese da 
             <a href="https://it.wikipedia.org/wiki/Malattia_sessualmente_trasmissibile">
-                wikipedia
+                Wikipedia
             </a>
         </div>
     </div>
@@ -1271,7 +1271,7 @@
         <br>
         i grid items possono essere posizionati in varie parti della row axis (ossia la linea immaginari orizzontale) della casella che occupa il grid item. la proprietà che si occupa di ciò si chiama justify-items, e si inserisce nelle regole del grid container
     </p>
-    <ul>i valori di justify-itmes sono:
+    <ul>i valori di justify-item sono:
         <li>
             stretch: valore di default, che fa espandere il grid items in tutta la casella lungo il row axis.
         </li>
@@ -1678,11 +1678,11 @@
     </p>
     facciamo un esempio: (guarda i commenti nel file HTML)
     <div class="grid-container26">
-        <nav class="navigationbar26">   <!--per far andare gli elementi a.anav verso la fine ho messo il flexbox al grid item, per poi impostare justify-content a flex-end-->
+        <nav class="navigationbar26">   <!--per far andare gli elementi a.a-nav verso la fine ho messo il flexbox al grid item, per poi impostare justify-content a flex-end-->
             <a class="a-nav" href="test_web.html">istruzioni principali HTML</a>
             <a class="a-nav" href="index-esercizio.html">pagina con anche CSS</a>
         </nav>
-        <div class="grid-item26">grid item</div>  <!--per far centrare il testo di div.grid-item26 lungo il main axis e corss axis, ho messo il display a flex e mo impostato a center "align-items" e "justify-content"-->
+        <div class="grid-item26">grid item</div>  <!--per far centrare il testo di div.grid-item26 lungo il main axis e cross axis, ho messo il display a flex e mo impostato a center "align-items" e "justify-content"-->
         <div class="grid-item26">grid item</div>
         <div class="grid-item26">grid item</div>
         <div class="grid-item26">grid item</div>

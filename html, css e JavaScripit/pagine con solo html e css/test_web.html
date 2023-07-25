@@ -2,8 +2,8 @@
 <html lang="it">
     <head>
         <title>
-            Esempio di file HTMl   <!--nel tag title c'è il titolo della scheda che comparirà in alto a sinistra sul browser-->
-        </title>
+            Esempio di file HTMl   
+        </title>  <!--nel tag title c'è il titolo della scheda che comparirà in alto a sinistra sul browser-->
     </head>
     <body>
         <h1>TITOLO PRIMARIO</h1>
@@ -17,10 +17,10 @@
             Paragrafo 2 e <em>corsivo di secondo tipo</em>
         </p>
         <p>
-            pargarafo e <b>grassetto di primo tipo</b>
+            paragrafo e <b>grassetto di primo tipo</b>
         </p>
         <p>
-            parafrafo e <strong>grassetto di secondo tipo</strong>
+            paragrafo e <strong>grassetto di secondo tipo</strong>
         </p>
         <p>
             paragrafo e <ins>testo sottolineato</ins>
@@ -32,7 +32,7 @@
 
 
 
-        <ul>Elenco non numerato     <!-- ul sta ler unorderer list -->
+        <ul>Elenco non numerato     <!-- ul sta ler unordered list -->
             <li>sei</li>            <!-- li sta per list item -->
             <li>popo</li>
             <li>un</li>
@@ -47,7 +47,7 @@
 
         <ol reversed>  Elenco numerato al contrario
             <li>eh capit eh?</li>
-            <li>io non prendo nè la pensione nè la centoequattro</li>
+            <li>io non prendo nè la pensione nè la centoquattro</li>
          </ol>
 
         
@@ -95,25 +95,25 @@
             come prima cosa specifichiamo la differenza tra URL e link.
             <br>
             Il link è un collegamento a un elemento, che può essere sul web (quindi come una pagina web in formato html) oppure
-            può essere sul server locale. Se il link riporta a un elemento sul web, allora è un percoso sul web detto URL.
+            può essere sul server locale. Se il link riporta a un elemento sul web, allora è un percorso sul web detto URL.
             <br>
             Nel caso del link che abbiamo messo sopra "<i>link senza bottone (collegato ad un URL)</i>" il link era un URL. Gli URL 
-            sono usati principalemente per collegare pagine esterne al progetto web creato.
+            sono usati principalmente per collegare pagine esterne al progetto web creato.
             Ma se si deve collegare una pagina dello stesso progetto, allora si collega "in locale".
         </p>
         <p>
-            Per collegare un elemento in locole si usano i percosi relativi o assoluti, che servono a muoverci tra le cartelle.
+            Per collegare un elemento in locale si usano i percorsi relativi o assoluti, che servono a muoverci tra le cartelle.
             <ul>
                 <li>
                     I percorsi assoluti partono dalla radice del computer o del server per arrivare ad ogni file. Sono scomodi da usare per
-                    i file locali perchè con il movimento di una minima cartella, il percorso si perde.
+                    i file locali perché con il movimento di una minima cartella, il percorso si perde.
                     <br>
                     Vengono usati principalmente negli URL e non molto in locale
                 </li>
                 <li>
                     I percorsi relativi fanno riferimento alla directory (cartella) in cui si trova il file da cui si parte.
                     <br>
-                    Ci sono 3 casi per i percosi relativi: 
+                    Ci sono 3 casi per i percorsi relativi: 
                     <ul>
                         <li>
                             il caso in cui i file sono nella stessa cartella. La sintassi è semplice: si deve solo inserire il nome del file
@@ -141,7 +141,7 @@
                             <br>
                             <i>href="../file da collegare.html"</i>
                             <br>
-                            in questo esempio salgo di 1 livell0 per collegare il file
+                            in questo esempio salgo di 1 livello per collegare il file
                             <br>
                             <img src="percorso2.jpg">
                             <br>
@@ -153,14 +153,14 @@
             <br>
             Quando si ha un hosting web disponibile (il servizio che permette di mettere online un sito web), i 
             vari file html si inseriscono in varie cartelle o nella stessa cartella di un server a seconda di 
-            come sono indirazzati i link.
+            come sono indirizzati i link.
         </p>
         <p>
             I nomi dei file html sono personalizzabili, ma di solito la homepage ha sempre il nome di index.html
             <br>
             esempio <a href="\percorso\assoluto\completamente\a\caso\index.html">link al file della homepage</a>
             <br>
-            Il link al file in questo caso è un percorso assoluto, che quasi sicurmente non andrà, perche sarà 
+            Il link al file in questo caso è un percorso assoluto, che quasi sicuramente non andrà, perché sarà 
             cambiata la posizione del file.
             <br>
         </p>
@@ -193,19 +193,19 @@
             <input type="text" name="email" placeholder="Qui devi scrivere COGLIONE!">
         </form>
         <br>
-        <!-- gli attributi width e height non funzionanano per gli input testo-->
+        <!-- gli attributi width e height non funzionano per gli input testo-->
 
         <!-- type si utilizza per specificare che tipo di input vuoi inserire (text, password, range, checkbox, date, color) -->
         <!-- vediamo i vari valori di type:-->
-        <!-- 1)text indica solo testo (si può omettere perche di defualt)-->             <input type="text" placeholder="testo normale"> <br>
+        <!-- 1)text indica solo testo (si può omettere perché di default)-->             <input type="text" placeholder="testo normale"> <br>
         <!-- 2)password nasconde il contenuto scritto -->                                <input type="password" placeholder="testo nascosto"><br>
         <!-- 3)range (intervallo) indica tipo un regolatore di livello -->               <input type="range"><br>
         <!-- 4)checkbox indica un quadrino da segnare con la crocetta -->                <input type="checkbox"><br>
         <!-- 5)date (data) indica una data -->                                           <input type="date"><br>
         <!-- 6)color indica la selezione di un colore -->                                <input type="color"><br>
-        <!-- 7)email fa in modo (principalemente nel dispositivi mobili)
-        di impostare la tasiera per scrivere un email
-        (quindi con la @ prensente nella prima sezione della tastiera) -->           <input type="email" placeholder="testo email">
+        <!-- 7)email fa in modo (principalmente nel dispositivi mobili)
+        di impostare la tastiera per scrivere un email
+        (quindi con la @ presente nella prima sezione della tastiera) -->           <input type="email" placeholder="testo email">
         <!-- 8)ci sono molti altri valori da vedere, come tel ecc-->    
         <!-- per raccogliere i dati scritti nel tag input bisogna usare il javascript (lo vedremo molto in futuro)-->
     
@@ -229,7 +229,7 @@
                 </li>
             </ul>
         </p>
-        <textarea name="testo a caso" cols="30" rows="10">questo testo viene scritto di default e puoò essere cancellato</textarea>
+        <textarea name="testo a caso" cols="30" rows="10">questo testo viene scritto di default e può essere cancellato</textarea>
         <p>
             il tag textarea ha come suo valore interno al tag di apertura e di chiusura il valore che viene scritto di default
             nell'inserimento testo. Può essere modificato a piacere, a meno che non venga messo l'attributo readonly, che rende impossibile 
@@ -237,7 +237,7 @@
         </p>
         <textarea readonly cols="40" rows="2">testo di default non modificabile</textarea>
         <h3>form tag e i suoi sotto tag</h3>
-        <!-- form sarebbe una specie di gruppo div specializzato per raggruppare un modulo (form), che può contenere un tag input e un botton,
+        <!-- form sarebbe una specie di gruppo div specializzato per raggruppare un modulo (form), che può contenere un tag input e un bottone,
         e anche vari altri possibili elementi di un modulo-->
         <form>
             Username: <input type="text">
@@ -265,7 +265,7 @@
             <button>Registrati</button>
         </form>
         <br>
-        <!-- possiamo poi mettere il tag legend come primo sottotag di fieldset, in modo da far comparire la scritta come titolo del gruppo-->
+        <!-- possiamo poi mettere il tag legend come primo sotto-tag di fieldset, in modo da far comparire la scritta come titolo del gruppo-->
         <form>
             <fieldset>
                 <legend>Informazioni personali</legend>
@@ -288,7 +288,7 @@
         <!-- inoltre c'è anche il tag label, che è usato per raggruppare le parole che aiutano gli utenti a sapere cosa scrivere nell'input-->
         <!-- l'attributo for del tag label serve a connettere il tag label con il suo corrispondente tag input-->
         <!-- il valore dell'attributo for deve corrispondere con il valore dell'attributo id del tag input, per potersi connettere-->
-        <!-- i label connessi con i tag input possono aiutare l'utente con l'accessibiità. Infatti il lettore quando cliccherà sul tag label
+        <!-- i label connessi con i tag input possono aiutare l'utente con l'accessibilità. Infatti il lettore quando cliccherà sul tag label
         verrà focusato il tag input corrispondente. Se invece i tag label e input non sono connessi, ciò non succederà-->     
         <form>
             <fieldset>
@@ -314,7 +314,7 @@
             </fieldset>
             <button>Registrati</button>
         </form>
-        <!-- un ottimo sostitto di label è l'attributo "placeholder" prensente in input-->
+        <!-- un ottimo sostituto di label è l'attributo "placeholder" presente in input-->
         <!-- placeholder si utilizza per scrivere il testo sullo sfondo dell'input (indica di solito email, username o password) -->
         <form>
             <fieldset>
@@ -344,9 +344,9 @@
         <br>
         <abbr title="Sono porci questi Romani">SPQR</abbr>
         <br>
-        <h3>scrivere codice come testo in un file HTLM</h3>
+        <h3>scrivere codice come testo in un file HTML</h3>
         <ul>
-            nel caso dobbiamo far vedere nella pagina web più spazi (il broswer interpreta solo il primo spazio, e quelli
+            nel caso dobbiamo far vedere nella pagina web più spazi (il browser interpreta solo il primo spazio, e quelli
             successivi li ignora) oppure proprio la scrittura del codice, ma viene interpretato dal browser, come 
             parte del codice stesso, possiamo usare vari metodi:
             <li>
@@ -403,7 +403,7 @@
 
 
         <h2>tag semantici</h2>
-        la maggior parte dei file semantici non modifacano l'aspetto della pagina, ma possono essere utili per le CSS rule 
+        la maggior parte dei file semantici non modificano l'aspetto della pagina, ma possono essere utili per le CSS rule 
         <!--div viene usata per raggruppare vari elementi in modo da essere meglio gestiti--> 
          <div>
             <p id="siuuum"> SIIUUUUUUUUUUUUUUUMMMM</p>
@@ -419,7 +419,7 @@
             </h5>
         </header>
         
-        <!--altro tag che sostituisce div è il tag footer, utilizato per informazioni a fine pagina, come informazioni di contatto e di visita-->
+        <!--altro tag che sostituisce div è il tag footer, utilizzato per informazioni a fine pagina, come informazioni di contatto e di visita-->
         <footer>
             numero di telefono: <a href="tel:+393442726457">pensaci sei carina</a>
         </footer>
@@ -441,28 +441,28 @@
             <a href="mailto:palestratoperlafiga@gmail.com">una scimmia</a>
         </nav>
         
-        <!--inotre possiamo sostituire anche il tag p del paragrafo per rendere il codice più leggibile-->
+        <!--inoltre possiamo sostituire anche il tag p del paragrafo per rendere il codice più leggibile-->
         <!--possiamo cambiare p con h1 che modifica anche le dimensioni del testo-->
         
-        <!--poi c'è il tag details che serve a nascondere descrizioni dettaggliate nella parola dettagli-->
+        <!--poi c'è il tag details che serve a nascondere descrizioni dettagliate nella parola dettagli-->
         <details>
             <p>
-                me piccat o cor, ma poi t na vai e nu sacc ancor
+                me pcciat o cor, ma poi t na vai e nu sacc ancor
             </p>
             sheeeeeeeeeeeeee
         </details>
-        <!--per poter dare una piccola descizione della descrizione si inserisce il tag summary nel tag details-->
+        <!--per poter dare una piccola descrizione della descrizione si inserisce il tag summary nel tag details-->
         <details>
             <summary>
                 sheeeeeeeeeeeeee
             </summary>
-            me piccat o cor, ma poi t na vai e nu sacc ancor       
+            me pcciat o cor, ma poi t na vai e nu sacc ancor       
         </details>
         <!--il tag details è molto utile in un bottone-->
         <button>
             <details>
                 <summary>
-                    e vuò cliccà o scè
+                    e vuò clicca o scè
                 </summary>
                 aaaaaaaaaaaaaazpegnaaaaaaa
             </details>
@@ -479,7 +479,7 @@
         <br>
         <br>
         <br>
-        <h2>ACCESSIBILITÁ HTML</h2>
+        <h2>ACCESSIBILITÀ HTML</h2>
         <p>
             Per rendere accessibile le pagine web al maggior numero di utenti, dobbiamo ricordarci tecnologie di assistenza.
             Queste tecnologie sono usate da utenti con diversi dispositivi o con una connessione lenta, oppure con disabilità.
@@ -501,7 +501,7 @@
             </li>
         </ul>
         <p>
-            Altro modo per migliorare l'accessibiità è il WAI-ARIA.
+            Altro modo per migliorare l'accessibilità è il WAI-ARIA.
             Il WAI-ARIA (Web Accessibility Initiative - Accessible Rich Internet Applications) è un insieme di specifiche
             sviluppate dal W3C (World Wide Web Consortium) per migliorare l'accessibilità dei contenuti Web per le persone
             con disabilità, in particolare per quelle che utilizzano tecnologie assistive come screen reader, tastiere, ecc.
@@ -534,7 +534,7 @@
                 role="banner" => fa interpretare un elemento come l'intestazione della pagina.
             </li>
             <br>
-            <li>Per far considerare al lettore di schermo vari elementi come un unico elemento, dobbiamo usare role al conteiner di questi elementi,
+            <li>Per far considerare al lettore di schermo vari elementi come un unico elemento, dobbiamo usare role al container di questi elementi,
                 dando il valore del tag.
                 <br>
                 <i>
@@ -559,22 +559,22 @@
             </li>
         </ul>
         <p>
-            Sui tag semantici non si deve usare l'attributo role, siccome è inutile e superfuo
-            Ricorda, tra un tag semantico e un attributo role, è meglio usare il tag semantico, siccome è più accessbile.
+            Sui tag semantici non si deve usare l'attributo role, siccome è inutile e superfluo
+            Ricorda, tra un tag semantico e un attributo role, è meglio usare il tag semantico, siccome è più accessibile.
         </p>
         <p>
             Altro attributo ARIA utile è aria-hidden.
             <br>
             aria-hidden: nasconde dal lettore di schermo elementi visivi superflui (non si deve inserire valore dell'attributo)
             <br>
-            questo attributo non deve essere usato su elementi interattivi, come bottoni o link, perchè non rende possibile per il lettore di schermo interagire con loro
+            questo attributo non deve essere usato su elementi interattivi, come bottoni o link, perché non rende possibile per il lettore di schermo interagire con loro
         </p>
         
         <br>
         <br>
         <br>
         <header>
-            <h2>CSS stilying</h2>
+            <h2>CSS styling</h2>
         </header>
 
         <!--per poter dare uno stile agli elementi HTML ci sono vari modi con il linguaggio CSS-->
@@ -583,26 +583,26 @@
         <!--poi dall'attributo style si sceglie l'aspetto che si vuole modificare (come color) e poi si aggiungono :-->
         <!--dopo i 2 punti si sceglie la modifica dell'aspetto-->
         <!--questi elementi sono chiamati declarations (dichiarazioni), formati da una proprietà (color) e un valore (brown)-->
-        <!--possiamo aggiungere quante proprietà vogliamo ma devono essere seperate da un ;-->
+        <!--possiamo aggiungere quante proprietà vogliamo ma devono essere separate da un ;-->
         <a href="Proprietà dei CSS.html">Proprietà CSS link percorso</a>
         <br>
         <a href="http://www.hotwebguide.com/content/programmazione-web/css-propriety.asp#:~:text=I%20valori%20predefiniti%20sono%20le,numeri%20interi%20seguiti%20da%20px">Proprietà CSS URL</a>
         <br>
         <p style="color:brown;">
-            We are VENOW
+            We are VENOM
         </p>
-        <!--ci sono tantissime proprietà in CSS, come backgrond-color, che sceglie il colore dello sfondo di un testo-->
+        <!--ci sono tantissime proprietà in CSS, come background-color, che sceglie il colore dello sfondo di un testo-->
         <p style="color: cornflowerblue; background-color: darkblue;">
-            BRINGG MEE THAAANOOOSSSS
+            BRING MEE THAAANOOOSSSS
         </p>
-        <!--altra prorpietà è il font-size (dimensione del carattere), con i valori che si possonon misurare in vari modi: pixel, percentuale,-->
+        <!--altra proprietà è il font-size (dimensione del carattere), con i valori che si possono misurare in vari modi: pixel, percentuale,-->
         <a href="tel:+393473528378" style="font-size: 60px;">Allora l'ho farò da solo</a>
         <!--si può scegliere il tipo di carattere, con la proprietà font-family. i valori di questa proprietà sono molteplici-->
         <div style="font-family:'Courier New', Courier, monospace;">
-            Io sono INELLUTABILE
+            Io sono INELUTTABILE
         </div>
         <!--font-style è una proprietà che può far diventare corsivo delle parole, similmente al tag em-->
-        <!--font-weight invece ha valori che permettono di far diventare il testo grasseto (to bold), similmente al tag strong-->
+        <!--font-weight invece ha valori che permettono di far diventare il testo grassetto (to bold), similmente al tag strong-->
         <section style="font-style: italic; font-weight:bold;">
             Peter, chiamami Strange
         </section>

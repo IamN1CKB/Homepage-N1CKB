@@ -10,14 +10,14 @@ PARAGRAFO_2.innerHTML = `secondo paragrafo modificato`;
 //ogni elemento della struttura lo chiamiamo node (nodo), come ad esempio p
 //ci sono diversi tipi di nodes
 //il tag html è il root node (nodo della radice), che non può essere più di uno
-//gli elementi come p sono chimati element nodes, invece il testo che sta dentro un tag di apertura e uno di chiusura si chiama text nodes
+//gli elementi come p sono chiamati element nodes, invece il testo che sta dentro un tag di apertura e uno di chiusura si chiama text nodes
 //infatti ogni testo che appare sulla pagina è scritta nel codice HTML
 
 //inoltre già conosciamo le relazioni genitore-figlio dei vari tag
 //altra relazione sono i discendenti, secondo cui tramite varie relazioni parent-child tutti i nodi sono discendenti del tag html
 
 //per gestire queste posizione in JavaScript si usa il DOM
-//il DOM (document object model) è un interfaccia che permette di accedere a ttti gli elementi in base alla loro posizione nella struttura ad albero
+//il DOM (document object model) è un interfaccia che permette di accedere a tutti gli elementi in base alla loro posizione nella struttura ad albero
 //la prima cosa a cui DOM può farci accedere è il root node
 var htmlRoot = document;
 console.log(htmlRoot);
@@ -25,9 +25,9 @@ console.log(htmlRoot);
 var headNode = document.head;
 console.log(headNode);
 console.log(document.body);
-//possiamo sempre aggiornare i nodes con l'instruzione .innerHTML
+//possiamo sempre aggiornare i nodes con l'istruzione .innerHTML
 
-//per accedere a tutti i figli di un node si usa l'instruzione .children
+//per accedere a tutti i figli di un node si usa l'istruzione .children
 var figli = PARENT_PARAGRAFO.children;
 console.log(figli);  //riporta un array con tutti l'elementi figli
 console.log(figli[2]);   //per prendere un figlio possiamo usare []
@@ -53,7 +53,7 @@ var elementoSpanClasse = document.querySelector("span.classe");
 console.log(elementoSpanClasse);    //in questo modo non si prende il primo elemento span o il primo elemento con class="classe"
 //invece si prende il primo elemento span con il class="classe"
 //per specificare in modo ancora ulteriore, si possono inserire più classi
-console.log(document.querySelector("p.classe.altraclasse"));
+console.log(document.querySelector("p.classe.altraClasse"));
 
 //ora vediamo come accedere il valore degli attributi dei tag
 //possiamo salvare il tag in considerazione in una variabile
@@ -73,15 +73,15 @@ function cambioHrefTagA() {
     const LINK_FINALE = document.querySelector("#link-finale");
     condizione = !condizione;
     if (condizione) {
-        LINK_INIZIALE.innerHTML = `il link inziale è ${LINK.href}`;
+        LINK_INIZIALE.innerHTML = `il link iniziale è ${LINK.href}`;
         LINK.href = "https://www.treccani.it/";
-        LINK.innerHTML = "link a treccani";
+        LINK.innerHTML = "link a Treccani";
         LINK_FINALE.innerHTML = `il link finale è ${LINK.href}`;
     }
     else {
-        LINK_INIZIALE.innerHTML = `il link inziale è ${LINK.href}`;
+        LINK_INIZIALE.innerHTML = `il link iniziale è ${LINK.href}`;
         LINK.href = "https://it.wikipedia.org/wiki/Pagina_principale";
-        LINK.innerHTML = "link a wikipedia";
+        LINK.innerHTML = "link a Wikipedia";
         LINK_FINALE.innerHTML = `il link finale è ${LINK.href}`;
     }
         
@@ -93,12 +93,12 @@ function cambioTipoDiInput() {
     const TIPO_INPUT_FINALE = document.querySelector("#input-finale");
     condizione1 = !condizione1;
     if (condizione1) {
-        TIPO_INPUT_INIZIALE.innerHTML = `il tipo inziale è ${INPUT.type}`;
+        TIPO_INPUT_INIZIALE.innerHTML = `il tipo iniziale è ${INPUT.type}`;
         INPUT.type = "date";
         TIPO_INPUT_FINALE.innerHTML = `il tipo finale è ${INPUT.type}`;
     }
     else {
-        TIPO_INPUT_INIZIALE.innerHTML = `il tipo inziale è ${INPUT.type}`;
+        TIPO_INPUT_INIZIALE.innerHTML = `il tipo iniziale è ${INPUT.type}`;
         INPUT.type = "text";
         TIPO_INPUT_FINALE.innerHTML = `il tipo finale è ${INPUT.type}`;
     }
@@ -143,7 +143,7 @@ function cancellaElementiDallaPagina() {
     while (document.body.children.length > 0) {
         if (ELEMENTO_DA_NON_CANCELLARE_titolo === document.body.children[0]) {
             console.log("sono arrivato all'ultimo elemento")
-            break;     //questa instruzione stoppa il while loop
+            break;     //questa istruzione stoppa il while loop
         }
         else if (document.body.children[0].matches("script")) {
             console.log(`non ho cancellato il tag script`);
@@ -172,8 +172,8 @@ function displayColor(paragrafo) {
 const PARAGRAFO_COLORATO1 = BODY2.children[0];
 const PARAGRAFO_COLORATO2 = document.querySelector("#paragrafo-colorato2");
 const PARAGRAFO_COLORATO3 = document.querySelector("#paragrafo-colorato3");
-//come possiamo provare, nel paragrafo colorato 1 si riesce ad accedere al colore, perchè settato inline
-//invece nel paragrafo colorato 2 e 3 no, perchè settati in un foglio esterno o nel tag style
+//come possiamo provare, nel paragrafo colorato 1 si riesce ad accedere al colore, perché settato inline
+//invece nel paragrafo colorato 2 e 3 no, perché settati in un foglio esterno o nel tag style
 //se vogliamo cambiare lo stile del paragrafo 2 e 3 vedremo come si fa
 
 //per adesso vediamo come cambiare lo stile inline
@@ -181,7 +181,7 @@ const PARAGRAFO_COLORATO3 = document.querySelector("#paragrafo-colorato3");
 function cambiaColore(paragrafo) {
     paragrafo.style.color = "black";
 }
-//per cambiare lo stile di proprietà con più parole si usa il camel Case, ad esempio background-color diventa backgruondColor
+//per cambiare lo stile di proprietà con più parole si usa il camel Case, ad esempio background-color diventa backgroundColor
 function cambiaColoreSfondo(elemento) {
     elemento.style.backgroundColor = "antiquewhite";
 }
@@ -212,7 +212,7 @@ puoi utilizzare la notazione punto per accedere alla proprietà corrispondente.
 Altrimenti, è meglio utilizzare il metodo getAttribute() perché gestisce meglio i casi in cui l'attributo non esiste o il nome è scritto in modo diverso.
 */
 
-//per cambiare attributo possiamo usare setAttribute().   (sempre alterantivo alla notazione punto)
+//per cambiare attributo possiamo usare setAttribute().   (sempre alternativo alla notazione punto)
 function changeImage() {
     const IMMAGINE_GATTO = document.querySelector("#gatto");
     console.log(IMMAGINE_GATTO.getAttribute("src"));
@@ -248,7 +248,7 @@ function removeConsoleDati() {
 
 //querySelectorAll include sia il metodo getElementsByClassName() sia il metodo getElementsByTagName()
 //i valore dei tre metodi però può essere diverso
-    /*getElementByTagName() e getElementByClassName() restituisce HTMLCollection di tutti gli elementi con il nome del tag o della classse 
+    /*getElementByTagName() e getElementByClassName() restituisce HTMLCollection di tutti gli elementi con il nome del tag o della classe 
     specificata presenti nella pagina.*/
         //L'HTMLCollection è simile a un array ma, a differenza di un vero array, è dinamico e si adatta automaticamente ai cambiamenti nella pagina.
         //dunque il valore di un HTMLCollection cambia con il cambiamento della pagina.
@@ -257,9 +257,9 @@ function removeConsoleDati() {
             console.log(PARAGRAFI_TAG_NAME);       //output: HTMLCollection(3) [p, p, p, ...]
         }
 
-        function displayClassexampleclass() {
-            const elementiexampleclass = document.getElementsByClassName('example-class');
-            console.log(elementiexampleclass);         //output: HTMLCollection(3) [div.example-class, p.example-class, span.example-class]
+        function displayExampleClass() {
+            const ELEMENTI_EXAMPLE_CLASS = document.getElementsByClassName('example-class');
+            console.log(ELEMENTI_EXAMPLE_CLASS);         //output: HTMLCollection(3) [div.example-class, p.example-class, span.example-class]
         }
 
     //querySelectorAll() restituisce una NodeList di tutti gli elementi che soddisfano la query CSS specificata.
@@ -286,7 +286,7 @@ un NodeList più versatile e flessibile.
 //https://dev.to/jimajs/htmlcollection-vs-nodelist-in-javascript-4337
 
 //per convertire una Nodelist o un HTMLCollection, ci basta dunque usare array.from() e vediamo ora come si usa
-//come prima cosa creiamo una Nodelist o un HTMLCollection e salviamolo in una variabile, poi usiamo array.from(Nodelist oppure HTMLCollection), e infini stampiamo i valori
+//come prima cosa creiamo una Nodelist o un HTMLCollection e salviamolo in una variabile, poi usiamo array.from(Nodelist oppure HTMLCollection), e infine stampiamo i valori
 function NodelistToArraySpan() {
     var NodelistSpan = document.querySelectorAll("span");
     var arrayOfSpan = Array.from(NodelistSpan);
@@ -311,12 +311,12 @@ function HTMLCollectionToArraySpan() {
 //Potremmo farlo con il metodo setAttribute, ma ciò fa annullare o l'una o l'altra classe.
 //infatti con setAttribute se voglio aggiungere una classe a un elemento, devo per forza settare anche le classi già presenti, altrimenti queste si annullano
 function cambiaAGrassetto() {
-    const paragrafo = document.querySelector("p#corsivograssetto");
+    const paragrafo = document.querySelector("p#corsivoGrassetto");
     paragrafo.setAttribute("class", "grassetto");
 }
    
 function cambiaACorsivo() {
-    const paragrafo = document.querySelector("p#corsivograssetto");
+    const paragrafo = document.querySelector("p#corsivoGrassetto");
     paragrafo.setAttribute("class", "corsivo");
 }
 //con questo codice possiamo cambiare la classe da corsivo a grassetto e viceversa, ma non possiamo avere entrambi le classi
@@ -334,8 +334,8 @@ La DOMTokenList fornisce metodi per la gestione dei token, come ad esempio add, 
 Questi metodi permettono di modificare e gestire facilmente la lista di token.
 */
 //dunque nei DOMTokenList possiamo usare i metodi:
-    //add(token) per aggingere un token senza eliminare gli altri,
-    //remove(token) per togliere solo deteriminati token, 
+    //add(token) per aggiungere un token senza eliminare gli altri,
+    //remove(token) per togliere solo determinati token, 
     //toggle(token) per aggiungere un token se non è presente, e toglierlo se è presente
     //contains(token) Restituisce true se il token è presente nella lista, altrimenti false
     //replace(oldToken, newToken): Sostituisce oldToken con newToken.
@@ -352,7 +352,7 @@ function modificaClassi() {
     console.log(element.className);
     // output: "new-class"
     
-    element.classList.toggle('new-class');  //siccome è già prensente, togli la classe new-class
+    element.classList.toggle('new-class');  //siccome è già presente, togli la classe new-class
     console.log(element.className);
     // output: ""
     
