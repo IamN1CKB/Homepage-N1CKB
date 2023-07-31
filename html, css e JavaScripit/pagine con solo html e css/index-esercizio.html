@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
     <title>
         Regole CSS
@@ -8,20 +9,29 @@
     <!--poi si scrive il tag senza ">" o "<", creando delle CSS regole per lo stile, rispettate in tutta la pagina per quei tipi di tag-->
     <style>
         h1 {
-            font-size: 50px; font-family:Georgia, 'Times New Roman', Times, serif; font-style: italic; color: maroon;
-        font-weight: bold; background-color: mediumspringgreen;
+            font-size: 50px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-style: italic;
+            color: maroon;
+            font-weight: bold;
+            background-color: mediumspringgreen;
         }
+
         footer {
-            background-color: orangered; text-align:center;
+            background-color: orangered;
+            text-align: center;
         }
+
         body {
             background-color: cornsilk;
         }
-        /* per fare delle note su CSS bisogna aggiungere questi simboli => /*...*/ /*(questa è una nota su CSS)*/
+
+        /* per fare delle note su CSS bisogna aggiungere questi simboli => /*...*/
+        /*(questa è una nota su CSS)*/
     </style>
     <!--3) terzo modo per usare CSS è tramite un file di stile esterno, collegato al file html-->
     <!--in questo modo si organizzano meglio le CSS rule (regole) in un foglio di stile (style sheet) come un file separato dal file HTML -->
-    <!--poi si collega ad esso tramite il tag link, usato proprio per fogli di stile-->            
+    <!--poi si collega ad esso tramite il tag link, usato proprio per fogli di stile-->
     <link rel="stylesheet" type="text/css" href="style-esercizio.css">
     <!--rel è un attributo che specifica il rapporto tra il documento corrente e quello linkato-->
     <!--type invece specifica il tipo di file collegato, se html (text/html) o css (text/css)-->
@@ -37,7 +47,7 @@
     <!--l'attributo target con il valore -blank fa in modo che il link si apra in una altra scheda-->
     <br>
     <h1 class="text">
-        To grow old in V. 
+        To grow old in V.
     </h1>
     <img src="https://mimo.app/i/earth.png" alt="non sei connesso coglione" class="terra">
     <p style="background-color: cadetblue;" class="text">
@@ -65,12 +75,12 @@
             looking strong, John
         </figcaption>
     </figure>
-            
+
     <img src="https://i.ibb.co/8mzQTDc/IMG-20220123-123023.jpg" alt="IMG-20220123-123023" class="layers">
     <br>
     <h2 class="thanos-logica">
         tutto perfettamente bilanciato come tutto dovrebbe essere
-    </h2> 
+    </h2>
     <img src="https://i.ibb.co/LzhfWQ0/IMG-20220123-145357.jpg" alt="IMG-20220123-145357" class="ordine">
     <br>
     <p class="titano-pazzo">
@@ -92,7 +102,7 @@
         </summary>
         Questo l'hai visto in un negozio di souvenir?
     </details>
-    
+
     <img src="https://i.ibb.co/X53bcgj/IMG-20210827-WA0003.jpg" alt="IMG-20210827-WA0003" class="nonna">
     <img src="https://i.ibb.co/X53bcgj/IMG-20210827-WA0003.jpg" alt="IMG-20210827-WA0003" class="nonnaa">
     <img src="https://mimo.app/i/light-bulb.png" class="lampdin">
@@ -112,8 +122,10 @@
     </section>
     <img src="https://i.ibb.co/jhRz878/IMG-20220124-WA0060.jpg" alt="IMG-20220124-WA0060" class="best">
     <p>
-        Le brutte intenzioni, la maleducazione, la tua brutta figura di ieri sera, la tua ingratitudine, la tua arroganza,
-        fai ciò che vuoi mettendo i piedi in testa. Certo il disordine è una forma d’arte, ma tu sai solo coltivare invidia.
+        Le brutte intenzioni, la maleducazione, la tua brutta figura di ieri sera, la tua ingratitudine, la tua
+        arroganza,
+        fai ciò che vuoi mettendo i piedi in testa. Certo il disordine è una forma d’arte, ma tu sai solo coltivare
+        invidia.
         Ringrazia il cielo sei su questo palco, rispetta chi ti ci ha portato dentro. Questo sono io.
     </p>
     <p class="simp">
@@ -125,7 +137,7 @@
     <div class="peter">
         Mister Stark, we won
     </div>
-    <div class="hulkk">
+    <div class="HULK">
         we have hulk
     </div>
     <br>
@@ -169,10 +181,10 @@
         <div class="item">io sono.... io sono.</div>
         <div class="item">Più in alto più lontano più veloce</div>
     </div>
-    <div class="coontainer">
-        <div class="ittem">Div</div>
-        <button class="ittem">Button</button>
-        <h3 class="ittem">Heading</h3>
+    <div class="CONTAINER">
+        <div class="ITEM">Div</div>
+        <button class="ITEM">Button</button>
+        <h3 class="ITEM">Heading</h3>
     </div>
     <div class="padre">
         <span class="figlio">a sinistra</span>
@@ -188,125 +200,127 @@
 
     <h1>proprietà del contenitore (flex container)</h1>
     <h2>justify-content</h2>
-    <p>proprietà usata per distribuire i contenuti del flexbox lungo il main axis (orizzontale in row, verticale in column)</p>
+    <p>proprietà usata per distribuire i contenuti del flexbox lungo il main axis (orizzontale in row, verticale in
+        column)</p>
     justify-content: flex-start;
     <div class="flex-start">
-        <div class="itemm">1</div>
-        <div class="itemm">2</div>
-        <div class="itemm">3</div>
-        <div class="itemm">4</div>
+        <div class="ITEM2">1</div>
+        <div class="ITEM2">2</div>
+        <div class="ITEM2">3</div>
+        <div class="ITEM2">4</div>
     </div>
     <br>
     justify-content: flex-end;
     <div class="flex-end">
-        <div class="itemm">1</div>
-        <div class="itemm">2</div>
-        <div class="itemm">3</div>
-        <div class="itemm">4</div>
+        <div class="ITEM2">1</div>
+        <div class="ITEM2">2</div>
+        <div class="ITEM2">3</div>
+        <div class="ITEM2">4</div>
     </div>
     <br>
     justify-content: center;
     <div class="center">
-        <div class="itemm">1</div>
-        <div class="itemm">2</div>
-        <div class="itemm">3</div>
-        <div class="itemm">4</div>
+        <div class="ITEM2">1</div>
+        <div class="ITEM2">2</div>
+        <div class="ITEM2">3</div>
+        <div class="ITEM2">4</div>
     </div>
     <br>
     justify-content: space-around;
     <div class="space-around">
-        <div class="itemm">1</div>
-        <div class="itemm">2</div>
-        <div class="itemm">3</div>
-        <div class="itemm">4</div>
+        <div class="ITEM2">1</div>
+        <div class="ITEM2">2</div>
+        <div class="ITEM2">3</div>
+        <div class="ITEM2">4</div>
     </div>
     <br>
     justify-content: space-between
     <div class="space-between">
-        <div class="itemm">1</div>
-        <div class="itemm">2</div>
-        <div class="itemm">3</div>
-        <div class="itemm">4</div>
+        <div class="ITEM2">1</div>
+        <div class="ITEM2">2</div>
+        <div class="ITEM2">3</div>
+        <div class="ITEM2">4</div>
     </div>
     <br>
 
     <h2>align-items</h2>
-    <p>proprietà usata per distribuire i contenuti del flexbox lungo il cross axis (verticale in row, orizzontale in column)</p>
+    <p>proprietà usata per distribuire i contenuti del flexbox lungo il cross axis (verticale in row, orizzontale in
+        column)</p>
     align-items: stretch;
-    <div class="stretchh">
-        <div class="itemm">1</div>
-        <div class="itemm">2</div>
-        <div class="itemm">3</div>
-        <div class="itemm">4</div>
+    <div class="STRETCH">
+        <div class="ITEM2">1</div>
+        <div class="ITEM2">2</div>
+        <div class="ITEM2">3</div>
+        <div class="ITEM2">4</div>
     </div>
     <br>
     align-items: flex-start;
-    <div class="flex-startt">
-        <div class="itemm">1</div>
-        <div class="itemm">2</div>
-        <div class="itemm">3</div>
-        <div class="itemm">4</div>
+    <div class="FLEX-START">
+        <div class="ITEM2">1</div>
+        <div class="ITEM2">2</div>
+        <div class="ITEM2">3</div>
+        <div class="ITEM2">4</div>
     </div>
     <br>
     align-items: flex-end;
-    <div class="flex-endd">
-        <div class="itemm">1</div>
-        <div class="itemm">2</div>
-        <div class="itemm">3</div>
-        <div class="itemm">4</div>
+    <div class="FLEX-END">
+        <div class="ITEM2">1</div>
+        <div class="ITEM2">2</div>
+        <div class="ITEM2">3</div>
+        <div class="ITEM2">4</div>
     </div>
     <br>
     align-items: center;
-    <div class="centerr">
-        <div class="itemm">1</div>
-        <div class="itemm">2</div>
-        <div class="itemm">3</div>
-        <div class="itemm">4</div>
+    <div class="CENTER">
+        <div class="ITEM2">1</div>
+        <div class="ITEM2">2</div>
+        <div class="ITEM2">3</div>
+        <div class="ITEM2">4</div>
     </div>
     <br>
-    
-    
+
+
     <h2>flex-wrap</h2>
     <p>la proprietà flex-wrap consente di disporre gli elementi che superano il container in righe differenti</p>
     flex-wrap: nowrap;
     <div class="nowrap">
-        <div class="itemmm">1</div>
-        <div class="itemmm">2</div>
-        <div class="itemmm">3</div>
-        <div class="itemmm">4</div>
-        <div class="itemmm">5</div>
-        <div class="itemmm">6</div>
-        <div class="itemmm">7</div>
-        <div class="itemmm">8</div>
-        <div class="itemmm">9</div>
-        <div class="itemmm">10</div>
+        <div class="ITEM3">1</div>
+        <div class="ITEM3">2</div>
+        <div class="ITEM3">3</div>
+        <div class="ITEM3">4</div>
+        <div class="ITEM3">5</div>
+        <div class="ITEM3">6</div>
+        <div class="ITEM3">7</div>
+        <div class="ITEM3">8</div>
+        <div class="ITEM3">9</div>
+        <div class="ITEM3">10</div>
     </div>
     <br>
     flex-wrap: wrap;
     <div class="wrap">
-        <div class="itemmm">1</div>
-        <div class="itemmm">2</div>
-        <div class="itemmm">3</div>
-        <div class="itemmm">4</div>
-        <div class="itemmm">5</div>
-        <div class="itemmm">6</div>
-        <div class="itemmm">7</div>
-        <div class="itemmm">8</div>
-        <div class="itemmm">9</div>
-        <div class="itemmm">10</div>
+        <div class="ITEM3">1</div>
+        <div class="ITEM3">2</div>
+        <div class="ITEM3">3</div>
+        <div class="ITEM3">4</div>
+        <div class="ITEM3">5</div>
+        <div class="ITEM3">6</div>
+        <div class="ITEM3">7</div>
+        <div class="ITEM3">8</div>
+        <div class="ITEM3">9</div>
+        <div class="ITEM3">10</div>
     </div>
     <br>flex-wrap: wrap-reverse;
     <div class="wrap-reverse">
-        <div class="itemmm">1</div>
-        <div class="itemmm">2</div>
-        <div class="itemmm">3</div>
-        <div class="itemmm">4</div>
-        <div class="itemmm">5</div>
-        <div class="itemmm">6</div>
-        <div class="itemmm">7</div>
-        <div class="itemmm">8</div>
-        <div class="itemmm">9</div>
-        <div class="itemmm">10</div>
+        <div class="ITEM3">1</div>
+        <div class="ITEM3">2</div>
+        <div class="ITEM3">3</div>
+        <div class="ITEM3">4</div>
+        <div class="ITEM3">5</div>
+        <div class="ITEM3">6</div>
+        <div class="ITEM3">7</div>
+        <div class="ITEM3">8</div>
+        <div class="ITEM3">9</div>
+        <div class="ITEM3">10</div>
     </div>
     <br>
     <br>
@@ -315,46 +329,46 @@
     <h2>
         align-content STUDIA MEGLIO
     </h2>
-        <p>la proprietà align-content consente di disporre gli elementi che superano il container in righe differenti</p>
-        align-content: ;
+    <p>la proprietà align-content consente di disporre gli elementi che superano il container in righe differenti</p>
+    align-content: ;
     <div class="align-content">
-        <div class="itemmm">1</div>
-        <div class="itemmm">2</div>
-        <div class="itemmm">3</div>
-        <div class="itemmm">4</div>
-        <div class="itemmm">5</div>
-        <div class="itemmm">6</div>
-        <div class="itemmm">7</div>
-        <div class="itemmm">8</div>
-        <div class="itemmm">9</div>
-        <div class="itemmm">10</div>
+        <div class="ITEM3">1</div>
+        <div class="ITEM3">2</div>
+        <div class="ITEM3">3</div>
+        <div class="ITEM3">4</div>
+        <div class="ITEM3">5</div>
+        <div class="ITEM3">6</div>
+        <div class="ITEM3">7</div>
+        <div class="ITEM3">8</div>
+        <div class="ITEM3">9</div>
+        <div class="ITEM3">10</div>
     </div>
     <br>
     flex-wrap: wrap;
     <div class="wrap">
-        <div class="itemmm">1</div>
-        <div class="itemmm">2</div>
-        <div class="itemmm">3</div>
-        <div class="itemmm">4</div>
-        <div class="itemmm">5</div>
-        <div class="itemmm">6</div>
-        <div class="itemmm">7</div>
-        <div class="itemmm">8</div>
-        <div class="itemmm">9</div>
-        <div class="itemmm">10</div>
+        <div class="ITEM3">1</div>
+        <div class="ITEM3">2</div>
+        <div class="ITEM3">3</div>
+        <div class="ITEM3">4</div>
+        <div class="ITEM3">5</div>
+        <div class="ITEM3">6</div>
+        <div class="ITEM3">7</div>
+        <div class="ITEM3">8</div>
+        <div class="ITEM3">9</div>
+        <div class="ITEM3">10</div>
     </div>
     <br>flex-wrap: wrap-reverse;
     <div class="wrap-reverse">
-        <div class="itemmm">1</div>
-        <div class="itemmm">2</div>
-        <div class="itemmm">3</div>
-        <div class="itemmm">4</div>
-        <div class="itemmm">5</div>
-        <div class="itemmm">6</div>
-        <div class="itemmm">7</div>
-        <div class="itemmm">8</div>
-        <div class="itemmm">9</div>
-        <div class="itemmm">10</div>
+        <div class="ITEM3">1</div>
+        <div class="ITEM3">2</div>
+        <div class="ITEM3">3</div>
+        <div class="ITEM3">4</div>
+        <div class="ITEM3">5</div>
+        <div class="ITEM3">6</div>
+        <div class="ITEM3">7</div>
+        <div class="ITEM3">8</div>
+        <div class="ITEM3">9</div>
+        <div class="ITEM3">10</div>
     </div>
 
 
@@ -366,86 +380,97 @@
     <h2>flex-basis</h2>
     per impostare la lunghezza iniziale di un flex item lungo il main axis si usa la proprietà flex-basis.
     Queste lunghezze vengono poi accorciate o allungate in base alle proprietà "shrink" e "grow"
-    <div id="containerrr">
-        <div class="flex-itemm">100px</div>
-        <div class="flex-itemm">100px</div>
-        <div class="flex-itemm">100px</div>
-        <div class="flex-itemm">100px</div>
+    <div id="CONTAINER3">
+        <div class="flex-ITEM2">100px</div>
+        <div class="flex-ITEM2">100px</div>
+        <div class="flex-ITEM2">100px</div>
+        <div class="flex-ITEM2">100px</div>
         <div id="flex-item-percentuale">valore percentuale (40% del container)</div>
         <div id="flex-item-particolare">valore di default (auto)</div>
-        <div id="flex-item-too-larg">valore che supera lo spazio restante nel container (50% del container)</div>
+        <div id="flex-item-too-large">valore che supera lo spazio restante nel container (50% del container)</div>
     </div>
     <br>
-    invece se non ci fosse stata la proprietà "flex-wrap: wrap;" nel container, tutti gli elementi si accorciano in proporzione
-    (secondo la proprietà "flex-shrink", vedi sotto) per risparmiare spazio, fino a quando non rientrano tutti in un unica riga,
+    invece se non ci fosse stata la proprietà "flex-wrap: wrap;" nel container, tutti gli elementi si accorciano in
+    proporzione
+    (secondo la proprietà "flex-shrink", vedi sotto) per risparmiare spazio, fino a quando non rientrano tutti in un
+    unica riga,
     come in questo caso
-    <div id="containerrrr">
-        <div class="flex-itemm">100px</div>
-        <div class="flex-itemm">100px</div>
-        <div class="flex-itemm">100px</div>
-        <div class="flex-itemm">100px</div>
+    <div id="CONTAINER4">
+        <div class="flex-ITEM2">100px</div>
+        <div class="flex-ITEM2">100px</div>
+        <div class="flex-ITEM2">100px</div>
+        <div class="flex-ITEM2">100px</div>
         <div id="flex-item-percentuale">valore percentuale (40% del container)</div>
         <div id="flex-item-particolare">valore di default (auto)</div>
         <div id="flex-item-too-larg">valore che supera lo spazio restante nel container (50% del container)</div>
     </div>
-    le parole che superano il limite flex-basis (quindi solo negli elementi), tendono a creare un novo rigo, ma all'interno dell'elemento
+    le parole che superano il limite flex-basis (quindi solo negli elementi), tendono a creare un novo rigo, ma
+    all'interno dell'elemento
     figlio, aumentando l'altezza degli altri elementi figli. Per evitare questo leggi sotto la proprietà flex-shrink
-    (<a href="#soluzione-flex-basis">qui per vedere direttamente la soluzione</a> ) 
+    (<a href="#soluzione-flex-basis">qui per vedere direttamente la soluzione</a> )
     <br>
 
     <br>
     <h2>flex-grow</h2>
     per decidere quanto si deve allungare un elemento quando c'è spazio disponibile nel container
-    <div id="containerrr">
-        <div class="flex-itemmm">0: elemento non allungabile</div>
-        <div class="flex-itemmm">0: elemento non allungabile</div>
-        <div class="flex-itemmm">0: elemento non allungabile</div>
-        <div class="flex-itemmm">0: elemento non allungabile</div>
+    <div id="CONTAINER3">
+        <div class="flex-ITEM3">0: elemento non allungabile</div>
+        <div class="flex-ITEM3">0: elemento non allungabile</div>
+        <div class="flex-ITEM3">0: elemento non allungabile</div>
+        <div class="flex-ITEM3">0: elemento non allungabile</div>
         <div id="flex-item-1">flex-grow: 1;</div>
     </div>
     <br>
     <br>
-    se invece si vuole che ogni elemento figlio prenda lo stesso spazio rimanente in modo da essere tutto proporzionato, si dà ad ogni
+    se invece si vuole che ogni elemento figlio prenda lo stesso spazio rimanente in modo da essere tutto proporzionato,
+    si dà ad ogni
     elemento lo stesso flex-grow
     <br>
     in questo caso settiamo 1
-    <div id="containerrr">
+    <div id="CONTAINER3">
         <div id="flex-item-1">flex-grow: 1;</div>
         <div id="flex-item-1">flex-grow: 1;</div>
         <div id="flex-item-1">flex-grow: 1;</div>
         <div id="flex-item-1">flex-grow: 1;</div>
         <div id="flex-item-1">flex-grow: 1;</div>
-    </div>        
+    </div>
     <br>
     <br>
-    poi se vogliamo che alcuni elementi prendano più spazio rimante di altri, si danno valori in modo che lo spazio aggiunto sia in
+    poi se vogliamo che alcuni elementi prendano più spazio rimante di altri, si danno valori in modo che lo spazio
+    aggiunto sia in
     proporzione con i valori
     <br>
-    ad esempio se ad un elemento settiamo il valore 1 in flex-grow, invece in un altro elemento settiamo 2; il secondo elemento prenderà il 
+    ad esempio se ad un elemento settiamo il valore 1 in flex-grow, invece in un altro elemento settiamo 2; il secondo
+    elemento prenderà il
     doppio dello spazio del primo elemento
-    <div id="containerrr">
+    <div id="CONTAINER3">
         <div id="flex-item-1">flex-grow: 1;</div>
         <div id="flex-item-2">flex-grow: 2;</div>
         <div id="flex-item-3">flex-grow: 3;</div>
     </div>
-    siccome i valori di flex-grow sono rapporti. allora possono essere anche valori enormi, ma con gli stessi risultati dei valori piccoli
+    siccome i valori di flex-grow sono rapporti. allora possono essere anche valori enormi, ma con gli stessi risultati
+    dei valori piccoli
     <br>
-    ad esempio se i flex-item hanno come valori 100 200 300, sarà l'equivalente di 1 2 3 
+    ad esempio se i flex-item hanno come valori 100 200 300, sarà l'equivalente di 1 2 3
     <br>
 
     <br>
     <h2>
         flex-shrink
     </h2>
-    per decidere fino a quando un elemento in flexbox deve accorciarsi quando non c'è più spazio disponibile nel container
+    per decidere fino a quando un elemento in flexbox deve accorciarsi quando non c'è più spazio disponibile nel
+    container
     <br>
-    siccome non si nota quanto un elemento si accorcia, mostrerò 2 volte il contenitore: quando è allungato, e quando è accorciato.
+    siccome non si nota quanto un elemento si accorcia, mostrerò 2 volte il contenitore: quando è allungato, e quando è
+    accorciato.
     <br>
-    Useremo anche la proprietà "flex-wrap:wrap" nel primo caso, per far andare a capo gli elementi che superano la lunghezza del
-    container; e la proprietà "flex-wrap: nowrap" nel secondo caso, per fare entrare tutti gli elementi in un rigo (in modo che si
+    Useremo anche la proprietà "flex-wrap:wrap" nel primo caso, per far andare a capo gli elementi che superano la
+    lunghezza del
+    container; e la proprietà "flex-wrap: nowrap" nel secondo caso, per fare entrare tutti gli elementi in un rigo (in
+    modo che si
     accorcino)
     <br>
-    <strong>flex-wrap: wrap; (va al rigo successivo)</strong>       
+    <strong>flex-wrap: wrap; (va al rigo successivo)</strong>
     <div id="container-flex-shrink">
         <div class="flex-shrink-0">flex-shrink: 0; valore in cui l'elemento non si accorcia</div>
         <div class="flex-shrink-0">flex-shrink: 0; valore in cui l'elemento non si accorcia</div>
@@ -459,11 +484,12 @@
         <div class="flex-shrink-0">flex-shrink: 0; valore in cui l'elemento non si accorcia</div>
         <div class="flex-shrink-0">flex-shrink: 0; valore in cui l'elemento non si accorcia</div>
         <div class="flex-shrink-0">flex-shrink: 0; valore in cui l'elemento non si accorcia</div>
-    </div>       
-    in questo caso, con nowrap (non va al rigo successivo) e "flex-shrink: 0;" (non si accorcia), gli elementi escono fuori il container
+    </div>
+    in questo caso, con nowrap (non va al rigo successivo) e "flex-shrink: 0;" (non si accorcia), gli elementi escono
+    fuori il container
     <br>
     <br>
-    ora vediamo il caso in cui non va al rigo successivo <strong>(nowrap)</strong> e si accorcia al valore 
+    ora vediamo il caso in cui non va al rigo successivo <strong>(nowrap)</strong> e si accorcia al valore
     default <strong>(flex-shrink: 1;)</strong>
     <div id="container-flex-shrink-nowrap">
         <div class="flex-shrink-1">flex-shrink: 1; l'elemento si accorcia</div>
@@ -480,7 +506,7 @@
     se invece sono numeri diversi, cederanno la porzione di spazio proporzionale al valore di flex-shrink
     <br>
     ad esempio un elemento con il valore 1 cederà tot spazio, un elemento con valore 2 cederà 2tot spazio
-    <div id="containerrrr">
+    <div id="CONTAINER4">
         <div id="flex-shrink-1">flex-shrink: 1; (flex-basis: 60%;)</div>
         <div id="flex-shrink-2">flex-shrink: 2; (flex-basis: 60%;)</div>
         <div id="flex-shrink-3">flex-shrink: 3; (flex-basis: 60%;)</div>
@@ -488,15 +514,16 @@
     <br>
     <br>
     <div id="soluzione-flex-basis">
-        per la soluzione di come non far andare su 2 righe solo un elemento figlio, (vedi sopra a flex-basis, o 
-        <a href="#flex-item-particolare">clicca qui</a>), si può usare la proprietà "flex-shrink: 0" per non far accorciare l'elemento,
+        per la soluzione di come non far andare su 2 righe solo un elemento figlio, (vedi sopra a flex-basis, o
+        <a href="#flex-item-particolare">clicca qui</a>), si può usare la proprietà "flex-shrink: 0" per non far
+        accorciare l'elemento,
         in modo che non si crei un altro rigo nell'elemento figlio.
     </div>
-    <div id="containerrrr">
-        <div class="flex-itemm">100px</div>
-        <div class="flex-itemm">100px</div>
-        <div class="flex-itemm">100px</div>
-        <div class="flex-itemm">100px</div>
+    <div id="CONTAINER4">
+        <div class="flex-ITEM2">100px</div>
+        <div class="flex-ITEM2">100px</div>
+        <div class="flex-ITEM2">100px</div>
+        <div class="flex-ITEM2">100px</div>
         <div id="flex-item-percentuale">valore percentuale (40% del container)</div>
         <div id="flex-item-particolare" style="flex-shrink: 0;">valore di default (auto)</div>
         <div id="flex-item-too-larg">valore che supera lo spazio restante nel container (50% del container)</div>
@@ -508,7 +535,7 @@
     possiamo racchiudere queste 3 proprietà nella proprietà shorthand "flex"
     <br>
     il primo valore di flex è il flex-grow, il secondo valore è il flex-shrink, il terzo valore è il flex-basis
-    <div id="containerrrr">
+    <div id="CONTAINER4">
         <div id="flex-1">flex: 0 1 auto; (valori di default)</div>
         <div id="flex-2">flex: 1 2 100px;</div>
         <div id="flex-3">flex: 2 3 100px;</div>
@@ -529,26 +556,28 @@
         <div class="grid-item">4</div>
     </div>
     <p>
-        Per iniziare con la griglia, nel foglio di stile dobbiamo applicare nel grid-container la proprietà "display: grid;"
+        Per iniziare con la griglia, nel foglio di stile dobbiamo applicare nel grid-container la proprietà "display:
+        grid;"
         <br>
-        Inoltre inseriamo anche le proprietà border, background-color, color, margin e tex-align (center) 
+        Inoltre inseriamo anche le proprietà border, background-color, color, margin e tex-align (center)
         per capire meglio come sono disposti gli elementi
     </p>
     <p>
-        Possiamo inoltre dare una altezza (height) e larghezza (width) alla griglia, in modo da poter usare i valori in percentuale
+        Possiamo inoltre dare una altezza (height) e larghezza (width) alla griglia, in modo da poter usare i valori in
+        percentuale
     </p>
 
     <p>
         Per organizzare i grid items in colonne useremo la proprietà "grid-template-columns" nel tag del grid container
         <br>
-        Settiamo la grandezza di ogni colonna mettendo tot valori (della proprietà template...) quante sono le colonne 
+        Settiamo la grandezza di ogni colonna mettendo tot valori (della proprietà template...) quante sono le colonne
         e ogni valore corrisponde a alla grandezza di una colonna
     </p>
     <p>
         Ad esempio con la proprietà "grid-template-columns: 50px 50px 120px;" ci saranno 3 colonne.
         La prima colonna sarà larga 50px, la seconda colonna sempre 50px, e la terza colonna 120px.
         <br>
-        Nel caso di un numero di grid items maggiore del numero di colonne, gli elementi extra vanno a capo 
+        Nel caso di un numero di grid items maggiore del numero di colonne, gli elementi extra vanno a capo
     </p>
     <div class="grid-container1">
         <div class="grid-item">1</div>
@@ -557,7 +586,8 @@
         <div class="grid-item">4</div>
     </div>
     <p>
-        <ins>RICORDA:</ins> la grandezza delle colonne e delle righe si setta sul parent element (in questo caso il grid container)
+        <ins>RICORDA:</ins> la grandezza delle colonne e delle righe si setta sul parent element (in questo caso il grid
+        container)
     </p>
     <ol>I valori che possiamo mettere nel grid-template-columns sono:
         <li>valori in px</li>
@@ -618,22 +648,24 @@
     <p>
         In questo caso c'è una nuova unità di misura: fr (fractional unit).
         <br>
-        Questa unità indica quanto spazio rimanente della griglia totale devono racchiudere le varie colonne, dando quindi valori in rapporto tra loro
+        Questa unità indica quanto spazio rimanente della griglia totale devono racchiudere le varie colonne, dando
+        quindi valori in rapporto tra loro
         (similmente a come succedeva nei valori di flex-grow e flex-shrink)
         <br>
         Ovviamente se tutti i valori delle colonne sono in fr, lo spazio che viene messo in rapporto è tutta la griglia
     </p>
     <p>
-        <ul>
-            Si possono anche mischiare i valori delle colonne tra px, fr auto e %
-            <li>
-                Se c'è già una colonna co il valore fr, la colonna con il valore auto prende il minimo necessario
-                (solo lo spazio che serve per contenere il proprio grid item)
-            </li>
-            <li>
-                Se ci sono qualsiasi altro valore al di fuori di fr, le colonne con il valore fr divideranno lo spazio rimante
-            </li>
-        </ul>
+    <ul>
+        Si possono anche mischiare i valori delle colonne tra px, fr auto e %
+        <li>
+            Se c'è già una colonna co il valore fr, la colonna con il valore auto prende il minimo necessario
+            (solo lo spazio che serve per contenere il proprio grid item)
+        </li>
+        <li>
+            Se ci sono qualsiasi altro valore al di fuori di fr, le colonne con il valore fr divideranno lo spazio
+            rimante
+        </li>
+    </ul>
     </p>
     esempio: "grid-template-columns: 1fr 2fr 1fr auto 100px;"
     <div class="grid-container5">
@@ -700,19 +732,19 @@
     <p>
         Stesse cose per organizzare in righe con la proprietà "grid-template-rows"
         <br>
-        <ul>
-            Poche cose cambiano:
-            <li>
-                si usa la proprietà grid-template-rows
-            </li>
-            <li>per utilizzare i valori in percentuale e in fr bisogna settare una altezza della griglia,
-                altrimenti le righe con questi valori sono sballate
-            </li>
-            <li>
-                le righe extra a quelle scritte nella proprietà grid-template-rows non hanno una grandezza
-                ma occupano solo lo spazio del loro contenuto (spazio minimo da occupare)
-            </li>
-        </ul>
+    <ul>
+        Poche cose cambiano:
+        <li>
+            si usa la proprietà grid-template-rows
+        </li>
+        <li>per utilizzare i valori in percentuale e in fr bisogna settare una altezza della griglia,
+            altrimenti le righe con questi valori sono sballate
+        </li>
+        <li>
+            le righe extra a quelle scritte nella proprietà grid-template-rows non hanno una grandezza
+            ma occupano solo lo spazio del loro contenuto (spazio minimo da occupare)
+        </li>
+    </ul>
     </p>
     esempio:
     <br>
@@ -810,10 +842,12 @@
         <div class="grid-item">39</div>
     </div>
     <br>
-    ricorda: il valore auto occupa tutto lo spazio restante a meno che non sia già occupato dagli altri elementi, in questo caso occupa solo la grandezza del contenuto.
+    ricorda: il valore auto occupa tutto lo spazio restante a meno che non sia già occupato dagli altri elementi, in
+    questo caso occupa solo la grandezza del contenuto.
     <br>
     <h2>grid-template</h2>
-    possiamo contrarre il tutto  (grid-template-row e grid-template-columns) possiamo usare anche la funzione grid-template
+    possiamo contrarre il tutto (grid-template-row e grid-template-columns) possiamo usare anche la funzione
+    grid-template
     <br>
     i valori di "grid template" sono separati da uno slash (/).
     <br>
@@ -859,15 +893,20 @@
     </div>
 
     <h2>grid gaps</h2>
-    di default, i grid items non hanno spazi tra di loro che li dividono. di solito ci arrangiavamo con la proprietà dei flex item "margin: 2px;"
+    di default, i grid items non hanno spazi tra di loro che li dividono. di solito ci arrangiavamo con la proprietà dei
+    flex item "margin: 2px;"
     <br>
-    ora utilizziamo una nuova proprietà (con una nuova classe di grid-item) in cui usiamo le varie funzione gap (contratte o meno).
+    ora utilizziamo una nuova proprietà (con una nuova classe di grid-item) in cui usiamo le varie funzione gap
+    (contratte o meno).
     <br>
-    dunque la differenza tra le funzioni gap e la funzione margin è che con margin possiamo modificare gli spazi tra un elemento e l'esterno, e invece con la funzione gap modifichiamo gli spazi tra i grid items
+    dunque la differenza tra le funzioni gap e la funzione margin è che con margin possiamo modificare gli spazi tra un
+    elemento e l'esterno, e invece con la funzione gap modifichiamo gli spazi tra i grid items
     <br>
-    ad esempio se tutti i grid item hanno i margini di 5px, lo spazio tra gli elementi sarà 10px, siccome è la somma dei margini di uno e di un altro grid item
+    ad esempio se tutti i grid item hanno i margini di 5px, lo spazio tra gli elementi sarà 10px, siccome è la somma dei
+    margini di uno e di un altro grid item
     <br>
-    invece con le funzioni gap si stabilisce tutto lo spazio tra i grid item, ossia con il valore del gap uguale a 5px, vuol dire che tra i grid items ci sarà 5 px di spazio
+    invece con le funzioni gap si stabilisce tutto lo spazio tra i grid item, ossia con il valore del gap uguale a 5px,
+    vuol dire che tra i grid items ci sarà 5 px di spazio
     <br>
     RICORDA: LE FUNZIONI GAP SI INSERISCONO NEL GRID CONTAINER, INVECE I MARGIN NEI GRID items
     <br>
@@ -1053,11 +1092,14 @@
         <div class="grid-item-no-margin">38</div>
         <div class="grid-item-no-margin">39</div>
     </div>
-    come si può vedere inoltre, altra differenza dei margin con i gap sono i grid items sui alti e agli angoli del grid container.
+    come si può vedere inoltre, altra differenza dei margin con i gap sono i grid items sui alti e agli angoli del grid
+    container.
     <br>
-    infatti, con i margin questi elementi hanno tutti e quattro i lati con lo spazio impostato (quindi anche con lo spazio tra il lato del grid container e il grid item)
+    infatti, con i margin questi elementi hanno tutti e quattro i lati con lo spazio impostato (quindi anche con lo
+    spazio tra il lato del grid container e il grid item)
     <br>
-    invece con le funzioni gap c'è spazio solo tra i grid items, ma non c'è spazio tra il lato del grid container e i grid items.
+    invece con le funzioni gap c'è spazio solo tra i grid items, ma non c'è spazio tra il lato del grid container e i
+    grid items.
     <br>
     per creare questo spazio possiamo usare la funzione padding all'interno del grid container
     <br>
@@ -1120,32 +1162,34 @@
     </ol>
     vediamo il primo caso.
     <br>
-    ci sono le proprietà "grid-column" e "grid-row" che stabiliscono di quante righe o colonne un elemento si deve estendere
+    ci sono le proprietà "grid-column" e "grid-row" che stabiliscono di quante righe o colonne un elemento si deve
+    estendere
     <br>
-    queste proprietà vanno INSERITE NEI GRID ITEMS (NO GRID-CONTAINER). I valori di queste proprietà sono formate dalla parola span (intervallo) e un numero.
+    queste proprietà vanno INSERITE NEI GRID ITEMS (NO GRID-CONTAINER). I valori di queste proprietà sono formate dalla
+    parola span (intervallo) e un numero.
     <br>
     esempio nel caso del primo grid item e del secondo e ventesimo:
     <br>
     <p>.grid-item-1 {
-            <br>
-            grid-column: span 3;
-            <br>
+        <br>
+        grid-column: span 3;
+        <br>
         }
         <br>
         <br>
         .grid-item-2 {
-            <br>
-            grid-row: span 2;
-            <br>
+        <br>
+        grid-row: span 2;
+        <br>
         }
         <br>
         <br>
         .grid-item-20 {
-            <br>
-            grid-column: span 2;
-            <br>
-            grid-row: span 4;
-            <br>
+        <br>
+        grid-column: span 2;
+        <br>
+        grid-row: span 4;
+        <br>
         }
     </p>
     <div class="grid-container15">
@@ -1196,32 +1240,39 @@
         <br>
         per prima cosa dobbiamo dare a tutti i grid items un attributo class diverso
         <br>
-        poi nel foglio di stile aggiungiamo a ogni grid item la proprietà "grid-area", il cui valore segnerà un nome a quel grid item
+        poi nel foglio di stile aggiungiamo a ogni grid item la proprietà "grid-area", il cui valore segnerà un nome a
+        quel grid item
         <br>
         poi dobbiamo aggiungere nel grid container la proprietà "grid-template-areas"
         <br>
-        i valori di grid-template-areas devono essere i valori di grid-area dei vari grid items, scritti nell'ordine in cui verranno visti nella pagina.
+        i valori di grid-template-areas devono essere i valori di grid-area dei vari grid items, scritti nell'ordine in
+        cui verranno visti nella pagina.
         <br>
         in questo modo potrebbe pure non servire la proprietà grid-template
     </p>
     <p>
         ora stabiliamo alcune regole nelle quali devono essere scritti i valori di grid-template-areas
-        <ul>
-            <li>se vogliamo far estendere un grid item in più caselle, ripetiamo il suo valore grid-area</li>
-            <li>se vogliamo lasciare degli spazi vuoti scriviamo . tra le grid area che vogliamo lasciare fuori</li>
-            <li>se vogliamo disporre gli elementi in righe diverse possiamo scrivere più valori in più ""</li>
-            <li>per comodità nel foglio di stile scriviamo i valori tra le "" in linee di codice successivi</li>
-            <li>tutte le linee di codice devono avare lo stesso numero di colonne (inserisci . dove non vuoi nulla), altrimenti errore</li>
-            <li>non ci devono essere valori ripetuti se non sono adiacenti (si trovano vicino verticalmente o orizzontalmente), altrimenti errore</li>
-            <li>i grid items possono estendersi o solo verticalmente o solo orizzontalmente (non figure ad L o simili), altrimenti errore</li>
-            <li>
-                se ci sono dei grid items che non hanno avuto la proprietà grid-area, si inseriscono nei primi spazi vuoti (quelli col il . )
-                <ul>
-                    <li>se finiscono gli spazi voti si posizionano in una nuova riga</li>
-                </ul>
-            </li>
-            <li>se ci sono grid-item con il grid-area ma che non sono stati inseriti nel grid-template-areas, sballano il valore della tabella, quindi errore</li>
-        </ul>
+    <ul>
+        <li>se vogliamo far estendere un grid item in più caselle, ripetiamo il suo valore grid-area</li>
+        <li>se vogliamo lasciare degli spazi vuoti scriviamo . tra le grid area che vogliamo lasciare fuori</li>
+        <li>se vogliamo disporre gli elementi in righe diverse possiamo scrivere più valori in più ""</li>
+        <li>per comodità nel foglio di stile scriviamo i valori tra le "" in linee di codice successivi</li>
+        <li>tutte le linee di codice devono avare lo stesso numero di colonne (inserisci . dove non vuoi nulla),
+            altrimenti errore</li>
+        <li>non ci devono essere valori ripetuti se non sono adiacenti (si trovano vicino verticalmente o
+            orizzontalmente), altrimenti errore</li>
+        <li>i grid items possono estendersi o solo verticalmente o solo orizzontalmente (non figure ad L o simili),
+            altrimenti errore</li>
+        <li>
+            se ci sono dei grid items che non hanno avuto la proprietà grid-area, si inseriscono nei primi spazi vuoti
+            (quelli col il . )
+            <ul>
+                <li>se finiscono gli spazi voti si posizionano in una nuova riga</li>
+            </ul>
+        </li>
+        <li>se ci sono grid-item con il grid-area ma che non sono stati inseriti nel grid-template-areas, sballano il
+            valore della tabella, quindi errore</li>
+    </ul>
     </p>
     <div class="grid-container16">
         <div class="grid-item-no-margin grid-items-1">1</div>
@@ -1240,9 +1291,9 @@
         <div class="grid-item-no-margin grid-items-14">14</div>
         <div class="grid-item-no-margin grid-items-15">15</div>
         <div class="grid-item-no-margin grid-items-16">16</div>
-        <div class="grid-item-no-margin">17</div>    <!--spazi vuoti riempiti-->
-        <div class="grid-item-no-margin">18</div>    <!--spazi vuoti riempiti-->
-        <div class="grid-item-no-margin">19</div>    <!--spazi vuoti riempiti-->
+        <div class="grid-item-no-margin">17</div> <!--spazi vuoti riempiti-->
+        <div class="grid-item-no-margin">18</div> <!--spazi vuoti riempiti-->
+        <div class="grid-item-no-margin">19</div> <!--spazi vuoti riempiti-->
     </div>
     <br>
     <br>
@@ -1255,10 +1306,18 @@
             <img width="200px" src="https://i.ibb.co/pwmBZQw/Cranach-Cupid-Complaining-to-Venus.jpg" alt="cazzo guardi">
         </div>
         <div class="grid-main grid-item-no-margin">
-            Una malattia trasmissibile sessualmente (nota anche con l'acronimo MTS) o infezione sessualmente trasmissibile (IST), o in lingua inglese sexually transmitted disease (STD), in passato malattia venerea, nella medicina, indica una malattia infettiva che si trasmette principalmente per contagio diretto in occasione di attività sessuali, inclusi i rapporti orali e anali. La maggior parte delle MTS inizialmente non presenta sintomi e ciò si traduce in un maggior rischio di trasmetterle ad altre persone. I sintomi e i segni della malattia possono includere perdite dalla vagina, dal pene, dolore pelvico, ulcere intorno agli organi genitali o su di essi. Un'infezione sessualmente trasmessa acquisita prima o durante una gravidanza può causare danni al nascituro. Alcune malattie sessualmente trasmissibili possono causare problemi di sterilità
+            Una malattia trasmissibile sessualmente (nota anche con l'acronimo MTS) o infezione sessualmente
+            trasmissibile (IST), o in lingua inglese sexually transmitted disease (STD), in passato malattia venerea,
+            nella medicina, indica una malattia infettiva che si trasmette principalmente per contagio diretto in
+            occasione di attività sessuali, inclusi i rapporti orali e anali. La maggior parte delle MTS inizialmente
+            non presenta sintomi e ciò si traduce in un maggior rischio di trasmetterle ad altre persone. I sintomi e i
+            segni della malattia possono includere perdite dalla vagina, dal pene, dolore pelvico, ulcere intorno agli
+            organi genitali o su di essi. Un'infezione sessualmente trasmessa acquisita prima o durante una gravidanza
+            può causare danni al nascituro. Alcune malattie sessualmente trasmissibili possono causare problemi di
+            sterilità
         </div>
         <div class="grid-footer grid-item-no-margin">
-            informazioni prese da 
+            informazioni prese da
             <a href="https://it.wikipedia.org/wiki/Malattia_sessualmente_trasmissibile">
                 Wikipedia
             </a>
@@ -1269,39 +1328,46 @@
     <p>
         <strong>ROW AXIS</strong>
         <br>
-        i grid items possono essere posizionati in varie parti della row axis (ossia la linea immaginari orizzontale) della casella che occupa il grid item. la proprietà che si occupa di ciò si chiama justify-items, e si inserisce nelle regole del grid container
+        i grid items possono essere posizionati in varie parti della row axis (ossia la linea immaginari orizzontale)
+        della casella che occupa il grid item. la proprietà che si occupa di ciò si chiama justify-items, e si inserisce
+        nelle regole del grid container
     </p>
     <ul>i valori di justify-item sono:
         <li>
             stretch: valore di default, che fa espandere il grid items in tutta la casella lungo il row axis.
         </li>
         <li>
-            start: che fa posizionare il grid item solo nella parte a sinistra della casella (parte iniziale della casella) lungo il row axis, occupando solo lo spazio minimo necessario
+            start: che fa posizionare il grid item solo nella parte a sinistra della casella (parte iniziale della
+            casella) lungo il row axis, occupando solo lo spazio minimo necessario
         </li>
         <li>
             end: stessa cosa di start ma a destra (parte finale della casella)
         </li>
         <li>
-            center: fa posizionare il grid item solo al centro della casella lungo il row axis occupando meno spazio possibile
+            center: fa posizionare il grid item solo al centro della casella lungo il row axis occupando meno spazio
+            possibile
         </li>
     </ul>
     <p>
         <strong>COLUMN AXIS</strong>
         <br>
-        invece per posizionare i grid items lungo la column axis si usa la proprietà align-items, sempre inserita nel container
+        invece per posizionare i grid items lungo la column axis si usa la proprietà align-items, sempre inserita nel
+        container
     </p>
     <ul>i valori di align-items sono:
         <li>
             stretch: valore di default, che fa espandere il grid items in tutta la casella lungo il column axis.
         </li>
         <li>
-            start: che fa posizionare il grid item solo nella parte a sinistra della casella (parte iniziale della casella) lungo il column axis, occupando solo lo spazio minimo necessario
+            start: che fa posizionare il grid item solo nella parte a sinistra della casella (parte iniziale della
+            casella) lungo il column axis, occupando solo lo spazio minimo necessario
         </li>
         <li>
             end: stessa cosa di start ma a destra (parte finale della casella)
         </li>
         <li>
-            center: fa posizionare il grid item solo al centro della casella lungo il column axis occupando meno spazio possibile
+            center: fa posizionare il grid item solo al centro della casella lungo il column axis occupando meno spazio
+            possibile
         </li>
     </ul>
     esempi:
@@ -1668,21 +1734,26 @@
         USING FLEXBOX AND GRID RULE
     </h2>
     <p>
-        per creare una "responsive" web page, ossia una pagina web adattiva a ogni tipo di schermo, possiamo combinare il flexbox con le grid rules
+        per creare una "responsive" web page, ossia una pagina web adattiva a ogni tipo di schermo, possiamo combinare
+        il flexbox con le grid rules
         <br>
         le grid CSS sono ottime per combinare un layout in 2 dimensioni, con righe e colonne.
         <br>
-        Nonostante ciò, i CSS grid sono limitati per disporre gli elementi in un grid item, per cui si usano le regole del flexbox.
+        Nonostante ciò, i CSS grid sono limitati per disporre gli elementi in un grid item, per cui si usano le regole
+        del flexbox.
         <br>
-        infatti se usiamo proprietà come justify-content o justify-items, noi muoviamo ogni elemento nella direzione selezionata, e non solo gli elementi del grid item voluto.
+        infatti se usiamo proprietà come justify-content o justify-items, noi muoviamo ogni elemento nella direzione
+        selezionata, e non solo gli elementi del grid item voluto.
     </p>
     facciamo un esempio: (guarda i commenti nel file HTML)
     <div class="grid-container26">
-        <nav class="navigationbar26">   <!--per far andare gli elementi a.a-nav verso la fine ho messo il flexbox al grid item, per poi impostare justify-content a flex-end-->
+        <nav class="navigation-bar26">
+            <!--per far andare gli elementi a.a-nav verso la fine ho messo il flexbox al grid item, per poi impostare justify-content a flex-end-->
             <a class="a-nav" href="test_web.html">istruzioni principali HTML</a>
             <a class="a-nav" href="index-esercizio.html">pagina con anche CSS</a>
         </nav>
-        <div class="grid-item26">grid item</div>  <!--per far centrare il testo di div.grid-item26 lungo il main axis e cross axis, ho messo il display a flex e mo impostato a center "align-items" e "justify-content"-->
+        <div class="grid-item26">grid item</div>
+        <!--per far centrare il testo di div.grid-item26 lungo il main axis e cross axis, ho messo il display a flex e mo impostato a center "align-items" e "justify-content"-->
         <div class="grid-item26">grid item</div>
         <div class="grid-item26">grid item</div>
         <div class="grid-item26">grid item</div>
@@ -1701,4 +1772,5 @@
         LIEVITAZIONE ASSISTITA
     </footer>
 </body>
+
 </html>

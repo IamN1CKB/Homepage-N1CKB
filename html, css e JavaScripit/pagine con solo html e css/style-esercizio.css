@@ -67,7 +67,7 @@ border (il bordo)
 margins (i margini, cioè lo spazio tra il bordo e gli altri elementi del sito)
 */
 /*
-per il paddind c'è la proprietà padding (valida per tutti e 4 i lati), e le proprietà padding-left, padding-right, padding-top, padding-bottom (validi un lato ciascuuno)
+per il padding c'è la proprietà padding (valida per tutti e 4 i lati), e le proprietà padding-left, padding-right, padding-top, padding-bottom (validi un lato ciascuno)
 */
 .layers {
     border: solid 3px blue;
@@ -95,7 +95,7 @@ la quarta quella a sinistra*/
     padding: 10px 50px 100px 0; 
 }
 /*poi c'è la proprietà margin, che si usa similmente alla proprietà padding, ma indica lo spazio tra l'elemento desiderato e gli altri elementi*/
-/*la proprietà margins si puo usare con le altre proprieà margin-top, margin-right..., oppure con i 4 valori, una per ogni lato*/
+/*la proprietà margins si puo usare con le altre proprietà margin-top, margin-right..., oppure con i 4 valori, una per ogni lato*/
 figure {
     margin: 0 100px 300px 0;
 }
@@ -146,7 +146,7 @@ figure {
 /*altre funzioni di filter sono:
 saturate (saturazione), cioè quanto sono vividi gli elementi, in cui 100% è l'immagine di default (modificabile maggiore o minore di 100%)
 brightness (luminosità), in cui 100% è l'immagine di default e 0% è l'immagine scura (modificabile maggiore o minore di 100%)
-contrast (contrastro), che indica il contrasto tra parti chiare e parti scure, di cui 100% è l'immagine di default */
+contrast (contrasto), che indica il contrasto tra parti chiare e parti scure, di cui 100% è l'immagine di default */
 .nonna {
     margin: 20px;
     height: 300px;
@@ -167,8 +167,8 @@ contrast (contrastro), che indica il contrasto tra parti chiare e parti scure, d
     height: 300px;
     filter: contrast(300%);
 }
-/*non solo la prorpietà filter supporta le funzioni ma molte altre, come background (sfondo)*/
-/*ricordiama la funzione linear-gradient, che permette di cambiare gradualmente colore dello sfondo da una parte all'altra*/
+/*non solo la proprietà filter supporta le funzioni ma anche molte altre proprietà, come background (sfondo)*/
+/*ricordiamo la funzione linear-gradient, che permette di cambiare gradualmente colore dello sfondo da una parte all'altra*/
 .Hulk {
     color: greenyellow;
     text-align: center;
@@ -253,7 +253,7 @@ div è il parent element e invece p è il child element*/
 /*per cambiare la posizione degli elementi dobbiamo prima di tutto impostare la proprietà position: relative; o con il valore absolute*/
 /*nel caso di relative tu sposti gli elementi basandoti sulla loro posizione nel normal flow (normale flusso della pagina)*/
 /*nel caso di absolute invece si spostano gli elementi in base alla pagina*/
-/*poi usare le proprietà top, bottom, right e left per impostare quanto a [proprietà] mettere l'elemento rispetto alla posizione originale nel caso di reletive, o rispetto alla pagina nel caso di absolute*/
+/*poi usare le proprietà top, bottom, right e left per impostare quanto a [proprietà] mettere l'elemento rispetto alla posizione originale nel caso di relative, o rispetto alla pagina nel caso di absolute*/
 .Wanda {
     position: relative;
     left: 150px;  /*150px più a sinistra rispetto alla posizione iniziale*/
@@ -267,7 +267,7 @@ div è il parent element e invece p è il child element*/
 .peter, .Wanda {
     font-family: monospace;
 }
-.hulkk {
+.HULK {
     position: absolute;
     right: 12px;       /*in questo modo con absolute si può sovrapporre (overlapping) più elementi*/
     transform: rotate(45deg);
@@ -287,7 +287,7 @@ rimarrà fisso anche quando lo scrolling verrà effettuato.
 
 /*per decidere quale elemento si sovrappone su un altro si usa la proprietà z-index*/
 /*di default si sovrappongono gli elementi scritti dopo nel codice, su quelli scritti prima*/
-/*con la proprietà z-index invece si da un valore numerico (che deve essere intero e può essere anche negativo) agli elemtnti, secondo cui gli elementi con il numero maggiore si trovano in primo piano*/
+/*con la proprietà z-index invece si da un valore numerico (che deve essere intero e può essere anche negativo) agli elementi, secondo cui gli elementi con il numero maggiore si trovano in primo piano*/
 /*il valore di default della proprietà z-index è 0*/
 .first-photo {
     z-index: -1;
@@ -347,12 +347,12 @@ rimarrà fisso anche quando lo scrolling verrà effettuato.
     width: 500px;
 }
 /*il  flexbox caratterizza nello stesso modo sia inline che block elements*/
-.coontainer {
+.CONTAINER {
     border: solid 2px green;
     display: flex;
     height: 200px;
 }
-.ittem {
+.ITEM {
     border: solid 2px blue;
     margin: 10px;
 }
@@ -396,7 +396,7 @@ e verticale nel caso di column*/
 2) flex-end, ossia con tutti gli elementi raggruppati alla fine
 3) center, ossia con tutti gli elementi posizionati al centro
 4) space-around, ossia con tutti gli elementi posizionati lungo tutto l'asse, con i due elementi estremi abbastanza centrati
-5) space-between, ossia con tutti gli elementi posizionati lungo tutto l'asse, con i due elementi estremi che toccanco il container*/
+5) space-between, ossia con tutti gli elementi posizionati lungo tutto l'asse, con i due elementi estremi che toccano il container*/
 
 
 .flex-start {
@@ -445,7 +445,7 @@ justify-content: space-around;
     justify-content: space-between;
 }
 
-.itemm {
+.ITEM2 {
     border: 2px solid #457081;
     margin: 10px;
     width: 100px;
@@ -454,11 +454,11 @@ justify-content: space-around;
 /*per gestire gli elementi nella cross axis si usa la proprietà align-items nel container*/
 /*i vari valori della proprietà sono:
 1) stretch, che dispone gli elementi lungo tutta la cross axis
-2) flex-start, che dispone gli elementi lungo solo la parte inziale della cross axis
+2) flex-start, che dispone gli elementi lungo solo la parte iniziale della cross axis
 3) flex-end, che dispone gli elementi lungo solo la parte finale della cross axis
 4) center, che dispone gli elementi lungo solo la parte centrale della cross axis*/
 
-.stretchh {
+.STRETCH {
     border: solid 2px #806868;
     display: flex;
     margin: 10px;
@@ -468,7 +468,7 @@ justify-content: space-around;
 
     align-items: stretch;
 }
-.flex-startt {
+.FLEX-START {
     border: solid 2px #806868;
     display: flex;
     margin: 10px;
@@ -478,7 +478,7 @@ justify-content: space-around;
 
     align-items: flex-start;
 }
-.flex-endd {
+.FLEX-END {
     border: solid 2px #806868;
     display: flex;
     margin: 10px;
@@ -488,7 +488,7 @@ justify-content: space-around;
 
     align-items: flex-end;
 }
-.centerr {
+.CENTER {
     border: solid 2px #806868;
     display: flex;
     margin: 10px;
@@ -504,7 +504,7 @@ justify-content: space-around;
 /*i valori della proprietà sono:
 1) nowrap (default), ciò vuol dire che se gli elementi del container sono tanti usciranno fuori dal container
 2) wrap, ciò vuol dire che gli elementi se sono troppi si dispongono in righe successive o colonne
-3) wrap-reverse, ciò vuol dire che gli elemetni si dispongono in righe successive o colonne ma partendo al contrario*/
+3) wrap-reverse, ciò vuol dire che gli elementi si dispongono in righe successive o colonne ma partendo al contrario*/
 
 .nowrap {
     border: solid 2px #806868;
@@ -536,12 +536,12 @@ justify-content: space-around;
 
     flex-wrap: wrap-reverse;
 }
-.itemmm {
+.ITEM3 {
     border: 2px solid #457081;
     margin: 10px;
     text-align: center;
 }
-/*per gestire come si dispongono i flex-item lungo il cross axis con gli elementi diposte in più righe*/
+/*per gestire come si dispongono i flex-item lungo il cross axis con gli elementi disposte in più righe*/
 .align-content {   /*STUDIA MEGLIO*/
     display: flex;
     border: solid 2px red;
@@ -557,13 +557,13 @@ justify-content: space-around;
 /*per impostare la lunghezza iniziale di un flex item lungo il main axis si usa la proprietà flex-basis*/
 /*queste lunghezze vengono poi accorciate o allungate in base alle proprietà "shrink" e "grow"*/
 /*possiamo dare anche valori in percentuale in modo che l'elemento occupi una parte precisa del container*/
-#containerrr {
+#CONTAINER3 {
     display: flex;
     flex-direction: row;
     border: 1px blue solid;
     flex-wrap: wrap;       /*così dato che gli elementi superano il contenitore, si aggiunge un nuovo rigo*/
 }
-.flex-itemm {
+.flex-ITEM2 {
     margin: 10px;
     border: solid 1px red;
     flex-basis: 100px;
@@ -579,17 +579,17 @@ justify-content: space-around;
     border: 1px solid red;
     flex-basis: auto;
 }
-/*se tutti gli elementi con il flex basis impostato hanno una grandezza maggiore del container, il valore di ogni elemeto si adatterà ad esso*/
-/*infatti gli elementi non usciranno fuori dal containet*/
-#flex-item-too-larg {
+/*se tutti gli elementi con il flex basis impostato hanno una grandezza maggiore del container, il valore di ogni elemento si adatterà ad esso*/
+/*infatti gli elementi non usciranno fuori dal container*/
+#flex-item-too-large {
     margin: 10px;
     border: 1px solid red;
     flex-basis: 50%   /*occupa una grandezza che supera quella del container, quindi va a capo*/
 }
 /*invece se non ci fosse stata la proprietà "flex-wrap: wrap;" nel container, tutti gli elementi si accorciano in proporzione
-per risparimare spazio, fino a quando non rientrano tutti in un unica riga*/
+per risparmiare spazio, fino a quando non rientrano tutti in un unica riga*/
 /*facciamo un altro esempio*/
-#containerrrr {
+#CONTAINER4 {
     display: flex;
     flex-direction: row;
     border: 1px blue solid;
@@ -600,8 +600,8 @@ per risparimare spazio, fino a quando non rientrano tutti in un unica riga*/
 
 /*per decidere quanto si deve allungare un elemento quando c'è spazio disponibile nel container, si usa la proprietà flex-grow*/
 /*per non confonderci useremo sempre il valore di "flex-basis" settato a 100 px (è solo la lunghezza iniziale)*/
-/*il valore di defaut è 0, ossia che un elemento non si adatti, e resta della sua dimensione*/
-.flex-itemmm {
+/*il valore di default è 0, ossia che un elemento non si adatti, e resta della sua dimensione*/
+.flex-ITEM3 {
     margin: 10px;
     border: 1px red solid;
     flex-basis: 100px;
@@ -620,7 +620,7 @@ elemento lo stesso flex-grow*/
 
 /*poi se vogliamo che alcuni elementi prendano più spazio rimante di altri, si danno valori in modo che lo spazio aggiunto sia in
 proporzione con i valori*/
-/*ad esempio se ad un elemento settiamo il valore 1 in flex-grow, invece in un altro elemento settiamo 2; il secondo elemento prendera il 
+/*ad esempio se ad un elemento settiamo il valore 1 in flex-grow, invece in un altro elemento settiamo 2; il secondo elemento prenderà il 
 doppio dello spazio del primo elemento*/
 #flex-item-2 {
     margin: 10px;
@@ -637,11 +637,11 @@ doppio dello spazio del primo elemento*/
 
 
 /*per decidere fino a quando un elemento in flexbox deve accorciarsi quando non c'è più spazio disponibile nel container,
-si usa la proprietà "flex-shkink", che funziona similmente a flex-grow, sempre in proporzione*/
+si usa la proprietà "flex-shrink", che funziona similmente a flex-grow, sempre in proporzione*/
 /*siccome non si nota quanto un elemento si accorcia, mostrerò 2 volte il contenitore: quando è allungato, e quando è accorciato.*/
 
 /*Useremo anche la proprietà "flex-wrap:wrap" nel primo caso, per far andare a capo gli elementi che superano la lunghezza del
-container; e la propretà "flex-wrap: nowrap" nel secondo caso, per fare entrare tutti gli elementi in un rigo (in modo che si accorcino)*/
+container; e la proprietà "flex-wrap: nowrap" nel secondo caso, per fare entrare tutti gli elementi in un rigo (in modo che si accorcino)*/
 #container-flex-shrink {
     display: flex;
     border: 1px blue solid;
@@ -659,7 +659,7 @@ container; e la propretà "flex-wrap: nowrap" nel secondo caso, per fare entrare
     border: 1px blue solid;
     flex-wrap: nowrap;
 }
-/*in questo caso, con nowrap (non va al rigo successivo) e "flex-shrink: 0;" (non si accorcia), gli elementi escono fuori il conteiner*/
+/*in questo caso, con nowrap (non va al rigo successivo) e "flex-shrink: 0;" (non si accorcia), gli elementi escono fuori il container*/
 
 /*ora vediamo il caso in cui non va al rigo successivo (nowrap) e si accorcia al valore default (flex-shrink: 1;)*/
 
@@ -973,7 +973,7 @@ container; e la propretà "flex-wrap: nowrap" nel secondo caso, per fare entrare
     color: white;
     padding: 10px;
     text-align: center;
-    border: groove black;   /*groove vuol dire scalanatura, dando un effetto del bordo 3D*/
+    border: groove black;   /*groove vuol dire scanalatura, dando un effetto del bordo 3D*/
 }
 .grid-container18 {
     display: grid;
@@ -1057,7 +1057,7 @@ container; e la propretà "flex-wrap: nowrap" nel secondo caso, per fare entrare
     padding: 10px;
     grid-template: repeat(3, 1fr)/ repeat(3, 1fr)
 }
-.navigationbar26 {
+.navigation-bar26 {
     display: flex;
     justify-content: flex-end;
     grid-column: span 3;
