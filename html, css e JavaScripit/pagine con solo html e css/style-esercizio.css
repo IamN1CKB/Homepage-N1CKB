@@ -463,6 +463,7 @@ justify-content: space-around;
     display: flex;
     margin: 10px;
     height: 200px;
+    width: min-content;
     flex-direction: row;
 /*  flex-direction: column;    /**/
 
@@ -473,6 +474,7 @@ justify-content: space-around;
     display: flex;
     margin: 10px;
     height: 200px;
+    width: min-content;
     flex-direction: row;
 /*  flex-direction: column;    /**/
 
@@ -483,6 +485,7 @@ justify-content: space-around;
     display: flex;
     margin: 10px;
     height: 200px;
+    width: min-content;
     flex-direction: row;
 /*  flex-direction: column;    /**/
 
@@ -493,6 +496,7 @@ justify-content: space-around;
     display: flex;
     margin: 10px;
     height: 200px;
+    width: min-content;
     flex-direction: row;
 /*  flex-direction: column;     /**/
 
@@ -538,17 +542,73 @@ justify-content: space-around;
 }
 .ITEM3 {
     border: 2px solid #457081;
-    margin: 10px;
+    margin-left: 10px;
+    width: 20%;
     text-align: center;
 }
 /*per gestire come si dispongono i flex-item lungo il cross axis con gli elementi disposte in più righe*/
-.align-content {   /*STUDIA MEGLIO*/
+.align-content-flex-start {
     display: flex;
     border: solid 2px red;
-    width: 10%;
+    height: 230px;
     flex-direction: row;
+    justify-content: center;
     flex-wrap: wrap;
-    align-content:center
+    align-content: flex-start;
+}
+.align-content-flex-end {
+    display: flex;
+    border: solid 2px red;
+    height: 230px;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: flex-end;
+}
+.align-content-center {
+    display: flex;
+    border: solid 2px red;
+    height: 230px;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+}
+.align-content-stretch {
+    display: flex;
+    border: solid 2px red;
+    height: 230px;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: stretch;
+}
+.align-content-space-between {
+    display: flex;
+    border: solid 2px red;
+    height: 230px;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+.align-content-space-around {
+    display: flex;
+    border: solid 2px red;
+    height: 230px;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: space-around;
+}
+.align-content-space-evenly {
+    display: flex;
+    border: solid 2px red;
+    height: 230px;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: space-evenly;
 }
 
 

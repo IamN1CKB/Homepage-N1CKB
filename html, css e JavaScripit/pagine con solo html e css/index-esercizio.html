@@ -202,6 +202,11 @@
     <h2>justify-content</h2>
     <p>proprietà usata per distribuire i contenuti del flexbox lungo il main axis (orizzontale in row, verticale in
         column)</p>
+        <div class="centrare" style="
+            margin: 10px;
+            float: right;">
+                <img src="foto flex-box/justify-content.png" alt="justify-content">
+        </div>
     justify-content: flex-start;
     <div class="flex-start">
         <div class="ITEM2">1</div>
@@ -242,18 +247,26 @@
         <div class="ITEM2">4</div>
     </div>
     <br>
-
+    <div style="
+            float: left;
+            margin: 10px;"
+        >
+        <img src="foto flex-box/align-items row.png" alt="align-items row">
+        <br>
+        <img src="foto flex-box/align-items column.png" alt="align-items column">
+    </div>
     <h2>align-items</h2>
     <p>proprietà usata per distribuire i contenuti del flexbox lungo il cross axis (verticale in row, orizzontale in
-        column)</p>
-    align-items: stretch;
-    <div class="STRETCH">
+        column)
+    </p>
+    <br>
+    align-items: center;
+    <div class="CENTER">
         <div class="ITEM2">1</div>
         <div class="ITEM2">2</div>
         <div class="ITEM2">3</div>
         <div class="ITEM2">4</div>
     </div>
-    <br>
     align-items: flex-start;
     <div class="FLEX-START">
         <div class="ITEM2">1</div>
@@ -261,7 +274,6 @@
         <div class="ITEM2">3</div>
         <div class="ITEM2">4</div>
     </div>
-    <br>
     align-items: flex-end;
     <div class="FLEX-END">
         <div class="ITEM2">1</div>
@@ -269,9 +281,8 @@
         <div class="ITEM2">3</div>
         <div class="ITEM2">4</div>
     </div>
-    <br>
-    align-items: center;
-    <div class="CENTER">
+    align-items: stretch;
+    <div class="STRETCH">
         <div class="ITEM2">1</div>
         <div class="ITEM2">2</div>
         <div class="ITEM2">3</div>
@@ -309,7 +320,8 @@
         <div class="ITEM3">9</div>
         <div class="ITEM3">10</div>
     </div>
-    <br>flex-wrap: wrap-reverse;
+    <br>
+    flex-wrap: wrap-reverse;
     <div class="wrap-reverse">
         <div class="ITEM3">1</div>
         <div class="ITEM3">2</div>
@@ -326,57 +338,139 @@
     <br>
     <br>
     <br>
+    <div style="
+        float: left;
+        margin: 10px;"
+        >
+        <img src="foto flex-box/align-content 1.png" alt="align-items row" style="
+            border-bottom: none;
+            margin-bottom: none;">
+        <br>
+        <img src="foto flex-box/align-content 2.png" alt="align-items column" style="border-top: none;">
+    </div>
     <h2>
-        align-content STUDIA MEGLIO
+        align-content
     </h2>
-    <p>la proprietà align-content consente di disporre gli elementi che superano il container in righe differenti</p>
-    align-content: ;
-    <div class="align-content">
-        <div class="ITEM3">1</div>
-        <div class="ITEM3">2</div>
-        <div class="ITEM3">3</div>
-        <div class="ITEM3">4</div>
-        <div class="ITEM3">5</div>
-        <div class="ITEM3">6</div>
-        <div class="ITEM3">7</div>
-        <div class="ITEM3">8</div>
-        <div class="ITEM3">9</div>
-        <div class="ITEM3">10</div>
+    <p style="width: 80%;">
+        Nel caso in cui si usa "flex-wrap: wrap;" oppure "flex-wrap: wrap-reverse;",
+        la proprietà align-content consente di disporre, spaziando in modo diverso gli elementi nelle diverse righe 
+        (nel caso di flex-direction: row) o nelle diverse colonne (in caso di flex-direction: column).
+        <br>
+        É una proprietà simile a align-items ma dispone nel caso di più di una riga o colonna. 
+    </p>
+    <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+        <div>
+            align-content: flex-start;
+            <div class="align-content-flex-start">
+                <div class="ITEM3">1</div>
+                <div class="ITEM3">2</div>
+                <div class="ITEM3">3</div>
+                <div class="ITEM3">4</div>
+                <div class="ITEM3">5</div>
+                <div class="ITEM3">6</div>
+                <div class="ITEM3">7</div>
+                <div class="ITEM3">8</div>
+                <div class="ITEM3">9</div>
+                <div class="ITEM3">10</div>
+            </div>
+        </div>
+        <div>
+            align-content: flex-end;
+            <div class="align-content-flex-end">
+                <div class="ITEM3">1</div>
+                <div class="ITEM3">2</div>
+                <div class="ITEM3">3</div>
+                <div class="ITEM3">4</div>
+                <div class="ITEM3">5</div>
+                <div class="ITEM3">6</div>
+                <div class="ITEM3">7</div>
+                <div class="ITEM3">8</div>
+                <div class="ITEM3">9</div>
+                <div class="ITEM3">10</div>
+            </div>
+        </div>
+        <div>
+            align-content: center;
+            <div class="align-content-center">
+                <div class="ITEM3">1</div>
+                <div class="ITEM3">2</div>
+                <div class="ITEM3">3</div>
+                <div class="ITEM3">4</div>
+                <div class="ITEM3">5</div>
+                <div class="ITEM3">6</div>
+                <div class="ITEM3">7</div>
+                <div class="ITEM3">8</div>
+                <div class="ITEM3">9</div>
+                <div class="ITEM3">10</div>
+            </div>
+        </div>
+        <div>
+            align-content: stretch;
+            <div class="align-content-stretch">
+                <div class="ITEM3">1</div>
+                <div class="ITEM3">2</div>
+                <div class="ITEM3">3</div>
+                <div class="ITEM3">4</div>
+                <div class="ITEM3">5</div>
+                <div class="ITEM3">6</div>
+                <div class="ITEM3">7</div>
+                <div class="ITEM3">8</div>
+                <div class="ITEM3">9</div>
+                <div class="ITEM3">10</div>
+            </div>
+        </div>
+        <div>
+            align-content: space-between;
+            <div class="align-content-space-between">
+                <div class="ITEM3">1</div>
+                <div class="ITEM3">2</div>
+                <div class="ITEM3">3</div>
+                <div class="ITEM3">4</div>
+                <div class="ITEM3">5</div>
+                <div class="ITEM3">6</div>
+                <div class="ITEM3">7</div>
+                <div class="ITEM3">8</div>
+                <div class="ITEM3">9</div>
+                <div class="ITEM3">10</div>
+            </div>
+        </div>
+        <div>
+            align-content: space-around;
+            <div class="align-content-space-around">
+                <div class="ITEM3">1</div>
+                <div class="ITEM3">2</div>
+                <div class="ITEM3">3</div>
+                <div class="ITEM3">4</div>
+                <div class="ITEM3">5</div>
+                <div class="ITEM3">6</div>
+                <div class="ITEM3">7</div>
+                <div class="ITEM3">8</div>
+                <div class="ITEM3">9</div>
+                <div class="ITEM3">10</div>
+            </div>
+        </div>
+        <div>
+            align-content: space-evenly;
+            <div class="align-content-space-evenly">
+                <div class="ITEM3">1</div>
+                <div class="ITEM3">2</div>
+                <div class="ITEM3">3</div>
+                <div class="ITEM3">4</div>
+                <div class="ITEM3">5</div>
+                <div class="ITEM3">6</div>
+                <div class="ITEM3">7</div>
+                <div class="ITEM3">8</div>
+                <div class="ITEM3">9</div>
+                <div class="ITEM3">10</div>
+            </div>
+        </div>
     </div>
     <br>
-    flex-wrap: wrap;
-    <div class="wrap">
-        <div class="ITEM3">1</div>
-        <div class="ITEM3">2</div>
-        <div class="ITEM3">3</div>
-        <div class="ITEM3">4</div>
-        <div class="ITEM3">5</div>
-        <div class="ITEM3">6</div>
-        <div class="ITEM3">7</div>
-        <div class="ITEM3">8</div>
-        <div class="ITEM3">9</div>
-        <div class="ITEM3">10</div>
-    </div>
-    <br>flex-wrap: wrap-reverse;
-    <div class="wrap-reverse">
-        <div class="ITEM3">1</div>
-        <div class="ITEM3">2</div>
-        <div class="ITEM3">3</div>
-        <div class="ITEM3">4</div>
-        <div class="ITEM3">5</div>
-        <div class="ITEM3">6</div>
-        <div class="ITEM3">7</div>
-        <div class="ITEM3">8</div>
-        <div class="ITEM3">9</div>
-        <div class="ITEM3">10</div>
-    </div>
-
-
-
-
-
+    <br>
+    <br>
+    <br>
+    <br>
     <h1>proprietà degli elementi contenuti (flex items)</h1>
-    <br>
     <h2>flex-basis</h2>
     per impostare la lunghezza iniziale di un flex item lungo il main axis si usa la proprietà flex-basis.
     Queste lunghezze vengono poi accorciate o allungate in base alle proprietà "shrink" e "grow"
