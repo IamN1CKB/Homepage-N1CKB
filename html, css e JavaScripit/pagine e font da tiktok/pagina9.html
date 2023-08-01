@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pagina con dark mode</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        /* NAVBAR STYLING*/
+        .navbar {
+            box-shadow: 0 5px 10px rgba(211, 211, 211, 0.8);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 25px;
+            position: sticky;
+            top: 0;
+            background-color: white;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .links {
+            list-style: none;
+            font-size: 1.1rem;
+            cursor: pointer;
+        }
+
+        /*DARK-MODE ICON*/
+        #dark-mode-icon {
+            font-size: larger;
+            cursor: pointer;
+            padding: 15px;
+        }
+
+        /*CONTENT SECTION*/
+        section {
+            width: 90%;
+            margin: 20px auto;
+        }
+
+        section p {
+            padding: 10px 0;
+            color: gray;
+        }
+
+        /* DARK-MODE | ON CLICK*/
+        .dark-mode {
+            background-color: black;
+            color: white;
+        }
+
+        .dark-nav {
+            background-color: black;
+            box-shadow: none;
+            border-bottom: 1px rgba(211, 211, 211, 0,205) solid;
+        }
+        </style>
+</head>
+<body>
+    <!--NAVBAR-->
+    <nav class="navbar">
+        <h1>LOGO</h1>
+
+        <!--NAV LINKS-->
+        <ul class="nav-links">
+            <li class="links">Home</li>
+            <li class="links">About</li>
+            <li class="links">Contact</li>
+        </ul>
+
+        <!--***** DARK-MODE-TOGGLE *****-->
+        <div id="dark-mode-icon" title="Toggle Dark/Light Mode">
+            <i class="fa-solid fa-circle-half-stroke"></i>
+        </div>
+    </nav>
+
+    <!-- OPTIONAL CONTENT -->
+    <main>
+        <section>
+            <h2>Home</h2>
+            <p>lorem text</p>
+        </section>
+    </main>
+
+    <!-- CON FROM FONT-AWESOME-->
+    <script src="https://kit.fontawesome.com/81d73e8e4d.js" crossorigin="anonymous">
+    </script>
+    <script>
+        let navBar = document.querySelector(".navbar");
+        let darkMode = document.querySelector("#dark-mode-icon");
+        let body = document.body;
+    
+        darkMode.addEventListener("click", () => {
+            navBar.classList.toggle("dark-nav")
+            body.classList.toggle("dark-mode");
+        });
+    </script>
+</body>
+</html>

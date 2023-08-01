@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>box cambio colore</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: center;
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            border: solid 1px black;
+        }
+        input {
+            width: 100px;
+            border: 1px solid  #ccc;
+            border-radius: 4px;
+            padding: 10px;
+            resize: none;      /*STUDIA MEGLIO resize */
+            outline: none;     /*STUDIA MEGLIO outline */
+            transition: 0,2s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+        <input type="text">
+    </div>
+    <script>
+        const box = document.querySelector(".box");
+        const input = document.querySelector("input");
+
+        input.addEventListener("input", (e)=> {
+            box.style.background = e.target.value;   //STUDIA MEGLIO target
+            box.style.borderRadius = e.target.value;   //perché dare un colore a border-radius?
+        })
+    </script>
+</body>
+</html>
