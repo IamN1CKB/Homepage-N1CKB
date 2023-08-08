@@ -250,9 +250,11 @@ div è il parent element e invece p è il child element*/
     font-family: cursive;
     clear: right;
 }
-/*per cambiare la posizione degli elementi dobbiamo prima di tutto impostare la proprietà position: relative; o con il valore absolute*/
+/*per cambiare la posizione degli elementi dobbiamo prima di tutto impostare la proprietà position, che ha di default il valore di static,
+ma noi possiamo modificarlo in "relative" o "absolute" */
 /*nel caso di relative tu sposti gli elementi basandoti sulla loro posizione nel normal flow (normale flusso della pagina)*/
-/*nel caso di absolute invece si spostano gli elementi in base alla pagina*/
+/*nel caso di absolute invece si spostano gli elementi in base al genitore più vicino con un valore di position diversa da static,
+nel caso in cui non ci fosse nessun genitore che abbia un valore diverso da static, ci riferiamo alla pagina stessa*/
 /*poi usare le proprietà top, bottom, right e left per impostare quanto a [proprietà] mettere l'elemento rispetto alla posizione originale nel caso di relative, o rispetto alla pagina nel caso di absolute*/
 .Wanda {
     position: relative;

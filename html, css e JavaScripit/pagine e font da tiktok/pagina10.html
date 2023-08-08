@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Form</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css?family=Roboto");
+        html {
+            font-family: "Roboto", sans-serif;
+            font-size: 16px;
+        }
+        :root {
+            --primary: #007fff;
+            --secondary: #6f7e8c;
+            --text: #212121;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .box {
+            background-color: white;
+            padding: 24px;
+            max-width: fit-content;
+            width: 100%;
+            padding-top: 12px;
+            border-radius: 16px;
+        }        
+        .centering {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100vw;
+            background-color: var(--primary);
+        }
+        .input__wrapped {
+            position: relative;
+            padding: 15px 0 0;
+        }
+        .input__field {
+            border: 1px solid var(--secondary);
+            font-size: 1rem;
+            border-radius: 4px;
+            color: var(--text);
+            padding: 8px;
+            padding-right: 32px;
+            background: transparent;
+            transition: border-color 0.2s;
+        }
+        .input__field::placeholder {
+            color: transparent;
+        }
+        .input__field:placeholder-shown ~ .input__label {
+            font-size: 1rem;
+            cursor: text;
+            color: var(--secondary);
+            top: 24px;
+        }
+        label,
+        .input__field:focus ~ .input__label {
+            position: absolute;
+            top: 6px;
+            padding: 0 4px;
+            background-color: white;
+            display: block;
+            font-size: 14px;
+            left: 8px;
+            color: var(--secondary);
+            transition: 0.3s;
+        }
+        .input__field:focus ~ .input__label {
+            color: var(--primary);
+        }
+        .input__field:focus {
+            border: 1px solid var(--primary);
+            outline: 1px solid var(--primary);
+        }
+        .input__icon {
+            position: absolute;
+            right: -10px;
+            bottom: -10px;
+            width: 28px;
+            height: 28px;
+            transform: translate(-50%,-50%);
+            transform-origin: center;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="centering">
+        <div class="box">
+            <div class="input__wrapped">
+                <input 
+                    type="password"
+                    name="password"
+                    id="password"
+                    placeholder="La tua Password"
+                    title="Minimo 6 caratteri con almeno una lettera e un numero"
+                    pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$"
+                    required
+                    class="input__field"
+                >
+                <label for="password" class="input__label">
+                    Password
+                </label>
+                <img src="media/visibility_black_24dp.svg" alt="Icona dell'occhio" title="Icona dell'occhio" class="input__icon">
+            </div>
+        </div>
+    </div>
+</body>
+    <script>
+        const input = document.querySelector(".input__field");
+        const inputIcon = document.querySelector(".input__icon");
+
+        inputIcon.addEventListener("click", (e) => {
+            e.preventDefault();
+
+            inputIcon.setAttribute(
+                "src",
+                input.getAttribute("type") === "password" ?
+                "media/visibility_off_FILL0_wght400_GRAD0_opsz48.svg"
+                :
+                "media/visibility_black_24dp.svg"
+            );
+
+            input.setAttribute(
+                "type",
+                input.getAttribute("type") === "password" ?
+                "text"
+                :
+                "password"
+            );
+        });
+    </script>
+</html>
