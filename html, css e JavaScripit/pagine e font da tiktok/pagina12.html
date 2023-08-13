@@ -3,9 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>form con input obbligatori</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 500px;
+            margin: 50px auto;
+            background-color: #fff;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #666;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="address"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border-radius: 3px;
+            border: 1px solid #ccc;
+        }
+        input[type="submit"] {
+            background-color: #4caf4c;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        input[type="submit"] {
+            background-color: #45a043;
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="container">
+        <h2>Form dell'identità</h2>
+        <form>
+            <div class="form-group">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" placeholder="Inserisci il tuo nome" required>
+            </div>
+            <div class="form-group">
+                <label for="nono">Email:</label>
+                <input type="email" id="email" placeholder="Inserisci la tua Email" required>
+            </div>
+            <div class="form-group">
+                <label for="nono">Telefono:</label>
+                <input type="tel" id="telefono" placeholder="Inserisci il tuo numero di telefono" required>
+            </div>
+            <div class="form-group">
+                <label for="nono">Indirizzo:</label>
+                <input type="address" id="" placeholder="" required>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
 </body>
 </html>
