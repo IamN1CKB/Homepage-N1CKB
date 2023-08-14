@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>evento input cazzo</title>
     <style>
-        .cazzo {
+        .foto {
             width: 250px;
         }
     </style>
@@ -24,14 +24,20 @@
             if (input.value === "cazzo" || input.value === "Cazzo") {
                 const cazzo = document.createElement("img");
                 cazzo.src = "media/cazzo.jpg";
-                cazzo.classList.add("cazzo")
+                cazzo.classList.add("foto")
                 document.body.appendChild(cazzo);
+            }
+            if (input.value === "gabby" || input.value === "Gabby") {
+                const gabby = document.createElement("img");
+                gabby.src = "media/gabby.jpg";
+                gabby.classList.add("foto")
+                document.body.appendChild(gabby);
             }
         }
         const bottone = document.querySelector("button");
         bottone.onclick = function rimuoviCazzo() {
-            const cazzo = document.querySelector("img.cazzo")
-            document.body.removeChild(cazzo);
+            const immagine = document.querySelector("img.foto")
+            document.body.removeChild(immagine);
         }
     </script>
 </body>
