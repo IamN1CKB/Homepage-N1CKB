@@ -245,10 +245,12 @@ div è il parent element e invece p è il child element*/
     width: 30%;
     float: right;
 }
-/*se si vuole che un testo non si adatti alla foto si deve aggiungere la proprietà clear al testo, con il valore right o left (che sarebbe la parte da tenere pulita, a seconda se l'immagine è a destra o a sinistra)*/
+/*se si vuole che un testo non si adatti alla foto si deve aggiungere la proprietà clear al testo, con il valore right o left 
+(che sarebbe la parte da tenere pulita, a seconda se l'immagine è a destra o a sinistra)*/
 .simp {
     font-family: cursive;
     clear: right;
+    border: solid;
 }
 /*per cambiare la posizione degli elementi dobbiamo prima di tutto impostare la proprietà position, che ha di default il valore di static,
 ma noi possiamo modificarlo in "relative" o "absolute" */

@@ -1,38 +1,70 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>come funziona position: absolute;</title>
     <style>
         body {
-            color: white;
+            padding: 10px;
         }
-        .container {
-            position: relative;
-            width: 300px;
-            height: 200px;
-            background-color: lightgray;
+        #container {
+            color: white;
+            width: 1000px;
+            height: 1000px;
+            background: url(media/container.png); 
+            /*dò lo sfondo a immagine in modo che ci sia la scritta container ma che non sia un elemento*/
         }
         
         .element1 {
-            /* position: absolute;
+            position: absolute;
             top: 50px;
-            left: 50px; */
+            right: 50px;
             width: 100px;
             height: 100px;
             background-color: blue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
         
         .element2 {
             position: absolute;
-            top: 10px;
-            left: 10px;
-            width: 50px;
-            height: 50px;
+            top: 80px;
+            left: 0;
+            width: 100px;
+            height: 100px;
             background-color: red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #container2{
+            color: white;
+            width: 1000px;
+            height: 1000px;
+            background: url(media/container.png);
+            position: relative;
         }
     </style>
 </head>
 <body>
-    <div class="container">
+    <h1>in questa pagina studiamo come funziona la proprietà position</h1>
+    iniziamo col vedere come
+    <div id="container">
+        <div class="element1">Element 1</div>
+        <div class="element2">Element 2</div>
+    </div>
+    <p>
+        in questo caso gli elementi 1 e 2 si spostano in base al layout della pagina, e non in base al container, 
+        siccome ha la proprietà position settata di default su static.
+        <br>
+        per far in modo che questi 2 elementi si muovano in base al container, dobbiamo cambiare il valore di position del container.
+        <br>
+        se non si deve cambiare la posizione reale del container ma si deve solo fare in modo che si modifichi il tutto, consiglio di 
+        inserire il valore di relative senza le proprietà top bottom right e left.
+    </p>
+    <div id="container2">
         <div class="element1">Element 1</div>
         <div class="element2">Element 2</div>
     </div>

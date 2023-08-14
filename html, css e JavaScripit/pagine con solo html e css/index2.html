@@ -4,9 +4,131 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>pagine con css avanzato</title>
+    <style>
+        body {
+            padding: 15px;
+            padding-top: 0;
+            background-color: antiquewhite;
+        }
+        h1 {
+            text-align: center;
+            color: red;
+            text-transform: uppercase;
+        }
+        h2 {
+            color: red;
+        }
+
+        /*argomento: ::placeholder pseudo class*/
+        #input::placeholder {
+            color: red;
+        }
+
+        /*argomento: :placeholder-shown pseudo class*/
+        #form1{
+            border: solid green;
+            width: min-content;
+        }
+        #input1 {
+            width: 200px;
+            height: 35px;
+            /*questa è la grandezza del tag input quando è scritto qualcosa dentro*/
+        }
+        #input1:placeholder-shown {
+            height: auto;
+            /*questa è la grandezza del tag input quando non è scritto nulla dentro (con placeholder visibile)*/
+        }
+    </style>
 </head>
 <body>
-    <h1>pagina per tip avanzate di css</h1>
+    <h1>Pagina per tip avanzate di css</h1>
+    <p style="text-align: center;">
+        In questa pagina mostrò delle tips per alcune chicche in CSS
+    </p>
+    <h2>
+        Le pseudo class
+    </h2>
+    <p>
+        In CSS, le pseudo-classi sono utilizzate per selezionare e modificare lo stile di elementi HTML in base a determinati stati o interazioni.
+        <br>
+        Esse hanno una sintassi che si aggiunge successivamente al selettore della regola CSS
+        <br>
+        element:pseudo-class {
+            <br>
+            proprietà: valore;
+            <br>
+        }
+    </p>
+    <p>
+        Le pseudo-classi in CSS possono avere uno o due punti (:) come prefisso, e la differenza tra i due dipende dal contesto
+        in cui vengono utilizzati.
+    </p>
+    <ul>
+        <li>
+            Pseudo-classe con un solo : (es. :hover, :active, :nth-child(2)):
+            <br>
+            Le pseudo-classi con un solo : sono le più comuni e vengono utilizzate per selezionare e stiliare elementi in base a stati
+            o caratteristiche specifiche.
+            Ad esempio, :hover viene utilizzata per applicare uno stile quando si posiziona il cursore sopra un elemento, mentre
+            :active viene utilizzata per applicare uno stile quando un elemento è attivo, ad esempio quando un pulsante viene premuto.
+        </li>
+        <br>
+        <li>
+            Pseudo-classe con due :: (es. ::before, ::after, ::first-line):
+            <br>
+            Le pseudo-classi con due :: sono chiamate pseudo-elementi. Questi vengono utilizzati per selezionare e stiliare parti
+            specifiche di un elemento che non sono rappresentate direttamente nel file HTML.
+            Ad esempio, ::before e ::after vengono utilizzate per inserire contenuto aggiuntivo prima o dopo un elemento
+            (ad esempio, per aggiungere icone o decorazioni). ::first-line viene utilizzata per selezionare la prima riga di
+            testo all'interno di un elemento.
+        </li>
+    </ul>
+    <p>
+        Ecco alcuni esempi di come vengono utilizzate le pseudo-classi e i pseudo-elementi
+    </p>
+    
+
+
+
+    <h2>
+        ::placeholder pseudo class
+    </h2>
+    <p>
+        Questo selettore se aggiunto a un file input dotato di placeholder, consente di modificare lo stile del placeholder.
+        Facciamo un esempio.
+        <br>
+        Ricorda che si scrive con :: e non con solo :
+        <br>
+        quindi la sintassi sarebbe=> input::placeholder {}
+    </p>
+    <input type="text" placeholder="scrivi qui" id="input">
+
+
+
+    <h2>
+        :placeholder-shown pseudo class
+    </h2>
+    <p>
+        questo selettore, usato su un tag input o textarea, consente di modificare l'aspetto del tag solo quando è visibile il placeholder
+        ossia quando non è stato scritto nulla all'interno del tag. Facciamo un esempio:
+        <br>
+        Ricorda che si scrive con : e non ::
+        <br>
+        quindi la sintassi sarebbe=> input:placeholder-shown {}
+    </p>
+    <form id="form1">
+        <label for="input1">tag label</label>
+        <input type="text" placeholder="se scrivi aumenta l'altezza" id="input1">
+    </form>
+
+
+
+    <h2>
+        :has pseudo class
+    </h2>
+
+
+
     <h2>come nascondere una parte del testo</h2>
 </body>
 </html>
