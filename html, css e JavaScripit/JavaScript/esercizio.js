@@ -23,7 +23,7 @@ siccome si devono registrare le informazioni nel linguaggio, lo JavaScript (come
 /*le variabili sono dunque come scatole con un contenuto e con un nome.
 per creare variabili noi usiamo le parole chiavi "let" e "const" (c'è anche un terzo modo, con "var", che vedremo molto più in là) */
 // let crea delle variabili che possono essere aggiornate successivamente, con l'operator assign "="
-//la forma per creare variabili è: let NomeDellaVaribile= valore dell variabile
+//la forma per creare variabili è: let NomeDellaVariabile= valore dell variabile
 let VariabileModificabile = "valore della variabile non costante (let)";
 console.log(VariabileModificabile);      
 //questa istruzione ci permette di stampare l'output del contenuto tra parentesi in un area chiamata console 
@@ -35,8 +35,8 @@ VariabileModificabile = "cambio valore della variabile (let)";   //per aggiornar
 console.log(VariabileModificabile);
 //invece le variabili con la parola chiave const sono delle variabili costanti che non varieranno neanche successivamente.
 //per scrivere queste variabili la forma è la stessa di let: const NOME_DELLA_VARIABILE= valore della variabile
-const VARIBILE_COSTANTE = "valore della variabile costante (const)";
-console.log(VARIBILE_COSTANTE);
+const VARIABILE_COSTANTE = "valore della variabile costante (const)";
+console.log(VARIABILE_COSTANTE);
 
 //il nome delle variabili non possono contenere spazi tra di essi, ed è accettato solo il simbolo _ come parte del nome di una variabile
 //il nome delle variabili possono contenere dei numeri, ma non possono stare come primo carattere del nome della variabile

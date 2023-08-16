@@ -19,12 +19,54 @@
             color: red;
         }
 
-        /*argomento: ::placeholder pseudo class*/
+        /*argomento=> selector div > p { }*/
+        #div {
+            background-color: green;
+            width:fit-content;
+        }
+        #div > img {
+            border: 3px solid blue;
+            width: 300px;
+        }
+        /*argomento=> selector div + p { }*/
+        .div {
+            background-color: blue;
+            color: white;
+        }
+        .div + p {
+            border: 3px dashed black;
+        }
+        /*argomento=> selector div ~ p { }*/
+        #div2 {
+            border: 1px solid;
+        }
+        #div2 ~ p {
+            color: brown;
+            border: 1px dashed white;
+        }
+
+        /* Pseudo-classe con un solo : */
+        a:hover {
+            color: red; 
+            /* Cambia il colore del testo quando si posiziona il cursore sopra un link */
+        }
+        /* Pseudo-elemento con due :: */
+        #p::before {
+            content: "► "; 
+            /* Aggiunge una freccia prima di ogni paragrafo */
+        }
+        #p::first-line {
+            font-weight: bold; 
+            /* Rende grassetto la prima riga di ogni paragrafo */
+        }
+
+
+        /*argomento=> ::placeholder pseudo class*/
         #input::placeholder {
             color: red;
         }
 
-        /*argomento: :placeholder-shown pseudo class*/
+        /*argomento=> :placeholder-shown pseudo class*/
         #form1{
             border: solid green;
             width: min-content;
@@ -38,13 +80,181 @@
             height: auto;
             /*questa è la grandezza del tag input quando non è scritto nulla dentro (con placeholder visibile)*/
         }
+
+        /*argomento=> :has() pseudo class*/
+        .p:has(a) {
+            background-color: yellow;
+        }
+        #label:has(~ input:placeholder-shown) {
+            border: dashed brown;
+        }
+        #label {
+            border: solid brown;
+        }
+        #label ~ input {
+            width: 300px;
+        }
+
+        /*argomento=> :invalid pseudo class*/
+        .input {
+            width: 200px;
+        }
+        .input:invalid {
+            border: 2px solid red;
+        }
+        
+        /*argomento=> come nascondere una parte di un testo*/
+        .box {
+            width: 400px;
+            border: solid 2px;
+            padding: 10px;
+        }
+        #p1 {
+            white-space: nowrap;
+            /* questo dispone tutto su una linea rompendo il container */
+            overflow: hidden;
+            /* questo nasconde la parte di testo fuori dal container */
+            text-overflow: ellipsis;
+            /* questo mette i puntini sospensivi poco prima dell'overflow */
+        }
+        #p2{
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            /* STUDIA MEGLIO */
+        }
+        
     </style>
 </head>
 <body>
     <h1>Pagina per tip avanzate di css</h1>
     <p style="text-align: center;">
-        In questa pagina mostrò delle tips per alcune chicche in CSS
+        In questa pagina mostrò delle tips per alcune chicche in CSS. vedi anche <a href="https://www.tiktok.com/@techlorem/video/7254927745900170501?is_from_webapp=1&sender_device=pc&web_id=7160711670368044550">qui</a>
     </p>
+    <h2>
+        Selector
+    </h2>
+    Per renderci i tag più selezionabili possiamo usare vari selector nelle CSS rule.
+    <ul>
+        <li>
+            * { } per selezionare tutti gli elementi
+        </li>
+        <li>
+            #id { } per selezionare l'elemento con l'id "id"
+        </li>
+        <li>
+            .class { } per selezionare tutti gli elementi con la classe "class"
+        </li>
+        <li>
+            tag { } per selezionare tutti gli elementi di un determinato tag
+        </li>
+        <li>
+            tag.class { } per selezionare tutti i tag con una determinata classe 
+        </li>
+        <br>
+        <li>
+            div > p { } per selezionare tutti i tag p all'interno del tag div selezionato. Facciamo un esempio.
+            <br>
+            <textarea cols="50" rows="9">
+                #div {
+                    background-color: green;
+                    width: fix-content;
+                }
+                #div > img {
+                    border: 3px solid blue;
+                    width: 300px;
+                }
+            </textarea>
+            <div id="div">
+                <img src="media/nonna.JPG">
+                <img src="media/genny.JPG">
+                <p>
+                    Questo è un paragrafo che non sarà influenzato dalla regola sopra
+                </p>
+            </div>
+        </li>
+        <br>
+        <li>
+            div + p { } per selezionare tutti gli elementi "p" che sono immediatamente preceduti da un elemento "div".
+            Questo selettore può essere utilizzato per applicare stili specifici solo agli elementi "p" che seguono
+            direttamente un elemento "div". Facciamo un esempio.
+            <br>
+            <textarea cols="50" rows="10">
+                .div {
+                    background-color: blue;
+                    color: white;
+                }
+                .div + p {
+                    border: 3px dashed black;
+                }
+            </textarea>
+            <div class="div">
+                tag div con classe div
+            </div>
+            <p>
+                paragrafo immediatamente successivo a un elemento con classe div
+            </p>
+            <p>
+                altro paragrafo non immediatamente successivo a un elemento con classe div
+            </p>
+            <div class="div">
+                tag div con classe div
+            </div>
+            <p>
+                altro paragrafo  immediatamente successivo a un elemento con class div
+            </p>
+            <div>
+                <div class="div">
+                    tag div con classe div all'interno di 
+                </div>
+            </div>
+            Si noti che il selettore div + p selezionerà solo i paragrafi direttamente successivi a un div.
+            Paragrafi che non sono immediatamente preceduti da un div non saranno interessati da questo stile.
+            Nonostante ciò tra i 2 tag si possono ignorare i commenti e i text node (testi scritti senza ulteriori tag)
+        </li>
+        <br>
+        <li>
+            div ~ p { } per selezionare i paragrafi successivi di div, che sono anche fratelli di div (nello stesso livello dei tag)
+            <br>
+            <textarea cols="50" rows="8">
+                #div2 {
+                    border: 1px solid;
+                }
+                #div2 ~ p {
+                    color: brown;
+                    border: 1px dashed white;
+                }
+            </textarea>
+            <div>
+                <p>
+                    Questo paragrafo non sarà marrone perché non è successivo al tag div
+                </p>
+                <div id="div2">
+                    Questo è il tag div con id "div2"
+                </div>
+                <p>
+                    Questo è un paragrafo che sarà marrone perché è un fratello successivo a #div2
+                </p>
+                <span>
+                    Questo è un tag span che non sarà marrone
+                </span>
+                <p>
+                    Questo è un paragrafo che sarà marrone perché è un fratello successivo a #div2
+                </p>
+                <div>
+                    <p>Questo è un paragrafo che non sarà marrone perché non è fratello di #div2, anche se è successivo ad esso</p>
+                </div>
+                <p>
+                    Questo è un paragrafo che sarà marrone perché è un fratello successivo a #div2
+                </p>
+                <p>
+                    Questo è un paragrafo che sarà marrone perché è un fratello successivo a #div2
+                </p>
+            </div>
+        </li>
+    </ul>
+    
     <h2>
         Le pseudo class
     </h2>
@@ -86,7 +296,28 @@
     <p>
         Ecco alcuni esempi di come vengono utilizzate le pseudo-classi e i pseudo-elementi
     </p>
-    
+    <textarea  cols="100" rows="14">
+        /* Pseudo-classe con un solo : */
+        a:hover {
+          color: blue; /* Cambia il colore del testo quando si posiziona il cursore sopra un link */
+        }
+
+        /* Pseudo-elemento con due :: */
+        #p::before {
+          content: "► "; /* Aggiunge una freccia prima di ogni paragrafo */
+        }
+
+        #p::first-line {
+          font-weight: bold; /* Rende grassetto la prima riga di ogni paragrafo */
+        }
+    </textarea>
+    <br>
+    <a href="">prova a mettere il cursore sopra al link</a>
+    <p id="p">
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+    </p>
+
+
 
 
 
@@ -98,9 +329,13 @@
         Facciamo un esempio.
         <br>
         Ricorda che si scrive con :: e non con solo :
-        <br>
-        quindi la sintassi sarebbe=> input::placeholder {}
     </p>
+    <textarea cols="40" rows="4">
+        #input::placeholder {
+            color: red;
+        }
+    </textarea>
+    <br>
     <input type="text" placeholder="scrivi qui" id="input">
 
 
@@ -113,9 +348,22 @@
         ossia quando non è stato scritto nulla all'interno del tag. Facciamo un esempio:
         <br>
         Ricorda che si scrive con : e non ::
-        <br>
-        quindi la sintassi sarebbe=> input:placeholder-shown {}
     </p>
+    <textarea cols="120" rows="14">
+        #form1{
+            border: solid green;
+            width: min-content;
+        }
+        #input1 {
+            width: 200px;
+            height: 35px;
+            /*questa è la grandezza del tag input quando è scritto qualcosa dentro*/
+        }
+        #input1:placeholder-shown {
+            height: auto;
+            /*questa è la grandezza del tag input quando non è scritto nulla dentro (con placeholder visibile)*/
+        }
+    </textarea>
     <form id="form1">
         <label for="input1">tag label</label>
         <input type="text" placeholder="se scrivi aumenta l'altezza" id="input1">
@@ -124,11 +372,157 @@
 
 
     <h2>
-        :has pseudo class
+        :has() pseudo class
     </h2>
+    <p>
+        L'idea di base della pseudo-classe :has è di selezionare un elemento genitore in base al fatto che contenga determinati elementi figli che soddisfano un selettore specifico. Ad esempio, potresti voler selezionare tutti i paragrafi che contengono link all'interno di un articolo.
+
+        Ecco un esempio di come la pseudo-classe :has potrebbe funzionare 
+    </p>
+    <p>
+        In questo esempio, tutti i paragrafi con classe "p" che contengono link al loro interno verrebbero stilizzati con uno sfondo giallo.
+    </p>
+    <textarea cols="50" rows="4">
+        .p:has(a) {
+            background-color: yellow;
+        }
+    </textarea>
+    <p class="p">
+        questo è un paragrafo con classe "p" senza link
+    </p>
+    <p class="p">
+        questo è un paragrafo con classe "p" con il <a href="">link</a>
+    </p>
+
+    <p>
+        la pseudo class :has() si può combinare con altre pseudo class e selector
+    </p>
+    <textarea cols="100" rows="12">
+        #label:has(~ input:placeholder-shown) {
+            border: dashed brown;
+            /*in questo modo facciamo si che il label sia a trattini solo se ha
+            come fratello successivo (operatore ~) un tag input con il placeholder mostrato*/
+        }
+        #label {
+            border: solid brown;
+        }
+        #label ~ input {
+            width: 300px;
+        }
+    </textarea>
+    <form>
+        <label for="input2" id="label">Label dell'input</label>
+        <br>
+        <input type="text" id="input2" placeholder="se scrivi qualcosa il label cambia bordi">
+    </form>
 
 
+    <h2>
+        :invalid pseudo class
+    </h2> 
+    <p>
+        La pseudo-classe :invalid viene utilizzata per selezionare gli elementi di un modulo (come campi di input,
+        caselle di selezione o aree di testo) che hanno errori di validazione nei dati inseriti dall'utente.
+        Ecco come funziona:
+    </p>
+    <ul>
+        <li>
+            Validazione: HTML5 ha introdotto attributi ed elementi incorporati per la validazione dei moduli,
+            come required (obbligatorio), min (valore minimo), max (valore massimo), pattern (schema di validazione), ecc.
+            Questi attributi definiscono le regole per la validazione dei dati inseriti dall'utente.
+        </li>
+        <li>
+            Input dell'utente: Quando un utente interagisce con un elemento del modulo, ad esempio scrivendo in un
+            campo di input, il browser verifica l'input rispetto alle regole di validazione definite.
+        </li>
+        <li>
+            Pseudo-classe :invalid: Se l'input dell'utente non rispetta le regole di validazione,
+            il browser segnala che l'elemento del modulo è "non valido". A questo punto, è possibile utilizzare
+            la pseudo-classe :invalid per applicare stili CSS specifici all'elemento con input non valido.
+        </li>
+    </ul>
+    <p>
+        Ad esempio, supponiamo di avere un campo di input che dovrebbe accettare un indirizzo email valido:
+    </p>
+    <br>
+    <textarea cols="120" rows="12">
+        /*in CSS*/
+        .input {
+            width: 300px;
+        }
+        .input:invalid {
+            border: 2px solid red;
+        }
 
-    <h2>come nascondere una parte del testo</h2>
+        <!--in HTML-->
+        <input type="email" class="input" placeholder="inserisci l'email" required>
+    </textarea>
+
+    <form action="">
+        <input type="email" class="input" placeholder="Inserisci l'email" required>
+        <input type="number" class="input" placeholder="inserisci età" min="5" max="17">
+        <br>
+        <button type="submit">Iscriviti</button>
+    </form>
+    <p>
+        <ul>
+            In questo modo in diversi casi il bordo dei tag input diventa rosso:
+            <li>
+                quando non è stato inserito nulla nei tag input con l'attributo required
+            </li>
+            <li>
+                quando non si rispetta la sintassi per il tag con type="email"
+            </li>
+            <li>
+                quando si inserisce un valore non compreso tra il massimo e il minimo stabilito dagli attributi min e max
+            </li>
+
+        </ul>
+    </p>
+
+
+    <h2>
+        come nascondere una parte di un testo
+    </h2>
+    vedi 
+    <a href="https://www.tiktok.com/@iamdillion/video/7257198565880122629?is_from_webapp=1&sender_device=pc&web_id=7160711670368044550">
+        qui
+    </a> e poi
+    <a href="https://www.tiktok.com/@iamdillion/video/7258321932800527621?is_from_webapp=1&sender_device=pc&web_id=7160711670368044550">
+        qui
+    </a>
+    <p>
+        per troncare un paragrafo in una riga o in righe multiple dobbiamo usare varie proprietà CSS.
+        <br>
+        nel caso di una sola linea possiamo usare le varie proprietà
+    </p>
+    <textarea cols="80" rows="15">
+        #box {
+            width: 400px;
+            border: solid 2px;
+            padding: 10px;
+        }
+        #p1 {
+            white-space: nowrap;
+            /* questo dispone tutto su una linea rompendo il container */
+            overflow: hidden;
+            /* questo nasconde la parte di testo fuori dal container */
+            text-overflow: ellipsis;
+            /* questo mette i puntini sospensivi poco prima dell'overflow */
+        }
+    </textarea>
+    <div class="box">
+        <p id="p1">
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+        </p>
+    </div>
+    <p>
+        invece nel caso di un troncamento a più righe, dobbiamo usare proprietà diverse.
+    </p>
+    <div class="box">
+        <p id="p2">
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+        </p>
+    </div>
 </body>
 </html>
