@@ -1,0 +1,110 @@
+@import url("pagine\ secondarie/style2NotMain.css");
+/* La regola @import in CSS è utilizzata per includere uno stile CSS da un altro file all'interno di un foglio di stile principale.
+Questo permette di organizzare il codice CSS in file separati e di riutilizzarlo in diverse pagine o sezioni di un sito web.
+L'uso di @import può aiutare a suddividere il codice in parti più gestibili e a migliorare la manutenibilità.  */
+
+/*argomento=> selector div > p { }*/
+#div {
+    background-color: green;
+    width:fit-content;
+}
+#div > img {
+    border: 3px solid blue;
+    width: 300px;
+}
+/*argomento=> selector div + p { }*/
+.div {
+    background-color: blue;
+    color: white;
+}
+.div + p {
+    border: 3px dashed black;
+}
+/*argomento=> selector div ~ p { }*/
+#div2 {
+    border: 1px solid;
+}
+#div2 ~ p {
+    color: brown;
+    border: 1px dashed white;
+}
+
+/* Pseudo-classe con un solo : */
+a:hover {
+    color: red; 
+    /* Cambia il colore del testo quando si posiziona il cursore sopra un link */
+}
+/* Pseudo-elemento con due :: */
+#p::before {
+    content: "► "; 
+    /* Aggiunge una freccia prima di ogni paragrafo */
+}
+#p::first-line {
+    font-weight: bold; 
+    /* Rende grassetto la prima riga di ogni paragrafo */
+}
+
+
+/*argomento=> ::placeholder pseudo class*/
+#input::placeholder {
+    color: red;
+}
+
+/*argomento=> :placeholder-shown pseudo class*/
+#form1{
+    border: solid green;
+    width: min-content;
+}
+#input1 {
+    width: 200px;
+    height: 35px;
+    /*questa è la grandezza del tag input quando è scritto qualcosa dentro*/
+}
+#input1:placeholder-shown {
+    height: auto;
+    /*questa è la grandezza del tag input quando non è scritto nulla dentro (con placeholder visibile)*/
+}
+
+/*argomento=> :has() pseudo class*/
+.p:has(a) {
+    background-color: yellow;
+}
+#label:has(~ input:placeholder-shown) {
+    border: dashed brown;
+}
+#label {
+    border: solid brown;
+}
+#label ~ input {
+    width: 300px;
+}
+
+/*argomento=> :invalid pseudo class*/
+.input {
+    width: 200px;
+}
+.input:invalid {
+    border: 2px solid red;
+}
+
+/*argomento=> come nascondere una parte di un testo*/
+.box {
+    width: 400px;
+    border: solid 2px;
+    padding: 10px;
+}
+#p1 {
+    white-space: nowrap;
+    /* questo dispone tutto su una linea rompendo il container */
+    overflow: hidden;
+    /* questo nasconde la parte di testo fuori dal container */
+    text-overflow: ellipsis;
+    /* questo mette i puntini sospensivi poco prima dell'overflow */
+}
+#p2{
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    /* STUDIA MEGLIO */
+}

@@ -25,10 +25,49 @@ time {
     text-align: right;
     width: 1000px;
 }
+
+
+/* per modificare lo stile di un list item possiamo usare la proprietà list-style-type */
+#li {
+    list-style-type: disc; /*valore di default*/
+}
+#li1 {
+    list-style-type: circle;
+}
+#li2 {
+    list-style-type: square;
+}
+#li3 {
+    list-style-type: decimal;
+}
+#li4 {
+    list-style-type: lower-roman;
+}
+#li5 {
+    list-style-type: upper-roman;
+}
+#li6 {
+    list-style-type: none;
+}
+/* per poter modificare lo style tramite un immagine possiamo usare la proprietà list-style-image */
+#li7 {
+    list-style-image: url(media/chevron_right_FILL0_wght400_GRAD0_opsz48.svg);
+    /* list-style-position: inside; */
+}
+#li8 {
+    list-style-type: square;
+    list-style-position: outside; /*di default*/
+}
+#li9 {
+    list-style-position: inside;
+}
+
+
+
 /*per dare un bordo a un elemento si utilizza la proprietà border e inserire il valore solid per farlo vedere*/
 /*poi inserire lo spessore dello bordo e il colore*/
 img {
-    border:solid 10px red;
+    border: solid 10px red;
 }
 /*al posto di solid si può anche scrivere dashed (tratteggiato) per far vedere il bordo tratteggiato*/
 
