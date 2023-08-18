@@ -33,9 +33,43 @@
         </li>
         <br>
         <li>
-            div > p { } per selezionare tutti i tag p all'interno del tag div selezionato. Facciamo un esempio.
+            div p { } per selezionare tutti i tag p che sono discendenti (quindi anche figli diretti) del tag div selezionato. Facciamo un esempio.
             <br>
-            <textarea cols="50" rows="9">
+            <textarea cols="90" rows="19">
+                /*in CSS*/
+                #div0 {
+                    background-color: black;
+                    width: fit-content;
+                }
+                #div0 p {
+                    color: white;
+                }
+
+                <!--in HTML-->
+                <div id="div0">
+                    <p>Questo paragrafo è un figlio diretto del tag div con id="div0"</p>
+                    <div>
+                        <p>
+                            Questo paragrafo è un discendente del tag div con id="div0"
+                        </p>
+                    </div>
+                </div>
+            </textarea>
+            <div id="div0">
+                <p>Questo paragrafo è un figlio diretto del tag div con id="div0"</p>
+                <div>
+                    <p>
+                        Questo paragrafo è un discendente del tag div con id="div0"
+                    </p>
+                </div>
+            </div>
+        </li>
+        <br>
+        <li>
+            div > p { } per selezionare tutti i tag p che sono figli diretti del tag div selezionato (non basta essere discendenti). Facciamo un esempio.
+            <br>
+            <textarea readonly cols="100" rows="24">
+                /*in CSS*/
                 #div {
                     background-color: green;
                     width: fix-content;
@@ -44,6 +78,20 @@
                     border: 3px solid blue;
                     width: 300px;
                 }
+
+                <!--in HTML-->
+                <div id="div">
+                    <img src="media/nonna.JPG">
+                    <img src="media/genny.JPG">
+                    <p>
+                        Questo è un paragrafo che non sarà influenzato dalla regola sopra
+                    </p>
+                    <div>
+                        <div>
+                            <img src="media/piobro.jpg">
+                        </div>
+                    </div>
+                </div>
             </textarea>
             <div id="div">
                 <img src="media/nonna.JPG">
@@ -51,6 +99,11 @@
                 <p>
                     Questo è un paragrafo che non sarà influenzato dalla regola sopra
                 </p>
+                <div>
+                    <div>
+                        <img src="media/piobro.jpg">
+                    </div>
+                </div>
             </div>
         </li>
         <br>
@@ -59,7 +112,7 @@
             Questo selettore può essere utilizzato per applicare stili specifici solo agli elementi "p" che seguono
             direttamente un elemento "div". Facciamo un esempio.
             <br>
-            <textarea cols="50" rows="10">
+            <textarea readonly cols="50" rows="9">
                 .div {
                     background-color: blue;
                     color: white;
@@ -85,7 +138,7 @@
             </p>
             <div>
                 <div class="div">
-                    tag div con classe div all'interno di 
+                    tag div con classe div all'interno di un tag div
                 </div>
             </div>
             Si noti che il selettore div + p selezionerà solo i paragrafi direttamente successivi a un div.
@@ -96,7 +149,7 @@
         <li>
             div ~ p { } per selezionare i paragrafi successivi di div, che sono anche fratelli di div (nello stesso livello dei tag)
             <br>
-            <textarea cols="50" rows="8">
+            <textarea readonly cols="50" rows="8">
                 #div2 {
                     border: 1px solid;
                 }
@@ -146,61 +199,193 @@
     <ul>
         Ci sono diversi tipi di attribute selector con una sintassi tra parentesi quadre:
         <li>
-            selettore di attributo generico
-            <textarea cols="30" rows="10">
+            selettore di attributo senza valore specifico=> tag[attributo] { }
+            <br>
+            <textarea readonly cols="100" rows="10">
+                <!--in HTML-->
+                <div class="div1" data-color="red">Questo paragrafo sarà rosso</div>
+                <div class="div1" data-color="red">Questo paragrafo sarà rosso</div>
+                <div class="div1" data-background="red">Questo paragrafo NON sarà rosso</div>
+
+                /*in CSS*/
+                .div1[data-color] {
+                    color: red;
+                }
+            </textarea>
+            <br>
+            <div class="div1" data-color="red">Questo paragrafo sarà rosso</div>
+            <div class="div1" data-color="red">Questo paragrafo sarà rosso</div>
+            <div class="div1" data-background="red">Questo paragrafo NON sarà rosso</div>
+        </li>
+        <br>
+        <li>
+            selettore di attributo esatto=> tag[attributo="valore"] { }
+            <br>
+            <textarea readonly cols="100" rows="10">
+                <!--in HTML-->
+                <div class="div2" data-color="red">Questo paragrafo sarà rosso</div>
+                <div class="div2" data-color="red">Questo paragrafo sarà rosso</div>
+                <div class="div2" data-color="blue">Questo paragrafo sarà NON rosso</div>
+
+                /*in CSS*/
+                .div2[data-color="red"] {
+                    color: red;
+                }
+            </textarea>
+            <br>
+            <div class="div2" data-color="red">Questo paragrafo sarà rosso</div>
+            <div class="div2" data-color="red">Questo paragrafo sarà rosso</div>
+            <div class="div2" data-color="blue">Questo paragrafo sarà NON rosso</div>
+        </li>
+        <br>
+        <li>
+            selettore di attributo contiene=> tag[attributo*="valore"] { }
+            <br>
+            Vuol dire che il valore dell'attributo contiene la parola indicata
+            <br>
+            <textarea readonly cols="100" rows="12">
+                <!--in HTML-->
+                <div class="foo-123">Questo sarà rosso</div>
+                <div class="foo123">Questo sarà rosso</div>
+                <div class="bar123foo">Questo sarà rosso</div>
+                <div class="barfooo123">Questo sarà rosso</div>
+                <div class="barfo0">Questo sarà NON rosso</div>
+
+                /*in CSS*/
+                div[class*="foo"] {
+                    color: red;
+                }
+            </textarea>
+            <div class="foo-123">Questo sarà rosso</div>
+            <div class="foo123">Questo sarà rosso</div>
+            <div class="bar123foo">Questo sarà rosso</div>
+            <div class="barfooo123">Questo sarà rosso</div>
+            <div class="barfo0">Questo sarà NON rosso</div>
+        </li>
+        <br>
+        <li>
+            selettore di attributo separato da uno spazio=> tag[attributo~="valore"] { }
+            <br>
+            Seleziona gli elementi che hanno un attributo con un valore che include una parola specifica, separata da uno spazio.
+            Per fare l'esempio userò un attributo personalizzabile.
+            <br>
+            <textarea readonly cols="50" rows="13">
+                <!--in HTML-->
+                <div data-boh="valore a caso">
+                    Questo sarà rosso
+                </div>
+                <div data-boh="valore-a caso">
+                    Questo NON sarà rosso
+                </div>
+
+                /*in CSS*/
+                div[data-boh~="valore"] {
+                    color: red;
+                }
+            </textarea>
+            <div data-boh="valore a caso">
+                Questo sarà rosso
+            </div>
+            <div data-boh="valore-a caso">
+                Questo NON sarà rosso
+            </div>
+        </li>
+        <br>
+        <li>
+            selettore di attributo inizia con=> tag[attributo^="valore"] { }
+            <br>
+            <textarea readonly cols="100" rows="10">
+                <!--in HTML-->
+                <a href="https://it.wikipedia.org/wiki/Pagina_principale">link per Wikipedia</a>
                 <br>
-                <div data-color="red">This will be red</div>
-                <div data-color="red">This will be red</div>
-                <div data-background="red">This will NOT be red</div>
+                <a href="../../index.html">homepage</a>
 
-                div[data-color] {
-                    color: red;
+                /*in CSS*/
+                a[href^="https://"] {
+                    color: cornflowerblue;
                 }
             </textarea>
             <br>
-        </li>
-        <li>
-            selettore di attributo
+            <a href="https://it.wikipedia.org/wiki/Pagina_principale">link per Wikipedia</a>
             <br>
-            <textarea cols="30" rows="10">
-                <div data-color="red">This will be red</div>
-                <div data-color="red">This will be red</div>
-                <div data-color="blue">This will NOT be red</div>
-
-                div[data-color="red"] {
+            <a href="../../index.html">homepage</a>
+            <p>
+                In questo modo tutti i link che portano a domini di siti web esterni saranno colorati in modo diverso
+            </p>
+        </li>
+        <br>
+        <li>
+            selettore di attributo finisce con=> tag[attributo$="valore"] { }
+            <br>
+            <textarea readonly cols="80" rows="10">
+                <!--in HTML-->
+                <div class="foobar-file">Questo sarà rosso</div>
+                <div class="foobar-file">Questo sarà rosso</div>
+                <div class="foobar-input">Questo NON sarà rosso</div>
+                
+                /*in CSS*/
+                div[class$="file"] {
                     color: red;
                 }
             </textarea>
+            <div class="type-file">Questo sarà rosso</div>
+            <div class="type-file">Questo sarà rosso</div>
+            <div class="type-file-input">Questo NON sarà rosso</div>
         </li>
+        <br>
         <li>
-            selettore di attributo
+            selettore di attributo in uno specifico prefisso=> tag[attributo|="valore"] { }
+            <br>
+            <textarea readonly cols="80" rows="10">
+                <!--in HTML-->
+                <p lang="EN-us">Questo paragrafo sarà rosso</p>
+                <p lang="EN-gb">Questo paragrafo sarà rosso</p>
+                <p lang="PT-pt">Questo paragrafo NON sarà rosso</p>
+                
+                /*in CSS*/
+                p[lang|="EN"] {
+                    color: red;
+                }
+            </textarea>
+            <p lang="EN-us">Questo paragrafo sarà rosso</p>
+            <p lang="EN-gb">Questo paragrafo sarà rosso</p>
+            <p lang="PT-pt">Questo paragrafo NON sarà rosso</p>
+            <p>tra questo selettore (|=) e il selettore inizia con (^=) non c'è differenza ma per sintassi si usa questo con solo i prefissi</p>
         </li>
+        <br>
         <li>
-            selettore di attributo
-        </li>
-        <li>
-            selettore di attributo
-        </li>
-        <li>
-            selettore di attributo
-        </li>
-        <li>
-            selettore di attributo
-        </li>
-        <li>
-            selettore di attributo
+            selettore di attributo => tag[attributo="valore" i] { }
+            <p>
+                In questo selettore c'è l'aggiunta di un modificatore di corrispondenza che viene aggiunto alla fine del selettore di attributo.
+                Nel contesto dei selettori di attributo, i sta per "case-insensitive" (non sensibile alle maiuscole e minuscole).
+                Questo significa che la corrispondenza dell'attributo e del valore non terrà conto delle differenze tra maiuscole e minuscole.
+            </p>
+            <textarea readonly cols="80" rows="10">
+                <!--in HTML-->
+                <div lang="EN">Questo sarà rosso</div>
+                <div lang="en">Questo sarà rosso</div>
+                <div lang="PT">Questo NON sarà rosso</div>
+
+                /*in CSS*/
+                div[lang="EN" i] {
+                    color: red;
+                }
+            </textarea>
+            <div lang="EN">Questo sarà rosso</div>
+            <div lang="en">Questo sarà rosso</div>
+            <div lang="PT">Questo NON sarà rosso</div>
         </li>
     </ul>
     
     <h2>
-        Le pseudo class
+        Le pseudo class 
     </h2>
     <p>
         In CSS, le pseudo-classi sono utilizzate per selezionare e modificare lo stile di elementi HTML in base a determinati stati o interazioni.
         <br>
         Esse hanno una sintassi che si aggiunge successivamente al selettore della regola CSS
         <br>
-        element:pseudo-class {
+        selettore:pseudo-class {
             <br>
             proprietà: valore;
             <br>
@@ -233,7 +418,7 @@
     <p>
         Ecco alcuni esempi di come vengono utilizzate le pseudo-classi e i pseudo-elementi
     </p>
-    <textarea  cols="100" rows="14">
+    <textarea readonly  cols="100" rows="14">
         /* Pseudo-classe con un solo : */
         a:hover {
           color: blue; /* Cambia il colore del testo quando si posiziona il cursore sopra un link */
@@ -253,6 +438,176 @@
     <p id="p">
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
     </p>
+    <h3>
+        Child pseudo class
+    </h3>
+    <p>
+        I child pseudo class vengono usate per selezionare elementi figli specifici all'interno di un elemento genitore.
+        Queste pseudo-classi consentono di applicare stili agli elementi figli in base alla loro posizione o relazione all'interno dell'albero HTML.
+        <br>
+        per capire come si usano creo un tag div con vari tag numerati dopo la seguente lista in cui ci sono differenti stili
+    </p>
+    <ul>
+        <li>
+            :first-child
+            <br>
+            <textarea readonly cols="70" rows="7">
+                #container-child-pseudo-class div:first-child {
+                    color: red;
+                }
+                #container-child-pseudo-class span:first-child {
+                    color: red;
+                }
+            </textarea>
+            <br>
+            Nel secondo caso la regola non funziona perché il primo figlio non è un tag span 
+        </li>
+        <li>
+            :nth-child(3)
+            <br>
+            <textarea readonly cols="70" rows="7">
+                #container-child-pseudo-class div:nth-child(3) {
+
+    
+
+                }
+            </textarea>
+        </li>
+        <li>
+            :nth-child(n+3)
+            <br>
+            <textarea readonly cols="70" rows="7">
+                #container-child-pseudo-class div:nth-child(n+3) {
+
+                }
+            </textarea>
+        </li>
+        <li>
+            :nth-child(3n)
+            <br>
+            <textarea readonly cols="70" rows="7">
+                #container-child-pseudo-class div:nth-child(3n) {
+
+                }
+            </textarea>
+        </li>
+        <li>
+            :nth-child(3n+1)
+            <br>
+            <textarea readonly cols="70" rows="7">
+                #container-child-pseudo-class div:nth-child(3n+1) {
+
+                }
+            </textarea>
+        </li>
+        <li>
+            :nth-child(-n+3)
+            <br>
+            <textarea readonly cols="70" rows="7">
+                #container-child-pseudo-class div:nth-child(-n+3) {
+
+                }
+            </textarea>
+        </li>
+        <li>
+            :nth-child(odd)
+            <br>
+            <textarea readonly cols="70" rows="7">
+                #container-child-pseudo-class div:nth-child(odd) {
+
+                }
+            </textarea>
+        </li>
+        <li>
+            :nth-child(even)
+            <br>
+            <textarea readonly cols="70" rows="7">
+                #container-child-pseudo-class div:nth-child(even) {
+
+                }
+            </textarea>
+        </li>
+    </ul>
+    <textarea readonly cols="40" rows="8">
+        #container-child-pseudo-class {
+            display: flex;
+            gap: 30px;
+            border: 2px red solid;
+            width: fit-content;
+            padding: 5px;
+        }
+    </textarea>
+    <div id="container-child-pseudo-class">
+        <div>1(div)</div>
+        <div>2(div)</div>
+        <div>3(div)</div>
+        <div>4(div)</div>
+        <div>5(div)</div>
+        <div>6(div)</div>
+        <span>7(span)</span>
+        <div>8(div)</div>
+        <div>9(div)</div>
+        <div>10(div)</div>
+        <div>11(div)</div>
+        <div>12(div)</div>
+        <div>13(div)</div>
+        <div>14(div)</div>
+        <div>15(span)</div>
+        <div>16(div)</div>
+        <div>17(div)</div>
+        <div>18(div)</div>
+        <div>19(div)</div>
+        <div>20(div)</div>
+    </div>
+
+
+
+
+    <br>
+    <ul>
+        <li>
+            :active=>  viene applicato ad ogni elemento che viene attivato o cliccato (solo nel momento del click), come ad esempio un link o un bottone che viene cliccato
+            <br>
+            <a href="">quando clicchi diventa bianco</a>
+            <br>
+            <button>quando clicchi il background-color diventa bianco</button>
+            <br>
+            <p id="paragrafo_da_attivare">
+                paragrafo che diventa rosso mentre clicchi
+            </p>
+            <!-- Come si può notare, lo stile torna subito come prima poco dopo.
+            Un trucchetto per usare questa pseudo class anche con paragrafi e altro è attivarli tramite un link che riporta a loro.
+            <a href="#paragrafo_da_attivare">link che porta al paragrafo sopra</a> -->
+        </li>
+        <li>
+            :any
+        </li>
+      
+        <li>
+            :
+        </li>
+        <li>
+            :
+        </li>
+        <li>
+            :
+        </li>
+        <li>
+            :
+        </li>
+        <li>
+            :
+        </li>
+        <li>
+            :
+        </li>
+        <li>
+            :
+        </li>
+        <li>
+            :
+        </li>
+    </ul>
 
 
 
@@ -267,7 +622,7 @@
         <br>
         Ricorda che si scrive con :: e non con solo :
     </p>
-    <textarea cols="40" rows="4">
+    <textarea readonly cols="40" rows="4">
         #input::placeholder {
             color: red;
         }
@@ -286,7 +641,7 @@
         <br>
         Ricorda che si scrive con : e non ::
     </p>
-    <textarea cols="120" rows="14">
+    <textarea readonly cols="120" rows="14">
         #form1{
             border: solid green;
             width: min-content;
@@ -319,7 +674,7 @@
     <p>
         In questo esempio, tutti i paragrafi con classe "p" che contengono link al loro interno verrebbero stilizzati con uno sfondo giallo.
     </p>
-    <textarea cols="50" rows="4">
+    <textarea readonly cols="50" rows="4">
         .p:has(a) {
             background-color: yellow;
         }
@@ -334,7 +689,7 @@
     <p>
         la pseudo class :has() si può combinare con altre pseudo class e selector
     </p>
-    <textarea cols="100" rows="12">
+    <textarea readonly cols="100" rows="12">
         #label:has(~ input:placeholder-shown) {
             border: dashed brown;
             /*in questo modo facciamo si che il label sia a trattini solo se ha
@@ -382,7 +737,7 @@
         Ad esempio, supponiamo di avere un campo di input che dovrebbe accettare un indirizzo email valido:
     </p>
     <br>
-    <textarea cols="120" rows="12">
+    <textarea readonly cols="120" rows="12">
         /*in CSS*/
         .input {
             width: 300px;
@@ -434,7 +789,7 @@
         <br>
         nel caso di una sola linea possiamo usare le varie proprietà
     </p>
-    <textarea cols="80" rows="15">
+    <textarea readonly cols="80" rows="15">
         #box {
             width: 400px;
             border: solid 2px;
@@ -462,6 +817,48 @@
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
         </p>
     </div>
+
+
+    <h2>
+        Prefissi di vendor (da rivedere)
+    </h2>
+    <br>
+    Le proprietà CSS con il trattino `-` all'inizio sono chiamate "prefissi di vendor" o "prefissi del fornitore". Queste proprietà vengono utilizzate per applicare stili specifici a determinati browser o motori di rendering che potrebbero richiedere implementazioni sperimentali o proprietarie. I prefissi di vendor sono spesso usati per introdurre nuove funzionalità CSS che potrebbero non essere ancora pienamente supportate da tutti i browser.
+
+    Un esempio comune di prefisso di vendor è `-webkit-`, che è utilizzato principalmente per proprietà specifiche di WebKit, il motore di rendering utilizzato da browser come Safari e alcuni altri. Altri esempi di prefissi di vendor includono `-moz-` per Mozilla Firefox e `-ms-` per Microsoft Internet Explorer o Microsoft Edge (versioni precedenti).
+    
+    Ad esempio, per utilizzare l'animazione CSS con il prefisso `-webkit-` per il supporto di WebKit (come Safari), potresti scrivere:
+    
+    ```css
+    @-webkit-keyframes animazione {
+      /* Definizione dell'animazione qui */
+    }
+    ```
+    
+    Tuttavia, è importante notare che l'uso eccessivo di prefissi di vendor può portare a un codice CSS gonfio e difficile da mantenere. Con il passare del tempo, molti nuovi standard CSS sono diventati più stabili e ampiamente supportati, riducendo la necessità di utilizzare prefissi di vendor per molte funzionalità. Invece di utilizzare prefissi, è spesso consigliabile utilizzare funzionalità CSS che hanno un buon supporto trasversale tra i browser.
+    
+    Gli sviluppatori spesso utilizzano strumenti come autoprefixer, che è una libreria o un plugin per vari strumenti di sviluppo (ad esempio, PostCSS) che aggiunge automaticamente i prefissi di vendor solo dove necessario in base ai dati sul supporto del browser. Questo semplifica notevolmente la gestione dei prefissi di vendor e aiuta a mantenere il codice CSS più pulito e mantenibile.
+    I prefissi di vendor più importanti sono quelli utilizzati per supportare funzionalità specifiche in diversi browser o motori di rendering. Tuttavia, è importante notare che l'uso dei prefissi di vendor è diventato meno comune grazie alla diffusione di nuove specifiche CSS che sono state stabilizzate e implementate in modo più uniforme nei browser moderni. Ecco alcuni dei prefissi di vendor più noti:
+    
+    1. **-webkit-**: Utilizzato per il supporto del motore di rendering WebKit, che è alla base di browser come Safari e alcuni altri browser meno noti. Ad esempio, `-webkit-transform` per trasformazioni CSS.
+    
+    2. **-moz-**: Utilizzato per il supporto di Mozilla Firefox. Ad esempio, `-moz-border-radius` per bordi arrotondati.
+    
+    3. **-ms-**: Utilizzato per il supporto di Internet Explorer e Microsoft Edge (versioni precedenti). Ad esempio, `-ms-flexbox` per il modello di layout Flexbox.
+    
+    4. **-o-**: Utilizzato per il supporto di Opera, anche se è diventato meno rilevante dato che Opera ora utilizza il motore di rendering Blink, simile a WebKit. Ad esempio, `-o-transition` per transizioni CSS.
+    
+    È importante notare che, quando si utilizzano i prefissi di vendor, dovresti sempre includere anche la versione non prefissata della proprietà CSS, poiché alcuni browser potrebbero supportare sia la versione non prefissata che quella prefissata. Ad esempio, puoi scrivere:
+    
+    ```css
+    div {
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+    }
+    ```
+    
+    Tuttavia, come menzionato in precedenza, con l'avanzare degli standard CSS e il miglioramento del supporto dei browser, l'uso dei prefissi di vendor è diventato meno necessario per molte funzionalità. È sempre una buona pratica verificare il supporto dei browser per le funzionalità che intendi utilizzare e, se possibile, utilizzare le versioni non prefissate delle proprietà CSS.
 
 
 

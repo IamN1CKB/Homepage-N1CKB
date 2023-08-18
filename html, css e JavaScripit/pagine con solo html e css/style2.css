@@ -3,6 +3,14 @@
 Questo permette di organizzare il codice CSS in file separati e di riutilizzarlo in diverse pagine o sezioni di un sito web.
 L'uso di @import può aiutare a suddividere il codice in parti più gestibili e a migliorare la manutenibilità.  */
 
+/*argomento=> selector div p { }*/
+#div0 {
+    background-color: black;
+    width: fit-content;
+}
+#div0 p {
+    color: white;
+}
 /*argomento=> selector div > p { }*/
 #div {
     background-color: green;
@@ -29,6 +37,35 @@ L'uso di @import può aiutare a suddividere il codice in parti più gestibili e 
     border: 1px dashed white;
 }
 
+/*argomento=> attribute selector*/
+.div1[data-color] {
+    color: red;
+}
+.div2[data-color="red"] {
+    color: red;
+}
+div[class*="foo"] {
+    color: red;
+}
+div[data-boh~="valore"] {
+    color: red;
+}
+a[href^="https://"] {
+    color: cornflowerblue;
+}
+div[class$="file"] {
+    color: red;
+}
+p[lang|="EN"] {
+    color: red;
+}
+div[lang="EN" i] {
+    color: red;
+}
+
+
+
+
 /* Pseudo-classe con un solo : */
 a:hover {
     color: red; 
@@ -42,6 +79,34 @@ a:hover {
 #p::first-line {
     font-weight: bold; 
     /* Rende grassetto la prima riga di ogni paragrafo */
+}
+
+/*child pseudo class*/
+#container-child-pseudo-class {
+    display: flex;
+    gap: 20px;
+    border: 2px red solid;
+    width: fit-content;
+    padding: 5px;
+}
+#container-child-pseudo-class div:first-child {
+    color: red;
+}
+#container-child-pseudo-class span:first-child {
+    color: red;
+}
+
+
+
+/*lista delle pseudo class più usate*/
+a:active {
+    color: white;
+}
+button:active {
+    background-color: white;
+}
+#paragrafo_da_attivare:active {
+    color: red;
 }
 
 
