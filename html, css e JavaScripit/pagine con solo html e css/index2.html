@@ -490,7 +490,7 @@
         /*in CSS*/
         #container-child-pseudo-class {
             display: flex;
-            gap: 30px;
+            gap: 18px;
             border: 2px red solid;
             width: fit-content;
             padding: 5px;
@@ -507,13 +507,13 @@
             <div>8(div)</div>
             <div>9(div)</div>
             <div>10(div)</div>
-            <div>11(div)</div>
+            <span>11(span)</span>
             <div>12(div)</div>
             <div>13(div)</div>
             <div>14(div)</div>
             <div>15(span)</div>
             <div>16(div)</div>
-            <div>17(div)</div>
+            <span>17(span)</span>
             <div>18(div)</div>
             <div>19(div)</div>
             <div>20(div)</div>
@@ -530,13 +530,13 @@
         <div>8(div)</div>
         <div>9(div)</div>
         <div>10(div)</div>
-        <div>11(div)</div>
+        <span>11(span)</span>
         <div>12(div)</div>
         <div>13(div)</div>
         <div>14(div)</div>
         <div>15(span)</div>
         <div>16(div)</div>
-        <div>17(div)</div>
+        <span>17(span)</span>
         <div>18(div)</div>
         <div>19(div)</div>
         <div>20(div)</div>
@@ -544,46 +544,52 @@
     <ul>
         <li>
             <i>:first-child</i> per selezionare il primo figlio
-            <textarea cols="70" rows="7">
+            <textarea cols="100" rows="9">
                 #container-child-pseudo-class > div:first-child {
-                    color: red;
+                    color: red; 
+                    /*1(div)*/
                 }
                 #container-child-pseudo-class > span:first-child {
                     color: red;
+                    /*non seleziona nulla*/
                 }
             </textarea>
             Nel secondo caso la regola non funziona perché il primo figlio non è un tag span 
         </li>
         <li>
             <i>:nth-child(3)</i> per selezionare il terzo elemento
-            <textarea cols="70" rows="5">
+            <textarea cols="100" rows="6">
                 /*stavolta non specifichiamo il tag div per comodità*/
                 #container-child-pseudo-class > :nth-child(3) {
-                    color: blue;
+                    color: blue; 
+                    /*3(div)*/
                 }
             </textarea>
         </li>
         <li>
             <i>:nth-child(n+3)</i> per selezionare tutti i figli dal terzo elemento in poi (tipo come in matematica con la periodicità => n appartenente a N)
-            <textarea cols="70" rows="4">
+            <textarea cols="100" rows="5">
                 #container-child-pseudo-class > :nth-child(n+3) {
-                    font-weight: bold;
+                    font-weight: bold; 
+                    /*da 3(div) fino alla fine*/
                 }
             </textarea>
         </li>
         <li>
             <i>:nth-child(3n)</i> per selezionare tutti i figli in ordine multipli di tre
-            <textarea cols="70" rows="4">
+            <textarea cols="100" rows="5">
                 #container-child-pseudo-class > :nth-child(3n) {
-                    border: 1px solid black;
+                    border: 1px solid black; 
+                    /*3(div) 6(div) 9(div) 12(div) 15(span) 18(div)*/
                 }
             </textarea>
         </li>
         <li>
             <i>:nth-child(3n+1)</i> per selezionare tutti i figli in ordine multipli di 3 + 1
-            <textarea cols="70" rows="4">
+            <textarea cols="100" rows="5">
                 #container-child-pseudo-class > :nth-child(3n+1) {
-                    color:chartreuse;
+                    color:chartreuse; 
+                    /*4(div) 7(div) 10(div) 13(div) 16(div) 19(div)*/
                 }
             </textarea>
         </li>
@@ -591,50 +597,65 @@
             <i>:nth-child(-n+3)</i> successione da capire con la matematica sostituendo n a ogni numero naturale: -0+3=3; -1+3=2; -2+3=1; -3+3=0; -4+3=-1; 
             <br>
             A questo punto è inutile continuare perché lo 0 e i numeri negativi non possono essere ordine di figli. In questo modo abbiamo selezionato i primi 3 elementi.
-            <textarea cols="70" rows="4">
+            <textarea cols="100" rows="5">
                 #container-child-pseudo-class > :nth-child(-n+3) {
                     transform: rotate(180deg);
+                    /*3(div) 2(div) 1(div)*/
                 }
             </textarea>
         </li>
         <li>
             <i>:nth-child(odd)</i> per selezionare gli elementi in ordine dispari
             <br>
-            <textarea cols="70" rows="4">
+            <textarea cols="100" rows="5">
                 #container-child-pseudo-class > :nth-child(odd) {
                     text-decoration: underline;
+                    /*1(div) 3(div) 5(div) 7(div) 9(div) 11(span) 13(div) 15(span) 17(span) 19(div)*/
                 }
             </textarea>
         </li>
         <li>
             <i>:nth-child(even)</i> per selezionare gli elementi in ordine pari
             <br>
-            <textarea cols="70" rows="4">
+            <textarea cols="100" rows="5">
                 #container-child-pseudo-class > :nth-child(even) {
-                    text-decoration: overline;
+                    text-decoration: overline; 
+                    /*2(div) 4(div) 6(div) 8(div) 10(div) 12(div) 14(div) 16(div) 18(div) 20(div)*/
                 }
             </textarea>
         </li>
         <li>
             <i>:last-child</i> per selezionare l'ultimo elemento
             <br>
-            <textarea cols="70" rows="4">
+            <textarea cols="100" rows="5">
                 #container-child-pseudo-class > :last-child {
-                    color: brown;
+                    color: brown; 
+                    /*19(div)*/
                 }
             </textarea>
         </li>
         <li>
             <i>:nth-last-child(3)</i> per selezionare il terzultimo elemento
             <br>
-            <textarea cols="70" rows="4">
+            <textarea cols="100" rows="5">
                 #container-child-pseudo-class > :nth-last-child(3) {
-                    color: yellowgreen;
+                    color: yellowgreen; 
+                    /*18(div)*/
+                }
+            </textarea>
+        </li>
+        <li>
+            <i>:last-of-type</i> per selezionare l'ultimo elemento di un certo tipo
+            <br>
+            <textarea cols="100" rows="5">
+                #container-child-pseudo-class > span:last-of-type {
+                    color: orange; 
+                    /*17(span)*/
                 }
             </textarea>
         </li>
     </ul>
-
+    
 
 
 
@@ -785,11 +806,32 @@
 
 
     <h3>
+        :in-range pseudo class
+    </h3>
+    <p>
+        La pseudo-classe :in-range è un selettore CSS che viene utilizzato per selezionare gli elementi di input, come ad esempio "input" o "textarea", che si trovano all'interno di un intervallo specificato. Questo selettore è spesso utilizzato in combinazione con gli attributi "min" e "max" per definire un intervallo di valori validi per un elemento di input. Possiamo anche dare già un valore iniziale o predefinito con l'attributo value
+    </p>
+    <textarea cols="60" rows="7">
+        /*in CSS*/
+        input:in-range {
+            border: 4px green solid;
+        }
+        <!--in HTML-->
+        <input type="number" min="2" max="10" value="7">
+    </textarea>
+    <input type="number" min="2" max="10" value="7">
+
+
+
+
+
+
+    <h3>
         :invalid pseudo class
     </h3>
     <p>
         La pseudo-classe :invalid viene utilizzata per selezionare gli elementi di un modulo (come campi di input,
-        caselle di selezione o aree di testo) che hanno errori di validazione nei dati inseriti dall'utente.
+        caselle di selezione o aree di testo) che hanno errori di validazione nei dati inseriti dall'utente. Esso si può usare in combinazione con la pseudo class in-range (una specie di suo contrario)
         Ecco come funziona:
     </p>
     <ul>
@@ -831,21 +873,19 @@
         <br>
         <button type="submit">Iscriviti</button>
     </form>
-    <p>
-        <ul>
-            In questo modo in diversi casi il bordo dei tag input diventa rosso:
-            <li>
-                quando non è stato inserito nulla nei tag input con l'attributo required
-            </li>
-            <li>
-                quando non si rispetta la sintassi per il tag con type="email"
-            </li>
-            <li>
-                quando si inserisce un valore non compreso tra il massimo e il minimo stabilito dagli attributi min e max
-            </li>
+    <ul>
+        In questo modo in diversi casi il bordo dei tag input diventa rosso:
+        <li>
+            quando non è stato inserito nulla nei tag input con l'attributo required
+        </li>
+        <li>
+            quando non si rispetta la sintassi per il tag con type="email"
+        </li>
+        <li>
+            quando si inserisce un valore non compreso tra il massimo e il minimo stabilito dagli attributi min e max
+        </li>
+    </ul>
 
-        </ul>
-    </p>
 
 
     <h2></h2>

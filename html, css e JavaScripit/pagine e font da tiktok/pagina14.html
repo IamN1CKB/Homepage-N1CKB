@@ -11,7 +11,9 @@
     </style>
 </head>
 <body>
-    <h1>se scrivi cazzo nel form input, verrà mostrato una foto del cazzo</h1>
+    <h1>
+        Se scrivi alcune parole nel form input, verrà mostrato una foto
+    </h1>
     <input type="text">
     <br>
     <button>
@@ -32,6 +34,12 @@
                 gabby.src = "media/gabby.jpg";
                 gabby.classList.add("foto")
                 document.body.appendChild(gabby);
+            }
+            if (input.value === "mare" || input.value === "Mare") {
+                const mare = document.createElement("img");
+                mare.src = "media/mare.jpg";
+                mare.classList.add("foto")
+                document.body.appendChild(mare);
             }
         }
         const bottone = document.querySelector("button");

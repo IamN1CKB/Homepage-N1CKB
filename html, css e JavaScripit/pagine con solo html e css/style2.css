@@ -88,7 +88,7 @@ a:hover {
 }
 #container-child-pseudo-class {
     display: flex;
-    gap: 20px;
+    gap: 18px;
     border: 2px red solid;
     width: fit-content;
     padding: 5px;
@@ -126,6 +126,10 @@ a:hover {
 #container-child-pseudo-class > :nth-last-child(3) {
     color: yellowgreen;
 }
+#container-child-pseudo-class > span:last-of-type {
+    color: orange
+}
+
 
 
 
@@ -173,6 +177,11 @@ button:active {
 }
 #label ~ input {
     width: 300px;
+}
+
+/*argomento=> :in-range pseudo class*/
+input:in-range {
+    border: 4px green solid;
 }
 
 /*argomento=> :invalid pseudo class*/
