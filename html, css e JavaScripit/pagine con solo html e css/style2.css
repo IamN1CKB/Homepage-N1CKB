@@ -99,6 +99,33 @@ a:hover {
 #container-child-pseudo-class > span:first-child {
     color: red;
 }
+#container-child-pseudo-class > :nth-child(3) {
+    color: blue;
+}
+#container-child-pseudo-class > :nth-child(n+3) {
+    font-weight: bold;
+}
+#container-child-pseudo-class > :nth-child(3n) {
+    border: 1px solid black;
+}
+#container-child-pseudo-class > :nth-child(3n+1) {
+    color:chartreuse;
+}
+#container-child-pseudo-class > :nth-child(-n+3) {
+    transform: rotate(180deg);
+}
+#container-child-pseudo-class > :nth-child(odd) {
+    text-decoration: underline;
+}
+#container-child-pseudo-class > :nth-child(even) {
+    text-decoration: overline;
+}
+#container-child-pseudo-class > :last-child {
+    color: brown;
+}
+#container-child-pseudo-class > :nth-last-child(3) {
+    color: yellowgreen;
+}
 
 
 

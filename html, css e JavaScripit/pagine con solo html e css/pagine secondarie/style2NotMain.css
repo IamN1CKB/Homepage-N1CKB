@@ -13,6 +13,10 @@ h1 {
 h2, h3 {
     color: red;
 }
+li {
+    padding: 5px;
+    margin: 5px;
+}
 textarea {
     display: block;
     resize: none; /*questo impedisce di ridimensionare il tag textarea*/

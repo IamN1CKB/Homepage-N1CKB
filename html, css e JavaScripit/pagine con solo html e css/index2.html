@@ -26,12 +26,14 @@
             .class { } per selezionare tutti gli elementi con la classe "class"
         </li>
         <li>
+            .class1.class2 { } per selezionare tutti gli elementi che contengono entrambe le classi (ricorda di scriverli senza spazio tra di loro nella regola)
+        </li>
+        <li>
             tag { } per selezionare tutti gli elementi di un determinato tag
         </li>
         <li>
             tag.class { } per selezionare tutti i tag con una determinata classe 
         </li>
-        <br>
         <li>
             div p { } per selezionare tutti i tag p che sono discendenti (quindi anche figli diretti) del tag div selezionato. Facciamo un esempio.
             <textarea cols="90" rows="19">
@@ -63,7 +65,6 @@
                 </div>
             </div>
         </li>
-        <br>
         <li>
             div > p { } per selezionare tutti i tag p che sono figli diretti del tag div selezionato (non basta essere discendenti). Facciamo un esempio.
             <textarea cols="100" rows="24">
@@ -104,7 +105,6 @@
                 </div>
             </div>
         </li>
-        <br>
         <li>
             div + p { } per selezionare tutti gli elementi "p" che sono immediatamente preceduti da un elemento "div".
             Questo selettore può essere utilizzato per applicare stili specifici solo agli elementi "p" che seguono
@@ -142,7 +142,6 @@
             Paragrafi che non sono immediatamente preceduti da un div non saranno interessati da questo stile.
             Nonostante ciò tra i 2 tag si possono ignorare i commenti e i text node (testi scritti senza ulteriori tag)
         </li>
-        <br>
         <li>
             div ~ p { } per selezionare i paragrafi successivi di div, che sono anche fratelli di div (nello stesso livello dei tag)
             <textarea cols="50" rows="8">
@@ -211,7 +210,6 @@
             <div class="div1" data-color="red">Questo paragrafo sarà rosso</div>
             <div class="div1" data-background="red">Questo paragrafo NON sarà rosso</div>
         </li>
-        <br>
         <li>
             selettore di attributo esatto=> tag[attributo="valore"] { }
             <textarea cols="100" rows="10">
@@ -229,7 +227,6 @@
             <div class="div2" data-color="red">Questo paragrafo sarà rosso</div>
             <div class="div2" data-color="blue">Questo paragrafo sarà NON rosso</div>
         </li>
-        <br>
         <li>
             selettore di attributo contiene=> tag[attributo*="valore"] { }
             <br>
@@ -253,7 +250,6 @@
             <div class="barfooo123">Questo sarà rosso</div>
             <div class="barfo0">Questo sarà NON rosso</div>
         </li>
-        <br>
         <li>
             selettore di attributo separato da uno spazio=> tag[attributo~="valore"] { }
             <br>
@@ -280,7 +276,6 @@
                 Questo NON sarà rosso
             </div>
         </li>
-        <br>
         <li>
             selettore di attributo inizia con=> tag[attributo^="valore"] { }
             <br>
@@ -303,7 +298,6 @@
                 In questo modo tutti i link che portano a domini di siti web esterni saranno colorati in modo diverso
             </p>
         </li>
-        <br>
         <li>
             selettore di attributo finisce con=> tag[attributo$="valore"] { }
             <br>
@@ -322,7 +316,6 @@
             <div class="type-file">Questo sarà rosso</div>
             <div class="type-file-input">Questo NON sarà rosso</div>
         </li>
-        <br>
         <li>
             selettore di attributo in uno specifico prefisso=> tag[attributo|="valore"] { }
             <br>
@@ -342,14 +335,12 @@
             <p lang="PT-pt">Questo paragrafo NON sarà rosso</p>
             <p>tra questo selettore (|=) e il selettore inizia con (^=) non c'è differenza ma per sintassi si usa questo con solo i prefissi</p>
         </li>
-        <br>
         <li>
             selettore di attributo => tag[attributo="valore" i] { }
-            <p>
-                In questo selettore c'è l'aggiunta di un modificatore di corrispondenza che viene aggiunto alla fine del selettore di attributo.
-                Nel contesto dei selettori di attributo, i sta per "case-insensitive" (non sensibile alle maiuscole e minuscole).
-                Questo significa che la corrispondenza dell'attributo e del valore non terrà conto delle differenze tra maiuscole e minuscole.
-            </p>
+            <br>
+            In questo selettore c'è l'aggiunta di un modificatore di corrispondenza che viene aggiunto alla fine del selettore di attributo.
+            Nel contesto dei selettori di attributo, i sta per "case-insensitive" (non sensibile alle maiuscole e minuscole).
+            Questo significa che la corrispondenza dell'attributo e del valore non terrà conto delle differenze tra maiuscole e minuscole.
             <textarea cols="80" rows="10">
                 <!--in HTML-->
                 <div lang="EN">Questo sarà rosso</div>
@@ -394,7 +385,6 @@
             Ad esempio, :hover viene utilizzata per applicare uno stile quando si posiziona il cursore sopra un elemento, mentre
             :active viene utilizzata per applicare uno stile quando un elemento è attivo, ad esempio quando un pulsante viene premuto.
         </li>
-        <br>
         <li>
             Pseudo-classe con due :: (es. ::before, ::after, ::first-line):
             <br>
@@ -496,7 +486,15 @@
         Ora vediamo come si usano i diversi tipi di queste pseudo-class.
         Per capire come si usano creo un tag div con vari tag numerati dopo la seguente lista in cui ci sono differenti stili
     </p>
-    <textarea cols="50" rows="24">
+    <textarea cols="50" rows="32">
+        /*in CSS*/
+        #container-child-pseudo-class {
+            display: flex;
+            gap: 30px;
+            border: 2px red solid;
+            width: fit-content;
+            padding: 5px;
+        }
         <!--in HTML-->
         <div id="container-child-pseudo-class">
             <div>1(div)</div>
@@ -545,8 +543,7 @@
     </div>
     <ul>
         <li>
-            :first-child
-            <br>
+            <i>:first-child</i> per selezionare il primo figlio
             <textarea cols="70" rows="7">
                 #container-child-pseudo-class > div:first-child {
                     color: red;
@@ -557,90 +554,86 @@
             </textarea>
             Nel secondo caso la regola non funziona perché il primo figlio non è un tag span 
         </li>
-        <br>
         <li>
-            :nth-child(3)
-            <br>
-            <textarea cols="70" rows="7">
+            <i>:nth-child(3)</i> per selezionare il terzo elemento
+            <textarea cols="70" rows="5">
                 /*stavolta non specifichiamo il tag div per comodità*/
                 #container-child-pseudo-class > :nth-child(3) {
-
-    
-
+                    color: blue;
                 }
             </textarea>
         </li>
-        <br>
         <li>
-            :nth-child(n+3)
-            <br>
-            <textarea cols="70" rows="7">
+            <i>:nth-child(n+3)</i> per selezionare tutti i figli dal terzo elemento in poi (tipo come in matematica con la periodicità => n appartenente a N)
+            <textarea cols="70" rows="4">
                 #container-child-pseudo-class > :nth-child(n+3) {
-
+                    font-weight: bold;
                 }
             </textarea>
         </li>
-        <br>
         <li>
-            :nth-child(3n)
-            <br>
-            <textarea cols="70" rows="7">
+            <i>:nth-child(3n)</i> per selezionare tutti i figli in ordine multipli di tre
+            <textarea cols="70" rows="4">
                 #container-child-pseudo-class > :nth-child(3n) {
-
+                    border: 1px solid black;
                 }
             </textarea>
         </li>
-        <br>
         <li>
-            :nth-child(3n+1)
-            <br>
-            <textarea cols="70" rows="7">
+            <i>:nth-child(3n+1)</i> per selezionare tutti i figli in ordine multipli di 3 + 1
+            <textarea cols="70" rows="4">
                 #container-child-pseudo-class > :nth-child(3n+1) {
-
+                    color:chartreuse;
                 }
             </textarea>
         </li>
-        <br>
         <li>
-            :nth-child(-n+3)
+            <i>:nth-child(-n+3)</i> successione da capire con la matematica sostituendo n a ogni numero naturale: -0+3=3; -1+3=2; -2+3=1; -3+3=0; -4+3=-1; 
             <br>
-            <textarea cols="70" rows="7">
+            A questo punto è inutile continuare perché lo 0 e i numeri negativi non possono essere ordine di figli. In questo modo abbiamo selezionato i primi 3 elementi.
+            <textarea cols="70" rows="4">
                 #container-child-pseudo-class > :nth-child(-n+3) {
-
+                    transform: rotate(180deg);
                 }
             </textarea>
         </li>
-        <br>
         <li>
-            :nth-child(odd)
+            <i>:nth-child(odd)</i> per selezionare gli elementi in ordine dispari
             <br>
-            <textarea cols="70" rows="7">
+            <textarea cols="70" rows="4">
                 #container-child-pseudo-class > :nth-child(odd) {
-
+                    text-decoration: underline;
                 }
             </textarea>
         </li>
-        <br>
         <li>
-            :nth-child(even)
+            <i>:nth-child(even)</i> per selezionare gli elementi in ordine pari
             <br>
-            <textarea cols="70" rows="7">
+            <textarea cols="70" rows="4">
                 #container-child-pseudo-class > :nth-child(even) {
-
+                    text-decoration: overline;
                 }
             </textarea>
         </li>
-        <br>
+        <li>
+            <i>:last-child</i> per selezionare l'ultimo elemento
+            <br>
+            <textarea cols="70" rows="4">
+                #container-child-pseudo-class > :last-child {
+                    color: brown;
+                }
+            </textarea>
+        </li>
+        <li>
+            <i>:nth-last-child(3)</i> per selezionare il terzultimo elemento
+            <br>
+            <textarea cols="70" rows="4">
+                #container-child-pseudo-class > :nth-last-child(3) {
+                    color: yellowgreen;
+                }
+            </textarea>
+        </li>
     </ul>
-    <textarea cols="40" rows="8">
-        #container-child-pseudo-class {
-            display: flex;
-            gap: 30px;
-            border: 2px red solid;
-            width: fit-content;
-            padding: 5px;
-        }
-    </textarea>
 
 
 
@@ -661,7 +654,6 @@
             Un trucchetto per usare questa pseudo class anche con paragrafi e altro è attivarli tramite un link che riporta a loro.
             <a href="#paragrafo_da_attivare">link che porta al paragrafo sopra</a> -->
         </li>
-        <br>
         <li>
             :any
         </li>
