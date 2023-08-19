@@ -264,9 +264,50 @@
         </p>
         <textarea readonly cols="40" rows="2">testo di default non modificabile</textarea>
         <h3>attributi dei tag input</h3>
+        Gli attributi che si possono utilizzare in un tag `input` variano a seconda del tipo di input che si sta creando. Ecco alcuni degli attributi più comuni che vengono utilizzati con il tag `input`:
+        <ul>
+            <li>
+                type: Specifica il tipo di input. Alcuni valori possibili sono "text" (per input di testo), "password" (per password), "email" (per indirizzo email), "number" (per numeri), "checkbox" (per caselle di controllo), "radio" (per input radio), ecc.
+            </li>
+            <li>
+                name: Definisce il nome dell'input, che verrà utilizzato per identificare l'input quando il modulo viene inviato. È importante avere nomi univoci per gli input all'interno di un modulo.
+            </li>
+            <li>
+                value: Di solito specifica il valore predefinito o iniziale dell'input. Ma se usato 
+            </li>
+            <li>
+                placeholder: Fornisce un suggerimento o un esempio di ciò che dovrebbe essere inserito nell'input. Questo testo scompare quando l'utente inizia a digitare.
+            </li>
+            <li>
+                required: Indica se l'input è obbligatorio o meno. Se presente, l'utente deve fornire un valore prima di poter inviare il modulo.
+            </li>
+            <li>
+                disabled: Disabilita l'input, impedendo all'utente di interagire con esso.
+            </li>
+            <li>
+                readonly: Rende l'input di sola lettura, consentendo all'utente di visualizzare ma non modificare il suo valore.
+            </li>
+            <li>
+                max e min: Utilizzati con input di tipo "number", definiscono il valore massimo e minimo consentito.
+            </li>
+            <li>
+                step: Utilizzato con input di tipo "number", definisce l'incremento o il decremento del valore quando l'utente utilizza i controlli di incremento/decremento.
+            </li>
+            <li>
+                checked: Utilizzato con input di tipo "checkbox" e "radio", indica se l'input è selezionato per impostazione predefinita.
+            </li>
+            <li>
+                autocomplete: Specifica se il browser deve suggerire automaticamente valori per l'input basandosi sulla cronologia dell'utente.
+            </li>
+            <li>
+                size e maxlength: Utilizzati con input di tipo "text" o "password", definiscono la dimensione visuale dell'input e la lunghezza massima del testo inserito.
+            </li>
+        </ul>
+
+Questi sono solo alcuni degli attributi che puoi utilizzare con il tag `input`. La scelta degli attributi dipende dal tipo di input che stai creando e dalle tue esigenze specifiche.
 
 
-        
+
         <h3>form tag e i suoi sotto tag</h3>
         <!-- form sarebbe una specie di gruppo div specializzato per raggruppare un modulo (form), che può contenere un tag input e un bottone,
         e anche vari altri possibili elementi di un modulo-->
@@ -390,13 +431,10 @@
         <br>
         <h3>scrivere codice come testo in un file HTML</h3>
         <ul>
-            nel caso dobbiamo far vedere nella pagina web più spazi (il browser interpreta solo il primo spazio, e quelli
-            successivi li ignora) oppure proprio la scrittura del codice, ma viene interpretato dal browser, come 
-            parte del codice stesso, possiamo usare vari metodi:
+            nel caso dobbiamo far vedere nella pagina web più spazi (il browser interpreta solo il primo spazio, e quelli successivi li ignora) oppure proprio la scrittura del codice, ma viene interpretato dal browser, come parte del codice stesso, possiamo usare vari metodi:
             <li>
                 <ul>
-                    scrivere i caratteri speciali in codice HTML: sostituire i caratteri speciali che vengono interpretati come codice,
-                    in altri modi, seguendo queste traduzioni (fai finta che i caratteri non sono divisi da spazi)
+                    scrivere i caratteri speciali in codice HTML: sostituire i caratteri speciali che vengono interpretati come codice, in altri modi, seguendo queste traduzioni (fai finta che i caratteri non sono divisi da spazi)
                     <li>
                         lo spazio &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; => &nbsp; &nbsp; &nbsp; &nbsp; & n b s p ;
                         <!--nella linea di codice precedente già è stato usato questo codice speciale-->
@@ -450,7 +488,9 @@
 
 
         <h2>tag semantici</h2>
-        la maggior parte dei file semantici non modificano l'aspetto della pagina, ma possono essere utili per le CSS rule 
+        <p>
+            la maggior parte dei file semantici non modificano l'aspetto della pagina, ma possono essere utili per le CSS rule 
+        </p>
         <!--div viene usata per raggruppare vari elementi in modo da essere meglio gestiti--> 
          <div>
             <p id="siuuum"> SIIUUUUUUUUUUUUUUUMMMM</p>
@@ -528,12 +568,7 @@
         <br>
         <h2>ACCESSIBILITÀ HTML</h2>
         <p>
-            Per rendere accessibile le pagine web al maggior numero di utenti, dobbiamo ricordarci tecnologie di assistenza.
-            Queste tecnologie sono usate da utenti con diversi dispositivi o con una connessione lenta, oppure con disabilità.
-            Alcune di queste tecnologie di assistenza sono lettori di schermo (per i ciechi), dispositivi di zoom, ecc...
-            Un modo per aiutare queste tecnologie, e quindi questi utenti, è usare un codice semantico HTML: al posto di usare
-            i generici div e span, che non hanno alcun contesto, possiamo usare i tag semantici, come "h1" "ul" o "p".
-            Infatti tramite questi tag semantici il lettore di schermo riesce a interpretare meglio gli elementi HTML.
+            Per rendere accessibile le pagine web al maggior numero di utenti, dobbiamo ricordarci tecnologie di assistenza. Queste tecnologie sono usate da utenti con diversi dispositivi o con una connessione lenta, oppure con disabilità. Alcune di queste tecnologie di assistenza sono lettori di schermo (per i ciechi), dispositivi di zoom, ecc... Un modo per aiutare queste tecnologie, e quindi questi utenti, è usare un codice semantico HTML: al posto di usare i generici div e span, che non hanno alcun contesto, possiamo usare i tag semantici, come "h1" "ul" o "p". Infatti tramite questi tag semantici il lettore di schermo riesce a interpretare meglio gli elementi HTML.
         </p>
         <ul>
             Ecco alcune regole che si dovrebbero rispettare per una migliore accessibilità:
@@ -548,32 +583,22 @@
             </li>
         </ul>
         <p>
-            Altro modo per migliorare l'accessibilità è il WAI-ARIA.
-            Il WAI-ARIA (Web Accessibility Initiative - Accessible Rich Internet Applications) è un insieme di specifiche
-            sviluppate dal W3C (World Wide Web Consortium) per migliorare l'accessibilità dei contenuti Web per le persone
-            con disabilità, in particolare per quelle che utilizzano tecnologie assistive come screen reader, tastiere, ecc.
+            Altro modo per migliorare l'accessibilità è il WAI-ARIA. Il WAI-ARIA (Web Accessibility Initiative - Accessible Rich Internet Applications) è un insieme di specifiche sviluppate dal W3C (World Wide Web Consortium) per migliorare l'accessibilità dei contenuti Web per le persone con disabilità, in particolare per quelle che utilizzano tecnologie assistive come screen reader, tastiere, ecc.
             <br>
             Infatti nei casi in cui i tag semantici non sono abbastanza, possiamo usare diversi attributi del WAI-ARIA.
         </p>
         <p>
             Il più importante di questi è l'attributo <strong>role</strong>:
             <br>
-            L'attributo role viene utilizzato per fornire informazioni aggiuntive sull'identità o sulla funzione di un
-            elemento HTML. In altre parole, l'attributo role viene utilizzato per specificare il ruolo semantico di un
-            elemento all'interno della pagina.
+            L'attributo role viene utilizzato per fornire informazioni aggiuntive sull'identità o sulla funzione di un elemento HTML. In altre parole, l'attributo role viene utilizzato per specificare il ruolo semantico di un elemento all'interno della pagina.
             <br>
-            L'attributo role può essere utilizzato su qualsiasi elemento HTML, ma è particolarmente utile per gli elementi
-            non semantici, come ad esempio un div o un span.
+            L'attributo role può essere utilizzato su qualsiasi elemento HTML, ma è particolarmente utile per gli elementi non semantici, come ad esempio un div o un span.
             <br>            
             Ecco un esempio di come utilizzare l'attributo role su un elemento HTML:
             <div role="button" aria-label="Click me">Click me</div>
             <textarea cols="100" rows="1" readonly><div role="button" aria-label="Click me">Click me</div></textarea>
             <br><br>
-            In questo esempio, l'attributo role viene utilizzato per indicare che l'elemento div ha il ruolo di pulsante.
-            L'attributo aria-label viene utilizzato per fornire una descrizione testuale dell'elemento per gli utenti che
-            utilizzano screen reader. L'attributo role può essere utilizzato in combinazione con altri attributi, come ad
-            esempio aria-label, aria-labelledby, aria-describedby, aria-owns, aria-haspopup, aria-expanded, aria-selected,
-            aria-checked, e molti altri ancora.
+            In questo esempio, l'attributo role viene utilizzato per indicare che l'elemento div ha il ruolo di pulsante. L'attributo aria-label viene utilizzato per fornire una descrizione testuale dell'elemento per gli utenti che utilizzano screen reader. L'attributo role può essere utilizzato in combinazione con altri attributi, come ad esempio aria-label, aria-labelledby, aria-describedby, aria-owns, aria-haspopup, aria-expanded, aria-selected, aria-checked, e molti altri ancora.
         </p>
         <ul>
             Facciamo alcuni esempi di role:
@@ -581,8 +606,7 @@
                 role="banner" => fa interpretare un elemento come l'intestazione della pagina.
             </li>
             <br>
-            <li>Per far considerare al lettore di schermo vari elementi come un unico elemento, dobbiamo usare role al container di questi elementi,
-                dando il valore del tag.
+            <li>Per far considerare al lettore di schermo vari elementi come un unico elemento, dobbiamo usare role al container di questi elementi, dando il valore del tag.
                 <br>
                 <i>
                     &lt;div role="img">
@@ -606,8 +630,7 @@
             </li>
         </ul>
         <p>
-            Sui tag semantici non si deve usare l'attributo role, siccome è inutile e superfluo
-            Ricorda, tra un tag semantico e un attributo role, è meglio usare il tag semantico, siccome è più accessibile.
+            Sui tag semantici non si deve usare l'attributo role, siccome è inutile e superfluo. Ricorda, tra un tag semantico e un attributo role, è meglio usare il tag semantico, siccome è più accessibile.
         </p>
         <p>
             Altro attributo ARIA utile è aria-hidden.
