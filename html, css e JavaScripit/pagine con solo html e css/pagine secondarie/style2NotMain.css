@@ -13,6 +13,10 @@ h1 {
 h2, h3 {
     color: red;
 }
+textarea {
+    display: block;
+    resize: none; /*questo impedisce di ridimensionare il tag textarea*/
+}
 footer {
     position: fixed;
     bottom: 0px;

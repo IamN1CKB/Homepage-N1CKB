@@ -34,7 +34,6 @@
         <br>
         <li>
             div p { } per selezionare tutti i tag p che sono discendenti (quindi anche figli diretti) del tag div selezionato. Facciamo un esempio.
-            <br>
             <textarea cols="90" rows="19">
                 /*in CSS*/
                 #div0 {
@@ -67,8 +66,7 @@
         <br>
         <li>
             div > p { } per selezionare tutti i tag p che sono figli diretti del tag div selezionato (non basta essere discendenti). Facciamo un esempio.
-            <br>
-            <textarea readonly cols="100" rows="24">
+            <textarea cols="100" rows="24">
                 /*in CSS*/
                 #div {
                     background-color: green;
@@ -111,8 +109,7 @@
             div + p { } per selezionare tutti gli elementi "p" che sono immediatamente preceduti da un elemento "div".
             Questo selettore può essere utilizzato per applicare stili specifici solo agli elementi "p" che seguono
             direttamente un elemento "div". Facciamo un esempio.
-            <br>
-            <textarea readonly cols="50" rows="9">
+            <textarea cols="50" rows="9">
                 .div {
                     background-color: blue;
                     color: white;
@@ -148,8 +145,7 @@
         <br>
         <li>
             div ~ p { } per selezionare i paragrafi successivi di div, che sono anche fratelli di div (nello stesso livello dei tag)
-            <br>
-            <textarea readonly cols="50" rows="8">
+            <textarea cols="50" rows="8">
                 #div2 {
                     border: 1px solid;
                 }
@@ -200,8 +196,7 @@
         Ci sono diversi tipi di attribute selector con una sintassi tra parentesi quadre:
         <li>
             selettore di attributo senza valore specifico=> tag[attributo] { }
-            <br>
-            <textarea readonly cols="100" rows="10">
+            <textarea cols="100" rows="10">
                 <!--in HTML-->
                 <div class="div1" data-color="red">Questo paragrafo sarà rosso</div>
                 <div class="div1" data-color="red">Questo paragrafo sarà rosso</div>
@@ -212,7 +207,6 @@
                     color: red;
                 }
             </textarea>
-            <br>
             <div class="div1" data-color="red">Questo paragrafo sarà rosso</div>
             <div class="div1" data-color="red">Questo paragrafo sarà rosso</div>
             <div class="div1" data-background="red">Questo paragrafo NON sarà rosso</div>
@@ -220,8 +214,7 @@
         <br>
         <li>
             selettore di attributo esatto=> tag[attributo="valore"] { }
-            <br>
-            <textarea readonly cols="100" rows="10">
+            <textarea cols="100" rows="10">
                 <!--in HTML-->
                 <div class="div2" data-color="red">Questo paragrafo sarà rosso</div>
                 <div class="div2" data-color="red">Questo paragrafo sarà rosso</div>
@@ -232,7 +225,6 @@
                     color: red;
                 }
             </textarea>
-            <br>
             <div class="div2" data-color="red">Questo paragrafo sarà rosso</div>
             <div class="div2" data-color="red">Questo paragrafo sarà rosso</div>
             <div class="div2" data-color="blue">Questo paragrafo sarà NON rosso</div>
@@ -242,8 +234,7 @@
             selettore di attributo contiene=> tag[attributo*="valore"] { }
             <br>
             Vuol dire che il valore dell'attributo contiene la parola indicata
-            <br>
-            <textarea readonly cols="100" rows="12">
+            <textarea cols="100" rows="12">
                 <!--in HTML-->
                 <div class="foo-123">Questo sarà rosso</div>
                 <div class="foo123">Questo sarà rosso</div>
@@ -268,8 +259,7 @@
             <br>
             Seleziona gli elementi che hanno un attributo con un valore che include una parola specifica, separata da uno spazio.
             Per fare l'esempio userò un attributo personalizzabile.
-            <br>
-            <textarea readonly cols="50" rows="13">
+            <textarea cols="50" rows="13">
                 <!--in HTML-->
                 <div data-boh="valore a caso">
                     Questo sarà rosso
@@ -294,7 +284,7 @@
         <li>
             selettore di attributo inizia con=> tag[attributo^="valore"] { }
             <br>
-            <textarea readonly cols="100" rows="10">
+            <textarea cols="100" rows="10">
                 <!--in HTML-->
                 <a href="https://it.wikipedia.org/wiki/Pagina_principale">link per Wikipedia</a>
                 <br>
@@ -317,7 +307,7 @@
         <li>
             selettore di attributo finisce con=> tag[attributo$="valore"] { }
             <br>
-            <textarea readonly cols="80" rows="10">
+            <textarea cols="80" rows="10">
                 <!--in HTML-->
                 <div class="foobar-file">Questo sarà rosso</div>
                 <div class="foobar-file">Questo sarà rosso</div>
@@ -336,7 +326,7 @@
         <li>
             selettore di attributo in uno specifico prefisso=> tag[attributo|="valore"] { }
             <br>
-            <textarea readonly cols="80" rows="10">
+            <textarea cols="80" rows="10">
                 <!--in HTML-->
                 <p lang="EN-us">Questo paragrafo sarà rosso</p>
                 <p lang="EN-gb">Questo paragrafo sarà rosso</p>
@@ -360,7 +350,7 @@
                 Nel contesto dei selettori di attributo, i sta per "case-insensitive" (non sensibile alle maiuscole e minuscole).
                 Questo significa che la corrispondenza dell'attributo e del valore non terrà conto delle differenze tra maiuscole e minuscole.
             </p>
-            <textarea readonly cols="80" rows="10">
+            <textarea cols="80" rows="10">
                 <!--in HTML-->
                 <div lang="EN">Questo sarà rosso</div>
                 <div lang="en">Questo sarà rosso</div>
@@ -418,7 +408,7 @@
     <p>
         Ecco alcuni esempi di come vengono utilizzate le pseudo-classi e i pseudo-elementi
     </p>
-    <textarea readonly  cols="100" rows="14">
+    <textarea  cols="100" rows="14">
         /* Pseudo-classe con un solo : */
         a:hover {
           color: blue; /* Cambia il colore del testo quando si posiziona il cursore sopra un link */
@@ -445,97 +435,91 @@
         I child pseudo class vengono usate per selezionare elementi figli specifici all'interno di un elemento genitore.
         Queste pseudo-classi consentono di applicare stili agli elementi figli in base alla loro posizione o relazione all'interno dell'albero HTML.
         <br>
-        per capire come si usano creo un tag div con vari tag numerati dopo la seguente lista in cui ci sono differenti stili
+        Praticamente, seleziona tutti i tag che sono figli specifici di qualche altro tag nell'albero HTML. Ad esempio div:first-child seleziona tutti i tag div che sono primi figli di un tag genitore.
     </p>
-    <ul>
-        <li>
-            :first-child
-            <br>
-            <textarea readonly cols="70" rows="7">
-                #container-child-pseudo-class div:first-child {
-                    color: red;
-                }
-                #container-child-pseudo-class span:first-child {
-                    color: red;
-                }
-            </textarea>
-            <br>
-            Nel secondo caso la regola non funziona perché il primo figlio non è un tag span 
-        </li>
-        <li>
-            :nth-child(3)
-            <br>
-            <textarea readonly cols="70" rows="7">
-                #container-child-pseudo-class div:nth-child(3) {
-
-    
-
-                }
-            </textarea>
-        </li>
-        <li>
-            :nth-child(n+3)
-            <br>
-            <textarea readonly cols="70" rows="7">
-                #container-child-pseudo-class div:nth-child(n+3) {
-
-                }
-            </textarea>
-        </li>
-        <li>
-            :nth-child(3n)
-            <br>
-            <textarea readonly cols="70" rows="7">
-                #container-child-pseudo-class div:nth-child(3n) {
-
-                }
-            </textarea>
-        </li>
-        <li>
-            :nth-child(3n+1)
-            <br>
-            <textarea readonly cols="70" rows="7">
-                #container-child-pseudo-class div:nth-child(3n+1) {
-
-                }
-            </textarea>
-        </li>
-        <li>
-            :nth-child(-n+3)
-            <br>
-            <textarea readonly cols="70" rows="7">
-                #container-child-pseudo-class div:nth-child(-n+3) {
-
-                }
-            </textarea>
-        </li>
-        <li>
-            :nth-child(odd)
-            <br>
-            <textarea readonly cols="70" rows="7">
-                #container-child-pseudo-class div:nth-child(odd) {
-
-                }
-            </textarea>
-        </li>
-        <li>
-            :nth-child(even)
-            <br>
-            <textarea readonly cols="70" rows="7">
-                #container-child-pseudo-class div:nth-child(even) {
-
-                }
-            </textarea>
-        </li>
-    </ul>
-    <textarea readonly cols="40" rows="8">
-        #container-child-pseudo-class {
-            display: flex;
-            gap: 30px;
-            border: 2px red solid;
+    <p>
+        Vediamo come funziona la sintassi di queste pseudo-class (uso sempre la classe prova in modo da caratterizzare solo questi elementi):
+    </p>
+    <textarea cols="70" rows="22">
+        /*in CSS*/
+        .prova:first-child {
+            background-color: red;
             width: fit-content;
-            padding: 5px;
         }
+
+        <!--in HTML-->
+        <div class="prova">
+            <div class="prova">
+                primo figlio
+            </div>
+            <div class="prova">
+                secondo figlio
+                <div class="prova">
+                    primo figlio del secondo figlio
+                </div>
+                <div class="prova">
+                    secondo figlio del secondo figlio
+                </div>
+            </div>
+        </div>
+    </textarea>
+    <div class="prova">
+        <div class="prova">
+            primo figlio
+        </div>
+        <div class="prova">
+            secondo figlio
+            <div class="prova">
+                primo figlio del secondo figlio
+            </div>
+            <div class="prova">
+                secondo figlio del secondo figlio
+            </div>
+        </div>
+        <div class="prova">
+            terzo figlio
+        </div>
+    </div>
+    <p>
+        Per rendere queste pseudo class più specifiche ancora, di solito si usano in combinazione con il selettore discendenza o il selettore figlio diretto. Ad esempio: 
+    </p>
+    <textarea cols="100" rows="8">
+        div p:first-child {
+            /*styling*/
+        } /*Questo seleziona tutti i paragrafi p che sono primi figli e discendenti di tag div*/
+
+        div > p:first-child {
+            /*styling*/
+        } /*Questo seleziona tutti i paragrafi p che sono primi figli diretti di tag div*/
+    </textarea>
+    <p>
+        Ora vediamo come si usano i diversi tipi di queste pseudo-class.
+        Per capire come si usano creo un tag div con vari tag numerati dopo la seguente lista in cui ci sono differenti stili
+    </p>
+    <textarea cols="50" rows="24">
+        <!--in HTML-->
+        <div id="container-child-pseudo-class">
+            <div>1(div)</div>
+            <div>2(div)</div>
+            <div>3(div)</div>
+            <div>4(div)</div>
+            <div>5(div)</div>
+            <div>6(div)</div>
+            <span>7(span)</span>
+            <div>8(div)</div>
+            <div>9(div)</div>
+            <div>10(div)</div>
+            <div>11(div)</div>
+            <div>12(div)</div>
+            <div>13(div)</div>
+            <div>14(div)</div>
+            <div>15(span)</div>
+            <div>16(div)</div>
+            <div>17(div)</div>
+            <div>18(div)</div>
+            <div>19(div)</div>
+            <div>20(div)</div>
+        </div>
     </textarea>
     <div id="container-child-pseudo-class">
         <div>1(div)</div>
@@ -559,6 +543,104 @@
         <div>19(div)</div>
         <div>20(div)</div>
     </div>
+    <ul>
+        <li>
+            :first-child
+            <br>
+            <textarea cols="70" rows="7">
+                #container-child-pseudo-class > div:first-child {
+                    color: red;
+                }
+                #container-child-pseudo-class > span:first-child {
+                    color: red;
+                }
+            </textarea>
+            Nel secondo caso la regola non funziona perché il primo figlio non è un tag span 
+        </li>
+        <br>
+        <li>
+            :nth-child(3)
+            <br>
+            <textarea cols="70" rows="7">
+                /*stavolta non specifichiamo il tag div per comodità*/
+                #container-child-pseudo-class > :nth-child(3) {
+
+    
+
+                }
+            </textarea>
+        </li>
+        <br>
+        <li>
+            :nth-child(n+3)
+            <br>
+            <textarea cols="70" rows="7">
+                #container-child-pseudo-class > :nth-child(n+3) {
+
+                }
+            </textarea>
+        </li>
+        <br>
+        <li>
+            :nth-child(3n)
+            <br>
+            <textarea cols="70" rows="7">
+                #container-child-pseudo-class > :nth-child(3n) {
+
+                }
+            </textarea>
+        </li>
+        <br>
+        <li>
+            :nth-child(3n+1)
+            <br>
+            <textarea cols="70" rows="7">
+                #container-child-pseudo-class > :nth-child(3n+1) {
+
+                }
+            </textarea>
+        </li>
+        <br>
+        <li>
+            :nth-child(-n+3)
+            <br>
+            <textarea cols="70" rows="7">
+                #container-child-pseudo-class > :nth-child(-n+3) {
+
+                }
+            </textarea>
+        </li>
+        <br>
+        <li>
+            :nth-child(odd)
+            <br>
+            <textarea cols="70" rows="7">
+                #container-child-pseudo-class > :nth-child(odd) {
+
+                }
+            </textarea>
+        </li>
+        <br>
+        <li>
+            :nth-child(even)
+            <br>
+            <textarea cols="70" rows="7">
+                #container-child-pseudo-class > :nth-child(even) {
+
+                }
+            </textarea>
+        </li>
+        <br>
+    </ul>
+    <textarea cols="40" rows="8">
+        #container-child-pseudo-class {
+            display: flex;
+            gap: 30px;
+            border: 2px red solid;
+            width: fit-content;
+            padding: 5px;
+        }
+    </textarea>
 
 
 
@@ -579,6 +661,7 @@
             Un trucchetto per usare questa pseudo class anche con paragrafi e altro è attivarli tramite un link che riporta a loro.
             <a href="#paragrafo_da_attivare">link che porta al paragrafo sopra</a> -->
         </li>
+        <br>
         <li>
             :any
         </li>
@@ -622,7 +705,7 @@
         <br>
         Ricorda che si scrive con :: e non con solo :
     </p>
-    <textarea readonly cols="40" rows="4">
+    <textarea cols="40" rows="4">
         #input::placeholder {
             color: red;
         }
@@ -641,7 +724,7 @@
         <br>
         Ricorda che si scrive con : e non ::
     </p>
-    <textarea readonly cols="120" rows="14">
+    <textarea cols="120" rows="14">
         #form1{
             border: solid green;
             width: min-content;
@@ -674,7 +757,7 @@
     <p>
         In questo esempio, tutti i paragrafi con classe "p" che contengono link al loro interno verrebbero stilizzati con uno sfondo giallo.
     </p>
-    <textarea readonly cols="50" rows="4">
+    <textarea cols="50" rows="4">
         .p:has(a) {
             background-color: yellow;
         }
@@ -689,7 +772,7 @@
     <p>
         la pseudo class :has() si può combinare con altre pseudo class e selector
     </p>
-    <textarea readonly cols="100" rows="12">
+    <textarea cols="100" rows="12">
         #label:has(~ input:placeholder-shown) {
             border: dashed brown;
             /*in questo modo facciamo si che il label sia a trattini solo se ha
@@ -737,7 +820,7 @@
         Ad esempio, supponiamo di avere un campo di input che dovrebbe accettare un indirizzo email valido:
     </p>
     <br>
-    <textarea readonly cols="120" rows="12">
+    <textarea cols="120" rows="12">
         /*in CSS*/
         .input {
             width: 300px;
@@ -789,7 +872,7 @@
         <br>
         nel caso di una sola linea possiamo usare le varie proprietà
     </p>
-    <textarea readonly cols="80" rows="15">
+    <textarea cols="80" rows="15">
         #box {
             width: 400px;
             border: solid 2px;

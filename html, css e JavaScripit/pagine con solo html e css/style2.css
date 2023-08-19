@@ -82,6 +82,10 @@ a:hover {
 }
 
 /*child pseudo class*/
+.prova:first-child {
+    background-color: red;
+    width: fit-content;
+}
 #container-child-pseudo-class {
     display: flex;
     gap: 20px;
@@ -89,10 +93,10 @@ a:hover {
     width: fit-content;
     padding: 5px;
 }
-#container-child-pseudo-class div:first-child {
+#container-child-pseudo-class > div:first-child {
     color: red;
 }
-#container-child-pseudo-class span:first-child {
+#container-child-pseudo-class > span:first-child {
     color: red;
 }
 
