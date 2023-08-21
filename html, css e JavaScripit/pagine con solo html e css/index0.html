@@ -6,8 +6,24 @@
         </title>  <!--nel tag title c'è il titolo della scheda che comparirà in alto a sinistra sul browser-->
     </head>
     <body>
-        <h1>TITOLO PRIMARIO</h1>
-        <h2>TITOLO SECONDARIO (puoi vedere fino a h6)</h2>
+        <h1>Guida all'HTML</h1>
+        <p>
+            HTML, acronimo di "HyperText Markup Language" (Linguaggio di Markup per l'IperTesto), è il linguaggio di markup standard  utilizzato per creare e strutturare contenuti su pagine web.
+            <br>
+            Un linguaggio di markup è un sistema di annotazione testuale utilizzato per definire la struttura, la formattazione e, talvolta, il comportamento di un documento.
+        </p>
+        <p>
+            HTML funziona attraverso l'uso di tag, che sono elementi del linguaggio racchiusi tra parentesi angolari &lt; >. Ogni tag fornisce un'indicazione sulla struttura o la funzione di un elemento all'interno della pagina web. Ad esempio, il tag &lt;h1> viene utilizzato per creare un titolo di primo livello (heading 1), il tag &lt;p> per creare un paragrafo di testo, il tag &lt;a> per creare un collegamento ipertestuale (link), e così via.
+        </p>
+        <p>
+            HTML è spesso accompagnato da CSS (Cascading Style Sheets) per gestire l'aspetto visivo della pagina e da JavaScript per aggiungere interattività e funzionalità dinamiche. Insieme, HTML, CSS e JavaScript costituiscono la base fondamentale per la creazione e lo sviluppo di pagine web moderne.
+            <br>
+            Il CSS e lo JavaScript li vedremo in futuro. Per adesso ci concentriamo sull'uso di HTML
+        </p>
+        <h2>I tag d'apertura e di chiusura</h2>
+        <p>
+            Un elemento 
+        </p>
         
 
         <p>
@@ -521,7 +537,7 @@ Questi sono solo alcuni degli attributi che puoi utilizzare con il tag `input`. 
             tras indo local, tutt Gucci e Ferragam, sold e fierr inde man
         </section>
         
-        <!--nav è un tag che contiene un gruppo di elementi che sono sati per navigare in pagine web, come gruppi di link-->
+        <!--nav è un tag che contiene un gruppo di elementi che sono usati per navigare in pagine web, come gruppi di link-->
         <nav>
             <a href="mailto:checcapocchia@gmail.com">delly</a>
             <a href="mailto:scimmiaincazzata@gmail.com">è</a>
@@ -595,9 +611,16 @@ Questi sono solo alcuni degli attributi che puoi utilizzare con il tag `input`. 
             L'attributo role può essere utilizzato su qualsiasi elemento HTML, ma è particolarmente utile per gli elementi non semantici, come ad esempio un div o un span.
             <br>            
             Ecco un esempio di come utilizzare l'attributo role su un elemento HTML:
-            <div role="button" aria-label="Click me">Click me</div>
-            <textarea cols="100" rows="1" readonly><div role="button" aria-label="Click me">Click me</div></textarea>
-            <br><br>
+            <div role="button" aria-label="Click me">
+                Click me
+            </div>
+            <textarea cols="70" rows="4" readonly>
+                <div role="button" aria-label="Click me">
+                    Click me
+                </div>
+            </textarea>
+            <br>
+            <br>
             In questo esempio, l'attributo role viene utilizzato per indicare che l'elemento div ha il ruolo di pulsante. L'attributo aria-label viene utilizzato per fornire una descrizione testuale dell'elemento per gli utenti che utilizzano screen reader. L'attributo role può essere utilizzato in combinazione con altri attributi, come ad esempio aria-label, aria-labelledby, aria-describedby, aria-owns, aria-haspopup, aria-expanded, aria-selected, aria-checked, e molti altri ancora.
         </p>
         <ul>
@@ -607,16 +630,13 @@ Questi sono solo alcuni degli attributi che puoi utilizzare con il tag `input`. 
             </li>
             <br>
             <li>Per far considerare al lettore di schermo vari elementi come un unico elemento, dobbiamo usare role al container di questi elementi, dando il valore del tag.
-                <br>
-                <i>
-                    &lt;div role="img">
-                    <br>
-                    &nbsp; &nbsp; &lt;img src="image1.png">
-                    <br>
-                    &nbsp; &nbsp; &lt;img src="image2.png">
-                    <br>
-                    &lt;/div>
-                </i>
+            <br>
+            <textarea cols="40" rows="5">
+                <div role="img">
+                    <img src="image1.png">
+                    <img src="image2.png">
+                </div>
+            </textarea>
             </li>
             <li>
                 role="comment" => fa interpretare un elemento come una reazione a un certo contenuto.
@@ -678,6 +698,6 @@ Questi sono solo alcuni degli attributi che puoi utilizzare con il tag `input`. 
         </section>
        <!--2)secondo modo per dare stile agli elementi HTML è col il tag style nel tag head a inizio file-->
        <!--per fare ciò creiamo una nuova pagina in un altro file-->
-       <a href="index-esercizio.html">continuo della pagina link percorso</a>
+       <a href="index1.html">continuo della pagina link percorso</a>
     </body>
 </html>

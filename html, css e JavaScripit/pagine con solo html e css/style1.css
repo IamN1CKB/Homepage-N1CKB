@@ -52,7 +52,6 @@ time {
 /* per poter modificare lo style tramite un immagine possiamo usare la proprietà list-style-image */
 #li7 {
     list-style-image: url(media/chevron_right_FILL0_wght400_GRAD0_opsz48.svg);
-    /* list-style-position: inside; */
 }
 #li8 {
     list-style-type: square;
