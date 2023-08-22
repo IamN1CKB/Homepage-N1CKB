@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tettonica a placche</title>
+    <link rel="stylesheet" href="style-argomenti.css">
+    <style>
+        #galleria  {
+            display: flex;
+            height: 20rem;
+            gap: 1rem;
+        }
+        #galleria > div {
+            flex: 1;
+            border-radius: 1rem;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: auto 100%;
+            transition: all .8s cubic-bezier(.25, .4, .45, 1.4);
+            border: solid;
+        }
+        #galleria > div:hover {
+            flex: 5;
+        }
+        #foto1 {
+            background-image: url("media/cazzo.jpg");
+        }
+        #foto2 {
+            background-image: url("media/gabby2.JPG");
+        }
+        #foto3 {
+            background-image: url("media/gabby.jpg");
+        }
+        #foto4 {
+            background-image: url("media/mare.jpg");
+        }
+        #foto5 {
+            background-image: url("media/piobro.jpg");
+        }
+        figcaption {
+            position: relative;
+            top: 21rem;
+            border: solid;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        TITOLO
+    <div id="galleria">
+        <div id="foto1">
+            <figcaption>
+                Descrizione della figura
+            </figcaption>
+        </div>
+        <div id="foto2">
+            <figcaption>
+                Descrizione della figura
+            </figcaption>
+        </div>
+        <div id="foto3">
+            <figcaption>
+                Descrizione della figura
+            </figcaption>
+        </div>
+        <div id="foto4">
+            <figcaption>
+                Descrizione della figura
+            </figcaption>
+        </div>
+        <div id="foto5">
+            <figcaption>
+                Descrizione della figura
+            </figcaption>
+        </div>
+    </div>
+</body>
+</html>

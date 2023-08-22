@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            --border: 3px solid aquamarine;
+        }
+        h1 {
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+            background: linear-gradient(90deg, red 0%, white 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: hueRotate 5s alternate infinite;
+        }
+        @keyframes hueRotate {
+            0% {
+                filter: hue-rotate(279deg);
+            }
+            50% {
+                filter: hue-rotate(197deg);
+            }
+            100% {
+                filter: hue-rotate(12deg);
+            }
+        }
+        #main {
+            display: flex;
+            justify-content: center;
+        }
+        #main > div {
+            display: flex;
+            gap: 30px;
+            width: 97%;
+            border: solid;
+            position: relative;
+            top: 10px;
+            height: 70px;
+            align-items: center;
+        }
+        #main > div > a {
+            width: 100%;
+            position: relative;
+            cursor: pointer;
+            text-align: center;
+            /*border: solid;*/
+        }
+        #main > div > a::before{
+            content: '';
+            position: absolute;
+            width: 1px;
+            height: 80%;
+            border-radius: 20%;
+        }
+        #main > div > a:hover::before{
+            animation: animateIn 400ms ease-in-out forwards;
+        }
+        #main > div > a::before{
+            animation: animateOut 400ms ease-in-out forwards;
+        }
+        @keyframes animateIn {
+            0% {
+                border-radius: var(--border);
+                border-left: var(--border);
+                border-right: var(--border);
+                width: 0%;
+                left: 50%;
+            }
+            100% {
+                border-radius: var(--border);
+                border-left: var(--border);
+                border-right: var(--border);
+                width: 130%;
+                left: -20%;
+            }
+        }
+        @keyframes animateOun {
+            0% {
+                border-radius: var(--border);
+                border-left: var(--border);
+                border-right: var(--border);
+                width: 130%;
+                left: -20%;
+            }
+            60% {
+                border-radius: var(--border);
+                border-left: var(--border);
+                border-right: var(--border);
+                width: 0%;
+                left: 50%;
+            }
+            100% {
+                width: 0%;
+                left: 50%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        <strong>
+            QUESTA É LA HOMEPAGE PER ...
+        </strong>
+    </h1>
+
+    <div id="main">
+        <div>
+            <a href="" target="_blank" rel="noopener noreferrer">
+                Argomento
+            </a>
+            <a href="" target="_blank" rel="noopener noreferrer">
+                Argomento
+            </a>
+            <a href="" target="_blank" rel="noopener noreferrer">
+                Argomento
+            </a>
+            <a href="" target="_blank" rel="noopener noreferrer">
+                Argomento
+            </a>
+            <a href="" target="_blank" rel="noopener noreferrer">
+                Argomento
+            </a>
+            <a href="" target="_blank" rel="noopener noreferrer">
+                Argomento
+            </a>
+            <a href="" target="_blank" rel="noopener noreferrer">
+                Argomento
+            </a>
+        </div>
+    </div>
+    
+</body>
+</html>

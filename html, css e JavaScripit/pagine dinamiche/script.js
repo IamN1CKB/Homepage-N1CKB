@@ -9,7 +9,7 @@
 //si può interagire con la pagina html grazie a vari modi
 //ci sono i metodi che interagiscono tramite gli id dei vari tag, che devono essere unici per ogni elemento della pagina
 //si può accedere all'id di un elemento tramite il metodo document.getElementById()
-var output = document.getElementById("console");
+const output = document.getElementById("console");
 console.log(document.getElementById("console"));
 console.log(output);
 //dunque document si riferisce a tutta la pagina in codice html, ma tramite il metodo getElementById() trova solo l'elemento voluto

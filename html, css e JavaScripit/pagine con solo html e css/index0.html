@@ -8,7 +8,9 @@
         </title>
 </head>
 <body>
-    <h1>Guida all'HTML</h1>
+    <h1 id="Giuda-allHTML">
+        Guida all'HTML
+    </h1>
     <p>
         HTML, acronimo di "HyperText Markup Language" (Linguaggio di Markup per l'IperTesto), è il linguaggio di markup standard  utilizzato per creare e strutturare contenuti su pagine web.
         <br>
@@ -22,7 +24,7 @@
         <br>
         Il CSS e lo JavaScript li vedremo in futuro. Per adesso ci concentriamo sull'uso di HTML
     </p>
-    <h2>
+    <h2 id="I-tag-dapertura-e-di-chiusura">
         I tag d'apertura e di chiusura
     </h2>
     <p>
@@ -34,13 +36,13 @@
         <br>
         Questi elementi sono detti elementi vuoti (void element). 
     </p>
-    <h2>
+    <h2 id="Gli-attributi">
         Gli attributi
     </h2>
     <p>
         Gli attributi sono elementi utilizzati per fornire informazioni aggiuntive o configurare specifiche caratteristiche di un elemento. Gli attributi forniscono istruzioni dettagliate su come un elemento dovrebbe essere visualizzato, comportarsi o interagire con altri elementi. Sono solitamente definiti all'interno dei tag di apertura degli elementi utilizzando la sintassi "nome dell'attributo"="valore dell'attributo".
     </p>
-    <h2>
+    <h2 id="I-principali-tag-da-usare">
         I principali tag da usare
     </h2>
     <p>
@@ -164,7 +166,7 @@
         <h6>Intestazione di sesto tipo</h6>
     </div>
 
-    <h2>
+    <h2 id="I-paragrafi">
         I paragrafi
     </h2>
     <p>
@@ -283,9 +285,81 @@
             "del" e "s": "s" viene usato per barrare un testo e dargli meno importanza. "del" viene usato per evidenziare del testo recentemente eliminato (utile nei lavori di gruppo su siti web)
         </li>
     </ul>
+
+    <h2>
+        Classi e id
+    </h2>
+    <p>
+        Le classi e gli ID semplificano il riferimento agli elementi HTML da script e fogli di stile. L'attributo class può essere utilizzato su uno o più tag ed è utilizzato da CSS per lo stile. Gli ID, invece, sono destinati a riferirsi a un singolo elemento, il che significa che lo stesso ID non dovrebbe mai essere utilizzato due volte. Gli ID sono generalmente utilizzati con JavaScript e collegamenti interni al documento, e sono sconsigliati in CSS.
+    </p>
+    <ul>
+        <li>
+            <h3>
+                Classi
+            </h3>
+            <p>
+                Le classi sono identificatori per gli elementi a cui vengono assegnate. Utilizza l'attributo class per assegnare una classe a un elemento.
+                <br>
+                Per assegnare più classi a un elemento, separa i nomi delle classi con spazi.
+            </p>
+            <textarea cols="50" rows="7">
+                <div class="example-class">
+                    Content
+                </div>
+                <div class="example-class class2">
+                    Content
+                </div>
+            </textarea>
+        </li>
+        <li>
+            <h3>
+                Id
+            </h3>
+            <p>
+                L'attributo ID di un elemento è un identificatore che deve essere unico nell'intero documento. Il suo scopo è quello di identificare univocamente l'elemento durante il collegamento (utilizzando un ancoraggio), la scrittura di script o lo styling (con CSS).
+            </p>
+            <textarea cols="35" rows="4">
+                <div id="example-id">
+                    Content
+                </div>
+            </textarea>
+        </li>
+    </ul>
+    <p>
+        Per capire come usare le class e gli id in CSS vedi <a href="index2.html#selector">qui</a>
+    </p>
+    <h3>
+        I valori accettati per una classe o un id (per HTML5 o superiori)
+    </h3>
+    <p>
+        Le caratteristiche accettate per una classe o un id sono
+        1. Non deve contenere spazi.
+        2. Deve contenere almeno un carattere.
+
+        Il valore può essere composto da cifre, da una singola cifra, da caratteri di punteggiatura, da caratteri speciali o qualsiasi altra cosa, ad eccezione degli spazi. Ecco degli esempi validi:
+    </p>
+    <textarea cols="40" rows="11">
+        <div id="container"> ... </div>
+        <div id="999"> ... </div>
+        <div id="#%LV-||"> ... </div>
+        <div id="____V"> ... </div>
+        <div id="⌘⌥"> ... </div>
+        <div id="♥"> ... </div>
+        <div id="{}"> ... </div>
+        <div id="©"> ... </div>
+        <div id="♤₩¤☆€~¥"> ... </div>
+    </textarea>
+    <p>
+        Questo invece è invalido:
+    </p>
+    <textarea cols="30" rows="2">
+        <div id=" "> ... </div>
+    </textarea>
         
     
-    <h2>I collegamenti ipertestuali</h2>
+    <h2 id="I-collegamenti-ipertestuali">
+        I collegamenti ipertestuali
+    </h2>
     <p>
         I collegamenti ipertestuali sono comunemente utilizzati per collegare pagine web separate, ma possono anche essere utilizzati per collegare tra diversi punti in un singolo documento, spesso all'interno di una tabella dei contenuti o addirittura per avviare applicazioni esterne. Questo argomento spiega l'implementazione e l'applicazione dei tag anchor HTML in vari contesti. 
         <br>
@@ -295,66 +369,168 @@
         <a href="sito su cui andare">testo scritto sul browser</a>
     </textarea>
     <ul>
-        Specifichiamo gli attributi utili nel tag a
+        <h3>
+            Specifichiamo gli attributi utili nel tag a
+        </h3>
         <li>
-            href: Specifica l'indirizzo di destinazione. Può essere un URL assoluto o relativo, oppure il nome di un ancoraggio. Un URL assoluto è l'URL completo di un sito web, come ad esempio http://example.com/. Un URL relativo punta a un'altra directory e/o a un documento all'interno dello stesso sito web, ad esempio /about-us/ punta alla directory "about-us" all'interno della directory radice (/). Quando si punta a un'altra directory senza specificare esplicitamente il documento, i server web restituiscono tipicamente il documento "index.html" all'interno di quella directory.
+            href: Specifica l'indirizzo di destinazione. Può essere un URL assoluto o relativo, oppure il nome di un ancoraggio . Un URL assoluto è l'URL completo di un sito web, come ad esempio http://example.com/. Un URL relativo punta a un'altra directory e/o a un documento all'interno dello stesso sito web, ad esempio /about-us/ punta alla directory "about-us" all'interno della directory radice (/). Quando si punta a un'altra directory senza specificare esplicitamente il documento, i server web restituiscono tipicamente il documento "index.html" all'interno di quella directory.
         </li>
+        <br>
         <li>
-            hreflang: Specifica la lingua della risorsa collegata dall'attributo href (che deve essere presente con questo attributo). Utilizzare i valori linguistici da BCP 47 per HTML5 e RFC 1766 per HTML 4.
+            hreflang: Specifica la lingua della risorsa collegata dall'attributo href (che deve essere presente con questo attributo). Utilizzare i valori linguistici da <a href="https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes#id">qui</a>
+            <br>
+            <textarea cols="80" rows="2">
+                <a href="https://www.treccani.it/" hreflang="it">Treccani</a>
+            </textarea>
+            <a href="https://www.treccani.it/" hreflang="it">Treccani</a>
         </li>
+        <br>
         <li>
-            rel: Specifica la relazione tra il documento corrente e il documento collegato. Per HTML5, i valori devono essere definiti nella specifica o registrati nel wiki di Microformats.
+            rel: Specifica la relazione tra il documento corrente e il documento collegato. Per HTML5, i valori devono essere definiti nella <a href="https://www.w3.org/TR/2014/REC-html5-20141028/links.html#linkTypes">specifica</a>.
         </li>
-        <li>
-            target: Specifica dove aprire il collegamento, ad esempio in una nuova scheda o finestra. I valori possibili sono _blank, _self, _parent, _top e il nome di una cornice (deprecato). Non è consigliabile forzare questo comportamento poiché viola il controllo dell'utente su un sito web.
-        </li>
+        <br>
         <li>
             title: Specifica informazioni aggiuntive su un collegamento. Le informazioni vengono spesso visualizzate come testo di suggerimento quando il cursore si sposta sopra il collegamento. Questo attributo non è limitato ai collegamenti, può essere utilizzato su quasi tutti i tag HTML.
+            <br>
+            <textarea cols="90" rows="2">
+                <a href="https://www.treccani.it/" title="questo è il titolo">Treccani</a>
+            </textarea>
+            <a href="https://www.treccani.it/" title="questo è il titolo">Treccani</a>
         </li>
+        <br>
         <li>
             download: Specifica che il bersaglio verrà scaricato quando un utente fa clic sul collegamento ipertestuale. Il valore dell'attributo sarà il nome del file scaricato. Non ci sono restrizioni sui valori consentiti e il browser rileverà automaticamente l'estensione del file corretta e la aggiungerà al file (.img, .pdf, ecc.). Se il valore viene omesso, verrà utilizzato il nome del file originale.
+            <br>
+            <textarea cols="80" rows="2">
+                <a href="media/gabby.JPG" download="gabby.png">scarica qui</a>
+            </textarea>
+            <a href="media/gabby.JPG" download="gabby.png">scarica qui</a>
+        </li>
+        <br>
+        <li>
+            target: Specifica dove aprire il collegamento, ad esempio in una nuova scheda o finestra. I valori possibili sono _blank, _self, _parent, _top e nome del frame (deprecato, ossia indica che è considerato obsoleto, non ottimale o non raccomandato per l'uso futuro.). L'uso di questo attributo potrebbe danneggiare la sicurezza del sito, 
+            <ul>
+                Vediamo il significato dei vari valori
+                <li>
+                    _self: Questo è il valore predefinito. Quando un utente fa clic sul collegamento, la nuova risorsa viene aperta nello stesso tab o finestra in cui si trova la pagina corrente.
+                </li>
+                <br>
+                <li>
+                    _blank: Quando un utente fa clic sul collegamento, la nuova risorsa viene aperta in una nuova finestra o tab del browser.
+                    <br>
+                    <strong>Pericolo di sicurezza</strong>: Utilizzare `target="_blank"` concede al sito che ha aperto la finestra un accesso parziale all'oggetto `window.opener` tramite JavaScript, consentendo a quella pagina di accedere e modificare `window.opener.location` della tua pagina e potenzialmente reindirizzare gli utenti a siti dannosi o di phishing.
+                    <br>
+                    Ogni volta che utilizzi questa opzione per pagine che non controlli, aggiungi `rel="noopener"` al tuo collegamento per impedire che l'oggetto `window.opener` venga inviato con la richiesta.
+                    <br>
+                    Attualmente, Firefox non supporta `noopener`, quindi dovrai utilizzare `rel="noopener noreferrer"` per ottenere il massimo effetto.
+                    <br>
+                    <textarea cols="130" rows="4">
+                        <a href="https://www.treccani.it/" target="_blank" >link non sicuro a Treccani</a>
+                        <br>
+                        <a href="https://www.treccani.it/" target="_blank" rel="noopener noreferrer">link sicuro a Treccani</a>
+                    </textarea>
+                    <br>
+                    <a href="https://www.treccani.it/" target="_blank" >link non sicuro a Treccani</a>
+                    <br>
+                    <a href="https://www.treccani.it/" target="_blank" rel="noopener noreferrer">link sicuro a Treccani</a>
+                    <br>
+                    Se Treccani fosse stato un sito non sicuro, con il primo caso avrebbe avuto accesso a un oggetto importante JavaScript (window.opener)
+                </li>
+                <br>
+                <li>
+                    _parent: Se la pagina corrente è all'interno di un frame o di un iframe, la nuova risorsa verrà aperta nel frame genitore, se disponibile. Se la pagina non è all'interno di un frame, questo comportamento sarà simile all'apertura nel contesto _self.
+                </li>
+                <br>
+                <li>
+                    _top: Se la pagina corrente è all'interno di un frame o di un iframe, la nuova risorsa verrà aperta nella finestra principale del browser, sostituendo tutti i frame. Se la pagina non è all'interno di un frame, questo comportamento sarà simile all'apertura nel contesto _self.
+                </li>
+                <br>
+                <li>
+                    nome del frame: È possibile specificare il nome di un frame o di un iframe esistente come valore per l'attributo target. In questo caso, la nuova risorsa verrà aperta nel frame specificato. Quest'opzione non è molto sicura.
+                </li>
+            </ul>
         </li>
     </ul>
-
-
-
-
-    <br>
-    <a href="https://paveldogreat.github.io/WebGL-Fluid-Simulation/"> bottone con link URL </a> </button>
-    <br>
-    <button>bottone senza link</button> 
-    <br>
-    <a href="https://thispersondoesnotexist.com/"> link senza bottone (collegato ad un URL) </a>
-    <br>
-    inoltre nel tag a si possono collegare anche email e numeri di telefono tramite le proprietà "mailto:" e "tel:" 
-    <br>
-    <a href="mailto:nicolabelardo005@gmail.com">email di Nicola</a>
-    <br>
-    <a href="tel:+393510630348">numero di un Playboy</a>
-    
+    <h3>
+        Frame e Iframe
+    </h3>
     <p>
-        il valore dell'attributo href (Hypertext REFerence) può essere un url dal web, oppure un collegamento dal locale
+        Dopo aver capito questo, vediamo di preciso cos'è un frame.
         <br>
-        come prima cosa specifichiamo la differenza tra URL e link.
-        <br>
-        Il link è un collegamento a un elemento, che può essere sul web (quindi come una pagina web in formato html) oppure può essere sul server locale. Se il link riporta a un elemento sul web, allora è un percorso sul web detto URL.
-        <br>
-        Nel caso del link che abbiamo messo sopra "<i>link senza bottone (collegato ad un URL)</i>" il link era un URL. Gli URL sono usati principalmente per collegare pagine esterne al progetto web creato. Ma se si deve collegare una pagina dello stesso progetto, allora si collega "in locale".
+        I frame e gli iframe sono entrambi elementi in HTML utilizzati per suddividere una pagina web in diverse sezioni o aree che possono contenere contenuti diversi. Tuttavia, hanno scopi e utilizzi leggermente diversi:
     </p>
     <ul>
-        Per collegare un elemento in locale si usano i percorsi relativi o assoluti, che servono a muoverci tra le cartelle.
         <li>
-            I percorsi assoluti partono dalla radice del computer o del server per arrivare ad ogni file. Sono scomodi da usare per i file locali perché con il movimento di una minima cartella, il percorso si perde.
+            Frame:
             <br>
-            Vengono usati principalmente negli URL e non molto in locale
+            I frame sono stati introdotti nelle prime versioni di HTML e sono stati utilizzati per creare layout complessi suddividendo una pagina in più sezioni rettangolari, ciascuna delle quali può contenere un documento HTML separato. I frame consentono agli sviluppatori di visualizzare più documenti HTML in una singola pagina web, dividendo l'area di visualizzazione in più parti. Tuttavia, a causa di problemi di usabilità, di accessibilità e di difficoltà nel gestire i contenuti, l'uso dei frame è ampiamente sconsigliato e non è supportato in HTML5.
+            <br>
+            Esempio di utilizzo dei frame (sconsigliato):
+            <br>
+            <textarea cols="60" rows="5">
+                <frameset cols="25%,75%">
+                  <frame src="menu.html">
+                  <frame src="contenuto.html">
+                </frameset>
+            </textarea>
         </li>
         <li>
-            I percorsi relativi fanno riferimento alla directory (cartella) in cui si trova il file da cui si parte.
+            iFrame (Inline Frame):
+            <br>
+            Gli iframe, d'altra parte, sono un elemento più moderno e flessibile introdotto con HTML 4.0. Gli iframe sono utilizzati per incorporare un documento HTML all'interno di un altro documento HTML. Possono essere utili per incorporare contenuti di terze parti come video, mappe, widget o qualsiasi altra risorsa Web all'interno di una pagina.
+            <br>
+            Gli iframe sono molto più flessibili rispetto ai frame tradizionali, ma possono ancora presentare sfide per l'accessibilità, la sicurezza e il layout responsivo. Gli sviluppatori dovrebbero prestare attenzione all'uso degli iframe e considerare le migliori pratiche per garantire un'esperienza utente positiva.
+            <br>
+            Esempio di utilizzo di un iframe:
+            <br>
+            <textarea name="" id="" cols="90" rows="2">
+                <iframe src="contenuto.html" width="500" height="300"></iframe>
+            </textarea>
+        </li>
+    </ul>
+    <p>
+        In generale, è preferibile evitare l'uso dei frame e degli iframe, specialmente quando ci sono alternative più moderne come l'utilizzo di CSS per la disposizione dei layout, l'uso di componenti di inclusione come Server-Side Includes (SSI) o lo sviluppo di applicazioni Web più interattive utilizzando tecnologie front-end come JavaScript e Ajax.
+    </p>
+        
+    
+    <h3>
+        Percorsi assoluti e relativi
+    </h3>
+    <p>
+        Per collegare un elemento in locale o sul web si usano i percorsi relativi o assoluti, che servono a muoverci tra le cartelle.
+        <br>
+        I percorsi assoluti e relativi sono termini utilizzati per descrivere come le risorse, come file o URL, vengono riferite e localizzate all'interno di un sistema di file o di un contesto web. Sia i percorsi assoluti che quelli relativi sono utilizzati per individuare la posizione di una risorsa all'interno di una struttura di directory.
+    </p>
+    <ul>
+        <li>
+            <p>
+                PERCORSO ASSOLUTO:
+                Un percorso assoluto specifica il percorso completo di una risorsa dall'inizio della gerarchia di directory o dalla radice del dominio web. In un sistema di file, il percorso assoluto includerebbe ogni directory nella gerarchia, dall'unità o dalla radice in cui si trova il file fino alla posizione del file stesso. In un contesto web, il percorso assoluto sarebbe l'URL completo, comprensivo del protocollo (http, https) e del dominio.
+            </p>      
+            <p>
+                Esempio di percorso assoluto in un sistema di file:
+                <i>
+                    C:\Documenti\Progetto\index.html
+                </i>
+                <br>
+                Esempio di percorso assoluto in un contesto web: 
+                <i>
+                    https://www.example.com/pagine/index.html
+                </i>
+                
+            </p>
+        </li>
+        <li>
+            PERCORSO RELATIVO:
+            Un percorso relativo, d'altra parte, specifica la posizione di una risorsa in relazione alla posizione del file o dell'URL di riferimento. In altre parole, un percorso relativo indica come raggiungere una risorsa partendo dalla posizione attuale. I percorsi relativi sono spesso utilizzati quando si fa riferimento a risorse all'interno della stessa directory o delle sue sottodirectory.
             <br>
             Ci sono 3 casi per i percorsi relativi: 
             <ul>
                 <li>
-                    il caso in cui i file sono nella stessa cartella. La sintassi è semplice: si deve solo inserire il nome del file
+                    Percorso Relativo Senza Cambiamenti di Directory:
+                    <br>
+                    In questo caso, il percorso relativo specifica semplicemente il nome del file o della risorsa da raggiungere, senza dover cambiare alcuna directory.
+                    Esempio:
                     <br>
                     <i>href="filedellastessacartella.html"</i>
                 </li>
@@ -366,7 +542,6 @@
                     <br>
                     <i>href="prima sottocartella/seconda sottocartella/altre sottocartelle/file da collegare.html"</i>
                     <br>
-                    <!--adesso inserisco un immagine, la sintassi per come inserire un immagine la capire più avanti-->
                     <img src="media/percorso1.jpg">
                     <br>
                     in quest'esempio il valore di href per collegare il file interna.html sarebbe <i>href="prima/interna/interna.html"</i>
@@ -389,6 +564,8 @@
         </li>
     </ul>
     <p>
+        In definitiva, i percorsi assoluti sono completi e iniziano dalla radice, mentre i percorsi relativi sono basati sulla posizione attuale e possono includere cambiamenti di directory. I percorsi relativi sono spesso più flessibili e portabili, in quanto non dipendono dalla struttura completa del sistema di file o dell'URL. La scelta tra i due dipenderà dal contesto in cui si sta lavorando.
+        <br>
         Quando si ha un hosting web disponibile (il servizio che permette di mettere online un sito web), i vari file html si inseriscono in varie cartelle o nella stessa cartella di un server a seconda di come sono indirizzati i link.
     </p>
     <p>
@@ -399,13 +576,232 @@
         Il link al file in questo caso è un percorso assoluto, che quasi sicuramente non andrà, perché sarà cambiata la posizione del file.
         <br>
     </p>
+    <h3>
+        Come linkare i vari collegamenti
+    </h3>
+    <h4>
+        Link esterni
+    </h4>
     <p>
-        ad esempio a <a href="pagine secondarie/a caso.html">questo link</a> c'è una tabella HTML
+        Dunque con il tag "a" possiamo linkare website esterni o pagine dello stesso website.
+        <br>
+        
+        Nel caso di un sito web esterno è giusto denotare che il link è esterno con l'attributo "rel" e il valore "external"
+    </p>
+    <textarea cols="130" rows="4">
+        <a href="https://paveldogreat.github.io/WebGL-Fluid-Simulation/" rel="external" title="WebGL-Fluid-Simulation">
+            WebGL-Fluid-Simulation
+        </a>
+    </textarea>
+    <br>
+    <a href="https://paveldogreat.github.io/WebGL-Fluid-Simulation/" rel="external" title="WebGL-Fluid-Simulation">
+        WebGL-Fluid-Simulation
+    </a>
+    <p>
+        Puoi collegarti a un sito che utilizza un protocollo diverso da HTTP. Ad esempio, per collegarti a un sito FTP, puoi fare così:
+        <br>
+        <textarea cols="80" rows="4">
+            <a href="ftp://example.com/" rel="external" title="example.it">
+                Questo potrebbe essere un collegamento a un sito FTP
+            </a>
+        </textarea>
+        <br>
+        <a href="ftp://example.com/" rel="external" title="example.it">
+            Questo potrebbe essere un collegamento a un sito FTP
+        </a>
+        <br>
+        In questo caso, la differenza è che questo tag di ancoraggio sta richiedendo al browser dell'utente di connettersi a example.com utilizzando il protocollo di trasferimento file (FTP) anziché il protocollo di trasferimento ipertestuale (HTTP).
+        <br>
+        Studia meglio il protocollo FTP e come funziona
+    </p>
+    <h4>
+        Link a un ancora (id)
+    </h4>
+    <p>
+        Gli ancoraggi possono essere utilizzati per passare a tag specifici all'interno di una pagina HTML. Il tag `a` può puntare a qualsiasi elemento che abbia un attributo id grazie al simbolo #. Gli ancoraggi vengono principalmente utilizzati per passare a una sottosezione di una pagina e vengono usati in combinazione con i tag di intestazione.
+        <br>
+        Facciamo un esempio con questa pagina stessa e con i tag di intestazione precedenti
+    </p>
+    <textarea cols="50" rows="24">
+        <a href="#Giuda-allHTML">
+            Guida all'HTML
+        </a>
+        <br>
+        <a href="#I-tag-dapertura-e-di-chiusura">
+            I tag d'apertura e di chiusura
+        </a>
+        <br>
+        <a href="#Gli-attributi">
+            Gli attributi
+        </a>
+        <br>
+        <a href="#I-principali-tag-da-usare">
+            I principali tag da usare
+        </a>
+        <br>
+        <a href="#I-paragrafi">
+            I paragrafi
+        </a>
+        <br>
+        <a href="#I-collegamenti-ipertestuali">
+            I collegamenti ipertestuali
+        </a>
+    </textarea>
+    <div>
+        <a href="#Giuda-allHTML">
+            Guida all'HTML
+        </a>
+        <br>
+        <a href="#I-tag-dapertura-e-di-chiusura">
+            I tag d'apertura e di chiusura
+        </a>
+        <br>
+        <a href="#Gli-attributi">
+            Gli attributi
+        </a>
+        <br>
+        <a href="#I-principali-tag-da-usare">
+            I principali tag da usare
+        </a>
+        <br>
+        <a href="#I-paragrafi">
+            I paragrafi
+        </a>
+        <br>
+        <a href="#I-collegamenti-ipertestuali">
+            I collegamenti ipertestuali
+        </a>
+    </div>
+    <p>
+        Gli ancoraggi si possono fare anche tra elementi di pagine diverse con la sintassi seguente (ci colleghiamo alla pagina dove studieremo il CSS)
+    </p>
+    <textarea cols="40" rows="4">
+        <a href="index1.html#flexbox">
+            Flexbox
+        </a>
+    </textarea>
+    <br>
+    <a href="index1.html#flexbox">
+        Flexbox
+    </a>
+
+
+    <h4>
+        Link a un numero di telefono
+    </h4>
+    <p>
+        Se il valore dell'attributo href inizia con "tel:" il tuo dispositivo comporrà il numero quando ci fai clic. Questo funziona su dispositivi mobili o su computer/tablet che eseguono software - come Skype o FaceTime - in grado di effettuare chiamate telefoniche.
+    </p>
+    <textarea cols="40" rows="4">
+        <a href="tel:+393510630348">
+            numero di un Playboy
+        </a>
+    </textarea>
+    <br>
+    <a href="tel:+393510630348">
+        numero di un Playboy
+    </a>
+
+    <h4>
+        Link a un Email
+    </h4>
+    <p>
+        Se il valore dell'attributo href inizia con "mailto:" cercherà di aprire un client di posta elettronica quando ci fai clic:
+    </p>
+    <textarea cols="50" rows="4">
+        <a href="mailto:nicolabelardo005@gmail.com">
+            email di Nicola
+        </a>
+    </textarea>
+    <br>
+    <a href="mailto:nicolabelardo005@gmail.com">
+        email di Nicola
+    </a>
+    <p>
+        Puoi anche aggiungere indirizzi per destinatari in copia (cc) o destinatari in copia nascosta (ccn, in inglese bcc) utilizzando la seguente sintassi:
+    </p>
+    <textarea cols="115" rows="4">
+        <a href="mailto:nicolabelardo005@gmail.com?cc=belardonicola2@gmail.com&bcc=franzesegiovanni221@gmail.com">
+            Email con destinatario in copia e copia nascosta
+        </a>
+    </textarea>
+    <br>
+    <a href="mailto:nicolabelardo005@gmail.com?cc=belardonicola2@gmail.com&bcc=franzesegiovanni221@gmail.com">
+        Email con destinatario in copia e copia nascosta
+    </a>
+    <p>
+        Puoi anche popolare l'oggetto e il corpo per il nuovo messaggio di posta elettronica:
+    </p>
+    <textarea cols="163" rows="4">
+        <a href="mailto:nicolabelardo005@gmail.com?subject=io+sono+Gianni&body=Ciao,+io+sono+Gianni&cc=belardonicola2@gmail.com&bcc=franzesegiovanni221@gmail.com">
+            Email con oggetto, corpo, destinatario in copia e copia nascosta
+        </a>
+    </textarea>
+    <br>
+    <a href="mailto:nicolabelardo005@gmail.com?subject=io+sono+Gianni&body=Ciao,+io+sono+Gianni&cc=belardonicola2@gmail.com&bcc=franzesegiovanni221@gmail.com">
+        Email con oggetto, corpo, destinatario in copia e copia nascosta
+    </a>
+    <p>
+        Non tutte le opzioni specificate dopo l'indirizzo del destinatario sono supportate in tutti i client di posta elettronica.
+    </p>
+
+
+    <h4>
+        Link che esegue una funzione JavaScript
+    </h4>
+    <p>
+        Possiamo usare i tag "a" anche per eseguire una funzione in JavaScript, tramite il protocollo "javascript:"
+        <br>
+        Per come fare una funzione JavaScript lo vedremo in futuro. La funzione che avvieremo farà in modo di aggiungere un paragrafo con scritto questo è il paragrafo n. Il paragrafo verrà aggiunto dopo il link che lo avvia
+    </p>
+    <textarea cols="50" rows="4">
+        <a href="javascript:myFunction();">
+            Esegui codice
+        </a>
+    </textarea>
+    <br>
+    <a href="javascript:myFunction();">
+        Esegui codice
+    </a>
+    <div id="funzione" style="border: solid 1px; width: fit-content;">
+        Qui nascono dei paragrafi:
+    </div>
+    <p>
+        Puoi fare la stessa cosa con l'attributo onclick (che poi vedremo nello JavaScript)
+    </p>
+    <textarea cols="55" rows="4">
+        <a href="" onclick="myFunction(); return false">
+            Esegui codice
+        </a>
+    </textarea>
+    <br>
+    <a href="" onclick="myFunction(); return false">
+        Esegui codice
+    </a>
+    <p>
+        Il `return false;` è necessario per evitare che la tua pagina scorra verso l'alto quando viene fatto clic sul collegamento a "". Assicurati di includere tutto il codice che desideri eseguire prima di esso, poiché il ritorno interromperà l'esecuzione del codice ulteriore.
+        <br>
+        Anche degno di nota, puoi includere un punto esclamativo ! dopo il cancelletto per evitare che la pagina scorra verso l'alto. Questo funziona perché qualsiasi slug non valido farà sì che il collegamento non scorrerà in nessun punto della pagina, poiché non riesce a individuare l'elemento a cui fa riferimento (un elemento con id="!"). Potresti anche utilizzare qualsiasi slug non valido (come #scrollsNowhere) per ottenere lo stesso effetto. In questo caso, `return false;` non è richiesto.
+    </p>
+    <p>
+        Dovresti usare qualcosa di tutto ciò?
+        <br>
+        La risposta è quasi certamente no. Eseguire JavaScript inline con l'elemento in questo modo è piuttosto una pratica non ottimale. Considera di utilizzare soluzioni JavaScript pure che cercano l'elemento nella pagina e associano una funzione ad esso invece di farlo in questo modo.
+        <br>
+        Considera anche se questo elemento sia veramente un pulsante invece di un collegamento. In tal caso, dovresti utilizzare `button`
     </p>
     
+    
+
+
+
+
     <h2>
         Elenchi
     </h2>
+    <p>
+        HTML offre tre modi per specificare elenchi: elenchi ordinati, elenchi non ordinati ed elenchi di definizione. Gli elenchi ordinati utilizzano sequenze ordinarie per indicare l'ordine degli elementi dell'elenco, gli elenchi non ordinati utilizzano un simbolo definito come un pallino per elencare gli elementi senza un ordine specifico, e gli elenchi di definizione utilizzano rientri per elencare gli elementi insieme ai loro sotto-punti.
+    </p>
     <ul>Elenco non numerato     <!-- ul sta ler unordered list -->
         <li>sei</li>            <!-- li sta per list item -->
         <li>popo</li>
@@ -414,14 +810,14 @@
     </ul>
     
     
-    <ol> Elenco numerato     <!-- ol sta per orderer list -->
+    <ol> Elenco ordinato     <!-- ol sta per orderer list -->
         <li>idiota</li>
         <li>stronzo</li>
     </ol>
-    <ol reversed>  Elenco numerato al contrario
+    <ol reversed>  Elenco ordinato al contrario
         <li>eh capit eh?</li>
         <li>io non prendo nè la pensione nè la centoquattro</li>
-     </ol>
+    </ol>
     
     lista non numerata in una lista numerata
     <ol>lista numerata
@@ -436,6 +832,9 @@
             </ul>
         </li>
     </ol>
+    <p>
+        ad esempio a <a href="pagine secondarie/a caso.html">questo link</a> c'è una tabella HTML
+    </p>
     <h2>TABELLE <a href="pagine secondarie/tabelle HTML.html">vedi qui</a> </h2>
 
 
@@ -491,9 +890,9 @@
     <!-- type si utilizza per specificare che tipo di input vuoi inserire (text, password, range, checkbox, date, color) -->
     <!-- vediamo i vari valori di type:-->
     <!-- 1)text indica solo testo (si può omettere perché di default)-->             
-        <input type="text" placeholder="testo normale"><br>
+    <input type="text" placeholder="testo normale"><br>
     <!-- 2)password nasconde il contenuto scritto -->                                
-        <input type="password" placeholder="testo nascosto"><br>
+    <input type="password" placeholder="testo nascosto"><br>
     <!-- 3)range (intervallo) indica tipo un regolatore di livello -->               
         <input type="range"><br>
     <!-- 4)checkbox indica un quadrino da segnare con la crocetta -->                
@@ -887,5 +1286,13 @@ ti sono solo alcuni degli attributi che puoi utilizzare con il tag `input`. La s
    <!--2)secondo modo per dare stile agli elementi HTML è col il tag style nel tag head a inizio file-->
    <!--per fare ciò creiamo una nuova pagina in un altro file-->
    <a href="index1.html">continuo della pagina link percorso</a>
+   <script>
+    const div = document.querySelector("#funzione");
+    function myFunction() {
+        const paragrafo = document.createElement("p");
+        div.appendChild(paragrafo);
+        paragrafo.innerHTML = `Questo è il ${div.children.length}° paragrafo`;
+    }
+   </script>
 </body>
 </html>

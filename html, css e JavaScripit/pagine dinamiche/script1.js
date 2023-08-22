@@ -19,16 +19,16 @@ PARAGRAFO_2.innerHTML = `secondo paragrafo modificato`;
 //per gestire queste posizione in JavaScript si usa il DOM
 //il DOM (document object model) è un interfaccia che permette di accedere a tutti gli elementi in base alla loro posizione nella struttura ad albero
 //la prima cosa a cui DOM può farci accedere è il root node
-var htmlRoot = document;
+const htmlRoot = document;
 console.log(htmlRoot);
 //per accedere ai figli di html (ossia a head e body) si possono usare le parole chiave (questa cosa va bene solo per loro 2)
-var headNode = document.head;
+const headNode = document.head;
 console.log(headNode);
 console.log(document.body);
 //possiamo sempre aggiornare i nodes con l'istruzione .innerHTML
 
 //per accedere a tutti i figli di un node si usa l'istruzione .children
-var figli = PARENT_PARAGRAFO.children;
+const figli = PARENT_PARAGRAFO.children;
 console.log(figli);  //riporta un array con tutti l'elementi figli
 console.log(figli[2]);   //per prendere un figlio possiamo usare []
 //per accedere al primo elemento possiamo anche usare direttamente il metodo firstElementChild
@@ -39,17 +39,17 @@ console.log(PARAGRAFO_2.nextElementSibling.innerHTML);   //così vediamo il cont
 
 
 //un altro modo per accedere a specifici elementi della pagina è tramite il metodo 
-var titolo_h2 = document.querySelector("h2");
+const titolo_h2 = document.querySelector("h2");
 console.log(titolo_h2.innerHTML);
 //querySelector funziona su tutti i tipi di selettori, come tag, classi o id
 console.log(document.querySelector("#id").innerHTML);
 //questo metodo accede solo al primo tag o classe che è presentato nel codice
-var elemento1classe = document.querySelector(".classe");
+const elemento1classe = document.querySelector(".classe");
 console.log(elemento1classe);    //ad esempio gli altri elementi .class non vengono eseguiti
-var elemento1span  = document.querySelector("span").innerHTML = "elemento 1 span modificato con JS";     //l'elemento 2 non viene toccato
+const elemento1span  = document.querySelector("span").innerHTML = "elemento 1 span modificato con JS";     //l'elemento 2 non viene toccato
 //questo può essere un problema nel caso dobbiamo accedere a un elemento successivamente nel codice
 //per questo motivo si può specificare a che tag e classe tramite la sintassi tag.classe
-var elementoSpanClasse = document.querySelector("span.classe");
+const elementoSpanClasse = document.querySelector("span.classe");
 console.log(elementoSpanClasse);    //in questo modo non si prende il primo elemento span o il primo elemento con class="classe"
 //invece si prende il primo elemento span con il class="classe"
 //per specificare in modo ancora ulteriore, si possono inserire più classi
