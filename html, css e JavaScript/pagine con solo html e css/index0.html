@@ -6,6 +6,14 @@
         <title>
             Esempio di file HTML  
         </title>
+        <style>
+            textarea {
+                resize: none;
+            }
+        .table-border td, .table-border th {
+                border: solid 1px;
+            }
+        </style>
 </head>
 <body>
     <h1 id="Giuda-allHTML">
@@ -793,49 +801,694 @@
     
     
 
-
-
-
     <h2>
         Elenchi
     </h2>
     <p>
         HTML offre tre modi per specificare elenchi: elenchi ordinati, elenchi non ordinati ed elenchi di definizione. Gli elenchi ordinati utilizzano sequenze ordinarie per indicare l'ordine degli elementi dell'elenco, gli elenchi non ordinati utilizzano un simbolo definito come un pallino per elencare gli elementi senza un ordine specifico, e gli elenchi di definizione utilizzano rientri per elencare gli elementi insieme ai loro sotto-punti.
     </p>
-    <ul>Elenco non numerato     <!-- ul sta ler unordered list -->
-        <li>sei</li>            <!-- li sta per list item -->
-        <li>popo</li>
-        <li>un</li>
-        <li>grande</li>
-    </ul>
     
-    
-    <ol> Elenco ordinato     <!-- ol sta per orderer list -->
-        <li>idiota</li>
-        <li>stronzo</li>
+    <h3>
+        Elenco ordinato
+    </h3>
+    <p>
+        Un elenco ordinato pò essere creato con il tag "ol" (ordered list) e il tag "li" (list item)
+    </p>
+    <textarea cols="30" rows="9">
+        <ol>
+            <li>Elemento 1</li>
+            <li>Elemento 2</li>
+            <li>Elemento 3</li>
+            <li>Elemento 4</li>
+            <li>Elemento 5</li>
+            <li>Elemento 6</li>
+        </ol>
+    </textarea>
+    <ol>
+        <li>Elemento 1</li>
+        <li>Elemento 2</li>
+        <li>Elemento 3</li>
+        <li>Elemento 4</li>
+        <li>Elemento 5</li>
+        <li>Elemento 6</li>
     </ol>
-    <ol reversed>  Elenco ordinato al contrario
-        <li>eh capit eh?</li>
-        <li>io non prendo nè la pensione nè la centoquattro</li>
-    </ol>
-    
-    lista non numerata in una lista numerata
-    <ol>lista numerata
-        <li>sto</li>
-        <li>sto</li>
-        <li>facendo</li>
-        <li>un video</li>
-        <li>lista non numerata
-            <ul>
-                <li> ahia</li>
-                <li> HAIAAAA</li>
-            </ul>
+    <h4>
+        Cambiare manualmente i numeri
+    </h4>
+    <p>
+        Possiamo cambiare manualmente il numero iniziale da cui partire con l'attributo (inserito in ol) start.
+        <br>
+        Inoltre possiamo cambiare il valore di un singolo list item con l'attributo (inserito in li) value. Dopo il list item
+    </p>
+    <textarea cols="60" rows="21">
+        <ol start="3">
+            <li>
+                Elemento 3
+            </li>
+            <li>
+                Elemento 4
+            </li>
+            <li value="3">
+                Elemento 3: da qui si resetta il conto
+            </li>
+            <li>
+                Elemento 4
+            </li>
+            <li>
+                Elemento 5
+            </li>
+            <li>
+                Elemento 6
+            </li>
+        </ol>
+    </textarea>
+    <ol start="3">
+        <li>
+            Elemento 3
+        </li>
+        <li>
+            Elemento 4
+        </li>
+        <li value="3">Elemento 3: da qui si resetta il conto</li>
+        <li>
+            Elemento 4
+        </li>
+        <li>
+            Elemento 5
+        </li>
+        <li>
+            Elemento 6
         </li>
     </ol>
     <p>
+        Nota: Gli attributi `start` e `value` accettano solo un numero, anche se l'elenco ordinato è impostato per essere visualizzato come numeri romani o lettere.
+    </p>
+    <p>
+        Si può invertire l'ordine della lista con l'attributo reversed
+    </p>
+    <textarea cols="40" rows="10">
+        <ol reversed="reversed">
+            Elenco ordinato al contrario
+            <li>Elemento 6</li>
+            <li>Elemento 5</li>
+            <li>Elemento 4</li>
+            <li>Elemento 3</li>
+            <li>Elemento 2</li>
+            <li>Elemento 1</li>
+        </ol>
+    </textarea>
+    <ol reversed>
+        Elenco ordinato al contrario
+        <li>Elemento 6</li>
+        <li>Elemento 5</li>
+        <li>Elemento 4</li>
+        <li>Elemento 3</li>
+        <li>Elemento 2</li>
+        <li>Elemento 1</li>
+    </ol>
+    <h4>
+        Cambiare il tipo di numerazione
+    </h4>
+    <p>
+        Con l'attributo type su ol possiamo cambiare il tipo di numerazione. I valori dell'attributo possono essere:
+    </p>
+    <ul>
+        <li>
+            <strong>1</strong> Valore predefinito - Numeri decimali 1, 2, 3, 4
+        </li>
+        <li>
+            <strong>a</strong>  Ordine alfabetico (minuscolo) a, b, c, d
+        </li>
+        <li>
+            <strong>A</strong>  Ordine alfabetico (maiuscolo) A, B, C, D
+        </li>
+        <li>
+            <strong>i</strong>  Numeri romani (minuscolo) i, ii, iii, iv
+        </li>
+        <li>
+            <strong>I</strong>  Numeri romani (maiuscolo) I, II, III, IV
+        </li>
+    </ul>
+    <textarea cols="30" rows="4">
+        <ol type="a">
+            <!--Elemento...-->
+        </ol>
+    </textarea>
+    <textarea cols="30" rows="4">
+        <ol type="A">
+            <!--Elemento...-->
+        </ol>
+    </textarea>
+    <textarea cols="30" rows="4">
+        <ol type="i">
+            <!--Elemento...-->
+        </ol>
+    </textarea>
+    <textarea cols="30" rows="4">
+        <ol type="I">
+            <!--Elemento...-->
+        </ol>
+    </textarea>
+    <div style="display: flex;">
+        <ol type="a">
+            <li>Elemento 1</li>
+            <li>Elemento 2</li>
+            <li>Elemento 3</li>
+            <li>Elemento 4</li>
+            <li>Elemento 5</li>
+            <li>Elemento 6</li>
+        </ol>
+        <ol type="A">
+            <li>Elemento 1</li>
+            <li>Elemento 2</li>
+            <li>Elemento 3</li>
+            <li>Elemento 4</li>
+            <li>Elemento 5</li>
+            <li>Elemento 6</li>
+        </ol>
+        <ol type="i">
+            <li>Elemento 1</li>
+            <li>Elemento 2</li>
+            <li>Elemento 3</li>
+            <li>Elemento 4</li>
+            <li>Elemento 5</li>
+            <li>Elemento 6</li>
+        </ol>
+        <ol type="I">
+            <li>Elemento 1</li>
+            <li>Elemento 2</li>
+            <li>Elemento 3</li>
+            <li>Elemento 4</li>
+            <li>Elemento 5</li>
+            <li>Elemento 6</li>
+        </ol>
+    </div>
+    
+
+    <h3>
+        Elenco non ordinato
+    </h3>
+    <p>
+        Un elenco non ordinato può essere creato con il tag "ul" (unordered list) e il tag "li" 
+    </p>
+    <ul>
+        <li>Elemento numerati</li>
+        <li>Elemento numerati</li>
+        <li>Elemento numerati</li>
+        <li>Elemento numerati</li>
+    </ul>
+    <p>
+        Negli ul possiamo usare l'attributo reversed, ma non ha senso usare start e value
+    </p>
+    <p>
+        Possiamo creare liste in altre liste, anche di tipo diverso
+    </p>
+    <ol>
+        lista non numerata in una lista numerata
+        <li>Elemento 1</li>
+        <li>Elemento 2</li>
+        <li>Elemento 3</li>
+        <li>Elemento 4</li>
+        <li>Elemento 5
+            <ul>
+                <li>Sub-elemento 5.1</li>
+                <li>Sub-elemento 5.2</li>
+            </ul>
+        </li>
+        <li>Elemento</li>
+    </ol>
+
+
+    <h3>
+        Elenco di descrizione (o di definizione)
+    </h3>
+    <p>
+        Un elenco di descrizione può essere creato con il tag dl (description list), il tag dt (description term) e il tag dd (description definition)
+    </p>
+    <textarea cols="50" rows="8">
+        <dl>
+            <dt>Termine 1</dt>
+            <dd>Definizione del termine 1.</dd>
+            
+            <dt>Termine 2</dt>
+            <dd>Definizione del termine 2.</dd>
+        </dl>
+    </textarea>
+    <dl>
+        <dt>Termine 1</dt>
+        <dd>Definizione del termine 1.</dd>
+        
+        <dt>Termine 2</dt>
+        <dd>Definizione del termine 2.</dd>
+    </dl>
+      
+
+
+    <h2>
+        Tabelle
+    </h2>
+    <p>
+        L'elemento HTML "table" consente agli autori web di visualizzare dati tabulari (come testo, immagini, collegamenti, altre tabelle, ecc.) in una tabella bidimensionale con righe e colonne di celle. I tag da usare sono "table" "tr" "th" "td"
+    </p>
+    <textarea cols="60" rows="27">
+        <table>
+            <tr>
+                <th>
+                    Intestazione 1/Colonna 1
+                </th>
+                <th>
+                    Intestazione 2/Colonna 2
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    Dato Riga 1 Colonna 1
+                </td>
+                <td>
+                    Dato Riga 1 Colonna 2
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Dato Riga 2 Colonna 1
+                </td>
+                <td>
+                    Dato Riga 2 Colonna 2
+                </td>
+            </tr>
+        </table>
+    </textarea>
+    <p>
+        Questo renderizzerà una "table" composta da tre righe in totale ("tr", ossia table row): una riga di celle di intestazione ("th", ossia table header) e due righe di celle di contenuto ("td", ossia table data). Gli elementi "th" sono intestazioni tabellari e gli elementi "td" sono dati tabellari. Puoi inserire ciò che vuoi all'interno di un "td" o "th".
+        <br>
+        Ricorda che senza applicare del CSS non ci sono bordi.
+    </p>
+    <table>
+        <tr>
+            <th>
+                Intestazione 1/Colonna 1
+            </th>
+            <th>
+                Intestazione 2/Colonna 2
+            </th>
+        </tr>
+        <tr>
+            <td>
+                Dato Riga 1 Colonna 1
+            </td>
+            <td>
+                Dato Riga 1 Colonna 2
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Dato Riga 2 Colonna 1
+            </td>
+            <td>
+                Dato Riga 2 Colonna 2
+            </td>
+        </tr>
+    </table>
+    <h3>
+        Estensione delle colonne o delle righe
+    </h3>
+    <p>
+        Le celle della tabella possono estendersi su più colonne o righe utilizzando gli attributi colspan e rowspan. Questi attributi possono essere applicati agli elementi "th" e "td" (non "tr").
+        <br>
+        In questo modo, le celle possono occupare spazio su più righe o colonne secondo necessità.
+        <br>
+        Applichiamo anche dello stile CSS per vedere i bordi
+    </p>
+    <textarea cols="75" rows="38">
+        <table class="table-border">
+            <tr>
+                <td>
+                    Riga 1 Colonna 1
+                </td>
+                <td>
+                    Riga 1 Colonna 2
+                </td>
+                <td>
+                    Riga 1 Colonna 3
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    Questa seconda riga si estende su tutte e tre le colonne
+                </td>
+            </tr>
+            <tr>
+                <td rowspan="2">
+                    Questa cella si estende su due righe
+                </td>
+                <td>
+                    Riga 3 Colonna 2
+                </td>
+                <td>
+                    Riga 3 Colonna 3
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Riga 4 Colonna 2
+                </td>
+                <td>
+                    Riga 4 Colonna 3
+                </td>
+            </tr>
+        </table>
+    </textarea>
+    <table class="table-border">
+        <tr>
+            <td>
+                Riga 1 Colonna 1
+            </td>
+            <td>
+                Riga 1 Colonna 2
+            </td>
+            <td>
+                Riga 1 Colonna 3
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                Questa seconda riga si estende su tutte e tre le colonne
+            </td>
+        </tr>
+        <tr>
+            <td rowspan="2">
+                Questa cella si estende su due righe
+            </td>
+            <td>
+                Riga 3 Colonna 2
+            </td>
+            <td>
+                Riga 3 Colonna 3
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Riga 4 Colonna 2
+            </td>
+            <td>
+                Riga 4 Colonna 3
+            </td>
+        </tr>
+    </table>
+
+    <p>
+        Nota che non dovresti progettare una tabella in cui sia le righe che le colonne si sovrappongano, dato che risulta un HTML non valido. Inoltre il risultato è gestito in modo diverso dai diversi browser web.
+        <br>
+        Vediamo meglio i 2 attributi
+    </p>
+
+    <ul>
+        <li>
+            `rowspan` = Un intero non negativo che specifica il numero di righe coperte da una cella. Il valore predefinito di questo attributo è uno (1). Un valore di zero (0) significa che la cella si estenderà dalla riga corrente fino all'ultima riga della tabella (`thead`, `tbody`, o `tfoot`, elementi che vedremo tra poco).
+        </li>
+        <li>
+            `colspan` = Un intero non negativo che specifica il numero di colonne coperte dalla cella corrente. Il valore predefinito di questo attributo è uno (1). Un valore di zero (0) significa che la cella si estenderà dalla colonna corrente fino all'ultima colonna del gruppo di colonne `colgroup` in cui la cella è definita.
+        </li>
+    </ul>
+    <h3>
+        Tabelle con gli elementi "thead", "tbody", "tfoot" e "caption"
+    </h3>
+    <p>
+        HTML offre anche le tabelle con gli elementi "thead", "tbody", "tfoot" e "caption". Questi elementi aggiuntivi sono utili per aggiungere valore semantico alle tue tabelle e per fornire un luogo per lo styling CSS separato.
+        <br>
+        Quando si stampa una tabella che non si adatta a una sola pagina (carta), la maggior parte dei browser ripete il contenuto di "thead" su ogni pagina.
+        <br>
+        Esiste un ordine specifico che deve essere seguito, e dovremmo essere consapevoli del fatto che non tutti gli elementi si inseriscono dove ci si aspetterebbe. L'esempio seguente illustra come i nostri 4 elementi dovrebbero essere posizionati:
+    </p>
+        <textarea cols="110" rows="26">
+            <table class="table-border">
+                <caption> <!-- caption è il primo figlio di table -->
+                    Titolo Tabella
+                </caption>
+                <thead> <!-- thead è dopo caption -->
+                    <tr>
+                        <th>Contenuto Intestazione 1</th>
+                        <th>Contenuto Intestazione 2</th>
+                    </tr>
+                </thead>
+                <tbody> <!-- tbody è dopo thead -->
+                    <tr>
+                        <td>Contenuto Corpo 1</td>
+                        <td>Contenuto Corpo 2</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <!-- tfoot può essere posizionato prima o dopo tbody, ma non in un gruppo di tbody. -->
+                    <!-- Indipendentemente da dove si trova tfoot nel markup, viene reso in fondo. -->
+                    <tr>
+                        <td>Contenuto Piè di Pagina 1</td>
+                        <td>Contenuto Piè di Pagina 2</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </textarea>
+        <table class="table-border">
+            <caption> <!-- caption è il primo figlio di table -->
+                Titolo Tabella
+            </caption>
+            <thead> <!-- thead è dopo caption -->
+                <tr>
+                    <th>Contenuto Intestazione 1</th>
+                    <th>Contenuto Intestazione 2</th>
+                </tr>
+            </thead>
+            <tbody> <!-- tbody è dopo thead -->
+                <tr>
+                    <td>Contenuto Corpo 1</td>
+                    <td>Contenuto Corpo 2</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <!-- tfoot può essere posizionato prima o dopo tbody, ma non in un gruppo di tbody. -->
+                <!-- Indipendentemente da dove si trova tfoot nel markup, viene reso in fondo. -->
+                <tr>
+                    <td>Contenuto Piè di Pagina 1</td>
+                    <td>Contenuto Piè di Pagina 2</td>
+                </tr>
+            </tfoot>
+        </table>
+        <ol>
+            Capiamo la funzione di ogni tag:
+            <li></li>
+        </ol>
+    
+        <p>
+            Nell'esempio seguente, i risultati vengono mostrati due volte: la prima tabella non ha stili, la seconda tabella ha alcune proprietà CSS applicate: background-color, color e border*. Gli stili vengono forniti come guida visiva e non sono un aspetto essenziale dell'argomento trattato.
+        </p>
+        ...
+
+    <h3>
+        Gruppi di Colonne
+    </h3>
+    <p>
+        A volte potresti voler applicare stili a una colonna o a un gruppo di colonne. Oppure, per scopi semantici, potresti voler raggruppare le colonne insieme. Per fare ciò, usa gli elementi `colgroup` e `col`.
+    </p>
+    <p>
+        L'elemento opzionale `colgroup` ti consente di raggruppare le colonne insieme. Gli elementi `colgroup` devono essere elementi figli di un `table` e devono venire dopo eventuali elementi `caption` e prima di qualsiasi contenuto della tabella (ad esempio, `tr`, `thead`, `tbody`, ecc.).
+    </p>
+    <textarea cols="30" rows="10">
+        <table>
+        <colgroup span="2">
+            Dato
+        </colgroup>
+        <colgroup span="2">
+            Dato
+        </colgroup>
+         ...
+        </table>
+    </textarea>
+    <br>
+    <table>
+     <colgroup span="2">
+        Dato
+    </colgroup>
+     <colgroup span="2">
+        Dato
+    </colgroup>
+     ...
+    </table>
+    <p>
+        L'elemento opzionale `col` ti consente di fare riferimento a colonne individuali o a un intervallo di colonne senza applicare un raggruppamento logico. Gli elementi `col` sono opzionali, ma se presenti, devono trovarsi all'interno di un elemento `colgroup`.
+    </p>
+    <textarea cols="30" rows="10">
+        <table>
+            <colgroup>
+                <col id="MySpecialColumn" />
+                <col />
+            </colgroup>
+            <colgroup>
+                <col class="CoolColumn" />
+                <col class="NeatColumn" span="2" />
+            </colgroup>
+            ...
+        </table>
+    </textarea>
+    <ul>
+        Le seguenti stili CSS possono essere applicati agli elementi `colgroup` e `col`:
+        <li>
+            `border`
+        </li>
+        <li>
+            `background`
+        </li>
+        <li>width
+        </li>
+        <li>
+            visibility
+        </li>
+        <li>
+            display (come in display: none)
+            <ul>
+                <li>
+                    `display: none;` rimuoverà effettivamente le colonne dalla visualizzazione, causando il rendering della tabella come se quelle celle non esistessero.
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    
+    <p>
         ad esempio a <a href="pagine secondarie/a caso.html">questo link</a> c'è una tabella HTML
     </p>
-    <h2>TABELLE <a href="pagine secondarie/tabelle HTML.html">vedi qui</a> </h2>
+    <br>
+    <br>
+    <table>                               <!--per creare una tabella usiamo il tag table, ma senza l'attributo border, non ci saranno bordi-->
+        <tr>                              <!--il tag tr sta per table row, e serve per creare una riga-->
+            <th>intestazione</th>            
+            <!--il tag th sta per table header, e contiene i titoli di ogni colonna della tabella-->
+            <!--di default il contenuto del tag th, è in grassetto ed è posizionato al centro della tabella, ma questo può essere cambiato con il CSS-->
+        </tr>
+        <tr>
+            <td>dato 1</td>            <!--il tag td sta per table data e raggruppa il contenuto della cella-->
+            <td>dato 2</td>
+        </tr>
+        <tr>
+            <td>dato 3</td>
+            <td>dato 4</td>
+            <td>dato 5</td>
+        </tr>
+    </table>
+    <!--le righe possono contenere diversi numero di colonne, lasciando spazi vuoti all'interno della tabella-->
+    <br>
+
+
+    <h2>TABELLA CON BORDI</h2>
+    <table border=1> <!--border è un attributo che decide lo spessore (numero di pixel) del bordo--> 
+        <caption>    <!--il tag caption è un tag facoltativo che ci permette di dare una contestualizzazione ai dati, per rendere più chiari i loro significati-->
+            questa è una tabella con i bordi
+        </caption>   <!--il tag caption ha come default il testo centrato, ma questo si può cambiare con il CSS-->
+
+
+        <thead>      <!--il tag thead è un tag facoltativo, che serve a raggruppare le righe che rappresentano l'intestazione-->
+            <tr>
+                <th colspan="3" style="background-color: red;">intestazione</th>      <!--l'attributo colspan nei tag th e td fa espandere la tabella di tot colonne-->
+    </tr>                                                                               <!--l'attributo style serve per applicare il CSS (in futuro vedremo), in questo caso ho applicato il colore rosso alla cella-->
+        </thead>
+        <tbody>     <!--tbody è un tag facoltativo che serve a raggruppare le righe che contengono il corpo della tabella, con i dati che interessano-->
+            <tr>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+            </tr>
+            <tr>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+            </tr>
+        </tbody>
+        <tfoot>     <!--tfoot è un tag facoltativo che serve a raggruppare le righe finali di una tabella che fungono da footer, dove possono essere inseriti dati di riepilogo come somme, medie, ecc..-->
+            <tr>
+                <td colspan="3">footer della tabella</td>
+            </tr>
+        </tfoot>
+    </table>
+    <br>
+    <br>
+    <br>
+
+    ora vediamo dei tag che servono per raggruppare gli elementi e gestirli in CSS E Javascript
+    <br>
+    <br>
+    <table border=1>
+        <caption>   
+            Possiamo raggruppare le celle della tabella anche per colonna grazie al tag colgroup e col
+        </caption>   
+
+        <colgroup class="colgroup1" span="2" style="background-color: green;">        <!--l'attributo class lo vedremo più avanti e serve per il CSS. Va inserito sempre prima di scrivere il contenuto delle righe-->
+                                                                                        <!--l'attributo span decide quante colonne raggruppare il tag colgroup-->
+                                                                                        <!--in questo caso ho messo il colore verde alle prime 2 colonne-->
+        </colgroup>                                                                     <!--i tag colgroup raggruppano le colonne a partire da destra e le successive vanno progressivamente a sinistra-->
+        <colgroup class="colgroup2" style="background-color: brown;">                 <!--possiamo anche non mettere il tag span e invece inseriamo nel tag colgroup tov tag col-->
+            <col style="font-size: smaller;">
+            <col span="2">
+            <col span="3">
+            <col span="4">
+        </colgroup>
+
+        <thead>      
+            <tr>
+                <th colspan="12" style="background-color: red;">intestazione</th>      
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+            </tr>
+            <tr>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+            </tr>
+            <tr>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="12">footer della tabella</td>
+            </tr>
+        </tfoot>
+    </table>
+    da approfondire <a target="-blank" href="https://www.html.it/pag/16055/tabella-struttura-di-base/">qui</a>
+    <br>
+    <br>
+    dopo aver fatto il CSS vedi pure questa tabella: <a href="TABELLE HTML CON CSS.html">Qui</a> 
 
 
 
