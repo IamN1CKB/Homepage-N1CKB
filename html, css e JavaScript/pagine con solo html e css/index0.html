@@ -10,14 +10,31 @@
             textarea {
                 resize: none;
             }
-        .table-border td, .table-border th {
-                border: solid 1px;
+            .table-border, .table-border td, .table-border th {
+                    border: solid 1px;
+            }
+            #A {
+                background-color: blue;
+                width: 75px;
+            }
+            #A1 {
+                background-color: aqua;
+            }
+            #A2{
+                background-color: brown;
+                width: 200px;
+            }
+            #B {
+                width: 100px;
+            }
+            #B1 {
+                background-color: red;
             }
         </style>
 </head>
 <body>
     <h1 id="Giuda-allHTML">
-        Guida all'HTML
+        GUIDA ALL'HTML
     </h1>
     <p>
         HTML, acronimo di "HyperText Markup Language" (Linguaggio di Markup per l'IperTesto), è il linguaggio di markup standard  utilizzato per creare e strutturare contenuti su pagine web.
@@ -32,8 +49,10 @@
         <br>
         Il CSS e lo JavaScript li vedremo in futuro. Per adesso ci concentriamo sull'uso di HTML
     </p>
+    
+    <hr>
     <h2 id="I-tag-dapertura-e-di-chiusura">
-        I tag d'apertura e di chiusura
+        I TAG DI APERTURA E DI CHIUSURA
     </h2>
     <p>
         Un elemento è di solito racchiuso in un tag di apertura e un tag di chiusura che hanno una sintassi del genere:
@@ -44,14 +63,18 @@
         <br>
         Questi elementi sono detti elementi vuoti (void element). 
     </p>
+    
+    <hr>
     <h2 id="Gli-attributi">
-        Gli attributi
+        GLI ATTRIBUTI
     </h2>
     <p>
         Gli attributi sono elementi utilizzati per fornire informazioni aggiuntive o configurare specifiche caratteristiche di un elemento. Gli attributi forniscono istruzioni dettagliate su come un elemento dovrebbe essere visualizzato, comportarsi o interagire con altri elementi. Sono solitamente definiti all'interno dei tag di apertura degli elementi utilizzando la sintassi "nome dell'attributo"="valore dell'attributo".
     </p>
+    
+    <hr>
     <h2 id="I-principali-tag-da-usare">
-        I principali tag da usare
+        I PRINCIPALI TAG DA USARE
     </h2>
     <p>
         Per strutturare una semplice pagina web bisogna essere a conoscenza di alcuni tag fondamentali.
@@ -88,15 +111,19 @@
     </ul>
 
 
+    
+    <hr>
     <h2>
-        Scrivere codice come testo in un file HTML
+        SCRIVERE CODICE COME TESTO IN UN FILE HTML
     </h2>
     <p>
         Prima di scoprire tutti i tag capiamo come si può scrivere in modo facile del codice all'interno della pagina senza farla interpretare dal browser.
         <br>
         Nel caso dobbiamo far vedere nella pagina web più spazi (il browser interpreta solo il primo spazio, e quelli successivi li ignora) oppure proprio la scrittura del codice, ma viene interpretato dal browser come parte del codice stesso, possiamo usare vari metodi:
     </p>
-    <h3>Usare i caratteri speciali</h3>
+    <h3>
+        Usare i caratteri speciali
+    </h3>
     <ul>
         Scrivere i caratteri speciali in codice HTML: sostituire i caratteri speciali che vengono interpretati come codice, in altri modi, seguendo queste traduzioni (fai finta che i caratteri non sono divisi da spazi)
         <li>
@@ -147,8 +174,10 @@
         <br>
         Ora possiamo studiare i diversi tipi di tag.
     </p>
+    
+    <hr>
     <h2>
-        Le intestazioni
+        LE INTESTAZIONI
     </h2>
     <p>
         HTML fornisce non solo semplici tag di paragrafo, ma anche sei tag di intestazione separati per indicare titoli di diverse dimensioni e spessori. Enumerati come titolo 1 fino a titolo 6, il titolo 1 ha il testo più grande e spesso, mentre il titolo 6 è il più piccolo e sottile, arrivando al livello del paragrafo.
@@ -174,8 +203,10 @@
         <h6>Intestazione di sesto tipo</h6>
     </div>
 
+    
+    <hr>
     <h2 id="I-paragrafi">
-        I paragrafi
+        I PARAGRAFI
     </h2>
     <p>
         I paragrafi sono il più basico HTML elemento. Sono usati per scrivere del testo nella pagina ma, vengono ignorati qualsiasi spazio extra dopo il primo, e anche le linee extra che vengono visualizzate dal browser come un solo semplice spazio. Per questo motivo, insieme al tag &lt;p> si usa anche i tag &lt;br> e &lt;pre>
@@ -219,9 +250,16 @@
         <br>
         Questo è il terzo rigo
     </p>
+    <p>
+        Eventualmente, per separare i paragrafi o altri elementi possiamo usare il tag "hr" che crea linea orizzontale che attraversa l'area in cui è stato inserito il tag.
+        <br>
+        Similmente a questo.
+    </p>
 
+    
+    <hr>
     <h2>
-        Formattazione del testo
+        FORMATTAZIONE DEL TESTO
     </h2>
     <p>
         Mentre la maggior parte dei tag HTML viene utilizzata per creare elementi, l'HTML fornisce anche tag di formattazione nel testo per applicare stili specifici legati al testo a porzioni di testo. Questo argomento include esempi di formattazione del testo in HTML come l'evidenziazione, il grassetto, il sottolineato, il pedice e il testo barrato.
@@ -294,8 +332,10 @@
         </li>
     </ul>
 
+    
+    <hr>
     <h2>
-        Classi e id
+        CLASSI O ID
     </h2>
     <p>
         Le classi e gli ID semplificano il riferimento agli elementi HTML da script e fogli di stile. L'attributo class può essere utilizzato su uno o più tag ed è utilizzato da CSS per lo stile. Gli ID, invece, sono destinati a riferirsi a un singolo elemento, il che significa che lo stesso ID non dovrebbe mai essere utilizzato due volte. Gli ID sono generalmente utilizzati con JavaScript e collegamenti interni al documento, e sono sconsigliati in CSS.
@@ -363,10 +403,56 @@
     <textarea cols="30" rows="2">
         <div id=" "> ... </div>
     </textarea>
-        
+
+
     
+    <hr>
+    <h2>
+        I COMMENTI
+    </h2>
+    <p>
+        Analogamente ad altri linguaggi di programmazione, di markup e di formattazione come il markdown, i commenti in HTML forniscono ad altri sviluppatori informazioni specifiche sullo sviluppo senza influire sull'interfaccia utente. Questo argomento spiega come scrivere commenti HTML e le loro applicazioni funzionali.
+    </p>
+    <p>
+        I commenti HTML possono essere utilizzati per lasciare note a te stesso o ad altri sviluppatori su un punto specifico nel codice. Possono essere iniziati con `&lt;!--` e conclusi con `--&gt;`, come ad esempio:
+    </p>
+    <textarea cols="40" rows="2">
+        <!-- Io sono un commento HTML! -->
+    </textarea>
+    <p>
+        Possono essere inseriti all'interno di altri contenuti:
+    </p>
+    <textarea cols="90" rows="4">
+        <h1>
+            Questa parte sarà visualizzata <!-- mentre questa non sarà visualizzata -->.
+        </h1>
+    </textarea>
+    <p>
+        Possono anche estendersi su più righe per fornire ulteriori informazioni:
+    </p>
+
+    <textarea cols="70" rows="5">
+        <!-- Questo è un commento HTML su più righe.
+         Qualsiasi cosa sia qui non verrà visualizzata dal browser.
+         Puoi "commentare" intere sezioni di codice HTML.
+        -->
+    </textarea>
+    <p>
+        Tuttavia, non possono apparire all'interno di un altro tag HTML, come in questo caso:
+    </p>
+
+    <textarea cols="80" rows="2">
+        <h1 <!-- testAttribute="something" -->>Questo non funzionerà</h1>
+    </textarea>
+    <p>
+        Questo produce HTML non valido poiché l'intero blocco `&lt;h1 &lt;!-- testAttribute="something" -->` sarebbe considerato un singolo tag di apertura `&lt;h1` con alcune altre informazioni non valide contenute al suo interno, seguito da un unico carattere `>` di chiusura che non fa nulla.
+    </p>
+   
+
+
+    <hr>
     <h2 id="I-collegamenti-ipertestuali">
-        I collegamenti ipertestuali
+        I COLLEGAMENTI IPERTESTUALI
     </h2>
     <p>
         I collegamenti ipertestuali sono comunemente utilizzati per collegare pagine web separate, ma possono anche essere utilizzati per collegare tra diversi punti in un singolo documento, spesso all'interno di una tabella dei contenuti o addirittura per avviare applicazioni esterne. Questo argomento spiega l'implementazione e l'applicazione dei tag anchor HTML in vari contesti. 
@@ -801,8 +887,10 @@
     
     
 
+    
+    <hr>
     <h2>
-        Elenchi
+        ELENCHI
     </h2>
     <p>
         HTML offre tre modi per specificare elenchi: elenchi ordinati, elenchi non ordinati ed elenchi di definizione. Gli elenchi ordinati utilizzano sequenze ordinarie per indicare l'ordine degli elementi dell'elenco, gli elenchi non ordinati utilizzano un simbolo definito come un pallino per elencare gli elementi senza un ordine specifico, e gli elenchi di definizione utilizzano rientri per elencare gli elementi insieme ai loro sotto-punti.
@@ -1044,8 +1132,10 @@
       
 
 
+    
+    <hr>
     <h2>
-        Tabelle
+        TABELLE
     </h2>
     <p>
         L'elemento HTML "table" consente agli autori web di visualizzare dati tabulari (come testo, immagini, collegamenti, altre tabelle, ecc.) in una tabella bidimensionale con righe e colonne di celle. I tag da usare sono "table" "tr" "th" "td"
@@ -1079,7 +1169,7 @@
         </table>
     </textarea>
     <p>
-        Questo renderizzerà una "table" composta da tre righe in totale ("tr", ossia table row): una riga di celle di intestazione ("th", ossia table header) e due righe di celle di contenuto ("td", ossia table data). Gli elementi "th" sono intestazioni tabellari e gli elementi "td" sono dati tabellari. Puoi inserire ciò che vuoi all'interno di un "td" o "th".
+        Questo renderizzerà una "table" composta da tre righe in totale ("tr", ossia table row): una riga di celle di intestazione ("th", ossia table header) e due righe di celle di contenuto ("td", ossia table data). Gli elementi "th" sono intestazioni tabellari in grassetto (di default) e gli elementi "td" sono dati tabellari. Puoi inserire ciò che vuoi all'interno di un "td" o "th".
         <br>
         Ricorda che senza applicare del CSS non ci sono bordi.
     </p>
@@ -1216,11 +1306,11 @@
     <p>
         HTML offre anche le tabelle con gli elementi "thead", "tbody", "tfoot" e "caption". Questi elementi aggiuntivi sono utili per aggiungere valore semantico alle tue tabelle e per fornire un luogo per lo styling CSS separato.
         <br>
-        Quando si stampa una tabella che non si adatta a una sola pagina (carta), la maggior parte dei browser ripete il contenuto di "thead" su ogni pagina.
+        Quando si stampa una tabella che non si adatta a una sola pagina (carta) ma si estende a più pagine, la maggior parte dei browser ripete il contenuto di "thead" su ogni pagina.
         <br>
         Esiste un ordine specifico che deve essere seguito, e dovremmo essere consapevoli del fatto che non tutti gli elementi si inseriscono dove ci si aspetterebbe. L'esempio seguente illustra come i nostri 4 elementi dovrebbero essere posizionati:
     </p>
-        <textarea cols="110" rows="26">
+    <textarea cols="110" rows="26">
             <table class="table-border">
                 <caption> <!-- caption è il primo figlio di table -->
                     Titolo Tabella
@@ -1246,8 +1336,8 @@
                     </tr>
                 </tfoot>
             </table>
-        </textarea>
-        <table class="table-border">
+    </textarea>
+    <table class="table-border">
             <caption> <!-- caption è il primo figlio di table -->
                 Titolo Tabella
             </caption>
@@ -1271,224 +1361,447 @@
                     <td>Contenuto Piè di Pagina 2</td>
                 </tr>
             </tfoot>
-        </table>
-        <ol>
+    </table>
+    <ol>
             Capiamo la funzione di ogni tag:
-            <li></li>
-        </ol>
-    
-        <p>
-            Nell'esempio seguente, i risultati vengono mostrati due volte: la prima tabella non ha stili, la seconda tabella ha alcune proprietà CSS applicate: background-color, color e border*. Gli stili vengono forniti come guida visiva e non sono un aspetto essenziale dell'argomento trattato.
-        </p>
-        ...
+            <li>
+                "caption"	È una didascalia che ci permette di dare una contestualizzazione ai dati e rendere più chiaro il loro significato.
+            </li>
+            <li>
+                "thead"	Serve per raggruppare le righe che rappresentano l'intestazione della tabella.
+            </li>
+            <li>
+                "th"	"table header" Indica una cella che contiene un intestazione (ad esempio il titolo di una colonna o di una riga) e serve a dare una definizione dei dati cui si riferisce.
+            </li>
+            <li>
+                "tbody"	Raggruppa le righe che contengono il corpo della tabella, spesso con i dati veri e propri.
+            </li>
+            <li>
+                "tfoot"	Racchiude le righe che utilizziamo come footer della tabella, in cui si possono inserire dei dati di riepilogo, somme, medie, etc.
+            </li>
+    </ol>
+    <p>
+            Interessante notare che thead, tbody e tfoot, creano dei raggruppamenti di righe e che tfoot può apparire, nel markup, anche prima del tbody, questo per consentire ai crowler di leggere prima i dati di sintesi e poi le informazioni più granulari.
+            <br>
+            Alla fine la rappresentazione della tabella rimane quella che ci aspetteremmo:
+            <br>
+            <img src="media/schemaTabella.gif" alt="">
+    </p>
 
     <h3>
         Gruppi di Colonne
     </h3>
     <p>
+        Dunque di default, nelle tabelle HTML si raggruppano prima le righe e poi le colonne.
+        <br>
         A volte potresti voler applicare stili a una colonna o a un gruppo di colonne. Oppure, per scopi semantici, potresti voler raggruppare le colonne insieme. Per fare ciò, usa gli elementi `colgroup` e `col`.
     </p>
+    <ol>
+        <li>
+            L'elemento `colgroup` ti consente di raggruppare le colonne insieme. Gli elementi `colgroup` devono essere elementi figli di un `table` e devono venire dopo eventuali elementi `caption` e prima di qualsiasi contenuto della tabella (ad esempio, `tr`, `thead`, `tbody`, ecc.). Il tag colgroup non ha senso se non ha un ele
+        </li>
+        <li>
+            Il tag "col" viene utilizzato all'interno del tag "colgroup" per definire gli attributi specifici di una colonna o di un gruppo di colonne. L'attributo span può essere utilizzato per specificare quante colonne verranno influenzate dalle proprietà definite all'interno di "col".
+        </li>
+    </ol>
     <p>
-        L'elemento opzionale `colgroup` ti consente di raggruppare le colonne insieme. Gli elementi `colgroup` devono essere elementi figli di un `table` e devono venire dopo eventuali elementi `caption` e prima di qualsiasi contenuto della tabella (ad esempio, `tr`, `thead`, `tbody`, ecc.).
+        La sintassi per scrivere la tabella resta la stessa, ma si aggiungono questi tag in modo da riuscire a selezionare le colonne, partendo da sinistra.  Il numero di colonne da considerare lo indichiamo grazie all'attributo span, settato (usato su colgroup per indicare le colonne del gruppo, e usato su col per indicare quali colonne di un gruppo) di default su 1.
     </p>
-    <textarea cols="30" rows="10">
-        <table>
-        <colgroup span="2">
-            Dato
-        </colgroup>
-        <colgroup span="2">
-            Dato
-        </colgroup>
-         ...
+    <p>
+        Meglio usare sia colgroup che col per non fare casino tra gli stili, e inoltre applicare lo stile ai tag col. (Non capisco perché posso usare poche proprietà CSS per stilare i tag colgroup e col, tra cui background-color e width)
+    </p>
+    <textarea cols="125" rows="117">
+        <table class="table-border">
+            <colgroup id="A"> <!-- questo tag ha la larghezza settata a 75px e il colore dello sfondo a blu-->
+                <col id="A1">
+                    <!-- in questo modo riusciamo a selezionare per i valori CSS la colonna 1; colore dello sfondo: aqua-->
+                <col span="2" id="A2">
+                    <!-- in questo modo riusciamo a selezionare per i valori CSS le colonne 2 e 3, grazie allo span="2" -->
+                <col>
+                    <!-- in questo modo occupiamo la colonna 4 i modo che non faccia parte del prossimo colgroup,
+                        inoltre avrà lo stile del suo genitore colgroup -->
+            </colgroup>
+            <colgroup id="B"> <!-- questo tag ha la larghezza settata a 200px-->
+                <col>
+                <col>
+                <col id="B1" span="2">
+            </colgroup>
+            <!-- l'ultima colonna non è influenzata da alcuno stile -->
+            <tr>
+                <th>Colonna 1</th>
+                <th>Colonna 2</th>
+                <th>Colonna 3</th>
+                <th>Colonna 4</th>
+                <th>Colonna 5</th>
+                <th>Colonna 6</th>
+                <th>Colonna 7</th>
+                <th>Colonna 8</th>
+                <th>Colonna 9</th>
+            </tr>
+            <tr>
+                <td>Riga 1, Colonna 1</td>
+                <td>Riga 1, Colonna 2</td>
+                <td>Riga 1, Colonna 3</td>
+                <td>Riga 1, Colonna 4</td>
+                <td>Riga 1, Colonna 5</td>
+                <td>Riga 1, Colonna 6</td>
+                <td>Riga 1, Colonna 7</td>
+                <td>Riga 1, Colonna 8</td>
+                <td>Riga 1, Colonna 9</td>
+            </tr>
+            <tr>
+                <td>Riga 2, Colonna 1</td>
+                <td>Riga 2, Colonna 2</td>
+                <td>Riga 2, Colonna 3</td>
+                <td>Riga 2, Colonna 4</td>
+                <td>Riga 2, Colonna 5</td>
+                <td>Riga 2, Colonna 6</td>
+                <td>Riga 2, Colonna 7</td>
+                <td>Riga 2, Colonna 8</td>
+                <td>Riga 2, Colonna 9</td>
+            </tr>
+            <tr>
+                <td>Riga 3, Colonna 1</td>
+                <td>Riga 3, Colonna 2</td>
+                <td>Riga 3, Colonna 3</td>
+                <td>Riga 3, Colonna 4</td>
+                <td>Riga 3, Colonna 5</td>
+                <td>Riga 3, Colonna 6</td>
+                <td>Riga 3, Colonna 7</td>
+                <td>Riga 3, Colonna 8</td>
+                <td>Riga 3, Colonna 9</td>
+            </tr>
+            <tr>
+                <td>Riga 4, Colonna 1</td>
+                <td>Riga 4, Colonna 2</td>
+                <td>Riga 4, Colonna 3</td>
+                <td>Riga 4, Colonna 4</td>
+                <td>Riga 4, Colonna 5</td>
+                <td>Riga 4, Colonna 6</td>
+                <td>Riga 4, Colonna 7</td>
+                <td>Riga 4, Colonna 8</td>
+                <td>Riga 4, Colonna 9</td>
+            </tr>
+            <tr>
+                <td>Riga 5, Colonna 1</td>
+                <td>Riga 5, Colonna 2</td>
+                <td>Riga 5, Colonna 3</td>
+                <td>Riga 5, Colonna 4</td>
+                <td>Riga 5, Colonna 5</td>
+                <td>Riga 5, Colonna 6</td>
+                <td>Riga 5, Colonna 7</td>
+                <td>Riga 5, Colonna 8</td>
+                <td>Riga 5, Colonna 9</td>
+            </tr>
+            <tr>
+                <td>Riga 6, Colonna 1</td>
+                <td>Riga 6, Colonna 2</td>
+                <td>Riga 6, Colonna 3</td>
+                <td>Riga 6, Colonna 4</td>
+                <td>Riga 6, Colonna 5</td>
+                <td>Riga 6, Colonna 6</td>
+                <td>Riga 6, Colonna 7</td>
+                <td>Riga 6, Colonna 8</td>
+                <td>Riga 6, Colonna 9</td>
+            </tr>
+            <tr>
+                <td>Riga 7, Colonna 1</td>
+                <td>Riga 7, Colonna 2</td>
+                <td>Riga 7, Colonna 3</td>
+                <td>Riga 7, Colonna 4</td>
+                <td>Riga 7, Colonna 5</td>
+                <td>Riga 7, Colonna 6</td>
+                <td>Riga 7, Colonna 7</td>
+                <td>Riga 7, Colonna 8</td>
+                <td>Riga 7, Colonna 9</td>
+            </tr>
+            <tr>
+                <td>Riga 8, Colonna 1</td>
+                <td>Riga 8, Colonna 2</td>
+                <td>Riga 8, Colonna 3</td>
+                <td>Riga 8, Colonna 4</td>
+                <td>Riga 8, Colonna 5</td>
+                <td>Riga 8, Colonna 6</td>
+                <td>Riga 8, Colonna 7</td>
+                <td>Riga 8, Colonna 8</td>
+                <td>Riga 8, Colonna 9</td>
+            </tr>
         </table>
     </textarea>
     <br>
-    <table>
-     <colgroup span="2">
-        Dato
-    </colgroup>
-     <colgroup span="2">
-        Dato
-    </colgroup>
-     ...
+    <table class="table-border">
+        <colgroup id="A"> <!-- questo tag ha la larghezza settata a 75px e il colore dello sfondo a blu-->
+            <col id="A1">
+                <!-- in questo modo riusciamo a selezionare per i valori CSS la colonna 1; colore dello sfondo: aqua-->
+            <col span="2" id="A2">
+                <!-- in questo modo riusciamo a selezionare per i valori CSS le colonne 2 e 3, grazie allo span="2" -->
+            <col>
+                <!-- in questo modo occupiamo la colonna 4 i modo che non faccia parte del prossimo colgroup, inoltre avrà lo stile del suo genitore colgroup -->
+        </colgroup>
+        <colgroup id="B"> <!-- questo tag ha la larghezza settata a 200px-->
+            <col>
+            <col>
+            <col id="B1" span="2">
+        </colgroup>
+        <!-- l'ultima colonna non è influenzata da alcuno stile -->
+        <tr>
+            <th>Colonna 1</th>
+            <th>Colonna 2</th>
+            <th>Colonna 3</th>
+            <th>Colonna 4</th>
+            <th>Colonna 5</th>
+            <th>Colonna 6</th>
+            <th>Colonna 7</th>
+            <th>Colonna 8</th>
+            <th>Colonna 9</th>
+        </tr>
+        <tr>
+            <td>Riga 1, Colonna 1</td>
+            <td>Riga 1, Colonna 2</td>
+            <td>Riga 1, Colonna 3</td>
+            <td>Riga 1, Colonna 4</td>
+            <td>Riga 1, Colonna 5</td>
+            <td>Riga 1, Colonna 6</td>
+            <td>Riga 1, Colonna 7</td>
+            <td>Riga 1, Colonna 8</td>
+            <td>Riga 1, Colonna 9</td>
+        </tr>
+        <tr>
+            <td>Riga 2, Colonna 1</td>
+            <td>Riga 2, Colonna 2</td>
+            <td>Riga 2, Colonna 3</td>
+            <td>Riga 2, Colonna 4</td>
+            <td>Riga 2, Colonna 5</td>
+            <td>Riga 2, Colonna 6</td>
+            <td>Riga 2, Colonna 7</td>
+            <td>Riga 2, Colonna 8</td>
+            <td>Riga 2, Colonna 9</td>
+        </tr>
+        <tr>
+            <td>Riga 3, Colonna 1</td>
+            <td>Riga 3, Colonna 2</td>
+            <td>Riga 3, Colonna 3</td>
+            <td>Riga 3, Colonna 4</td>
+            <td>Riga 3, Colonna 5</td>
+            <td>Riga 3, Colonna 6</td>
+            <td>Riga 3, Colonna 7</td>
+            <td>Riga 3, Colonna 8</td>
+            <td>Riga 3, Colonna 9</td>
+        </tr>
+        <tr>
+            <td>Riga 4, Colonna 1</td>
+            <td>Riga 4, Colonna 2</td>
+            <td>Riga 4, Colonna 3</td>
+            <td>Riga 4, Colonna 4</td>
+            <td>Riga 4, Colonna 5</td>
+            <td>Riga 4, Colonna 6</td>
+            <td>Riga 4, Colonna 7</td>
+            <td>Riga 4, Colonna 8</td>
+            <td>Riga 4, Colonna 9</td>
+        </tr>
+        <tr>
+            <td>Riga 5, Colonna 1</td>
+            <td>Riga 5, Colonna 2</td>
+            <td>Riga 5, Colonna 3</td>
+            <td>Riga 5, Colonna 4</td>
+            <td>Riga 5, Colonna 5</td>
+            <td>Riga 5, Colonna 6</td>
+            <td>Riga 5, Colonna 7</td>
+            <td>Riga 5, Colonna 8</td>
+            <td>Riga 5, Colonna 9</td>
+        </tr>
+        <tr>
+            <td>Riga 6, Colonna 1</td>
+            <td>Riga 6, Colonna 2</td>
+            <td>Riga 6, Colonna 3</td>
+            <td>Riga 6, Colonna 4</td>
+            <td>Riga 6, Colonna 5</td>
+            <td>Riga 6, Colonna 6</td>
+            <td>Riga 6, Colonna 7</td>
+            <td>Riga 6, Colonna 8</td>
+            <td>Riga 6, Colonna 9</td>
+        </tr>
+        <tr>
+            <td>Riga 7, Colonna 1</td>
+            <td>Riga 7, Colonna 2</td>
+            <td>Riga 7, Colonna 3</td>
+            <td>Riga 7, Colonna 4</td>
+            <td>Riga 7, Colonna 5</td>
+            <td>Riga 7, Colonna 6</td>
+            <td>Riga 7, Colonna 7</td>
+            <td>Riga 7, Colonna 8</td>
+            <td>Riga 7, Colonna 9</td>
+        </tr>
+        <tr>
+            <td>Riga 8, Colonna 1</td>
+            <td>Riga 8, Colonna 2</td>
+            <td>Riga 8, Colonna 3</td>
+            <td>Riga 8, Colonna 4</td>
+            <td>Riga 8, Colonna 5</td>
+            <td>Riga 8, Colonna 6</td>
+            <td>Riga 8, Colonna 7</td>
+            <td>Riga 8, Colonna 8</td>
+            <td>Riga 8, Colonna 9</td>
+        </tr>
     </table>
     <p>
-        L'elemento opzionale `col` ti consente di fare riferimento a colonne individuali o a un intervallo di colonne senza applicare un raggruppamento logico. Gli elementi `col` sono opzionali, ma se presenti, devono trovarsi all'interno di un elemento `colgroup`.
+        Ricorda: in una tabella i colgroup non sostituiscono i tr e i th, per questo motivo non vanno mai omessi.
+        <br>
+        Una tabella del genere non avrebbe senso:
     </p>
-    <textarea cols="30" rows="10">
-        <table>
-            <colgroup>
-                <col id="MySpecialColumn" />
-                <col />
+    <textarea cols="50" rows="10">
+        <table class="table-border">
+            <colgroup span="2">
+                <col>
+                Dato
             </colgroup>
-            <colgroup>
-                <col class="CoolColumn" />
-                <col class="NeatColumn" span="2" />
+             <colgroup span="2">
+                Dato
             </colgroup>
-            ...
         </table>
     </textarea>
+
+
+
+    <h3>
+        Heading scope
+    </h3>
+    <p>
+        Il tag "th" indica il significato dei dati all'interno delle celle, ma quali? Possiamo sfruttare questo tag sia per le colonne sia per le righe impostando l'attributo scope che prevede 5 valori (stati):
+    </p>
     <ul>
-        Le seguenti stili CSS possono essere applicati agli elementi `colgroup` e `col`:
         <li>
-            `border`
+            scope="row" => L'header si riferisce ai valori sulla stessa riga
         </li>
         <li>
-            `background`
-        </li>
-        <li>width
+            scope="col" => L'header si riferisce ai valori sulla stessa colonna
         </li>
         <li>
-            visibility
+            scope="rowgroup" => L'header si riferisce a tutte le celle incluse nello stesso gruppo di righe del th (il valore non è ammesso se il th non appartiene a un gruppo di righe)
         </li>
         <li>
-            display (come in display: none)
-            <ul>
-                <li>
-                    `display: none;` rimuoverà effettivamente le colonne dalla visualizzazione, causando il rendering della tabella come se quelle celle non esistessero.
-                </li>
-            </ul>
+            scope="colgroup" => L'header si riferisce a tutte le celle incluse nello stesso gruppo di colonne del th (valido solo se th appartiene a un gruppo di colonne)
+        </li>
+        <li>
+            scope="auto" => se diamo come scope "auto" o se omettiamo lo scope, l'insieme di celle cui si applica il contenuto di th viene selezionato dal contesto.
         </li>
     </ul>
-
-    
-    <p>
-        ad esempio a <a href="pagine secondarie/a caso.html">questo link</a> c'è una tabella HTML
-    </p>
-    <br>
-    <br>
-    <table>                               <!--per creare una tabella usiamo il tag table, ma senza l'attributo border, non ci saranno bordi-->
-        <tr>                              <!--il tag tr sta per table row, e serve per creare una riga-->
-            <th>intestazione</th>            
-            <!--il tag th sta per table header, e contiene i titoli di ogni colonna della tabella-->
-            <!--di default il contenuto del tag th, è in grassetto ed è posizionato al centro della tabella, ma questo può essere cambiato con il CSS-->
-        </tr>
-        <tr>
-            <td>dato 1</td>            <!--il tag td sta per table data e raggruppa il contenuto della cella-->
-            <td>dato 2</td>
-        </tr>
-        <tr>
-            <td>dato 3</td>
-            <td>dato 4</td>
-            <td>dato 5</td>
-        </tr>
-    </table>
-    <!--le righe possono contenere diversi numero di colonne, lasciando spazi vuoti all'interno della tabella-->
-    <br>
-
-
-    <h2>TABELLA CON BORDI</h2>
-    <table border=1> <!--border è un attributo che decide lo spessore (numero di pixel) del bordo--> 
-        <caption>    <!--il tag caption è un tag facoltativo che ci permette di dare una contestualizzazione ai dati, per rendere più chiari i loro significati-->
-            questa è una tabella con i bordi
-        </caption>   <!--il tag caption ha come default il testo centrato, ma questo si può cambiare con il CSS-->
-
-
-        <thead>      <!--il tag thead è un tag facoltativo, che serve a raggruppare le righe che rappresentano l'intestazione-->
+    <textarea cols="60" rows="22">
+        <table class="table-border">
+            <thead>
+                <tr>
+                <td></td>
+                <th scope="col">Intestazione Colonna 1</th>
+                <th scope="col">Intestazione Colonna 2</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">Intestazione Riga 1</th>
+                    <td></td>
+                    <td></td>
+                    </tr>
+                <tr>
+                    <th scope="row">Intestazione Riga 2</th>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </textarea>
+    <table class="table-border">
+        <thead>
             <tr>
-                <th colspan="3" style="background-color: red;">intestazione</th>      <!--l'attributo colspan nei tag th e td fa espandere la tabella di tot colonne-->
-    </tr>                                                                               <!--l'attributo style serve per applicare il CSS (in futuro vedremo), in questo caso ho applicato il colore rosso alla cella-->
-        </thead>
-        <tbody>     <!--tbody è un tag facoltativo che serve a raggruppare le righe che contengono il corpo della tabella, con i dati che interessano-->
-            <tr>
-                <td>dato</td>
-                <td>dato</td>
-                <td>dato</td>
-            </tr>
-            <tr>
-                <td>dato</td>
-                <td>dato</td>
-                <td>dato</td>
-            </tr>
-        </tbody>
-        <tfoot>     <!--tfoot è un tag facoltativo che serve a raggruppare le righe finali di una tabella che fungono da footer, dove possono essere inseriti dati di riepilogo come somme, medie, ecc..-->
-            <tr>
-                <td colspan="3">footer della tabella</td>
-            </tr>
-        </tfoot>
-    </table>
-    <br>
-    <br>
-    <br>
-
-    ora vediamo dei tag che servono per raggruppare gli elementi e gestirli in CSS E Javascript
-    <br>
-    <br>
-    <table border=1>
-        <caption>   
-            Possiamo raggruppare le celle della tabella anche per colonna grazie al tag colgroup e col
-        </caption>   
-
-        <colgroup class="colgroup1" span="2" style="background-color: green;">        <!--l'attributo class lo vedremo più avanti e serve per il CSS. Va inserito sempre prima di scrivere il contenuto delle righe-->
-                                                                                        <!--l'attributo span decide quante colonne raggruppare il tag colgroup-->
-                                                                                        <!--in questo caso ho messo il colore verde alle prime 2 colonne-->
-        </colgroup>                                                                     <!--i tag colgroup raggruppano le colonne a partire da destra e le successive vanno progressivamente a sinistra-->
-        <colgroup class="colgroup2" style="background-color: brown;">                 <!--possiamo anche non mettere il tag span e invece inseriamo nel tag colgroup tov tag col-->
-            <col style="font-size: smaller;">
-            <col span="2">
-            <col span="3">
-            <col span="4">
-        </colgroup>
-
-        <thead>      
-            <tr>
-                <th colspan="12" style="background-color: red;">intestazione</th>      
+            <td></td>
+            <th scope="col">Intestazione Colonna 1</th>
+            <th scope="col">Intestazione Colonna 2</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td>dato</td>
-                <td>dato</td>
-                <td>dato</td>
-                <td>dato</td>
-                <td>dato</td>
-                <td>dato</td>
-                <td>dato</td>
-                <td>dato</td>
-                <td>dato</td>
-                <td>dato</td>
-                <td>dato</td>
-                <td>dato</td>
-            </tr>
+                <th scope="row">Intestazione Riga 1</th>
+                <td></td>
+                <td></td>
+                </tr>
             <tr>
-                <td>dato</td>
-                <td>dato</td>
-                <td>dato</td>
-                <td>dato</td>
-                <td>dato</td>
-                <td>dato</td>
-                <td>dato</td>
-                <td>dato</td>
-                <td>dato</td>
-                <td>dato</td>
-                <td>dato</td>
-                <td>dato</td>
-            </tr>
-            <tr>
-                <td>dato</td>
-                <td>dato</td>
-                <td>dato</td>
-                <td>dato</td>
-                <td>dato</td>
-                <td>dato</td>
-                <td>dato</td>
-                <td>dato</td>
-                <td>dato</td>
-                <td>dato</td>
-                <td>dato</td>
-                <td>dato</td>
+                <th scope="row">Intestazione Riga 2</th>
+                <td></td>
+                <td></td>
             </tr>
         </tbody>
-        <tfoot>
-            <tr>
-                <td colspan="12">footer della tabella</td>
-            </tr>
-        </tfoot>
     </table>
-    da approfondire <a target="-blank" href="https://www.html.it/pag/16055/tabella-struttura-di-base/">qui</a>
     <br>
-    <br>
-    dopo aver fatto il CSS vedi pure questa tabella: <a href="TABELLE HTML CON CSS.html">Qui</a> 
+    dopo aver fatto il CSS vedi pure questa tabella: <a href="TABELLE HTML CON CSS.html">Qui</a>
+
+
+    <hr>
+    <h2>
+        ATTRIBUTI PERSONALIZZATI O DATA ATTRIBUTES
+    </h2>
+    <p>
+        Inoltre esistono gli attributi personalizzabili, detti anche attributi data, che sono attributi HTML definiti dall'utente che non sono standard secondo le specifiche HTML ufficiali, ma sono utilizzati per archiviare dati personalizzati o per scopi specifici all'interno degli elementi HTML. Questi attributi iniziano con il prefisso "data-", seguito da un nome che può essere scelto liberamente dallo sviluppatore.
+    </p>
+    <p>
+        Gli attributi personalizzati sono molto utili quando vuoi associare dati aggiuntivi a elementi HTML senza doverli utilizzare per il comportamento o la presentazione predefiniti del browser. Questo può essere particolarmente utile quando si lavora con scripting JavaScript o quando si desidera memorizzare metadati aggiuntivi.
+        <br>
+        Ecco un esempio di come potresti utilizzare un attributo personalizzato:
+    </p>
+    <button data-action="submit-form">
+        Invia il modulo
+    </button>
+    <p>
+        In questo esempio, l'attributo personalizzato data-action è stato aggiunto a un pulsante. Questo attributo non ha alcun significato intrinseco per il browser, ma può essere utilizzato dal tuo script JavaScript per determinare quale azione eseguire quando il pulsante viene cliccato.
+    </p>
+    <p>
+        Nell'ambito del CSS, gli attributi personalizzati possono anche essere utilizzati in combinazione con i selettori di attributi per applicare stili specifici a elementi con attributi dati specifici:
+        <br>
+        Ricorda che, mentre gli attributi personalizzati sono ampiamente supportati nei moderni browser e possono essere molto utili, è importante utilizzarli con coerenza e con un significato chiaro, in modo che il codice rimanga leggibile e mantenibile nel tempo.
+    </p>
+
+
+    <h2>
+        COLLEGAMENTO DI RISORSE
+    </h2>
+    <p>
+        Mentre molti script, icone e fogli di stile possono essere inseriti direttamente nel markup HTML, è una pratica consigliata e più efficiente includere queste risorse in un proprio file e collegarle al tuo documento. Questo argomento tratta del collegamento di risorse esterne, come fogli di stile e script, in un documento HTML.
+    </p>
+
+Dettagli degli Attributi
+**charset** Specifica la codifica dei caratteri del documento collegato
+**crossorigin** Specifica come l'elemento gestisce le richieste cross-origin
+**href** Specifica la posizione del documento collegato
+**hreflang** Specifica la lingua del testo nel documento collegato
+**media** Specifica su quale dispositivo verrà visualizzato il documento collegato, spesso usato per selezionare fogli di stile in base al dispositivo in questione
+**rel** Richiesto. Specifica la relazione tra il documento corrente e il documento collegato
+**rev** Specifica la relazione tra il documento collegato e il documento corrente
+**sizes** Specifica le dimensioni della risorsa collegata. Solo quando rel="icon"
+**target** Specifica dove verrà caricato il documento collegato
+**type** Specifica il tipo di media del documento collegato
+**integrity** Specifica un hash codificato in base64 (sha256, sha384 o sha512) della risorsa collegata, consentendo al browser di verificarne la legittimità.
+**Sezione 12.1: JavaScript**
+Sincrono
+```html
+<script src="percorso/verso.js"></script>
+```
+La pratica standard è posizionare gli elementi `<script>` JavaScript appena prima del tag di chiusura `/body>`. Caricare gli script per ultimi consente ai tuoi elementi visivi del sito di apparire più velocemente e scoraggia il tuo JavaScript dall'interagire con elementi che non sono ancora stati caricati.
+
+Asincrono
+```html
+<script src="percorso/verso.js" async></script>
+```
+Un'altra alternativa, quando il codice JavaScript che viene caricato non è necessario per l'inizializzazione della pagina, è caricarlo in modo asincrono, velocizzando il caricamento della pagina. Utilizzando `async`, il browser caricherà il contenuto dello script in parallelo e, una volta che è completamente scaricato, interromperà l'analisi HTML per analizzare il file JavaScript.
+
+Rinviato (Deferred)
+```html
+<script src="percorso/verso.js" defer></script>
+```
+Gli script rinviati sono simili agli script asincroni, con la differenza che l'analisi verrà eseguita solo una volta che l'HTML è completamente analizzato. Gli script rinviati sono garantiti di essere caricati nell'ordine della dichiarazione, allo stesso modo degli script sincroni.
+
+<noscript>
+```html
+<noscript>JavaScript disabilitato</noscript>
+```
+L'elemento `<noscript>` definisce il contenuto da visualizzare se l'utente ha i JavaScript disabilitati o se il browser non supporta l'uso degli script. L'elemento `<noscript>` può essere collocato sia nell'`<head>` che nel `<body>`.
 
 
 
@@ -1511,29 +1824,7 @@
     <a href="http://wa.me/393291899607">
         <img src="https://i.ibb.co/kh2C1Rk/STK-20220112-WA0033.webp" alt="STK-20220112-WA0033" border="0">
     </a>
-    <h2>
-        Attributi personalizzabili
-    </h2>
-    <p>
-        Inoltre esistono gli attributi personalizzabili, detti anche attributi data, che sono attributi HTML definiti dall'utente che non sono standard secondo le specifiche HTML ufficiali, ma sono utilizzati per archiviare dati personalizzati o per scopi specifici all'interno degli elementi HTML. Questi attributi iniziano con il prefisso "data-", seguito da un nome che può essere scelto liberamente dallo sviluppatore.
-    </p>
-    <p>
-        Gli attributi personalizzati sono molto utili quando vuoi associare dati aggiuntivi a elementi HTML senza doverli utilizzare per il comportamento o la presentazione predefiniti del browser. Questo può essere particolarmente utile quando si lavora con scripting JavaScript o quando si desidera memorizzare metadati aggiuntivi.
-        <br>
-        Ecco un esempio di come potresti utilizzare un attributo personalizzato:
-    </p>
-    <button data-action="submit-form">
-        Invia il modulo
-    </button>
-    <p>
-        In questo esempio, l'attributo personalizzato data-action è stato aggiunto a un pulsante. Questo attributo non ha alcun significato intrinseco per il browser, ma può essere utilizzato dal tuo script JavaScript per determinare quale azione eseguire quando il pulsante viene cliccato.
-    </p>
-    <p>
-        Nell'ambito del CSS, gli attributi personalizzati possono anche essere utilizzati in combinazione con i selettori di attributi per applicare stili specifici a elementi con attributi dati specifici:
-        <br>
-        Ricorda che, mentre gli attributi personalizzati sono ampiamente supportati nei moderni browser e possono essere molto utili, è importante utilizzarli con coerenza e con un significato chiaro, in modo che il codice rimanga leggibile e mantenibile nel tempo.
-    </p>
-        
+    
     <h3>Questo é un esempio di inserimento testo! Inoltre ci sono anche vari attributi</h3>
     <form>
         <input type="text" name="email" placeholder="Qui devi scrivere COGLIONE!">
@@ -1745,6 +2036,8 @@ ti sono solo alcuni degli attributi che puoi utilizzare con il tag `input`. La s
     <br>
     
     
+    
+    <hr>
     <h2>tag semantici</h2>
     <p>
         la maggior parte dei file semantici non modificano l'aspetto della pagina, ma possono essere utili per le CSS rule 
@@ -1823,6 +2116,8 @@ ti sono solo alcuni degli attributi che puoi utilizzare con il tag `input`. La s
     <br>
     <br>
     <br>
+    
+    <hr>
     <h2>ACCESSIBILITÀ HTML</h2>
     <p>
         Per rendere accessibile le pagine web al maggior numero di utenti, dobbiamo ricordarci tecnologie di assistenza. Queste tecnologie sono usate da utenti con diversi dispositivi o con una connessione lenta, oppure con disabilità. Alcune di queste tecnologie di assistenza sono lettori di schermo (per i ciechi), dispositivi di zoom, ecc... Un modo per aiutare queste tecnologie, e quindi questi utenti, è usare un codice semantico HTML: al posto di usare i generici div e span, che non hanno alcun contesto, possiamo usare i tag semantici, come "h1" "ul" o "p". Infatti tramite questi tag semantici il lettore di schermo riesce a interpretare meglio gli elementi HTML.
