@@ -12,7 +12,7 @@
 </head>
 <body>
     <h1>
-        Se scrivi alcune parole nel form input, verrà mostrato una foto
+        Se scrivi alcune parole nel form input, verrà mostrata una foto
     </h1>
     <input type="text">
     <br>
@@ -40,6 +40,12 @@
                 mare.src = "media/mare.jpg";
                 mare.classList.add("foto")
                 document.body.appendChild(mare);
+            }
+            if (input.value === "Taormina" || input.value === "taormina") {
+                const Taormina = document.createElement("img");
+                Taormina.src = "media/Taormina.jpg";
+                Taormina.classList.add("foto")
+                document.body.appendChild(Taormina);
             }
         }
         const bottone = document.querySelector("button");

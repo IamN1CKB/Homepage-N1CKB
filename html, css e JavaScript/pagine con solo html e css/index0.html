@@ -1765,43 +1765,92 @@
     <p>
         Mentre molti script, icone e fogli di stile possono essere inseriti direttamente nel markup HTML, è una pratica consigliata e più efficiente includere queste risorse in un proprio file e collegarle al tuo documento. Questo argomento tratta del collegamento di risorse esterne, come fogli di stile e script, in un documento HTML.
     </p>
+    <ul>
+        Dettagli degli Attributi
+        <li>
+            charset: Specifica la codifica dei caratteri del documento collegato
+        </li>
+        <li>
+            crossorigin: Specifica come l'elemento gestisce le richieste cross-origin
+        </li>
+        <li>
+            href: Specifica la posizione del documento collegato
+        </li>
+        <li>
+            hreflang: Specifica la lingua del testo nel documento collegato
+        </li>
+        <li>
+            media: Specifica su quale dispositivo verrà visualizzato il documento collegato, spesso usato per selezionare fogli di stile in base al dispositivo in questione
+        </li>
+        <li>
+            rel: Richiesto. Specifica la relazione tra il documento corrente e il documento collegato
+        </li>
+        <li>
+            rev: Specifica la relazione tra il documento collegato e il documento corrente
+        </li>
+        <li>
+            sizes: Specifica le dimensioni della risorsa collegata. Solo quando rel="icon"
+        </li>
+        <li>
+            target: Specifica dove verrà caricato il documento collegato
+        </li>
+        <li>
+            type: Specifica il tipo di media del documento collegato
+        </li>
+        <li>
+            integrity: Specifica un hash codificato in base64 (sha256, sha384 o sha512) della risorsa collegata, consentendo al browser di verificarne la legittimità.
+        </li>
+    </ul>
+    <h3>
+        JavaScript
+    </h3>
+    <ul>
+        Si può linkare un file JavaScript in diversi modi:
+        <li>
+            Sincrono
+            <br>
+            <textarea cols="60" rows="2">
+                <script src="percorso/verso.js"></script>
+            </textarea>
+            <p>
+                La pratica standard è posizionare gli elementi `&lt;script>` JavaScript appena prima del tag di chiusura `&lt;/body>`. Caricare gli script per ultimi consente ai tuoi elementi visivi del sito di apparire più velocemente e scoraggia il tuo JavaScript dall'interagire con elementi che non sono ancora stati caricati.
+            </p>
+        </li>
+        <li>
+            Asincrono
+            <br>
+            <textarea cols="70" rows="2">
+                <script src="percorso/verso.js" async></script>
+            </textarea>
+            <p>
+                Un'altra alternativa, quando il codice JavaScript che viene caricato non è necessario per l'inizializzazione della pagina, è caricarlo in modo asincrono, velocizzando il caricamento della pagina. Utilizzando `async`, il browser caricherà il contenuto dello script in parallelo e, una volta che è completamente scaricato, interromperà l'analisi HTML per analizzare il file JavaScript.
+            </p>
+        </li>
+        <li>
+            Rinviato (Deferred)
+            <br>
+            <textarea cols="70" rows="2">
+                <script src="percorso/verso.js" defer></script>
+            </textarea>
+            <p>
+                Gli script rinviati sono simili agli script asincroni, con la differenza che l'analisi verrà eseguita solo una volta che l'HTML è completamente analizzato. Gli script rinviati sono garantiti di essere caricati nell'ordine della dichiarazione, allo stesso modo degli script sincroni.
+            </p>
+        </li>
+        <li>
+            &lt;noscript>
+            <br>
+            <textarea cols="60" rows="2">
+                <noscript>JavaScript disabilitato</noscript> 
+            </textarea>
+            <p>
+                L'elemento `&lt;noscript>` definisce il contenuto da visualizzare se l'utente ha i JavaScript disabilitati o se il browser non supporta l'uso degli script. L'elemento `&lt;noscript>` può essere collocato sia nell'`&lt;head>` che nel `&lt;body>`.
+            </p>
+        </li>
+    </ul>
 
-Dettagli degli Attributi
-**charset** Specifica la codifica dei caratteri del documento collegato
-**crossorigin** Specifica come l'elemento gestisce le richieste cross-origin
-**href** Specifica la posizione del documento collegato
-**hreflang** Specifica la lingua del testo nel documento collegato
-**media** Specifica su quale dispositivo verrà visualizzato il documento collegato, spesso usato per selezionare fogli di stile in base al dispositivo in questione
-**rel** Richiesto. Specifica la relazione tra il documento corrente e il documento collegato
-**rev** Specifica la relazione tra il documento collegato e il documento corrente
-**sizes** Specifica le dimensioni della risorsa collegata. Solo quando rel="icon"
-**target** Specifica dove verrà caricato il documento collegato
-**type** Specifica il tipo di media del documento collegato
-**integrity** Specifica un hash codificato in base64 (sha256, sha384 o sha512) della risorsa collegata, consentendo al browser di verificarne la legittimità.
-**Sezione 12.1: JavaScript**
-Sincrono
-```html
-<script src="percorso/verso.js"></script>
-```
-La pratica standard è posizionare gli elementi `<script>` JavaScript appena prima del tag di chiusura `/body>`. Caricare gli script per ultimi consente ai tuoi elementi visivi del sito di apparire più velocemente e scoraggia il tuo JavaScript dall'interagire con elementi che non sono ancora stati caricati.
-
-Asincrono
-```html
-<script src="percorso/verso.js" async></script>
-```
-Un'altra alternativa, quando il codice JavaScript che viene caricato non è necessario per l'inizializzazione della pagina, è caricarlo in modo asincrono, velocizzando il caricamento della pagina. Utilizzando `async`, il browser caricherà il contenuto dello script in parallelo e, una volta che è completamente scaricato, interromperà l'analisi HTML per analizzare il file JavaScript.
-
-Rinviato (Deferred)
-```html
-<script src="percorso/verso.js" defer></script>
-```
-Gli script rinviati sono simili agli script asincroni, con la differenza che l'analisi verrà eseguita solo una volta che l'HTML è completamente analizzato. Gli script rinviati sono garantiti di essere caricati nell'ordine della dichiarazione, allo stesso modo degli script sincroni.
-
-<noscript>
-```html
-<noscript>JavaScript disabilitato</noscript>
-```
-L'elemento `<noscript>` definisce il contenuto da visualizzare se l'utente ha i JavaScript disabilitati o se il browser non supporta l'uso degli script. L'elemento `<noscript>` può essere collocato sia nell'`<head>` che nel `<body>`.
+    <h3>
+        
+    </h3>
 
 
 
