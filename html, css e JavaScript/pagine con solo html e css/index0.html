@@ -7,8 +7,14 @@
             Esempio di file HTML  
         </title>
         <style>
+            h1, h2 {
+                text-transform: uppercase;
+            }
             textarea {
                 resize: none;
+            }
+            details {
+                border: solid 1px;
             }
             .table-border, .table-border td, .table-border th {
                     border: solid 1px;
@@ -317,19 +323,23 @@
         <sub>testo in apice</sub>: esempio=> base<sub>apice</sub> => F<sub>1</sub>
     </p>
     <ul>
-        Alcuni tag sembrano non avere differenze, ma in realtà c'è una differenza semantica.
-        <li>
-            "b" e "strong": "strong" viene utilizzato per indicare che il testo è fondamentalmente o semanticamente importante rispetto al testo circostante, mentre "b" non indica tale importanza e rappresenta semplicemente del testo che dovrebbe essere reso in grassetto.
-        </li>
-        <li>
-            "i" e "em": "em" viene utilizzato per indicare che il testo dovrebbe avere un'enfasi aggiuntiva che deve essere evidenziata, mentre "i" rappresenta semplicemente del testo che dovrebbe essere separato dal testo normale circostante.
-        </li>
-        <li>
-            "u" e "ins": "u" viene usato per sottolineare del testo e dargli importanza. "ins" viene usato per evidenziare del testo recentemente inserito (utile nei lavori di gruppo su siti web)
-        </li>
-        <li>
-            "del" e "s": "s" viene usato per barrare un testo e dargli meno importanza. "del" viene usato per evidenziare del testo recentemente eliminato (utile nei lavori di gruppo su siti web)
-        </li>
+        <details>
+            <summary>
+                Alcuni tag sembrano non avere differenze, ma in realtà c'è una differenza semantica.
+            </summary>
+            <li>
+                "b" e "strong": "strong" viene utilizzato per indicare che il testo è fondamentalmente o semanticamente importante rispetto al testo circostante, mentre "b" non indica tale importanza e rappresenta semplicemente del testo che dovrebbe essere reso in grassetto.
+            </li>
+            <li>
+                "i" e "em": "em" viene utilizzato per indicare che il testo dovrebbe avere un'enfasi aggiuntiva che deve essere evidenziata, mentre "i" rappresenta semplicemente del testo che dovrebbe essere separato dal testo normale circostante.
+            </li>
+            <li>
+                "u" e "ins": "u" viene usato per sottolineare del testo e dargli importanza. "ins" viene usato per evidenziare del testo recentemente inserito (utile nei lavori di gruppo su siti web)
+            </li>
+            <li>
+                "del" e "s": "s" viene usato per barrare un testo e dargli meno importanza. "del" viene usato per evidenziare del testo recentemente eliminato (utile nei lavori di gruppo su siti web)
+            </li>
+        </details>
     </ul>
 
     
@@ -503,88 +513,92 @@
         <br>
         <li>
             target: Specifica dove aprire il collegamento, ad esempio in una nuova scheda o finestra. I valori possibili sono _blank, _self, _parent, _top e nome del frame (deprecato, ossia indica che è considerato obsoleto, non ottimale o non raccomandato per l'uso futuro.). L'uso di questo attributo potrebbe danneggiare la sicurezza del sito, 
-            <ul>
-                Vediamo il significato dei vari valori
-                <li>
-                    _self: Questo è il valore predefinito. Quando un utente fa clic sul collegamento, la nuova risorsa viene aperta nello stesso tab o finestra in cui si trova la pagina corrente.
-                </li>
-                <br>
-                <li>
-                    _blank: Quando un utente fa clic sul collegamento, la nuova risorsa viene aperta in una nuova finestra o tab del browser.
+            <details>
+                <summary>
+                    Vediamo il significato dei vari valori e il significato di Frame e iFrame
+                </summary>
+                <ul>
+                    <li>
+                        _self: Questo è il valore predefinito. Quando un utente fa clic sul collegamento, la nuova risorsa viene aperta nello stesso tab o finestra in cui si trova la pagina corrente.
+                    </li>
                     <br>
-                    <strong>Pericolo di sicurezza</strong>: Utilizzare `target="_blank"` concede al sito che ha aperto la finestra un accesso parziale all'oggetto `window.opener` tramite JavaScript, consentendo a quella pagina di accedere e modificare `window.opener.location` della tua pagina e potenzialmente reindirizzare gli utenti a siti dannosi o di phishing.
-                    <br>
-                    Ogni volta che utilizzi questa opzione per pagine che non controlli, aggiungi `rel="noopener"` al tuo collegamento per impedire che l'oggetto `window.opener` venga inviato con la richiesta.
-                    <br>
-                    Attualmente, Firefox non supporta `noopener`, quindi dovrai utilizzare `rel="noopener noreferrer"` per ottenere il massimo effetto.
-                    <br>
-                    <textarea cols="130" rows="4">
+                    <li>
+                        _blank: Quando un utente fa clic sul collegamento, la nuova risorsa viene aperta in una nuova finestra o tab del browser.
+                        <br>
+                        <strong>Pericolo di sicurezza</strong>: Utilizzare `target="_blank"` concede al sito che ha aperto la finestra un accesso parziale all'oggetto `window.opener` tramite JavaScript, consentendo a quella pagina di accedere e modificare `window.opener.location` della tua pagina e potenzialmente reindirizzare gli utenti a siti dannosi o di phishing.
+                        <br>
+                        Ogni volta che utilizzi questa opzione per pagine che non controlli, aggiungi `rel="noopener"` al tuo collegamento per impedire che l'oggetto `window.opener` venga inviato con la richiesta.
+                        <br>
+                        Attualmente, Firefox non supporta `noopener`, quindi dovrai utilizzare `rel="noopener noreferrer"` per ottenere il massimo effetto.
+                        <br>
+                        <textarea cols="130" rows="4">
+                            <a href="https://www.treccani.it/" target="_blank" >link non sicuro a Treccani</a>
+                            <br>
+                            <a href="https://www.treccani.it/" target="_blank" rel="noopener noreferrer">link sicuro a Treccani</a>
+                        </textarea>
+                        <br>
                         <a href="https://www.treccani.it/" target="_blank" >link non sicuro a Treccani</a>
                         <br>
                         <a href="https://www.treccani.it/" target="_blank" rel="noopener noreferrer">link sicuro a Treccani</a>
-                    </textarea>
+                        <br>
+                        Se Treccani fosse stato un sito non sicuro, con il primo caso avrebbe avuto accesso a un oggetto importante JavaScript (window.opener)
+                    </li>
                     <br>
-                    <a href="https://www.treccani.it/" target="_blank" >link non sicuro a Treccani</a>
+                    <li>
+                        _parent: Se la pagina corrente è all'interno di un frame o di un iframe, la nuova risorsa verrà aperta nel frame genitore, se disponibile. Se la pagina non è all'interno di un frame, questo comportamento sarà simile all'apertura nel contesto _self.
+                    </li>
                     <br>
-                    <a href="https://www.treccani.it/" target="_blank" rel="noopener noreferrer">link sicuro a Treccani</a>
+                    <li>
+                        _top: Se la pagina corrente è all'interno di un frame o di un iframe, la nuova risorsa verrà aperta nella finestra principale del browser, sostituendo tutti i frame. Se la pagina non è all'interno di un frame, questo comportamento sarà simile all'apertura nel contesto _self.
+                    </li>
                     <br>
-                    Se Treccani fosse stato un sito non sicuro, con il primo caso avrebbe avuto accesso a un oggetto importante JavaScript (window.opener)
-                </li>
-                <br>
-                <li>
-                    _parent: Se la pagina corrente è all'interno di un frame o di un iframe, la nuova risorsa verrà aperta nel frame genitore, se disponibile. Se la pagina non è all'interno di un frame, questo comportamento sarà simile all'apertura nel contesto _self.
-                </li>
-                <br>
-                <li>
-                    _top: Se la pagina corrente è all'interno di un frame o di un iframe, la nuova risorsa verrà aperta nella finestra principale del browser, sostituendo tutti i frame. Se la pagina non è all'interno di un frame, questo comportamento sarà simile all'apertura nel contesto _self.
-                </li>
-                <br>
-                <li>
-                    nome del frame: È possibile specificare il nome di un frame o di un iframe esistente come valore per l'attributo target. In questo caso, la nuova risorsa verrà aperta nel frame specificato. Quest'opzione non è molto sicura.
-                </li>
-            </ul>
+                    <li>
+                        nome del frame: È possibile specificare il nome di un frame o di un iframe esistente come valore per l'attributo target. In questo caso, la nuova risorsa verrà aperta nel frame specificato. Quest'opzione non è molto sicura.
+                    </li>
+                </ul>
+                <h3>
+                    Frame e iFrame
+                </h3>
+                <p>
+                    Dopo aver capito questo, vediamo di preciso cos'è un frame.
+                    <br>
+                    I frame e gli iframe sono entrambi elementi in HTML utilizzati per suddividere una pagina web in diverse sezioni o aree che possono contenere contenuti diversi. Tuttavia, hanno scopi e utilizzi leggermente diversi:
+                </p>
+                <ul>
+                    <li>
+                        Frame:
+                        <br>
+                        I frame sono stati introdotti nelle prime versioni di HTML e sono stati utilizzati per creare layout complessi suddividendo una pagina in più sezioni rettangolari, ciascuna delle quali può contenere un documento HTML separato. I frame consentono agli sviluppatori di visualizzare più documenti HTML in una singola pagina web, dividendo l'area di visualizzazione in più parti. Tuttavia, a causa di problemi di usabilità, di accessibilità e di difficoltà nel gestire i contenuti, l'uso dei frame è ampiamente sconsigliato e non è supportato in HTML5.
+                        <br>
+                        Esempio di utilizzo dei frame (sconsigliato):
+                        <br>
+                        <textarea cols="60" rows="5">
+                            <frameset cols="25%,75%">
+                              <frame src="menu.html">
+                              <frame src="contenuto.html">
+                            </frameset>
+                        </textarea>
+                    </li>
+                    <li>
+                        iFrame (Inline Frame):
+                        <br>
+                        Gli iframe, d'altra parte, sono un elemento più moderno e flessibile introdotto con HTML 4.0. Gli iframe sono utilizzati per incorporare un documento HTML all'interno di un altro documento HTML. Possono essere utili per incorporare contenuti di terze parti come video, mappe, widget o qualsiasi altra risorsa Web all'interno di una pagina.
+                        <br>
+                        Gli iframe sono molto più flessibili rispetto ai frame tradizionali, ma possono ancora presentare sfide per l'accessibilità, la sicurezza e il layout responsivo. Gli sviluppatori dovrebbero prestare attenzione all'uso degli iframe e considerare le migliori pratiche per garantire un'esperienza utente positiva.
+                        <br>
+                        Esempio di utilizzo di un iframe:
+                        <br>
+                        <textarea name="" id="" cols="90" rows="2">
+                            <iframe src="contenuto.html" width="500" height="300"></iframe>
+                        </textarea>
+                    </li>
+                </ul>
+                <p>
+                    In generale, è preferibile evitare l'uso dei frame e degli iframe, specialmente quando ci sono alternative più moderne come l'utilizzo di CSS per la disposizione dei layout, l'uso di componenti di inclusione come Server-Side Includes (SSI) o lo sviluppo di applicazioni Web più interattive utilizzando tecnologie front-end come JavaScript e Ajax.
+                </p>
+            </details>
         </li>
     </ul>
-    <h3>
-        Frame e Iframe
-    </h3>
-    <p>
-        Dopo aver capito questo, vediamo di preciso cos'è un frame.
-        <br>
-        I frame e gli iframe sono entrambi elementi in HTML utilizzati per suddividere una pagina web in diverse sezioni o aree che possono contenere contenuti diversi. Tuttavia, hanno scopi e utilizzi leggermente diversi:
-    </p>
-    <ul>
-        <li>
-            Frame:
-            <br>
-            I frame sono stati introdotti nelle prime versioni di HTML e sono stati utilizzati per creare layout complessi suddividendo una pagina in più sezioni rettangolari, ciascuna delle quali può contenere un documento HTML separato. I frame consentono agli sviluppatori di visualizzare più documenti HTML in una singola pagina web, dividendo l'area di visualizzazione in più parti. Tuttavia, a causa di problemi di usabilità, di accessibilità e di difficoltà nel gestire i contenuti, l'uso dei frame è ampiamente sconsigliato e non è supportato in HTML5.
-            <br>
-            Esempio di utilizzo dei frame (sconsigliato):
-            <br>
-            <textarea cols="60" rows="5">
-                <frameset cols="25%,75%">
-                  <frame src="menu.html">
-                  <frame src="contenuto.html">
-                </frameset>
-            </textarea>
-        </li>
-        <li>
-            iFrame (Inline Frame):
-            <br>
-            Gli iframe, d'altra parte, sono un elemento più moderno e flessibile introdotto con HTML 4.0. Gli iframe sono utilizzati per incorporare un documento HTML all'interno di un altro documento HTML. Possono essere utili per incorporare contenuti di terze parti come video, mappe, widget o qualsiasi altra risorsa Web all'interno di una pagina.
-            <br>
-            Gli iframe sono molto più flessibili rispetto ai frame tradizionali, ma possono ancora presentare sfide per l'accessibilità, la sicurezza e il layout responsivo. Gli sviluppatori dovrebbero prestare attenzione all'uso degli iframe e considerare le migliori pratiche per garantire un'esperienza utente positiva.
-            <br>
-            Esempio di utilizzo di un iframe:
-            <br>
-            <textarea name="" id="" cols="90" rows="2">
-                <iframe src="contenuto.html" width="500" height="300"></iframe>
-            </textarea>
-        </li>
-    </ul>
-    <p>
-        In generale, è preferibile evitare l'uso dei frame e degli iframe, specialmente quando ci sono alternative più moderne come l'utilizzo di CSS per la disposizione dei layout, l'uso di componenti di inclusione come Server-Side Includes (SSI) o lo sviluppo di applicazioni Web più interattive utilizzando tecnologie front-end come JavaScript e Ajax.
-    </p>
         
     
     <h3>
@@ -596,66 +610,71 @@
         I percorsi assoluti e relativi sono termini utilizzati per descrivere come le risorse, come file o URL, vengono riferite e localizzate all'interno di un sistema di file o di un contesto web. Sia i percorsi assoluti che quelli relativi sono utilizzati per individuare la posizione di una risorsa all'interno di una struttura di directory.
     </p>
     <ul>
-        <li>
-            <p>
-                PERCORSO ASSOLUTO:
-                Un percorso assoluto specifica il percorso completo di una risorsa dall'inizio della gerarchia di directory o dalla radice del dominio web. In un sistema di file, il percorso assoluto includerebbe ogni directory nella gerarchia, dall'unità o dalla radice in cui si trova il file fino alla posizione del file stesso. In un contesto web, il percorso assoluto sarebbe l'URL completo, comprensivo del protocollo (http, https) e del dominio.
-            </p>      
-            <p>
-                Esempio di percorso assoluto in un sistema di file:
-                <i>
-                    C:\Documenti\Progetto\index.html
-                </i>
+        <details>
+            <summary>
+                Vediamo come usare i percorsi assoluti e relativi
+            </summary>
+            <li>
+                <p>
+                    PERCORSO ASSOLUTO:
+                    Un percorso assoluto specifica il percorso completo di una risorsa dall'inizio della gerarchia di directory o dalla radice del dominio web. In un sistema di file, il percorso assoluto includerebbe ogni directory nella gerarchia, dall'unità o dalla radice in cui si trova il file fino alla posizione del file stesso. In un contesto web, il percorso assoluto sarebbe l'URL completo, comprensivo del protocollo (http, https) e del dominio.
+                </p>      
+                <p>
+                    Esempio di percorso assoluto in un sistema di file:
+                    <i>
+                        C:\Documenti\Progetto\index.html
+                    </i>
+                    <br>
+                    Esempio di percorso assoluto in un contesto web: 
+                    <i>
+                        https://www.example.com/pagine/index.html
+                    </i>
+                    
+                </p>
+            </li>
+            <li>
+                PERCORSO RELATIVO:
+                Un percorso relativo, d'altra parte, specifica la posizione di una risorsa in relazione alla posizione del file o dell'URL di riferimento. In altre parole, un percorso relativo indica come raggiungere una risorsa partendo dalla posizione attuale. I percorsi relativi sono spesso utilizzati quando si fa riferimento a risorse all'interno della stessa directory o delle sue sottodirectory.
                 <br>
-                Esempio di percorso assoluto in un contesto web: 
-                <i>
-                    https://www.example.com/pagine/index.html
-                </i>
-                
-            </p>
-        </li>
-        <li>
-            PERCORSO RELATIVO:
-            Un percorso relativo, d'altra parte, specifica la posizione di una risorsa in relazione alla posizione del file o dell'URL di riferimento. In altre parole, un percorso relativo indica come raggiungere una risorsa partendo dalla posizione attuale. I percorsi relativi sono spesso utilizzati quando si fa riferimento a risorse all'interno della stessa directory o delle sue sottodirectory.
-            <br>
-            Ci sono 3 casi per i percorsi relativi: 
-            <ul>
-                <li>
-                    Percorso Relativo Senza Cambiamenti di Directory:
+                Ci sono 3 casi per i percorsi relativi: 
+                <ul>
+                    <li>
+                        Percorso Relativo Senza Cambiamenti di Directory:
+                        <br>
+                        In questo caso, il percorso relativo specifica semplicemente il nome del file o della risorsa da raggiungere, senza dover cambiare alcuna directory.
+                        Esempio:
+                        <br>
+                        <i>href="filedellastessacartella.html"</i>
+                    </li>
                     <br>
-                    In questo caso, il percorso relativo specifica semplicemente il nome del file o della risorsa da raggiungere, senza dover cambiare alcuna directory.
-                    Esempio:
+                    <li>
+                        il caso in cui i file partono da una directory superiore fino ad arrivare a quella inferiore
+                        <br>
+                        dobbiamo usare la sintassi
+                        <br>
+                        <i>href="prima sottocartella/seconda sottocartella/altre sottocartelle/file da collegare.html"</i>
+                        <br>
+                        <img src="media/percorso1.jpg">
+                        <br>
+                        in quest'esempio il valore di href per collegare il file interna.html sarebbe <i>href="prima/interna/interna.html"</i>
+                    </li>
                     <br>
-                    <i>href="filedellastessacartella.html"</i>
-                </li>
-                <br>
-                <li>
-                    il caso in cui i file partono da una directory superiore fino ad arrivare a quella inferiore
-                    <br>
-                    dobbiamo usare la sintassi
-                    <br>
-                    <i>href="prima sottocartella/seconda sottocartella/altre sottocartelle/file da collegare.html"</i>
-                    <br>
-                    <img src="media/percorso1.jpg">
-                    <br>
-                    in quest'esempio il valore di href per collegare il file interna.html sarebbe <i>href="prima/interna/interna.html"</i>
-                </li>
-                <br>
-                <li>
-                    il caso in cui i file partono da una directory inferiore fino ad arrivare a quella superiore
-                    <br>
-                    in questo caso la sintassi è tot 2 punti quanti sono i livelli da "scalare", separati da /, e poi il file da collegare:
-                    <br>
-                    <i>href="../file da collegare.html"</i>
-                    <br>
-                    in questo esempio salgo di 1 livello per collegare il file
-                    <br>
-                    <img src="media/percorso2.jpg">
-                    <br>
-                    nell'esempio della foto si deve salire di 2 livelli => <i>href="../../index.html"</i>
-                </li>
-            </ul>
-        </li>
+                    <li>
+                        il caso in cui i file partono da una directory inferiore fino ad arrivare a quella superiore
+                        <br>
+                        in questo caso la sintassi è tot 2 punti quanti sono i livelli da "scalare", separati da /, e poi il file da collegare:
+                        <br>
+                        <i>href="../file da collegare.html"</i>
+                        <br>
+                        in questo esempio salgo di 1 livello per collegare il file
+                        <br>
+                        <img src="media/percorso2.jpg">
+                        <br>
+                        nell'esempio della foto si deve salire di 2 livelli => <i>href="../../index.html"</i>
+                    </li>
+                </ul>
+            </li>
+        </details>
     </ul>
     <p>
         In definitiva, i percorsi assoluti sono completi e iniziano dalla radice, mentre i percorsi relativi sono basati sulla posizione attuale e possono includere cambiamenti di directory. I percorsi relativi sono spesso più flessibili e portabili, in quanto non dipendono dalla struttura completa del sistema di file o dell'URL. La scelta tra i due dipenderà dal contesto in cui si sta lavorando.
@@ -1849,31 +1868,400 @@
     </ul>
 
     <h3>
-        
+        Foglio di stile CSS Esterno
     </h3>
+    <textarea cols="80" rows="2">
+        <link rel="stylesheet" href="percorso/verso.css" type="text/css">
+    </textarea>
+    <p>
+        La pratica standard è collocare gli elementi `link` CSS all'interno del tag `head` all'inizio del tuo HTML. In questo modo, il CSS verrà caricato per primo e si applicherà alla tua pagina mentre si sta caricando, invece di mostrare HTML senza stile fino a quando il CSS non viene caricato. L'attributo `type` non è necessario in HTML5, poiché HTML5 supporta generalmente il CSS.
+    </p>
+    <p>
+        Questi 2 tag fanno la stessa cosa in HTML5.
+    </p>
+    <textarea cols="80" rows="3">
+        <link rel="stylesheet" href="percorso/verso.css" type="text/css">
+        <link rel="stylesheet" href="percorso/verso.css">
+    </textarea>
+    <p>
+        Un'altra pratica, sebbene meno comune, è utilizzare una dichiarazione @import all'interno del CSS diretto. Come questo:
+    </p>
+    <textarea cols="80" rows="4">
+        <style type="text/css">
+            @import url("percorso/verso.css");
+        </style>
+    </textarea>
+
+
+    <h3>
+        Favicon
+    </h3>
+    <p>
+        Un favicon è una piccola icona o immagine che viene associata a un sito web e visualizzata nella barra degli indirizzi del browser, accanto al titolo della pagina o all'URL. L'immagine del favicon può essere in diversi formati come ICO (formato icona di Windows), PNG (Portable Network Graphics) o GIF (Graphics Interchange Format).
+    </p>
+    <textarea cols="90" rows="3">
+        <link rel="icon" type="image/png" href="/favicon.png">
+        <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    </textarea>
+    <p>
+        Usa il tipo mime image/png per i file PNG e image/x-icon per i file icon (*.ico).
+        <br>
+        Un file chiamato favicon.ico nella radice del tuo sito web di solito verrà caricato e applicato automaticamente, senza la necessità di un tag `link`. Se questo file cambia, i browser possono essere lenti e testardi nel aggiornare la loro cache.
+        <br>
+        Per questo motivo è sempre meglio inserirlo in un tag "link"
+    </p>
+    <p>
+        La differenza principale tra rel="icon" e rel="shortcut icon" riguarda la compatibilità con le versioni più vecchie dei browser. In passato, alcuni browser utilizzavano l'attributo rel="shortcut icon" per identificare il favicon. Tuttavia, nel corso del tempo, è diventato più comune utilizzare rel="icon" per specificare il favicon.
+        <br>
+        Se desideri garantire la massima compatibilità con i browser più vecchi, puoi utilizzare entrambe le varianti rel="icon" e rel="shortcut icon":
+    </p>
+
+
+    <h3>
+        CSS Alternativo
+    </h3>
+    <p>
+        Alcuni browser consentono l'applicazione di fogli di stile alternativi se vengono offerti. Di default, non verranno applicati, ma di solito possono essere cambiati attraverso le impostazioni del browser:
+    </p>
+    <textarea cols="30" rows="10">
+        <link rel="alternate stylesheet" href="percorso/stile.css" title="tuoTitolo">
+    </textarea>
+    <p>
+        Firefox consente all'utente di selezionare il foglio di stile utilizzando il submenu Visualizza > Stile pagina, Internet Explorer supporta anche questa funzione (a partire da IE 8), accessibile anche da Visualizza > Stile pagina (almeno fino a IE 11), ma Chrome richiede un'estensione per utilizzare la funzione (a partire dalla versione 48). La pagina web può anche fornire la propria interfaccia utente per consentire all'utente di cambiare stili.
+    </p>
+
+
+    <h3>
+        Risorsa Hint: dns-prefetch, prefetch, prerender
+    </h3>
+    <ul>
+        Questi attributi vengono usati per l'ottimizzazione delle risorse e metadati per le pagine web.
+        <li>
+            Preconnect: Questo attributo informa il browser di stabilire una connessione di rete anticipata con il server specificato nell'URL. Ciò include la risoluzione DNS, l'handshake TCP e, opzionalmente, la negoziazione TLS. Questo può ridurre significativamente il ritardo dovuto all'inizializzazione della connessione quando vengono richieste risorse aggiuntive dallo stesso dominio.
+            <br>
+            <textarea cols="50" rows="2">
+                <link rel="preconnect" href="URL">
+            </textarea>
+        </li>
+        <li>
+            DNS-Prefetch: Informa i browser di risolvere il DNS per un URL, in modo che tutte le risorse da quell'URL vengano caricate più velocemente (come preconnect ma senza la risoluzione DNS, l'handshake TCP e, opzionalmente, la negoziazione TLS).
+            <br>
+            <textarea cols="50" rows="2">
+                <link rel="dns-prefetch" href="URL">
+            </textarea>
+        </li>
+        <li>
+            Prefetch: Questo attributo informa il browser che una risorsa specificata dovrebbe essere prefetched, ovvero scaricata in anticipo, in modo che possa essere caricata più velocemente quando necessaria.
+            <br>
+            <textarea cols="50" rows="2">
+                <link rel="prefetch" href="URL">
+            </textarea>
+            Ricorda: DNS-Prefetch risolve solo il nome di dominio, mentre prefetch scarica/archivia le risorse specificate.
+        </li>
+        <li>
+            Prerender: Questo attributo informa il browser di eseguire il prerendering della pagina specificata in background. Questo può essere utile per fornire un'esperienza di navigazione più rapida, poiché la pagina sarà già pronta quando l'utente vi accede. 
+            <br>
+            Si tratta di una funzione sperimentale.
+            <br>
+            <textarea cols="50" rows="2">
+                <link rel="prerender" href="URL">
+            </textarea>
+        </li>
+    </ul>
+
+    <h3>
+        Attributo 'media' del link
+    </h3>
+    <p>
+        Media specifica quale foglio di stile dovrebbe essere utilizzato per quale tipo di media. L'utilizzo del valore "print" visualizzerebbe solo quel foglio di stile per le pagine di stampa.
+    </p>
+    <textarea cols="60" rows="2">
+        <link rel="stylesheet" href="test.css" media="print">
+    </textarea>
+    <p>
+        Il valore di questo attributo può essere uno dei valori mediatype (simili a una query media CSS).
+        <details>
+            <summary>
+                Puoi vedere qui i più comuni valori di media:
+            </summary>
+            <ul>
+                <li>
+                    all: Rappresenta tutti i dispositivi e media. Questo è il valore predefinito se non viene specificato alcun media type.
+                </li>
+                <li>
+                    screen: Rappresenta dispositivi con schermi, come computer, tablet e smartphone.
+                </li>
+                <li>
+                    print: Rappresenta la visualizzazione quando la pagina viene stampata, ottimizzando lo stile per la stampa su carta.
+                </li>
+                <li>
+                    speech: Rappresenta dispositivi che leggono il contenuto ad alta voce, come screen reader per utenti non vedenti.
+                </li>
+                <li>
+                    aural: Questo media type è stato deprecato ed è stato sostituito da speech nei CSS3 Media Queries.
+                </li>
+                <li>
+                    tv: Rappresenta dispositivi televisivi.
+                </li>
+                <li>
+                    projection: Rappresenta dispositivi di proiezione, come schermi di presentazione.
+                </li>
+                <li>
+                    handheld: Rappresenta dispositivi portatili, come telefoni cellulari.
+                </li>
+                <li>
+                    braille: Rappresenta dispositivi braille, utilizzati da utenti non vedenti.
+                </li>
+                <li>
+                    embossed: Rappresenta dispositivi braille che producono una stampa in rilievo.
+                </li>
+                <li>
+                    tty: Rappresenta dispositivi teletipici (TTY) utilizzati da persone con disabilità uditive.
+                </li>
+            </ul>
+        </details>
+    </p>
+
+
+    <h3>
+        Prev e Next
+    </h3>
+    <p>
+        Questi attributi vengono utilizzati per indicare la relazione tra pagine consecutive in una serie. L'attributo rel="prev" viene utilizzato per puntare alla pagina precedente, mentre rel="next" viene utilizzato per puntare alla pagina successiva.
+    </p>
+    <textarea cols="85" rows="3">
+        <link rel="prev" href="http://stackoverflow.com/documentation/java/topics">
+        <link rel="next" href="http://stackoverflow.com/documentation/css/topics">
+    </textarea>
+
+
+    <h3>
+        Feed Web
+    </h3>
+    <p>
+        Utilizza l'attributo rel="alternate" per consentire la scoperta dei tuoi feed Atom/RSS.
+    </p>
+    <textarea cols="94" rows="3">
+        <link rel="alternate" type="application/atom+xml" href="http://example.com/feed.xml">
+        <link rel="alternate" type="application/rss+xml" href="http://example.com/feed.xml">
+    </textarea>
+    <details>
+        <summary>
+            Ma cosa sono i feed Atom e RSS
+        </summary>
+        <p>
+            I feed Atom e RSS sono formati standardizzati per la sindacazione di contenuti web. Sono utilizzati per distribuire e aggiornare automaticamente contenuti come articoli, notizie, podcast e altro ancora, in modo che gli utenti possano rimanere informati senza dover visitare manualmente ogni sito web.
+        </p>
+        <ul>
+            Ecco una spiegazione di entrambi i formati:
+            <li>
+                RSS (Really Simple Syndication): RSS è un formato di feed che consente ai siti web di condividere i propri contenuti in modo strutturato. Gli utenti possono sottoscrivere un feed RSS tramite un lettore di feed o un aggregatore, che periodicamente verifica se ci sono nuovi contenuti nel feed e li mostra all'utente. I feed RSS contengono titoli, descrizioni e link agli articoli o alle risorse originali.
+            </li>
+            <li>
+                Atom: Atom è un altro formato di feed sindacazione che è stato progettato per superare alcune delle limitazioni di RSS. È basato su standard tecnici ben definiti e offre una struttura più flessibile per la pubblicazione di contenuti. Atom è considerato più robusto e ben strutturato rispetto a RSS.
+            </li>
+        </ul>
+        <p>
+            Sia RSS che Atom funzionano seguendo un modello di sottoscrizione. Gli utenti interessati al contenuto di un sito web possono sottoscrivere il feed utilizzando un lettore di feed o un'applicazione specifica. Quando il sito pubblica nuovi contenuti, questi vengono aggiunti automaticamente al feed, e i lettori di feed notificano agli utenti l'aggiornamento.
+        </p>
+        <p>
+            In generale, sia RSS che Atom sono strumenti utili per distribuire e consumare contenuti in modo efficiente su Internet, specialmente quando si tratta di tenersi aggiornati su notizie, blog, podcast e altri tipi di contenuti online.
+        </p>
+    </details>
 
 
 
-    <!-- immagine ed immagine con link -->
-    <h4 id="terra"> La Terra. <em> (titolo di tipo 4) </em> </h4>   <!--l'attributo id lo capirai dopo col css-->
-    <img src="https://mimo.app/i/earth.png" width="200" height="200" border="1" alt="non sei connesso coglione">
-    <!--src sta per source e può indicare sia un URL che un percorso relativo o assoluto di un file-->
+    <h2>
+        Image (vedi alla fine se hai messo gli attributi)
+    </h2>
+    <p>
+        Per aggiungere immagini in un sito web usiamo il tag img, che sono void element (senza tag di chiusura)
+        <br>
+        Gli attributi principali che si danno al tag img sono src, la fonte dell'immagine, e alt, che è il testo alternativo che descrive l'immagine.
+        <br>
+        Il valore di src può essere un file in locale con il suo link assoluto o relativo, oppure un URL a una pagina esterna. Se non vogliamo caricarla in locale possiamo anche usare dei siti che ci permettono di averla sempre disponibile tramite link a pagine esterne, come <a href="https://imgbb.com/">imgbb</a> o <a href="https://www.mediafire.com/">mediafire</a>.
+    </p>
+    <textarea cols="110" rows="3">
+        <img src="images/hello.png" alt="Hello World">
+        <img src="https://i.ibb.co/5nRRmB2/Earth-Eastern-Hemisphere.jpg" alt="la Terra" width="200px">
+    </textarea>
+    <br>
+    <img src="images/hello.png" alt="Hello World">
+    <img src="https://i.ibb.co/5nRRmB2/Earth-Eastern-Hemisphere.jpg" alt="la Terra" width="200px" id="terra">
+    <p>
+        Nota: Le immagini non vengono tecnicamente inserite in una pagina HTML, ma sono collegate alle pagine HTML. Il tag "img" crea uno spazio in cui viene visualizzata l'immagine di riferimento.
+        È anche possibile incorporare immagini direttamente all'interno della pagina utilizzando il base64:
+        <details>
+            <summary>
+                Ma cos'è il base64?
+            </summary>
+            <p>
+                Il Base64 è un sistema di codifica che consente di rappresentare dati binari (ad esempio file multimediali o file di qualsiasi tipo) in forma di testo ASCII. Questa codifica è utilizzata principalmente per trasmettere dati binari attraverso protocolli di trasmissione che supportano solo testo, come ad esempio le e-mail o i dati incorporati direttamente nel codice HTML, CSS o JavaScript.
+                <br>
+                La codifica Base64 converte ogni sequenza di 8 bit di dati in una sequenza di caratteri ASCII che rappresentano il valore dei dati. Questo processo implica la suddivisione dei dati binari in gruppi di 6 bit e la conversione di ciascun gruppo in un carattere ASCII corrispondente, utilizzando una tabella di conversione predefinita.
+            </p>
+            <ul>
+                Un esempio semplificato di codifica Base64 potrebbe apparire così:
+                <li>
+                    Prendiamo una sequenza di dati binari: `01001001 01001110 01000110 01001111` (che rappresenta i byte ASCII per "INFO").
+                </li>
+                <li>
+                    Dividiamo questi dati in gruppi di 6 bit: `010010 010100 110100 010001 010110 011110`.
+                </li>
+                <li>
+                    Convertiamo ciascun gruppo di 6 bit in un numero decimale: `18 20 52 9 22 30`.
+                </li>
+                <li>
+                    Usiamo una tabella di codifica Base64 per mappare questi numeri decimali in caratteri ASCII: `S U y J W e`.
+                </li>
+            </ul>
+            <p>
+                Quindi, la sequenza di dati binari "INFO" è stata codificata in Base64 come "SUYJWe".
+                <br>
+                Il risultato è una rappresentazione testuale dei dati binari che può essere facilmente trasmessa attraverso protocolli testuali. Tuttavia, è importante notare che la codifica Base64 non compressa può aumentare la dimensione dei dati, poiché ogni byte di dati binari viene convertito in almeno due caratteri ASCII.
+                <br>
+                In pratica, puoi incontrare il Base64 quando si tratta di incorporare immagini, file audio, video o altri dati binari in codice HTML, CSS o JavaScript.
+            </p>
+        </details>
+    </p>
+    <textarea cols="70" rows="2">
+        <img src="data:image/png;base64,iVBOR..." alt="Hello World">
+    </textarea>
+    <br>
+    <img src="data:image/png;base64,iVBOR..." alt="Hello World">
+    <p>
+        Suggerimento: Per collegare un'immagine a un altro documento, basta inserire il tag "img" all'interno dei tag "a".
+    </p>
+
+    <h3>
+        Sezione 15.2: Scelta del testo alternativo (alt text)
+    </h3>
+    <p>
+        Il testo alternativo viene utilizzato dagli screen reader per gli utenti con problemi di vista e dai motori di ricerca. È quindi importante scrivere un buon testo alternativo per le tue immagini.
+        <br>
+        Il testo dovrebbe avere senso anche se sostituisci l'immagine con il suo attributo alt. Ad esempio le seguenti linee di codice non vanno bene:
+    </p>
+    <textarea cols="90" rows="5">
+        <img src="anonymous.png" alt="Avatar utente anonimo"/> Un utente anonimo ha scritto:
+        <p>Lorem ipsum dolor sit amet.</p>
+        <a href="https://google.com/"><img src="edit.png" alt="Icona modifica"/></a> /
+        <a href="https://google.com/"><img src="delete.png" alt="Icona eliminazione"/></a>
+    </textarea>
+    <p>
+        Infatti, se sostituiamo le immagini con i testi alternativi, apparirebbe questo:
+    </p>
+    <div>
+        <img src="anonymous.png" alt="Avatar utente anonimo"/> Un utente anonimo ha scritto:
+        <p>Lorem ipsum dolor sit amet.</p>
+        <a href="https://google.com/"><img src="edit.png" alt="Icona modifica"/></a> /
+        <a href="https://google.com/"><img src="delete.png" alt="Icona eliminazione"/></a>
+    </div>
+    <ul>
+        Per correggere questo:
+        <li>
+            Rimuovi il testo alternativo per l'avatar. Questa immagine fornisce informazioni agli utenti vedenti (un'icona facilmente riconoscibile per indicare che l'utente è anonimo), ma queste informazioni sono già disponibili nel testo.
+        </li>
+        <li>
+            Rimuovi la parola "icona" dal testo alternativo per le icone. Sapere che l'immagine sarebbe un'icona se ci fosse non aiuta a trasmetterne il vero scopo.
+        </li>
+    </ul>
+    <textarea cols="80" rows="5">
+        <img src="anonymous.png" alt=""> Un utente anonimo ha scritto:
+        <p>Lorem ipsum dolor sit amet.</p>
+        <a href="https://google.com/"><img src="edit.png" alt="Modifica"></a> /
+        <a href="https://google.com/"><img src="delete.png" alt="Elimina"></a>
+    </textarea>
+    <br>
+    <div>
+        <img src="anonymous.png" alt=""> Un utente anonimo ha scritto:
+        <p>Lorem ipsum dolor sit amet.</p>
+        <a href="https://google.com/"><img src="edit.png" alt="Modifica"></a> /
+        <a href="https://google.com/"><img src="delete.png" alt="Elimina"></a>
+    </div>
+    <h4>
+        Note a piè di pagina:
+    </h4>
+    <p>
+        Esiste una differenza semantica tra l'includere un attributo alt vuoto e escluderlo del tutto. Un attributo alt vuoto indica che l'immagine non è una parte chiave del contenuto (come è vero in questo caso - è semplicemente un'immagine aggiuntiva che non è necessaria per capire il resto) e quindi può essere omesso dal rendering. Tuttavia, l'assenza di un attributo alt indica che l'immagine è una parte chiave del contenuto e che semplicemente non esiste un equivalente testuale disponibile per il rendering.
+    </p>
+    
+    <h3>
+        Immagine Responsive Utilizzando l'Attributo srcset
+    </h3>
+    <h4>
+        Utilizzo di srcset con sizes:
+    </h4>
+    <img sizes="(min-width: 1200px) 580px,
+                 (min-width: 640px) 48vw,
+                 98vw"
+         srcset="img/hello-300.jpg 300w,
+                 img/hello-600.jpg 600w,
+                 img/hello-900.jpg 900w,
+                 img/hello-1200.jpg 1200w"
+         src="img/hello-900.jpg" alt="ciao">
+L'attributo `sizes` funziona come le query media, descrivendo quanto spazio l'immagine occupa nella finestra di visualizzazione.
+- Se la finestra di visualizzazione è più grande di 1200px, l'immagine sarà esattamente di 580px (ad esempio, se il nostro contenuto è centrato in un contenitore largo al massimo 1200px, l'immagine ne occuperà metà meno i margini).
+- Se la finestra di visualizzazione è compresa tra 640px e 1200px, l'immagine occuperà il 48% della finestra di visualizzazione (ad esempio, l'immagine si adatta alla larghezza della nostra pagina e ne occupa la metà meno i margini).
+- Se la finestra di visualizzazione è di un'altra dimensione, nel nostro caso inferiore a 640px, l'immagine occuperà il 98% della finestra di visualizzazione (ad esempio, l'immagine si adatta alla larghezza della nostra pagina e ne occupa tutta la larghezza, meno i margini). La condizione media deve essere omessa per l'ultimo elemento.
+    <p>
+        L'attributo srcset sta solo indicando al quali immagini sono disponibili, e quali sono le loro dimensioni.
+    </p>
+**img/hello-300.jpg** ha una larghezza di 300px,
+**img/hello-600.jpg** ha una larghezza di 600px,
+**img/hello-900.jpg** ha una larghezza di 900px,
+**img/hello-1200.jpg** ha una larghezza di 1200px
+L'attributo src è sempre obbligatorio per la fonte dell'immagine. Nel caso di utilizzo con srcset, src fornirà un'immagine di fallback nel caso in cui il browser non supporti srcset.
+Utilizzo di srcset senza sizes
+```html
+<img src="img/hello-300.jpg" alt="ciao"
+ srcset="img/hello-300.jpg 1x,
+ img/hello-600.jpg 2x,
+ img/hello-1200.jpg 3x">
+```
+srcset fornisce un elenco di immagini disponibili, con il descrittore del rapporto di pixel del dispositivo x.
+- Se il rapporto di pixel del dispositivo è 1, usa img/hello-300.jpg
+- Se il rapporto di pixel del dispositivo è 2, usa img/hello-600.jpg
+- Se il rapporto di pixel del dispositivo è 3, usa img/hello-1200.jpg
+L'attributo src è sempre obbligatorio per la fonte dell'immagine. Nel caso di utilizzo con srcset, src fornirà un'immagine di fallback nel caso in cui il browser non supporti srcset.
+**Sezione 15.4: Immagine Responsive Utilizzando l'Elemento picture**
+Codice
+```html
+<picture>
+ <source media="(min-width: 600px)" srcset="large_image.jpg">
+ <source media="(min-width: 450px)" srcset="small_image.jpg">
+ <img src="default_image.jpg" style="width:auto;">
+</picture>
+```
+Utilizzo
+Per visualizzare diverse immagini in base alla larghezza dello schermo, è necessario includere tutte le immagini utilizzando il tag source in un tag picture come mostrato nell'esempio precedente.
+Risultato
+Su schermi con larghezza di schermo >600px, mostra large_image.jpg
+Su schermi con larghezza di schermo >450px, mostra small_image.jpg
+Su schermi con altra larghezza di schermo, mostra default_image.jpg
+
+
+
+
     <!--width (larghezza) e height (altezza) sono attributi che regolano le dimensioni (presente anche nel css che vedrai più in là)-->
     <!--border regola lo spessore del bordo (presente anche nel css che vedrai più in là)--> 
     <!--alt è un attributo che mostra un testo alternativo nel caso in cui l'immagine non si caricasse -->
     <br> 
     
     <h4>
-        prendi immagine da <a href="https://imgbb.com/">qui (imgbb)</a> o da <a href="https://www.mediafire.com/">mediafire</a> (con link diretto)
     </h4>
     <a href="https://ibb.co/gPRRNz6">
-        <img src="https://i.ibb.co/5nRRmB2/Earth-Eastern-Hemisphere.jpg" alt="Earth-Eastern-Hemisphere" border="0">
+        <img src="" alt="Earth-Eastern-Hemisphere" border="0">
     </a>
     <br>
     <a href="http://wa.me/393291899607">
         <img src="https://i.ibb.co/kh2C1Rk/STK-20220112-WA0033.webp" alt="STK-20220112-WA0033" border="0">
     </a>
     
+
+
+
+
+
     <h3>Questo é un esempio di inserimento testo! Inoltre ci sono anche vari attributi</h3>
     <form>
         <input type="text" name="email" placeholder="Qui devi scrivere COGLIONE!">
@@ -2071,7 +2459,40 @@ ti sono solo alcuni degli attributi che puoi utilizzare con il tag `input`. La s
     </form>
 
     
-    
+    <h2>
+        Marking-up Quote (per adesso da chatgpt)
+    </h2>
+    <textarea cols="180" rows="35">
+        Il tag `<blockquote>` in HTML è utilizzato per citare un blocco di testo o contenuto da un'altra fonte. Questo elemento viene comunemente utilizzato per evidenziare citazioni o porzioni di testo che sono stati tratti da una fonte esterna, come un libro, un articolo o un'altra pagina web. L'uso corretto del tag `<blockquote>` aiuta a strutturare correttamente il contenuto e a fornire attribuzione alle citazioni.
+
+        Ecco come puoi utilizzare il tag `<blockquote>`:
+        
+        ```html
+        <blockquote>
+          Questa è una citazione tratta da un'altra fonte. Può essere più di una riga di testo.
+        </blockquote>
+        ```
+        
+        Inoltre, puoi includere attributi aggiuntivi per fornire informazioni sulla fonte della citazione, come l'autore o il titolo dell'opera da cui è stata presa la citazione:
+        
+        ```html
+        <blockquote cite="https://www.esempio.com/libro">
+          "La conoscenza è potere." - <cite>Francis Bacon</cite>
+        </blockquote>
+        ```
+        
+        Nell'esempio sopra, l'attributo `cite` viene utilizzato per specificare l'URL della fonte originale da cui è stata tratta la citazione. L'elemento `<cite>` viene utilizzato per includere l'autore o il titolo della fonte.
+        
+        Puoi anche annidare altri elementi all'interno di `<blockquote>`, come paragrafi, testo in corsivo e altro, per formattare la citazione come desideri:
+        
+        ```html
+        <blockquote>
+          <p>La felicità non sta nel possedere, ma nel dare. - <em>Mahatma Gandhi</em></p>
+        </blockquote>
+        ```
+        
+        In conclusione, il tag `<blockquote>` è un modo formale e semanticamente corretto per evidenziare citazioni o porzioni di testo tratti da altre fonti all'interno del tuo contenuto web.
+    </textarea>
     <p>
         <a href="mailto:siiiiiuuuuuuuummm@gmail.com">갑자기?!</a> 
     </p>

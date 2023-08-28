@@ -3,62 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>evento input immagini</title>
+    <title></title>
     <style>
-        .foto {
-            width: 250px;
-        }
     </style>
 </head>
 <body>
-    <h1>
-        Se scrivi alcune parole nel form input, verrà mostrata una foto
-    </h1>
-    <input type="text">
-    <br>
-    <button>
-        Rimuovi foto
-    </button>
-    <br>
-    <script>
-        const input = document.querySelector("input")
-        input.oninput = function aggiungiCazzo() {
-            if (input.value === "cazzo" || input.value === "Cazzo") {
-                const cazzo = document.createElement("img");
-                cazzo.src = "media/cazzo.jpg";
-                cazzo.classList.add("foto")
-                document.body.appendChild(cazzo);
-            }
-            if (input.value === "gabby" || input.value === "Gabby") {
-                const gabby = document.createElement("img");
-                gabby.src = "media/gabby.jpg";
-                gabby.classList.add("foto")
-                document.body.appendChild(gabby);
-            }
-            if (input.value === "mare" || input.value === "Mare") {
-                const mare = document.createElement("img");
-                mare.src = "media/mare.jpg";
-                mare.classList.add("foto")
-                document.body.appendChild(mare);
-            }
-            if (input.value === "Taormina" || input.value === "taormina") {
-                const Taormina = document.createElement("img");
-                Taormina.src = "media/Taormina.jpg";
-                Taormina.classList.add("foto")
-                document.body.appendChild(Taormina);
-            }
-            if (input.value === "Taormina" || input.value === "taormina") {
-                const Taormina = document.createElement("img");
-                Taormina.src = "media/Taormina.jpg";
-                Taormina.classList.add("foto")
-                document.body.appendChild(Taormina);
-            }
-        }
-        const bottone = document.querySelector("button");
-        bottone.onclick = function rimuoviCazzo() {
-            const immagine = document.querySelector("img.foto")
-            document.body.removeChild(immagine);
-        }
-    </script>
 </body>
 </html>
