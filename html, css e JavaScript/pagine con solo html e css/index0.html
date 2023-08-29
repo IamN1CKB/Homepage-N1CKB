@@ -2081,13 +2081,15 @@
         <br>
         Il valore di src può essere un file in locale con il suo link assoluto o relativo, oppure un URL a una pagina esterna. Se non vogliamo caricarla in locale possiamo anche usare dei siti che ci permettono di averla sempre disponibile tramite link a pagine esterne, come <a href="https://imgbb.com/">imgbb</a> o <a href="https://www.mediafire.com/">mediafire</a>.
     </p>
-    <textarea cols="110" rows="3">
+    <textarea cols="110" rows="4">
         <img src="images/hello.png" alt="Hello World">
         <img src="https://i.ibb.co/5nRRmB2/Earth-Eastern-Hemisphere.jpg" alt="la Terra" width="200px">
+        <img src="https://i.ibb.co/kh2C1Rk/STK-20220112-WA0033.webp" alt="STK-20220112-WA0033" width="200px">
     </textarea>
     <br>
     <img src="images/hello.png" alt="Hello World">
     <img src="https://i.ibb.co/5nRRmB2/Earth-Eastern-Hemisphere.jpg" alt="la Terra" width="200px" id="terra">
+    <img src="https://i.ibb.co/kh2C1Rk/STK-20220112-WA0033.webp" alt="STK-20220112-WA0033" width="200px">
     <p>
         Nota: Le immagini non vengono tecnicamente inserite in una pagina HTML, ma sono collegate alle pagine HTML. Il tag "img" crea uno spazio in cui viene visualizzata l'immagine di riferimento.
         È anche possibile incorporare immagini direttamente all'interno della pagina utilizzando il base64:
@@ -2134,7 +2136,7 @@
     </p>
 
     <h3>
-        Sezione 15.2: Scelta del testo alternativo (alt text)
+        Scelta del testo alternativo (alt text)
     </h3>
     <p>
         Il testo alternativo viene utilizzato dagli screen reader per gli utenti con problemi di vista e dai motori di ricerca. È quindi importante scrivere un buon testo alternativo per le tue immagini.
@@ -2191,72 +2193,182 @@
     <h4>
         Utilizzo di srcset con sizes:
     </h4>
+    <p>
+        L'attributo `srcset` nell'elemento `img` in HTML è utilizzato per fornire al browser una serie di URL di immagini alternative, ciascuna con una diversa risoluzione o dimensione. Questo permette al browser di selezionare automaticamente l'immagine più adatta in base alle caratteristiche dello schermo del dispositivo e alla larghezza del viewport, migliorando così le prestazioni e l'esperienza utente.
+        <br>
+        Ecco come si utilizza l'attributo `srcset`:
+    </p>
+    <textarea cols="60" rows="7">
+        <img src="https://placehold.co/1024x682"
+             srcset="https://placehold.co/1024x682 1024w,
+                     https://placehold.co/800x533 800w,
+                     https://placehold.co/600x400 600w,
+                     https://placehold.co/300x200 300w"
+             alt="Descrizione dell'immagine">
+    </textarea>
+    <br>
+    <figure>
+        <figcaption>
+            immagine con 1024px di larghezza
+        </figcaption>
+        <img src="https://placehold.co/1024x682"
+             srcset="https://placehold.co/1024x682 1024w,
+                     https://placehold.co/800x533 800w,
+                     https://placehold.co/600x400 600w,
+                     https://placehold.co/300x200 300w"
+             alt="Descrizione dell'immagine" width="1024">
+    </figure>
+    <figure>
+        <figcaption>
+            immagine con 800px di larghezza
+        </figcaption>
+        <img src="https://placehold.co/1024x682"
+             srcset="https://placehold.co/1024x682 1024w,
+                     https://placehold.co/800x533 800w,
+                     https://placehold.co/600x400 600w,
+                     https://placehold.co/300x200 300w"
+             alt="Descrizione dell'immagine" width="800">
+    </figure>
+    <figure>
+        <figcaption>
+            immagine con 600px di larghezza
+        </figcaption>
+        <img src="https://placehold.co/1024x682"
+             srcset="https://placehold.co/1024x682 1024w,
+                     https://placehold.co/800x533 800w,
+                     https://placehold.co/600x400 600w,
+                     https://placehold.co/300x200 300w"
+             alt="Descrizione dell'immagine" width="600">
+    </figure>
+    <figure>
+        <figcaption>
+            immagine con 300px di larghezza
+        </figcaption>
+        <img src="https://placehold.co/1024x682"
+             srcset="https://placehold.co/1024x682 1024w,
+                     https://placehold.co/800x533 800w,
+                     https://placehold.co/600x400 600w,
+                     https://placehold.co/300x200 300w"
+             alt="Descrizione dell'immagine" width="300">
+    </figure>
+    <ul>
+        Nell'esempio sopra:
+        <li>
+            L'attributo `src` definisce l'URL dell'immagine da caricare per i dispositivi che non supportano `srcset` o in caso di mancata corrispondenza con le opzioni `srcset`.
+        </li>
+        <li>
+            L'attributo `srcset` contiene una lista di URL di immagini seguiti dalla larghezza preferita dell'immagine in pixel (ad esempio, `800w` e `1200w`).
+        </li>
+        <li>
+            Il browser selezionerà l'immagine migliore in base alle sue capacità e alla larghezza del viewport. Se la larghezza del viewport è inferiore a 800 pixel, verrà utilizzata l'immagine `image-medium.jpg`. Se la larghezza del viewport è inferiore a 1200 pixel, ma superiore a 800 pixel, verrà utilizzata l'immagine `image-large.jpg`.
+        </li>
+    </ul>
+    <p>
+        È importante notare che puoi specificare più immagini nell'attributo `srcset` con diverse larghezze preferite, e il browser selezionerà quella più appropriata in base alle capacità e alla dimensione dello schermo del dispositivo.
+        <br>
+        L'attributo `sizes` può anche essere utilizzato in combinazione con `srcset` per fornire ulteriori indicazioni al browser su come selezionare le immagini in base alle dimensioni del viewport.
+    </p>
+    <textarea cols="50" rows="9">
+        <img sizes="(min-width: 1200px) 580px,
+                     (min-width: 640px) 48vw,
+                     98vw"
+             srcset="img/hello-300.jpg 300w,
+                     img/hello-600.jpg 600w,
+                     img/hello-900.jpg 900w,
+                     img/hello-1200.jpg 1200w"
+             src="img/hello-900.jpg" alt="ciao">
+    </textarea>
+    <br>
     <img sizes="(min-width: 1200px) 580px,
-                 (min-width: 640px) 48vw,
-                 98vw"
-         srcset="img/hello-300.jpg 300w,
-                 img/hello-600.jpg 600w,
-                 img/hello-900.jpg 900w,
-                 img/hello-1200.jpg 1200w"
-         src="img/hello-900.jpg" alt="ciao">
-L'attributo `sizes` funziona come le query media, descrivendo quanto spazio l'immagine occupa nella finestra di visualizzazione.
-- Se la finestra di visualizzazione è più grande di 1200px, l'immagine sarà esattamente di 580px (ad esempio, se il nostro contenuto è centrato in un contenitore largo al massimo 1200px, l'immagine ne occuperà metà meno i margini).
-- Se la finestra di visualizzazione è compresa tra 640px e 1200px, l'immagine occuperà il 48% della finestra di visualizzazione (ad esempio, l'immagine si adatta alla larghezza della nostra pagina e ne occupa la metà meno i margini).
-- Se la finestra di visualizzazione è di un'altra dimensione, nel nostro caso inferiore a 640px, l'immagine occuperà il 98% della finestra di visualizzazione (ad esempio, l'immagine si adatta alla larghezza della nostra pagina e ne occupa tutta la larghezza, meno i margini). La condizione media deve essere omessa per l'ultimo elemento.
+                    (min-width: 640px) 48vw,
+                    98vw"
+            srcset="img/hello-300.jpg 300w,
+                    img/hello-600.jpg 600w,
+                    img/hello-900.jpg 900w,
+                    img/hello-1200.jpg 1200w"
+            src="img/hello-900.jpg" alt="ciao">
+    <ul>
+        L'attributo `sizes` funziona come le query media, descrivendo quanto spazio l'immagine occupa nella finestra di visualizzazione.
+        <li>
+            Se la finestra di visualizzazione è più grande di 1200px, l'immagine sarà esattamente di 580px (ad esempio, se il nostro contenuto è centrato in un contenitore largo al massimo 1200px, l'immagine ne occuperà metà meno i margini).
+        </li>
+        <li>
+            Se la finestra di visualizzazione è compresa tra 640px e 1200px, l'immagine occuperà il 48% della finestra di visualizzazione (ad esempio, l'immagine si adatta alla larghezza della nostra pagina e ne occupa la metà meno i margini).
+        </li>
+        <li>
+            Se la finestra di visualizzazione è di un'altra dimensione, nel nostro caso inferiore a 640px, l'immagine occuperà il 98% della finestra di visualizzazione (ad esempio, l'immagine si adatta alla larghezza della nostra pagina e ne occupa tutta la larghezza, meno i margini). La condizione media deve essere omessa per l'ultimo elemento.
+        </li>
+    </ul>
     <p>
         L'attributo srcset sta solo indicando al quali immagini sono disponibili, e quali sono le loro dimensioni.
+        <br>
+        "img/hello-300.jpg" ha una larghezza di 300px,
+        <br>
+        "img/hello-600.jpg" ha una larghezza di 600px,
+        <br>
+        "img/hello-900.jpg" ha una larghezza di 900px,
+        <br>
+        "img/hello-1200.jpg" ha una larghezza di 1200px
     </p>
-**img/hello-300.jpg** ha una larghezza di 300px,
-**img/hello-600.jpg** ha una larghezza di 600px,
-**img/hello-900.jpg** ha una larghezza di 900px,
-**img/hello-1200.jpg** ha una larghezza di 1200px
-L'attributo src è sempre obbligatorio per la fonte dell'immagine. Nel caso di utilizzo con srcset, src fornirà un'immagine di fallback nel caso in cui il browser non supporti srcset.
-Utilizzo di srcset senza sizes
-```html
-<img src="img/hello-300.jpg" alt="ciao"
- srcset="img/hello-300.jpg 1x,
- img/hello-600.jpg 2x,
- img/hello-1200.jpg 3x">
-```
-srcset fornisce un elenco di immagini disponibili, con il descrittore del rapporto di pixel del dispositivo x.
-- Se il rapporto di pixel del dispositivo è 1, usa img/hello-300.jpg
-- Se il rapporto di pixel del dispositivo è 2, usa img/hello-600.jpg
-- Se il rapporto di pixel del dispositivo è 3, usa img/hello-1200.jpg
-L'attributo src è sempre obbligatorio per la fonte dell'immagine. Nel caso di utilizzo con srcset, src fornirà un'immagine di fallback nel caso in cui il browser non supporti srcset.
-**Sezione 15.4: Immagine Responsive Utilizzando l'Elemento picture**
-Codice
-```html
-<picture>
- <source media="(min-width: 600px)" srcset="large_image.jpg">
- <source media="(min-width: 450px)" srcset="small_image.jpg">
- <img src="default_image.jpg" style="width:auto;">
-</picture>
-```
-Utilizzo
-Per visualizzare diverse immagini in base alla larghezza dello schermo, è necessario includere tutte le immagini utilizzando il tag source in un tag picture come mostrato nell'esempio precedente.
-Risultato
-Su schermi con larghezza di schermo >600px, mostra large_image.jpg
-Su schermi con larghezza di schermo >450px, mostra small_image.jpg
-Su schermi con altra larghezza di schermo, mostra default_image.jpg
-
-
-
-
-    <!--width (larghezza) e height (altezza) sono attributi che regolano le dimensioni (presente anche nel css che vedrai più in là)-->
-    <!--border regola lo spessore del bordo (presente anche nel css che vedrai più in là)--> 
-    <!--alt è un attributo che mostra un testo alternativo nel caso in cui l'immagine non si caricasse -->
-    <br> 
-    
+    <p>
+        L'attributo src è sempre obbligatorio per la fonte dell'immagine. Nel caso di utilizzo con srcset, src fornirà un'immagine di fallback nel caso in cui il browser non supporti srcset.
+    </p>
     <h4>
+        Utilizzo di srcset senza sizes
     </h4>
-    <a href="https://ibb.co/gPRRNz6">
-        <img src="" alt="Earth-Eastern-Hemisphere" border="0">
-    </a>
+    <textarea cols="50" rows="5">
+        <img src="img/hello-300.jpg" alt="ciao"
+            srcset="img/hello-300.jpg 1x,
+            img/hello-600.jpg 2x,
+            img/hello-1200.jpg 3x">
+    </textarea>
     <br>
-    <a href="http://wa.me/393291899607">
-        <img src="https://i.ibb.co/kh2C1Rk/STK-20220112-WA0033.webp" alt="STK-20220112-WA0033" border="0">
-    </a>
-    
+    <img src="img/hello-300.jpg" alt="ciao"
+        srcset="img/hello-300.jpg 1x,
+        img/hello-600.jpg 2x,
+        img/hello-1200.jpg 3x">
+    <ul>
+        srcset fornisce un elenco di immagini disponibili, con il descrittore del rapporto di pixel del dispositivo x.
+        <li>
+            Se il rapporto di pixel del dispositivo è 1, usa img/hello-300.jpg
+        </li>
+        <li>
+            Se il rapporto di pixel del dispositivo è 2, usa img/hello-600.jpg
+        </li>
+        <li>
+            Se il rapporto di pixel del dispositivo è 3, usa img/hello-1200.jpg
+        </li>
+    </ul>
+    <p>
+        L'attributo src è sempre obbligatorio per la fonte dell'immagine. Nel caso di utilizzo con srcset, src fornirà un'immagine di fallback nel caso in cui il browser non supporti srcset.
+    </p>
+    <h3>
+        Immagine Responsive Utilizzando l'Elemento picture
+    </h3>
+    <textarea cols="70" rows="6">
+        <picture>
+            <source media="(min-width: 600px)" srcset="large_image.jpg">
+            <source media="(min-width: 450px)" srcset="small_image.jpg">
+            <img src="default_image.jpg" style="width:auto;" alt="img">
+        </picture>
+    </textarea>
+    <br>
+    <picture>
+        <source media="(min-width: 600px)" srcset="large_image.jpg">
+        <source media="(min-width: 450px)" srcset="small_image.jpg">
+        <img src="default_image.jpg" style="width:auto;" alt="img">
+    </picture>
+    <p>
+        Per visualizzare diverse immagini in base alla larghezza dello schermo, è necessario includere tutte le immagini utilizzando il tag source in un tag picture come mostrato nell'esempio precedente.
+        <br>
+        Risultato:
+        <br>
+        Su schermi con larghezza di schermo >600px, mostra large_image.jpg
+        <br>
+        Su schermi con larghezza di schermo >450px, mostra small_image.jpg
+        <br>
+        Su schermi con altra larghezza di schermo, mostra default_image.jpg
+    </p>
 
 
 
@@ -2462,7 +2574,7 @@ ti sono solo alcuni degli attributi che puoi utilizzare con il tag `input`. La s
     <h2>
         Marking-up Quote (per adesso da chatgpt)
     </h2>
-    <textarea cols="180" rows="35">
+    <textarea cols="179" rows="35">
         Il tag `<blockquote>` in HTML è utilizzato per citare un blocco di testo o contenuto da un'altra fonte. Questo elemento viene comunemente utilizzato per evidenziare citazioni o porzioni di testo che sono stati tratti da una fonte esterna, come un libro, un articolo o un'altra pagina web. L'uso corretto del tag `<blockquote>` aiuta a strutturare correttamente il contenuto e a fornire attribuzione alle citazioni.
 
         Ecco come puoi utilizzare il tag `<blockquote>`:
@@ -2493,9 +2605,7 @@ ti sono solo alcuni degli attributi che puoi utilizzare con il tag `input`. La s
         
         In conclusione, il tag `<blockquote>` è un modo formale e semanticamente corretto per evidenziare citazioni o porzioni di testo tratti da altre fonti all'interno del tuo contenuto web.
     </textarea>
-    <p>
-        <a href="mailto:siiiiiuuuuuuuummm@gmail.com">갑자기?!</a> 
-    </p>
+    <br>
     per indicare che un testo nel nostro file HTML è un indicazione di data o ora si utilizza il tag time (non cambia la forma della parola)
     <br>
     Rapporto missione <time>16 dicembre 1991</time>
