@@ -2087,9 +2087,18 @@
         <img src="https://i.ibb.co/kh2C1Rk/STK-20220112-WA0033.webp" alt="STK-20220112-WA0033" width="200px">
     </textarea>
     <br>
-    <img src="images/hello.png" alt="Hello World">
-    <img src="https://i.ibb.co/5nRRmB2/Earth-Eastern-Hemisphere.jpg" alt="la Terra" width="200px" id="terra">
-    <img src="https://i.ibb.co/kh2C1Rk/STK-20220112-WA0033.webp" alt="STK-20220112-WA0033" width="200px">
+    <img src="images/hello.png"
+         alt="Hello World"
+    >
+    <img src="https://i.ibb.co/5nRRmB2/Earth-Eastern-Hemisphere.jpg"
+         alt="la Terra"
+         width="200px"
+         id="terra"
+    >
+    <img src="https://i.ibb.co/kh2C1Rk/STK-20220112-WA0033.webp"
+         alt="STK-20220112-WA0033"
+         width="200px"
+    >
     <p>
         Nota: Le immagini non vengono tecnicamente inserite in una pagina HTML, ma sono collegate alle pagine HTML. Il tag "img" crea uno spazio in cui viene visualizzata l'immagine di riferimento.
         È anche possibile incorporare immagini direttamente all'interno della pagina utilizzando il base64:
@@ -2130,7 +2139,9 @@
         <img src="data:image/png;base64,iVBOR..." alt="Hello World">
     </textarea>
     <br>
-    <img src="data:image/png;base64,iVBOR..." alt="Hello World">
+    <img src="data:image/png;base64,iVBOR..."
+         alt="Hello World"
+    >
     <p>
         Suggerimento: Per collegare un'immagine a un altro documento, basta inserire il tag "img" all'interno dei tag "a".
     </p>
@@ -2198,59 +2209,25 @@
         <br>
         Ecco come si utilizza l'attributo `srcset`:
     </p>
-    <textarea cols="60" rows="7">
+    <textarea cols="60" rows="9">
         <img src="https://placehold.co/1024x682"
              srcset="https://placehold.co/1024x682 1024w,
                      https://placehold.co/800x533 800w,
                      https://placehold.co/600x400 600w,
                      https://placehold.co/300x200 300w"
-             alt="Descrizione dell'immagine">
+             alt="Descrizione dell'immagine"
+             width="1024"
+        >
     </textarea>
     <br>
-    <figure>
-        <figcaption>
-            immagine con 1024px di larghezza
-        </figcaption>
-        <img src="https://placehold.co/1024x682"
-             srcset="https://placehold.co/1024x682 1024w,
-                     https://placehold.co/800x533 800w,
-                     https://placehold.co/600x400 600w,
-                     https://placehold.co/300x200 300w"
-             alt="Descrizione dell'immagine" width="1024">
-    </figure>
-    <figure>
-        <figcaption>
-            immagine con 800px di larghezza
-        </figcaption>
-        <img src="https://placehold.co/1024x682"
-             srcset="https://placehold.co/1024x682 1024w,
-                     https://placehold.co/800x533 800w,
-                     https://placehold.co/600x400 600w,
-                     https://placehold.co/300x200 300w"
-             alt="Descrizione dell'immagine" width="800">
-    </figure>
-    <figure>
-        <figcaption>
-            immagine con 600px di larghezza
-        </figcaption>
-        <img src="https://placehold.co/1024x682"
-             srcset="https://placehold.co/1024x682 1024w,
-                     https://placehold.co/800x533 800w,
-                     https://placehold.co/600x400 600w,
-                     https://placehold.co/300x200 300w"
-             alt="Descrizione dell'immagine" width="600">
-    </figure>
-    <figure>
-        <figcaption>
-            immagine con 300px di larghezza
-        </figcaption>
-        <img src="https://placehold.co/1024x682"
-             srcset="https://placehold.co/1024x682 1024w,
-                     https://placehold.co/800x533 800w,
-                     https://placehold.co/600x400 600w,
-                     https://placehold.co/300x200 300w"
-             alt="Descrizione dell'immagine" width="300">
-    </figure>
+    <img src="https://placehold.co/1024x682"
+         srcset="https://placehold.co/1024x682 1024w,
+                 https://placehold.co/800x533 800w,
+                 https://placehold.co/600x400 600w,
+                 https://placehold.co/300x200 300w"
+         alt="Descrizione dell'immagine"
+         width="1024"
+    >
     <ul>
         Nell'esempio sopra:
         <li>
@@ -2260,35 +2237,40 @@
             L'attributo `srcset` contiene una lista di URL di immagini seguiti dalla larghezza preferita dell'immagine in pixel (ad esempio, `800w` e `1200w`).
         </li>
         <li>
-            Il browser selezionerà l'immagine migliore in base alle sue capacità e alla larghezza del viewport. Se la larghezza del viewport è inferiore a 800 pixel, verrà utilizzata l'immagine `image-medium.jpg`. Se la larghezza del viewport è inferiore a 1200 pixel, ma superiore a 800 pixel, verrà utilizzata l'immagine `image-large.jpg`.
+            Il browser selezionerà l'immagine migliore in base alle sue capacità e alla larghezza del viewport. Se la larghezza del viewport è inferiore a 800px e superiore a 600px, verrà utilizzata l'immagine 800w. Se la larghezza del viewport è inferiore a 1024px, ma superiore a 800px, verrà utilizzata l'immagine 1024px.
         </li>
     </ul>
     <p>
-        È importante notare che puoi specificare più immagini nell'attributo `srcset` con diverse larghezze preferite, e il browser selezionerà quella più appropriata in base alle capacità e alla dimensione dello schermo del dispositivo.
+        Dunque ricordiamo che l'attributo srcset, indicato con un valore in w, non si riferisce alla larghezza dell'immagine ma alla larghezza della viewport.
+        È importante notare che puoi specificare più immagini nell'attributo `srcset` con diverse larghezze preferite, e il browser selezionerà quella più appropriata in base alle capacità e alla dimensione dello schermo del dispositivo. Se stiamo usando il pc per visualizzare questo sito, molto probabilmente si caricherà l'immagine a 1024px; invece su dispositivi con risoluzione minore si caricano gli altri.
         <br>
-        L'attributo `sizes` può anche essere utilizzato in combinazione con `srcset` per fornire ulteriori indicazioni al browser su come selezionare le immagini in base alle dimensioni del viewport.
+        L'attributo `sizes` può anche essere utilizzato in combinazione con `srcset` per fornire ulteriori indicazioni al browser su come selezionare le immagini in base alle dimensioni del viewport. Per poter funzionare, l'attributo size non deve essere scavalcato da un attributo width o una proprietà CSS width (si dice override)
     </p>
-    <textarea cols="50" rows="9">
+    <textarea cols="60" rows="11">
         <img sizes="(min-width: 1200px) 580px,
-                     (min-width: 640px) 48vw,
-                     98vw"
-             srcset="img/hello-300.jpg 300w,
-                     img/hello-600.jpg 600w,
-                     img/hello-900.jpg 900w,
-                     img/hello-1200.jpg 1200w"
-             src="img/hello-900.jpg" alt="ciao">
+                    (min-width: 640px) 48vw,
+                    98vw"
+             src="https://placehold.co/300x200" 
+             srcset="https://placehold.co/1024x682 1024w,
+                     https://placehold.co/800x533 800w,
+                     https://placehold.co/600x400 600w,
+                     https://placehold.co/300x200 300w"
+             alt="ciao"
+        >
     </textarea>
     <br>
     <img sizes="(min-width: 1200px) 580px,
-                    (min-width: 640px) 48vw,
-                    98vw"
-            srcset="img/hello-300.jpg 300w,
-                    img/hello-600.jpg 600w,
-                    img/hello-900.jpg 900w,
-                    img/hello-1200.jpg 1200w"
-            src="img/hello-900.jpg" alt="ciao">
+                (min-width: 640px) 48vw,
+                98vw"
+         src="https://placehold.co/300x200" 
+         srcset="https://placehold.co/1024x682 1024w,
+                 https://placehold.co/800x533 800w,
+                 https://placehold.co/600x400 600w,
+                 https://placehold.co/300x200 300w"
+         alt="ciao"
+    >
     <ul>
-        L'attributo `sizes` funziona come le query media, descrivendo quanto spazio l'immagine occupa nella finestra di visualizzazione.
+        L'attributo `sizes` funziona come le query media, descrivendo quanto spazio l'immagine occupa nella finestra di visualizzazione. Cambiando la larghezza della finestra di visualizzazione, cambia l'adattamento dell'immagine.
         <li>
             Se la finestra di visualizzazione è più grande di 1200px, l'immagine sarà esattamente di 580px (ad esempio, se il nostro contenuto è centrato in un contenitore largo al massimo 1200px, l'immagine ne occuperà metà meno i margini).
         </li>
@@ -2300,43 +2282,39 @@
         </li>
     </ul>
     <p>
-        L'attributo srcset sta solo indicando al quali immagini sono disponibili, e quali sono le loro dimensioni.
-        <br>
-        "img/hello-300.jpg" ha una larghezza di 300px,
-        <br>
-        "img/hello-600.jpg" ha una larghezza di 600px,
-        <br>
-        "img/hello-900.jpg" ha una larghezza di 900px,
-        <br>
-        "img/hello-1200.jpg" ha una larghezza di 1200px
-    </p>
-    <p>
         L'attributo src è sempre obbligatorio per la fonte dell'immagine. Nel caso di utilizzo con srcset, src fornirà un'immagine di fallback nel caso in cui il browser non supporti srcset.
     </p>
     <h4>
         Utilizzo di srcset senza sizes
     </h4>
-    <textarea cols="50" rows="5">
+    <textarea cols="55" rows="7">
         <img src="img/hello-300.jpg" alt="ciao"
-            srcset="img/hello-300.jpg 1x,
-            img/hello-600.jpg 2x,
-            img/hello-1200.jpg 3x">
+            srcset="https://placehold.co/1024x682 4x,
+                    https://placehold.co/800x533 3x,
+                    https://placehold.co/600x400 2x,
+                    https://placehold.co/300x200 1x"
+        >
     </textarea>
     <br>
     <img src="img/hello-300.jpg" alt="ciao"
-        srcset="img/hello-300.jpg 1x,
-        img/hello-600.jpg 2x,
-        img/hello-1200.jpg 3x">
+        srcset="https://placehold.co/1024x682 4x,
+                https://placehold.co/800x533 3x,
+                https://placehold.co/600x400 2x,
+                https://placehold.co/300x200 1x"
+    >
     <ul>
         srcset fornisce un elenco di immagini disponibili, con il descrittore del rapporto di pixel del dispositivo x.
         <li>
-            Se il rapporto di pixel del dispositivo è 1, usa img/hello-300.jpg
+            Se il rapporto di pixel del dispositivo è 1, usa https://placehold.co/300x200
         </li>
         <li>
-            Se il rapporto di pixel del dispositivo è 2, usa img/hello-600.jpg
+            Se il rapporto di pixel del dispositivo è 2, usa https://placehold.co/600x400
         </li>
         <li>
-            Se il rapporto di pixel del dispositivo è 3, usa img/hello-1200.jpg
+            Se il rapporto di pixel del dispositivo è 3, usa https://placehold.co/800x533
+        </li>
+        <li>
+            Se il rapporto di pixel del dispositivo è 4, usa https://placehold.co/1024x682
         </li>
     </ul>
     <p>
@@ -2345,29 +2323,38 @@
     <h3>
         Immagine Responsive Utilizzando l'Elemento picture
     </h3>
-    <textarea cols="70" rows="6">
+    <textarea cols="90" rows="7">
         <picture>
-            <source media="(min-width: 600px)" srcset="large_image.jpg">
-            <source media="(min-width: 450px)" srcset="small_image.jpg">
-            <img src="default_image.jpg" style="width:auto;" alt="img">
+            <source media="(min-width: 1000px)" srcset="https://placehold.co/1024x682">
+            <source media="(min-width: 600px)" srcset="https://placehold.co/800x533">
+            <source media="(min-width: 450px)" srcset="https://placehold.co/600x400">
+            <img src="https://placehold.co/300x200" style="width:auto;" alt="img">
         </picture>
     </textarea>
     <br>
     <picture>
-        <source media="(min-width: 600px)" srcset="large_image.jpg">
-        <source media="(min-width: 450px)" srcset="small_image.jpg">
-        <img src="default_image.jpg" style="width:auto;" alt="img">
+        <source media="(min-width: 1000px)" srcset="https://placehold.co/1024x682">
+        <source media="(min-width: 600px)" srcset="https://placehold.co/800x533">
+        <source media="(min-width: 450px)" srcset="https://placehold.co/600x400">
+        <img src="https://placehold.co/300x200" style="width:auto;" alt="img">
     </picture>
     <p>
         Per visualizzare diverse immagini in base alla larghezza dello schermo, è necessario includere tutte le immagini utilizzando il tag source in un tag picture come mostrato nell'esempio precedente.
-        <br>
-        Risultato:
-        <br>
-        Su schermi con larghezza di schermo >600px, mostra large_image.jpg
-        <br>
-        Su schermi con larghezza di schermo >450px, mostra small_image.jpg
-        <br>
-        Su schermi con altra larghezza di schermo, mostra default_image.jpg
+        <ul>
+            Risultato:
+            <li>
+                Su schermi con larghezza minima di schermo >1000px, mostra https://placehold.co/1024x682
+            </li>
+            <li>
+                Su schermi con larghezza minima di schermo >600px, mostra https://placehold.co/800x533
+            </li>
+            <li>
+                Su schermi con larghezza minima di schermo >450px, mostra https://placehold.co/600x400
+            </li>
+            <li>
+                Su schermi con altra larghezza minima di schermo, mostra https://placehold.co/300x200
+            </li>
+        </ul>
     </p>
 
 
