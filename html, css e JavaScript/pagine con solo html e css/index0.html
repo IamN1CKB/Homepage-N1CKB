@@ -7,7 +7,17 @@
             Esempio di file HTML  
         </title>
         <style>
+            /* *{
+                border: solid;
+            } */
             h1, h2 {
+                text-transform: uppercase;
+            }
+            h1::first-letter,
+            h2::first-letter,
+            h3::first-letter,
+            h4::first-letter,
+            p::first-letter {
                 text-transform: uppercase;
             }
             textarea {
@@ -15,6 +25,9 @@
             }
             details {
                 border: solid 1px;
+            }
+            form {
+                width: 1000px;
             }
             .table-border, .table-border td, .table-border th {
                     border: solid 1px;
@@ -35,6 +48,9 @@
             }
             #B1 {
                 background-color: red;
+            }
+            img[usemap="#map-name"] {
+                border: solid 1px;
             }
         </style>
 </head>
@@ -89,7 +105,7 @@
         <li>
             &lt;!DOCTYPE html> (abbreviazione di document type) è una dichiarazione utilizzata all'inizio di un documento HTML per specificare il tipo di documento e la versione di HTML che il browser dovrebbe utilizzare per interpretarlo correttamente. Questa dichiarazione informa il browser che il documento è scritto in HTML5 e il browser quindi renderà la pagina utilizzando le regole e le funzionalità specifiche di HTML5.
             <br>
-            Questa dichiarazione è insensibile alle maiuscole. Quindi andrebbero bene anche dichiarazione del genere:
+            Questa dichiarazione è insensibile alle maiuscole. Quindi andrebbero bene anche dichiarazioni del genere:
             <br>
             &lt;!dOcTyPe html> &lt;!doctype html>
         </li>
@@ -128,7 +144,7 @@
         Nel caso dobbiamo far vedere nella pagina web più spazi (il browser interpreta solo il primo spazio, e quelli successivi li ignora) oppure proprio la scrittura del codice, ma viene interpretato dal browser come parte del codice stesso, possiamo usare vari metodi:
     </p>
     <h3>
-        Usare i caratteri speciali
+        usare i caratteri speciali
     </h3>
     <ul>
         Scrivere i caratteri speciali in codice HTML: sostituire i caratteri speciali che vengono interpretati come codice, in altri modi, seguendo queste traduzioni (fai finta che i caratteri non sono divisi da spazi)
@@ -1429,124 +1445,127 @@
     <p>
         Meglio usare sia colgroup che col per non fare casino tra gli stili, e inoltre applicare lo stile ai tag col. (Non capisco perché posso usare poche proprietà CSS per stilare i tag colgroup e col, tra cui background-color e width)
     </p>
-    <textarea cols="125" rows="117">
-        <table class="table-border">
-            <colgroup id="A"> <!-- questo tag ha la larghezza settata a 75px e il colore dello sfondo a blu-->
-                <col id="A1">
-                    <!-- in questo modo riusciamo a selezionare per i valori CSS la colonna 1; colore dello sfondo: aqua-->
-                <col span="2" id="A2">
-                    <!-- in questo modo riusciamo a selezionare per i valori CSS le colonne 2 e 3, grazie allo span="2" -->
-                <col>
-                    <!-- in questo modo occupiamo la colonna 4 i modo che non faccia parte del prossimo colgroup,
-                        inoltre avrà lo stile del suo genitore colgroup -->
-            </colgroup>
-            <colgroup id="B"> <!-- questo tag ha la larghezza settata a 200px-->
-                <col>
-                <col>
-                <col id="B1" span="2">
-            </colgroup>
-            <!-- l'ultima colonna non è influenzata da alcuno stile -->
-            <tr>
-                <th>Colonna 1</th>
-                <th>Colonna 2</th>
-                <th>Colonna 3</th>
-                <th>Colonna 4</th>
-                <th>Colonna 5</th>
-                <th>Colonna 6</th>
-                <th>Colonna 7</th>
-                <th>Colonna 8</th>
-                <th>Colonna 9</th>
-            </tr>
-            <tr>
-                <td>Riga 1, Colonna 1</td>
-                <td>Riga 1, Colonna 2</td>
-                <td>Riga 1, Colonna 3</td>
-                <td>Riga 1, Colonna 4</td>
-                <td>Riga 1, Colonna 5</td>
-                <td>Riga 1, Colonna 6</td>
-                <td>Riga 1, Colonna 7</td>
-                <td>Riga 1, Colonna 8</td>
-                <td>Riga 1, Colonna 9</td>
-            </tr>
-            <tr>
-                <td>Riga 2, Colonna 1</td>
-                <td>Riga 2, Colonna 2</td>
-                <td>Riga 2, Colonna 3</td>
-                <td>Riga 2, Colonna 4</td>
-                <td>Riga 2, Colonna 5</td>
-                <td>Riga 2, Colonna 6</td>
-                <td>Riga 2, Colonna 7</td>
-                <td>Riga 2, Colonna 8</td>
-                <td>Riga 2, Colonna 9</td>
-            </tr>
-            <tr>
-                <td>Riga 3, Colonna 1</td>
-                <td>Riga 3, Colonna 2</td>
-                <td>Riga 3, Colonna 3</td>
-                <td>Riga 3, Colonna 4</td>
-                <td>Riga 3, Colonna 5</td>
-                <td>Riga 3, Colonna 6</td>
-                <td>Riga 3, Colonna 7</td>
-                <td>Riga 3, Colonna 8</td>
-                <td>Riga 3, Colonna 9</td>
-            </tr>
-            <tr>
-                <td>Riga 4, Colonna 1</td>
-                <td>Riga 4, Colonna 2</td>
-                <td>Riga 4, Colonna 3</td>
-                <td>Riga 4, Colonna 4</td>
-                <td>Riga 4, Colonna 5</td>
-                <td>Riga 4, Colonna 6</td>
-                <td>Riga 4, Colonna 7</td>
-                <td>Riga 4, Colonna 8</td>
-                <td>Riga 4, Colonna 9</td>
-            </tr>
-            <tr>
-                <td>Riga 5, Colonna 1</td>
-                <td>Riga 5, Colonna 2</td>
-                <td>Riga 5, Colonna 3</td>
-                <td>Riga 5, Colonna 4</td>
-                <td>Riga 5, Colonna 5</td>
-                <td>Riga 5, Colonna 6</td>
-                <td>Riga 5, Colonna 7</td>
-                <td>Riga 5, Colonna 8</td>
-                <td>Riga 5, Colonna 9</td>
-            </tr>
-            <tr>
-                <td>Riga 6, Colonna 1</td>
-                <td>Riga 6, Colonna 2</td>
-                <td>Riga 6, Colonna 3</td>
-                <td>Riga 6, Colonna 4</td>
-                <td>Riga 6, Colonna 5</td>
-                <td>Riga 6, Colonna 6</td>
-                <td>Riga 6, Colonna 7</td>
-                <td>Riga 6, Colonna 8</td>
-                <td>Riga 6, Colonna 9</td>
-            </tr>
-            <tr>
-                <td>Riga 7, Colonna 1</td>
-                <td>Riga 7, Colonna 2</td>
-                <td>Riga 7, Colonna 3</td>
-                <td>Riga 7, Colonna 4</td>
-                <td>Riga 7, Colonna 5</td>
-                <td>Riga 7, Colonna 6</td>
-                <td>Riga 7, Colonna 7</td>
-                <td>Riga 7, Colonna 8</td>
-                <td>Riga 7, Colonna 9</td>
-            </tr>
-            <tr>
-                <td>Riga 8, Colonna 1</td>
-                <td>Riga 8, Colonna 2</td>
-                <td>Riga 8, Colonna 3</td>
-                <td>Riga 8, Colonna 4</td>
-                <td>Riga 8, Colonna 5</td>
-                <td>Riga 8, Colonna 6</td>
-                <td>Riga 8, Colonna 7</td>
-                <td>Riga 8, Colonna 8</td>
-                <td>Riga 8, Colonna 9</td>
-            </tr>
-        </table>
-    </textarea>
+    <details>
+        <summary>vedi codice:</summary>
+        <textarea cols="125" rows="117">
+            <table class="table-border">
+                <colgroup id="A"> <!-- questo tag ha la larghezza settata a 75px e il colore dello sfondo a blu-->
+                    <col id="A1">
+                        <!-- in questo modo riusciamo a selezionare per i valori CSS la colonna 1; colore dello sfondo: aqua-->
+                    <col span="2" id="A2">
+                        <!-- in questo modo riusciamo a selezionare per i valori CSS le colonne 2 e 3, grazie allo span="2" -->
+                    <col>
+                        <!-- in questo modo occupiamo la colonna 4 i modo che non faccia parte del prossimo colgroup,
+                            inoltre avrà lo stile del suo genitore colgroup -->
+                </colgroup>
+                <colgroup id="B"> <!-- questo tag ha la larghezza settata a 200px-->
+                    <col>
+                    <col>
+                    <col id="B1" span="2">
+                </colgroup>
+                <!-- l'ultima colonna non è influenzata da alcuno stile -->
+                <tr>
+                    <th>Colonna 1</th>
+                    <th>Colonna 2</th>
+                    <th>Colonna 3</th>
+                    <th>Colonna 4</th>
+                    <th>Colonna 5</th>
+                    <th>Colonna 6</th>
+                    <th>Colonna 7</th>
+                    <th>Colonna 8</th>
+                    <th>Colonna 9</th>
+                </tr>
+                <tr>
+                    <td>Riga 1, Colonna 1</td>
+                    <td>Riga 1, Colonna 2</td>
+                    <td>Riga 1, Colonna 3</td>
+                    <td>Riga 1, Colonna 4</td>
+                    <td>Riga 1, Colonna 5</td>
+                    <td>Riga 1, Colonna 6</td>
+                    <td>Riga 1, Colonna 7</td>
+                    <td>Riga 1, Colonna 8</td>
+                    <td>Riga 1, Colonna 9</td>
+                </tr>
+                <tr>
+                    <td>Riga 2, Colonna 1</td>
+                    <td>Riga 2, Colonna 2</td>
+                    <td>Riga 2, Colonna 3</td>
+                    <td>Riga 2, Colonna 4</td>
+                    <td>Riga 2, Colonna 5</td>
+                    <td>Riga 2, Colonna 6</td>
+                    <td>Riga 2, Colonna 7</td>
+                    <td>Riga 2, Colonna 8</td>
+                    <td>Riga 2, Colonna 9</td>
+                </tr>
+                <tr>
+                    <td>Riga 3, Colonna 1</td>
+                    <td>Riga 3, Colonna 2</td>
+                    <td>Riga 3, Colonna 3</td>
+                    <td>Riga 3, Colonna 4</td>
+                    <td>Riga 3, Colonna 5</td>
+                    <td>Riga 3, Colonna 6</td>
+                    <td>Riga 3, Colonna 7</td>
+                    <td>Riga 3, Colonna 8</td>
+                    <td>Riga 3, Colonna 9</td>
+                </tr>
+                <tr>
+                    <td>Riga 4, Colonna 1</td>
+                    <td>Riga 4, Colonna 2</td>
+                    <td>Riga 4, Colonna 3</td>
+                    <td>Riga 4, Colonna 4</td>
+                    <td>Riga 4, Colonna 5</td>
+                    <td>Riga 4, Colonna 6</td>
+                    <td>Riga 4, Colonna 7</td>
+                    <td>Riga 4, Colonna 8</td>
+                    <td>Riga 4, Colonna 9</td>
+                </tr>
+                <tr>
+                    <td>Riga 5, Colonna 1</td>
+                    <td>Riga 5, Colonna 2</td>
+                    <td>Riga 5, Colonna 3</td>
+                    <td>Riga 5, Colonna 4</td>
+                    <td>Riga 5, Colonna 5</td>
+                    <td>Riga 5, Colonna 6</td>
+                    <td>Riga 5, Colonna 7</td>
+                    <td>Riga 5, Colonna 8</td>
+                    <td>Riga 5, Colonna 9</td>
+                </tr>
+                <tr>
+                    <td>Riga 6, Colonna 1</td>
+                    <td>Riga 6, Colonna 2</td>
+                    <td>Riga 6, Colonna 3</td>
+                    <td>Riga 6, Colonna 4</td>
+                    <td>Riga 6, Colonna 5</td>
+                    <td>Riga 6, Colonna 6</td>
+                    <td>Riga 6, Colonna 7</td>
+                    <td>Riga 6, Colonna 8</td>
+                    <td>Riga 6, Colonna 9</td>
+                </tr>
+                <tr>
+                    <td>Riga 7, Colonna 1</td>
+                    <td>Riga 7, Colonna 2</td>
+                    <td>Riga 7, Colonna 3</td>
+                    <td>Riga 7, Colonna 4</td>
+                    <td>Riga 7, Colonna 5</td>
+                    <td>Riga 7, Colonna 6</td>
+                    <td>Riga 7, Colonna 7</td>
+                    <td>Riga 7, Colonna 8</td>
+                    <td>Riga 7, Colonna 9</td>
+                </tr>
+                <tr>
+                    <td>Riga 8, Colonna 1</td>
+                    <td>Riga 8, Colonna 2</td>
+                    <td>Riga 8, Colonna 3</td>
+                    <td>Riga 8, Colonna 4</td>
+                    <td>Riga 8, Colonna 5</td>
+                    <td>Riga 8, Colonna 6</td>
+                    <td>Riga 8, Colonna 7</td>
+                    <td>Riga 8, Colonna 8</td>
+                    <td>Riga 8, Colonna 9</td>
+                </tr>
+            </table>
+        </textarea>
+    </details>
     <br>
     <table class="table-border">
         <colgroup id="A"> <!-- questo tag ha la larghezza settata a 75px e il colore dello sfondo a blu-->
@@ -1778,6 +1797,7 @@
     </p>
 
 
+    <hr>
     <h2>
         COLLEGAMENTO DI RISORSE
     </h2>
@@ -2071,8 +2091,9 @@
 
 
 
+    <hr>
     <h2>
-        Image (vedi alla fine se hai messo gli attributi)
+        Image
     </h2>
     <p>
         Per aggiungere immagini in un sito web usiamo il tag img, che sono void element (senza tag di chiusura)
@@ -2142,9 +2163,6 @@
     <img src="data:image/png;base64,iVBOR..."
          alt="Hello World"
     >
-    <p>
-        Suggerimento: Per collegare un'immagine a un altro documento, basta inserire il tag "img" all'interno dei tag "a".
-    </p>
 
     <h3>
         Scelta del testo alternativo (alt text)
@@ -2356,67 +2374,552 @@
             </li>
         </ul>
     </p>
+    <h3>
+        Altri attributi di img
+    </h3>
+    <ul>
+        <li>
+            <details>
+                <summary>
+                    width e height: (opzionale)  specificano le dimensioni dell'immagine in pixel.
+                </summary>
+                <p>
+                    In generale, è una pratica migliore utilizzare CSS o un sistema di layout responsivo per gestire le dimensioni delle immagini, in modo che possano adattarsi in modo flessibile alle diverse dimensioni dello schermo senza causare distorsioni. Gli attributi height e width dovrebbero essere utilizzati solo quando è necessario un controllo specifico sulle dimensioni dell'immagine e quando si è sicuri di rispettare le proporzioni originali.
+                </p>
+            </details>
+        </li>
+        <li>
+            <details>
+                <summary>
+                    crossorigin: Specifica come l'elemento gestisce le richieste cross-origin.
+                </summary>
+                <p>
+                    L'attributo `crossorigin` nell'elemento `img` in HTML è utilizzato per gestire le politiche di sicurezza quando si caricano immagini da un dominio diverso dal dominio della pagina web corrente. Questo attributo è particolarmente utile quando si lavora con risorse come immagini, font o script da fonti esterne, poiché può prevenire potenziali problemi di sicurezza noti come "violation of same-origin policy" (violazione della politica dello stesso dominio).
+                </p>
+                <ul>
+                    L'attributo `crossorigin` può avere diversi valori:
+                    <li>
+                        anonymous: Questo è il valore predefinito. Indica che il browser caricherà l'immagine in modo anonimo, senza includere le credenziali dell'utente nella richiesta. Questo è il valore più comune e appropriato quando si lavora con immagini di dominio incrociato.
+                    </li>
+                    <li>
+                        use-credentials: Indica che il browser caricherà l'immagine includendo le credenziali dell'utente nella richiesta, come i cookie. Questo può essere utile quando si desidera che il server dell'immagine autentichi l'utente, ma richiede che il server supporti tale funzionalità.
+                    </li>
+                </ul>
+                <p>
+                    Ecco un esempio di come puoi utilizzare l'attributo `crossorigin`:
+                </p>
+                <textarea cols="100" rows="2">
+                    <img src="https://example.com/image.jpg" alt="Immagine" crossorigin="anonymous">
+                </textarea>
+                <p>
+                    In questo esempio, l'immagine viene caricata con l'attributo `crossorigin` impostato su "anonymous", indicando che il browser deve caricare l'immagine in modo anonimo.
+                </p>
+                <p>
+                    L'utilizzo dell'attributo `crossorigin` è importante per evitare problemi di sicurezza, specialmente quando si lavora con risorse da fonti esterne. Tuttavia, è importante notare che il server che ospita l'immagine deve essere configurato per supportare il caricamento incrociato e per gestire correttamente le richieste con gli attributi `crossorigin`.
+                </p>
+            </details>
+        </li>
+        <li>
+            usemap: Specifica il nome di una mappa di immagine da utilizzare. Il prossimo argomento sarà questo.
+        </li>
+        <li>
+            ismap: Indica se l'immagine è una mappa di immagine lato server.
+        </li>
+    </ul>
 
 
-
-
-
-    <h3>Questo é un esempio di inserimento testo! Inoltre ci sono anche vari attributi</h3>
-    <form>
-        <input type="text" name="email" placeholder="Qui devi scrivere COGLIONE!">
-    </form>
-    <br>
-    <!-- gli attributi width e height non funzionano per gli input testo-->
-    <!-- type si utilizza per specificare che tipo di input vuoi inserire (text, password, range, checkbox, date, color) -->
-    <!-- vediamo i vari valori di type:-->
-    <!-- 1)text indica solo testo (si può omettere perché di default)-->             
-    <input type="text" placeholder="testo normale"><br>
-    <!-- 2)password nasconde il contenuto scritto -->                                
-    <input type="password" placeholder="testo nascosto"><br>
-    <!-- 3)range (intervallo) indica tipo un regolatore di livello -->               
-        <input type="range"><br>
-    <!-- 4)checkbox indica un quadrino da segnare con la crocetta -->                
-        <input type="checkbox"><br>
-    <!-- 5)date (data) indica una data -->                                           
-        <input type="date"><br>
-    <!-- 6)color indica la selezione di un colore -->                                
-        <input type="color"><br>
-    <!-- 7)email fa in modo (principalmente nel dispositivi mobili) di impostare la tastiera per scrivere un email (quindi con la @ presente nella prima sezione della tastiera) -->           
-        <input type="email" placeholder="testo email"><br>
-    <!-- 8)radio  è utilizzato per creare un gruppo di opzioni tra cui l'utente può selezionarne una sola. Ogni opzione è rappresentata da un input di tipo radio. Per creare un gruppo di input radio, devi assicurarti che abbiano lo stesso attributo name. In questo modo, solo una delle opzioni può essere selezionata alla volta all'interno del gruppo.-->
-        <input type="radio" name="esempio">Opzione 1
-        <input type="radio" name="esempio">Opzione 2
-        <input type="radio" name="esempio">Opzione 3
-        <input type="radio" name="esempio">Opzione 4
-    <!-- 9)ci sono molti altri valori da vedere, come tel ecc-->    
-    <!-- per raccogliere i dati scritti nel tag input bisogna usare il javascript (lo vedremo molto in futuro)-->
-
+    <hr>
+    <h2>
+        Image map
+    </h2>
+    <h3>
+        Introduzione alle mappe di immagini
+    </h3>
     <p>
-        Inoltre esiste anche un tag per gli input in multiriga, detto textarea, con il quale possiamo anche regolare la grandezza dell'inserimento testo dalla pagina web.
-        <ul>Abbiamo gli attributi:
-            <li>
-                rows per decidere quante righe debba essere alto (almeno inizialmente, prima che sia modificato nella pagina)
-                <br>
-                le righe di default sono 2
-            </li>
-            <li>
-                cols per decidere quante colonne debba essere lungo (almeno inizialmente, prima che sia modificato nella pagina)
-                <br>
-                le colonne di default sono 20
-            </li>
-            <li>
-                name per identificare un elemento HTML all'interno di un modulo o di una richiesta HTTP. Questo attributo consente di inviare dati al server in modo strutturato e prevedibile. (lo vedremo molto in futuro)
-            </li>
-        </ul>
+        Le "image map" (mappa delle immagini) sono un meccanismo che consente di rendere diverse aree di un'immagine cliccabili e associate a link o azioni specifiche. Questo è utile quando si desidera creare collegamenti interattivi in parti specifiche di un'immagine, ad esempio in una mappa geografica o in un'immagine con aree di interesse.
+        <br>
+        Le image map sono spesso utilizzate insieme all'elemento `map` e agli elementi `area` in HTML. Ecco come funzionano:
     </p>
+    <ul>
+        <li>
+            Creazione dell'immagine: Inizialmente, devi creare l'immagine a cui desideri aggiungere le aree cliccabili. Questa immagine può essere qualsiasi formato di immagine supportato (ad esempio, JPEG, PNG, GIF).
+        </li>
+        <li>
+            Creazione dell'elemento `map`: Devi creare un elemento `map` e assegnargli un nome univoco utilizzando l'attributo `name` che dovrà avere lo stesso valore dell'attributo usemap del tag img (escludendo #). Questo elemento conterrà le definizioni delle diverse aree cliccabili dell'immagine.
+        </li>
+        <li>
+            Creazione degli elementi `area`: All'interno dell'elemento `map`, devi creare gli elementi `area` che rappresentano le aree cliccabili dell'immagine. Ogni elemento `area` può avere attributi come `shape` (forma dell'area) e `coords` (coordinate dell'area). Inoltre, puoi specificare l'URL o l'azione associata all'area cliccabile utilizzando gli attributi `href` o `onclick`.
+        </li>
+    </ul>
+    <p>
+        Ecco un esempio di come potrebbe apparire l'uso delle image map (metto il bordo all'immagine per far capire che è una sola):
+    </p>
+    <textarea cols="120" rows="7">
+        <img src="media/figure.gif" alt="Mappa interattiva" usemap="#map-name">
+        <map name="map-name">
+            <area shape="polygon" coords="79,6,5,134,153,134" href="../../index.html" alt="triangolo">
+            <area shape="rectangle" coords="177,6,306,134" href="index1.html" alt="quadrato">
+            <area shape="circle" coords="397,71,65" onclick="myFunction2()" alt="cerchio">
+        </map>
+    </textarea>
+    <img src="media/figure.gif" alt="Mappa interattiva" usemap="#map-name">
+    <map name="map-name">
+        <area shape="polygon" coords="79,6,5,134,153,134" href="../../index.html" alt="triangolo">
+        <area shape="rectangle" coords="177,6,306,134" href="index1.html" alt="quadrato">
+        <area shape="circle" coords="397,71,65" onclick="myFunction2()" alt="cerchio">
+    </map>
+    <p id="cerchio">
+
+    </p>
+    <ul>
+        Nell'esempio sopra:
+        <li>
+            L'immagine "media/figure.gif" viene visualizzata nell'elemento `img`.
+        </li>
+        <li>
+            L'elemento `map` con l'attributo `name="map-name"` definisce la mappa delle immagini.
+        </li>
+        <li>
+            Gli elementi `area` definiscono 3 aree cliccabili: un triangolo, un rettangolo e un cerchio. Le coordinate `coords` definiscono i punti che delimitano l'area cliccabile.
+        </li>
+        <li>
+            Gli attributi `href` specificano le pagine a cui gli utenti verranno reindirizzati quando cliccano su ciascuna area.
+        </li>
+        <li>
+            Gli attributi `alt` specificano il testo alternativo.
+        </li>
+    </ul>
+    <p>
+        Ad esempio la figura del triangolo riporta alla homepage, la figura del quadrato alla pagine con la spiegazione del CSS, e la figura del cerchio crea un nuovo paragrafo dopo la figura.
+    </p>
+    <p>
+        Le image map possono essere un modo efficace per creare interazioni interattive all'interno di immagini e fornire ai visitatori la possibilità di esplorare contenuti correlati alle aree specifiche dell'immagine.
+        <br>
+        Dovresti notare che il browser riconosce le aree quando il cursore si trasforma in un puntatore (questo succede solo se alle aree viene dato un iperlink, ad esempio al cerchio no).
+    </p>
+    <h3>
+        I possibili valori di coords e shape
+    </h3>
+    <ul>
+        <li>
+            shape: La forma dell'elemento `area`. Può essere impostato su default per selezionare l'intera immagine (nessun attributo coords necessario), circle o circ per un cerchio, rectangle o rect per un rettangolo, e polygon o poly per un'area poligonale specificata da punti angolari.
+        </li>
+        <li>
+            coords
+            Le coordinate che delimitano l'area selezionabile. Quando shape="polygon", questo dovrebbe essere impostato su una lista di coppie "x, y" separate da virgole (ad esempio, shape="polygon" coords="x1, y1, x2, y2, x3, y3, ...").
+            <br>
+            Quando shape="rectangle", questo dovrebbe essere impostato su sinistra, in alto, destra, in basso. Quando shape="circle", questo dovrebbe essere impostato su centroX, centroY, raggio.
+        </li>
+    </ul>
+
+
+
+
+
+    <hr>
+    <h2>
+        Elementi input
+    </h2>
+    <p>
+        Una componente chiave dei sistemi web interattivi sono gli elementi `input`, ossia elementi HTML progettati per ricevere un tipo specifico di input dagli utenti. Diversi tipi di elementi di input possono regolare i dati inseriti per adattarli a un formato specifico e fornire sicurezza all'inserimento delle password.
+    </p>
+    <h3>
+        Campo di testo
+    </h3>
+    <p>
+        Il tipo di input più basilare e il tipo di input predefinito se non viene specificato alcun tipo. Questo tipo di input definisce un campo di testo a singola riga con ritorni automatici delle linee rimossi dal valore di input. Tutti gli altri caratteri possono essere inseriti in questo campo. Gli elementi `input` vengono utilizzati all'interno di un elemento `form` per dichiarare controlli di input che consentono agli utenti di inserire dati.
+    </p>
+    <textarea cols="90" rows="4">
+        <input type="text">
+        <!-- oppure (senza specificare un tipo, utilizzando l'attributo predefinito): -->
+        <input>
+    </textarea>
+    <br>
+    <input type="text">
+    <!-- oppure (senza specificare un tipo, utilizzando l'attributo predefinito): -->
+    <input>
+    <p>
+        La larghezza predefinita di un campo di testo di input è di 20 caratteri. Questo può essere modificato specificando un valore per l'attributo size in questo modo:
+    </p>
+    <textarea cols="50" rows="2">
+        <input type="text" size="50">
+    </textarea>
+    <br>
+    <input type="text" size="50">
+    <p>
+        L'attributo size è nettamente diverso dal definire una larghezza con CSS. Utilizzare una larghezza definisce un valore specifico (in pixel, percentuale dell'elemento padre, ecc.) che l'input deve sempre avere. L'utilizzo dell'attributo size calcola la quantità di larghezza da allocare in base al font utilizzato e a quanto sono larghi normalmente i caratteri.
+        <br>
+        <strong>Nota:</strong> L'utilizzo dell'attributo size non limita intrinsecamente il numero di caratteri che possono essere inseriti nella casella, ma solo quanto ampia è visualizzata la casella. Per limitare la lunghezza, consulta la Validazione dell'Input.
+    </p>
+    <h3>
+        Textarea
+    </h3>
+    <p>
+        Un campo di input consente solo una riga di testo. Se hai bisogno di un input di testo multi-linea per una quantità significativa di testo, utilizza invece un elemento `textarea` (ossia quello che usiamo per scriverci codice sul browser).
+    </p>
+    <ul>
+        Per i tag textarea abbiamo gli attributi:
+        <li>
+            rows per decidere quante righe debba essere alto (almeno inizialmente, prima che sia modificato nella pagina)
+            <br>
+            le righe di default sono 2
+        </li>
+        <li>
+            cols per decidere quante colonne debba essere lungo (almeno inizialmente, prima che sia modificato nella pagina)
+            <br>
+            le colonne di default sono 20
+        </li>
+        <li>
+            name per identificare un elemento HTML all'interno di un modulo o di una richiesta HTTP. Questo attributo consente di inviare dati al server in modo strutturato e prevedibile. (lo vedremo molto in futuro)
+        </li>
+    </ul>
     <textarea name="testo a caso" cols="30" rows="10">questo testo viene scritto di default e può essere cancellato</textarea>
     <p>
         il tag textarea ha come suo valore interno al tag di apertura e di chiusura il valore che viene scritto di default nell'inserimento testo. Può essere modificato a piacere, a meno che non venga messo l'attributo readonly, che rende impossibile la modifica del testo.
     </p>
     <textarea readonly cols="40" rows="2">testo di default non modificabile</textarea>
-    <h3>attributi dei tag input</h3>
-    Gli attributi che si possono utilizzare in un tag `input` variano a seconda del tipo di input che si sta creando. Ecco alcuni degli attributi più comuni che vengono utilizzati con il tag `input`:
+
+
+
+    <h3>
+        Caselle di Controllo e Pulsanti Radio
+    </h3>
+    <p>
+        Panoramica:
+        <br>
+        Le caselle di controllo e i pulsanti radio vengono scritti con il tag HTML `input`, e il loro comportamento è definito nella specifica HTML.
+        <br>
+        La casella di controllo o il pulsante radio più semplice è un elemento `input` con un attributo type di checkbox o radio, rispettivamente:
+    </p>
+    <textarea cols="30" rows="3">
+        <input type="checkbox">
+        <input type="radio">
+    </textarea>
+    <br>
+    <input type="checkbox">
+    <input type="radio">
+    <p>
+        Un singolo elemento casella di controllo autonomo viene utilizzato per una singola opzione binaria, come una domanda a cui si può rispondere con sì o no. Le caselle di controllo sono indipendenti, il che significa che l'utente può selezionare tutte le scelte che desidera in un gruppo di caselle di controllo. In altre parole, la selezione di una casella di controllo non deseleziona le altre caselle di controllo nello stesso gruppo.
+    </p>
+    <p>
+        I pulsanti radio di solito vengono raggruppati (se non sono raggruppati con un altro pulsante radio, probabilmente intendevi utilizzare una casella di controllo al suo posto) identificati dall'uso dello stesso attributo name su tutti i pulsanti all'interno di quel gruppo. La selezione dei pulsanti radio è mutualmente esclusiva, il che significa che l'utente può selezionare solo una scelta da un gruppo di pulsanti radio. Quando un pulsante radio è selezionato, ogni altro pulsante radio con lo stesso nome che era stato precedentemente selezionato viene deselezionato.
+        <br>
+        Esempio:
+    </p>
+    <textarea cols="70" rows="4">
+        <input type="radio" name="colore" id="rosso" value="#F00"> Rosso
+        <input type="radio" name="colore" id="verde" value="#0F0"> Verde
+        <input type="radio" name="colore" id="blu" value="#00F"> Blu
+    </textarea>
+    <br>
+    <input type="radio" name="colore" id="rosso" value="#F00"> Rosso
+    <input type="radio" name="colore" id="verde" value="#0F0"> Verde
+    <input type="radio" name="colore" id="blu" value="#00F"> Blu
+    <p>
+        Quando vengono visualizzati, i pulsanti radio appaiono come un cerchio (non selezionato) o un cerchio riempito (selezionato). Le caselle di controllo appaiono come un quadrato (non selezionato) o un quadrato riempito (selezionato). A seconda del browser e del sistema operativo, il quadrato ha talvolta angoli arrotondati.
+    </p>
+    <h4>
+        Attributi delle caselle di controllo e dei pulsanti radio
+    </h4>
     <ul>
+        Le caselle di controllo e i pulsanti radio hanno vari attributi per controllare il loro comportamento:
+        <li>
+            valore: Come qualsiasi altro elemento di input, l'attributo value specifica il valore stringa da associare al pulsante in caso di invio del modulo. Tuttavia, le caselle di controllo e i pulsanti radio sono speciali nel senso che quando il valore viene omesso negli attributi, si imposta il valore predefinito su "on" quando viene inviato, anziché inviare un valore vuoto. L'attributo value non viene riflessa nell'aspetto del pulsante.
+        </li>
+        <li>
+            checked: L'attributo checked specifica lo stato iniziale di una casella di controllo o di un pulsante radio. Si tratta di un attributo booleano e può essere omesso.
+            Ciascuna di queste sono modi validi ed equivalenti per definire un pulsante radio p una casella di controllo selezionata:
+            <br>
+            <textarea cols="60" rows="9">
+                <input type="radio" checked>
+                <input type="radio" checked="">
+                <input type="radio" checked="checked">
+                <input type="radio" checked="ChEcKeD">
+                <input type="checkbox" checked>
+                <input type="checkbox" checked="">
+                <input type="checkbox" checked="checked">
+                <input type="checkbox" checked="ChEcKeD">
+            </textarea>
+            <br>
+            <input type="radio" checked>
+            <input type="radio" checked="">
+            <input type="radio" checked="checked">
+            <input type="radio" checked="ChEcKeD">
+            <input type="checkbox" checked>
+            <input type="checkbox" checked="">
+            <input type="checkbox" checked="checked">
+            <input type="checkbox" checked="ChEcKeD">
+            <p>
+                L'assenza dell'attributo checked è l'unico syntax valido per un pulsante non selezionato:
+            </p>
+            <textarea cols="40" rows="3">
+                <input type="radio">
+                <input type="checkbox">
+            </textarea>
+            <br>
+            <input type="radio">
+            <input type="checkbox">
+        </li>
+    </ul>
+    Quando si resetta un `form`, le caselle di controllo e i pulsanti radio tornano allo stato del loro attributo checked.
+    
+
+    <h4>
+        Accessibilità
+    </h4>
+    <ul>
+        <li>
+            <p>
+                ETICHETTE
+                <br>
+                Per dare contesto ai pulsanti e mostrare agli utenti a cosa serve ciascun pulsante, ognuno di essi dovrebbe avere un'etichetta. Questo può essere fatto utilizzando un elemento `label` per avvolgere il pulsante. Inoltre, ciò rende l'etichetta cliccabile, consentendo di selezionare il pulsante corrispondente.
+                <br>
+                Esempio:
+            </p>
+            <textarea cols="80" rows="4">
+                <label>
+                    <input type="radio" name="colore1" value="#F00"> Rosso
+                </label>
+            </textarea>
+            <br>
+            <label>
+                <input type="radio" name="colore1" value="#F00"> Rosso
+            </label>
+            <p>
+                o con un elemento `label` con un attributo for impostato sull'attributo id del pulsante:
+            </p>
+            <textarea cols="80" rows="3">
+                <input type="checkbox" name="colore2" value="#F00" id="rosso2">
+                <label for="rosso2">Rosso</label>
+            </textarea>
+            <br>
+            <input type="checkbox" name="colore2" value="#F00" id="rosso2">
+            <label for="rosso2">Rosso</label>
+        </li>
+        <br>
+        <li>
+            <p>
+                GRUPPI DI PULSANTI
+                <br>
+                Poiché ciascun pulsante radio influisce sugli altri nel gruppo, è comune fornire un'etichetta o un contesto per l'intero gruppo di pulsanti radio.
+                <br>
+                Per fornire un'etichetta per l'intero gruppo, i pulsanti radio dovrebbero essere inclusi in un elemento `fieldset` con un elemento `legend` al suo interno.
+                <br>
+                Esempio:
+            </p>
+            <textarea cols="100" rows="16">
+                <fieldset>
+                    <legend>Colore del tema:</legend>
+                    <p>
+                        <input type="radio" name="color" id="red" value="#F00">
+                        <label for="red">Rosso</label>
+                    </p>
+                    <p>
+                        <input type="radio" name="color" id="green" value="#0F0">
+                        <label for="green">Verde</label>
+                    </p>
+                    <p>
+                        <input type="radio" name="color" id="blue" value="#00F">
+                        <label for="blue">Blu</label>
+                    </p>
+                </fieldset>
+            </textarea>
+            <fieldset>
+                <legend>Colore del tema:</legend>
+                <p>
+                    <input type="radio" name="color" id="red" value="#F00">
+                    <label for="red">Rosso</label>
+                </p>
+                <p>
+                    <input type="radio" name="color" id="green" value="#0F0">
+                    <label for="green">Verde</label>
+                </p>
+                <p>
+                    <input type="radio" name="color" id="blue" value="#00F">
+                    <label for="blue">Blu</label>
+                </p>
+            </fieldset>
+            <p>
+                Le caselle di controllo possono anche essere raggruppate in modo simile, con un fieldset e una legenda che identifica il gruppo di caselle di controllo correlate. Tuttavia, tieni presente che le caselle di controllo non dovrebbero condividere lo stesso nome perché non sono mutualmente esclusive. Farlo comporterà l'invio da parte del modulo di valori multipli per la stessa chiave e non tutti i linguaggi lato server gestiscono questa situazione allo stesso modo (comportamento non definito). Ciascuna casella di controllo dovrebbe avere un nome unico o utilizzare un set di parentesi quadre ([]) per indicare che il modulo deve inviare un array di valori per quella chiave (poi vedremo in futuro).
+            </p>
+            <p>
+                Il metodo da scegliere dovrebbe dipendere da come hai intenzione di gestire i dati del modulo lato client o lato server. Inoltre, dovresti mantenere la legenda breve, poiché alcune combinazioni di browser e lettori di schermo leggono la legenda prima di ciascun campo di input nel fieldset.
+            </p>
+        </li>
+    </ul>
+
+    <h3>
+        Convalida dell'Input
+    </h3>
+    <p>
+        La convalida dell'input HTML viene effettuata automaticamente dal browser basandosi su attributi speciali sull'elemento di input. Questo può sostituire parzialmente o completamente la convalida dell'input JavaScript. Questo tipo di convalida può essere aggirato dall'utente tramite richieste HTTP appositamente progettate, quindi non sostituisce la convalida dell'input lato server. La convalida avviene solo quando si cerca di inviare il modulo, quindi tutti gli input restrittivi devono essere all'interno di un modulo affinché la convalida si verifichi (a meno che tu non stia usando JavaScript). Tieni presente che gli input che sono disabilitati o di sola lettura non attiveranno la convalida.
+    </p>
+    <p>
+        Alcuni tipi di input più recenti (come email, url, tel, date e molti altri) vengono convalidati automaticamente e non richiedono vincoli di convalida personalizzati.
+        <br>
+        Tutte queste specifiche sono supportate in versioni di HTML ≥ 5
+    </p>
+    <ul>
+        <li>
+            <strong>required</strong>
+            <br>
+            Utilizza l'attributo required per indicare che un campo deve essere compilato per superare la convalida.
+            ```html
+            <input required>
+            ```
+        </li>
+        <li>
+        </li>
+        <li>
+        </li>
+        <li>
+        </li>
+        <li>
+        </li>
+        <li>
+        </li>
+        <li>
+        </li>
+    </ul>
+   
+   **Lunghezza minima/massima**
+   Utilizza gli attributi minlength e maxlength per indicare i requisiti di lunghezza. La maggior parte dei browser impedisce all'utente di digitare più di un certo numero di caratteri nella casella, impedendo loro di rendere la loro voce non valida prima ancora di tentare la presentazione del modulo.
+   ```html
+   <input minlength="3">
+   <input maxlength="15">
+   <input minlength="3" maxlength="15">
+   ```
+   
+   **Specificare un intervallo**
+   Utilizza gli attributi min e max per limitare l'intervallo di numeri che un utente può inserire in un input di tipo numero o range.
+   ```html
+   Marks: <input type="number" size="6" name="marks" min="0" max="100" />
+   Subject Feedback: <input type="range" size="2" name="feedback" min="1" max="5" />
+   ```
+   
+   **
+   Corrispondere a un Modello**
+   Per un controllo più preciso, utilizza l'attributo pattern per specificare qualsiasi espressione regolare che deve essere corrisposta per superare la convalida. Puoi anche specificare un titolo, che verrà incluso nel messaggio di convalida se il campo non viene superato.
+   ```html
+   <input pattern="\d*" title="Solo numeri, per favore.">
+   ```
+   
+   **File di Accettazione Tipo**
+   Per i campi di input di tipo file, è possibile accettare solo determinati tipi di file, come video, immagini, audio, estensioni di file specifiche o determinati tipi di supporti. Ad esempio:
+   ```html
+   <input type="file" accept="image/*" title="Sono ammesse solo immagini">
+   ```
+   È possibile specificare valori multipli separati da virgola, ad esempio:
+   ```html
+   <input type="file" accept="image/*,.rar,application/zip">
+   ```
+   Nota: Aggiungere l'attributo novalidate all'elemento del modulo o l'attributo formnovalidate al pulsante di invio impedisce la convalida degli elementi del modulo. Ad esempio:
+   ```html
+   <form>
+    <input type="text" name="nome" required>
+    <input type="email" name="email" required>
+    <input pattern="\d*" name="numero" required>
+    <input type="submit" value="Pubblica"> <!-- il modulo verrà convalidato -->
+    <input type="submit" value="Salva" formnovalidate> <!-- il modulo NON verrà convalidato -->
+   </form>
+   ```
+   Il modulo ha campi che sono obbligatori per "pubblicare" la bozza ma non sono obbligatori per "salvare" la bozza.
+   
+   **Sezione 17.4: Colore**
+   
+   ```html
+   <input type="color" name="colorepreferito" value="#ff0000">
+   ```
+   Nei browser che lo supportano, l'elemento di input con un attributo di tipo valore colore crea un controllo simile a un pulsante, con un colore uguale al valore dell'attributo di colore (predefinito a nero se il valore non è specificato o è un formato esadecimale non valido).
+   Cliccando su questo pulsante si apre il widget del colore del sistema operativo, che consente all'utente di selezionare un colore.
+   Il fallback per i browser che non supportano questo tipo di input è un input regolare di tipo testo.
+   
+   **Sezione 17.5: Password**
+   ```html
+   <input type
+   
+   ="password" name="password">
+   ```
+   L'elemento di input con un attributo di tipo valore password crea un campo di testo a riga singola simile all'input di tipo testo, tranne che il testo non viene visualizzato mentre l'utente lo inserisce.
+   ```html
+   <input type="password" name="password" placeholder="Password">
+   ```
+   Il testo segnaposto viene mostrato in formato normale e viene sovrascritto automaticamente quando un utente inizia a digitare.
+   Nota: Alcuni browser e sistemi modificano il comportamento predefinito del campo password per visualizzare anche il carattere digitato più di recente per breve tempo, come ad esempio:
+   
+   **Sezione 17.6: File**
+   ```html
+   <input type="file" name="inviafile">
+   ```
+   Gli input di file consentono agli utenti di selezionare un file dal proprio sistema di file locale per l'uso con la pagina corrente. Se utilizzati in combinazione con un elemento di modulo, possono essere utilizzati per consentire agli utenti di caricare file su un server (per ulteriori informazioni, vedere Caricamento dei file).
+   L'esempio seguente consente agli utenti di utilizzare l'input del file per selezionare un file dal proprio sistema di file e caricare quel file su uno script sul server chiamato upload_file.php.
+   ```html
+   <form action="upload_file.php" method="post" enctype="multipart/form-data">
+    Seleziona il file da caricare:
+    <input type="file" name="fileSubmission" id="fileSubmission">
+    <input type="submit" value="Carica il tuo file" name="submit">
+   </form>
+   ```
+
+
+
+
+
+
+
+
+    <ul>Vediamo gli attributi di un tag input
+        <li>
+            class Indica la classe dell'input
+        </li>
+        <li>
+            id Indica l'ID dell'input
+        </li>
+        <li>
+            type Identifica il tipo di controllo di input da visualizzare. I valori accettabili sono hidden, text, tel, url, email,password, date, time, number, range, color, checkbox, radio, file, submit, image, reset e button. Se non specificato, se il valore non è valido o se il browser non supporta il tipo specificato, il valore predefinito è text.
+        </li>
+        <li>
+            name Indica il nome dell'input
+        </li>
+        <li>
+            disabled Valore booleano che indica che l'input dovrebbe essere disabilitato. I controlli disabilitati non possono essere modificati, non vengono inviati durante la sottomissione del modulo e non possono ricevere il focus.
+        </li>
+        <li>
+            checked Quando il valore dell'attributo type è radio o checkbox, la presenza di questo attributo booleano indica che il controllo è selezionato per impostazione predefinita; in caso contrario viene ignorato.
+        </li>
+        <li>
+            multiple HTML5 Indica che possono essere passati più file o valori (si applica solo agli input di tipo file ed email)
+        </li>
+        <li>
+            placeholder HTML5 Suggerisce all'utente cosa può essere inserito nel controllo. Il testo del segnaposto non deve contenere ritorni a capo o avanzamenti di riga.
+        </li>
+        <li>
+            autocomplete HTML5 Indica se il valore del controllo può essere automaticamente completato dal browser.
+        </li>
+        <li>
+            readonly Valore booleano che indica che l'input non è modificabile. I controlli in modalità sola lettura vengono comunque inviati durante la sottomissione del modulo, ma non riceveranno il focus. HTML5: Questo attributo viene ignorato quando il valore dell'attributo type è impostato su hidden, range, color, checkbox, radio, file o button.
+        </li>
+        <li>
+            required HTML5 Indica che un valore deve essere presente o che l'elemento deve essere selezionato affinché il modulo venga inviato.
+        </li>
+        <li>
+            alt Un testo alternativo per le immagini, nel caso in cui non vengano visualizzate.
+        </li>
+        <li>
+            autofocus L'elemento `input` dovrebbe ricevere il focus quando la pagina si carica.
+        </li>
+        <li>
+            value Specifica il valore dell'elemento `input`.
+        </li>
+        <li>
+            step L'attributo step specifica gli intervalli numerici consentiti. Funziona con i seguenti tipi di input: number, range, date, datetime-local, month, time e week.
+        </li>
+    </ul>
+    <h3>attributi dei tag input</h3>
+    <p>
+            Gli attributi che si possono utilizzare in un tag `input` variano a seconda del tipo di input che si sta creando. Ecco alcuni degli attributi più comuni che vengono utilizzati con il tag `input`:
+    </p>
+    <ul>Vedi anche questo
         <li>
             type: Specifica il tipo di input. Alcuni valori possibili sono "text" (per input di testo), "password" (per password), "email" (per indirizzo email), "number" (per numeri), "checkbox" (per caselle di controllo), "radio" (per input radio), ecc.
         </li>
@@ -2454,6 +2957,14 @@
             size e maxlength: Utilizzati con input di tipo "text" o "password", definiscono la dimensione visuale dell'input e la lunghezza massima del testo inserito.
         </li>
     </ul>
+  
+    <!-- 8)radio  è utilizzato per creare un gruppo di opzioni tra cui l'utente può selezionarne una sola. Ogni opzione è rappresentata da un input di tipo radio. Per creare un gruppo di input radio, devi assicurarti che abbiano lo stesso attributo name. In questo modo, solo una delle opzioni può essere selezionata alla volta all'interno del gruppo.-->
+        <input type="radio" name="esempio">Opzione 1
+        <input type="radio" name="esempio">Opzione 2
+        <input type="radio" name="esempio">Opzione 3
+        <input type="radio" name="esempio">Opzione 4
+    <!-- per raccogliere i dati scritti nel tag input bisogna usare il javascript (lo vedremo molto in futuro)-->
+
 ti sono solo alcuni degli attributi che puoi utilizzare con il tag `input`. La scelta degli attributi dipende dal tipo di input che stai creando e dalle tue esigenze specifiche.
     <h3>form tag e i suoi sotto tag</h3>
     <!-- form sarebbe una specie di gruppo div specializzato per raggruppare un modulo (form), che può contenere un tag input e un bottone,
@@ -2558,10 +3069,11 @@ ti sono solo alcuni degli attributi che puoi utilizzare con il tag `input`. La s
     </form>
 
     
+    <hr>
     <h2>
         Marking-up Quote (per adesso da chatgpt)
     </h2>
-    <textarea cols="179" rows="35">
+    <textarea cols="169" rows="35">
         Il tag `<blockquote>` in HTML è utilizzato per citare un blocco di testo o contenuto da un'altra fonte. Questo elemento viene comunemente utilizzato per evidenziare citazioni o porzioni di testo che sono stati tratti da una fonte esterna, come un libro, un articolo o un'altra pagina web. L'uso corretto del tag `<blockquote>` aiuta a strutturare correttamente il contenuto e a fornire attribuzione alle citazioni.
 
         Ecco come puoi utilizzare il tag `<blockquote>`:
@@ -2807,6 +3319,20 @@ ti sono solo alcuni degli attributi che puoi utilizzare con il tag `input`. La s
         const paragrafo = document.createElement("p");
         div.appendChild(paragrafo);
         paragrafo.innerHTML = `Questo è il ${div.children.length}° paragrafo`;
+    }
+
+    let n_eseguito = 0
+    function myFunction2() {
+        const paragrafo_cerchio = document.querySelector("#cerchio");
+        n_eseguito++
+        if (n_eseguito === 1) {
+            var volte = "volta"
+        } else {
+            var volte = "volte"
+        }
+        paragrafo_cerchio.innerHTML = `Hai cliccato sul cerchio (il puntatore su di esso non cambia perché non hai usato un attributo href).
+        <br>
+        Hai cliccato il paragrafo ${n_eseguito} ${volte}`
     }
    </script>
 </body>
