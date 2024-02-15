@@ -177,3 +177,26 @@ DIV_CAMBIO_SFONDO.addEventListener("click", cambioColoreSfondo);
 
 //fai i progetti in querying webpages: word editor
 //VEDI TIKTOK SALVATI
+/*
+
+La funzione `toFixed()` in JavaScript è un metodo dell'oggetto Number che formatta un numero utilizzando una notazione con punto fisso⁵. Questo metodo ritorna una stringa che rappresenta un numero con un numero specifico di cifre decimali¹².
+
+La sintassi del metodo `toFixed()` è la seguente:
+
+```javascript
+numObj.toFixed([digits])
+```
+
+Dove `numObj` è un oggetto Number e `digits` è un parametro opzionale che specifica il numero di cifre da mostrare dopo il punto decimale. Il valore di `digits` dovrebbe essere compreso tra 0 e 100².
+
+Ecco un esempio di utilizzo del metodo `toFixed()`:
+
+```javascript
+let num = 5.56789;
+let n = num.toFixed(2);  // ritorna '5.57'
+```
+
+In questo esempio, `toFixed()` arrotonda il numero a due cifre decimali.
+
+Si prega di notare che se il valore assoluto del numero è maggiore o uguale a 10^21, `toFixed()` ritorna una stringa in notazione esponenziale². Inoltre, se il numero di cifre decimali è superiore a quello nel numero, vengono aggiunti degli zeri¹.
+*/
