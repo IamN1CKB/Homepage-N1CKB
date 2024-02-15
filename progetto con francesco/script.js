@@ -31,14 +31,26 @@ function displayOrder() {
     var orderDiv = document.getElementById('order');
     orderDiv.innerHTML = '';
     var totId = document.createElement('div');
-    orderDiv.appendChild(totId);
     order.forEach(function(item) {
         var itemDiv = document.createElement('div');
         itemDiv.textContent = item.name + ' - €' + item.price.toFixed(2);
         orderDiv.appendChild(itemDiv);
         tot += item.price;
     });
+    orderDiv.appendChild(totId);
     totId.textContent = 'Totale = €' + tot.toFixed(2);
+    totId.classList.add("totale");
+    var ordinaButton = document.createElement("button");
+    ordinaButton.innerHTML = 'ORDINA ORA'
+    orderDiv.appendChild(ordinaButton);
+    ordinaButton.addEventListener('click', ordina(orderDiv))
+}
+
+function ordina(orderDiv) {
+    var ordineFatto = document.createElement('p');
+    ordineFatto.innerHTML = 'ordine effettuato con successo';
+    orderDiv.appendChild(ordineFatto);
+    this.removeEventListener('click', ordina(orderDiv, ordinaButton))
 }
 
 displayMenu();
