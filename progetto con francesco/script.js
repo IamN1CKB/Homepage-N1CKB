@@ -43,14 +43,15 @@ function displayOrder() {
     var ordinaButton = document.createElement("button");
     ordinaButton.innerHTML = 'ORDINA ORA'
     orderDiv.appendChild(ordinaButton);
-    ordinaButton.addEventListener('click', ordina(orderDiv))
+    ordinaButton.addEventListener('click', ordina);
 }
 
-function ordina(orderDiv) {
+function ordina() {
+    var orderDiv = document.getElementById('order');
     var ordineFatto = document.createElement('p');
     ordineFatto.innerHTML = 'ordine effettuato con successo';
     orderDiv.appendChild(ordineFatto);
-    this.removeEventListener('click', ordina(orderDiv, ordinaButton))
+    this.removeEventListener('click', ordina)
 }
 
 displayMenu();
