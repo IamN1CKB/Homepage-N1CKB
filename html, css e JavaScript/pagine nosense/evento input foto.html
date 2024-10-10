@@ -33,8 +33,9 @@
                 input.value.toLowerCase()==="papà" ||
                 input.value.toLowerCase()==="stazione" ||
                 input.value.toLowerCase()==="trombe" ||
-                input.value.toLowerCase()==="conchiglia"
-                //input.value.toLowerCase()==="boh"
+                input.value.toLowerCase()==="conchiglia" /*||
+                input.value.toLowerCase()==="boh"
+                */
             ) {
                 const immagine = document.createElement("img");
                 immagine.src = "media/" + input.value.toLowerCase() + ".jpg";
@@ -42,7 +43,6 @@
                 document.body.appendChild(immagine);
             }
         }
-
         const bottone = document.querySelector("button");
         bottone.onclick = function rimuoviCazzo() {
             const immagine = document.querySelector("img.foto")
