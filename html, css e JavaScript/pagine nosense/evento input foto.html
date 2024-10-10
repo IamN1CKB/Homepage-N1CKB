@@ -22,68 +22,27 @@
     <br>
     <script>
         const input = document.querySelector("input")
-        input.oninput = function aggiungiCazzo() {
-            if (input.value === "cazzo" || input.value === "Cazzo") {
-                const cazzo = document.createElement("img");
-                cazzo.src = "media/cazzo.jpg";
-                cazzo.classList.add("foto")
-                document.body.appendChild(cazzo);
-            }
-            if (input.value === "gabby" || input.value === "Gabby") {
-                const gabby = document.createElement("img");
-                gabby.src = "media/gabby.jpg";
-                gabby.classList.add("foto")
-                document.body.appendChild(gabby);
-            }
-            if (input.value === "mare" || input.value === "Mare") {
-                const mare = document.createElement("img");
-                mare.src = "media/mare.jpg";
-                mare.classList.add("foto")
-                document.body.appendChild(mare);
-            }
-            if (input.value === "Taormina" || input.value === "taormina") {
-                const Taormina = document.createElement("img");
-                Taormina.src = "media/Taormina.jpg";
-                Taormina.classList.add("foto")
-                document.body.appendChild(Taormina);
-            }
-            if (input.value === "papà" || input.value === "Papà") {
-                const papà = document.createElement("img");
-                papà.src = "media/papà.jpg";
-                papà.classList.add("foto")
-                document.body.appendChild(papà);
-            }
-            if (input.value === "trombe" || input.value === "Trombe") {
-                const trombe = document.createElement("img");
-                trombe.src = "media/trombe.jpg";
-                trombe.classList.add("foto")
-                document.body.appendChild(trombe);
-            }
-            if (input.value === "conchiglia" || input.value === "Conchiglia") {
-                const conchiglia = document.createElement("img");
-                conchiglia.src = "media/conchiglia.jpg";
-                conchiglia.classList.add("foto")
-                document.body.appendChild(conchiglia);
-            }
-            if (input.value === "mamma" || input.value === "Mamma") {
-                const mamma = document.createElement("img");
-                boh.src = "media/mamma.jpg";
-                boh.classList.add("foto")
-                document.body.appendChild(mamma);
-            }
-            if (input.value === "mommy" || input.value === "Mommy") {
-                const mommy = document.createElement("img");
-                boh.src = "media/mommy.jpg";
-                boh.classList.add("foto")
-                document.body.appendChild(mommy);
-            }
-            if (input.value === "boh" || input.value === "boh") {
-                const boh = document.createElement("img");
-                boh.src = "media/boh.jpg";
-                boh.classList.add("foto")
-                document.body.appendChild(boh);
+        input.oninput = function aggiungiImmagine() {
+            if (
+                input.value.toLowerCase()==="cazzo" ||
+                input.value.toLowerCase()==="gabby" ||
+                input.value.toLowerCase()==="mamma" ||
+                input.value.toLowerCase()==="mommy" ||
+                input.value.toLowerCase()==="mare" ||
+                input.value.toLowerCase()==="taormina" ||
+                input.value.toLowerCase()==="papà" ||
+                input.value.toLowerCase()==="stazione" ||
+                input.value.toLowerCase()==="trombe" ||
+                input.value.toLowerCase()==="conchiglia"
+                //input.value.toLowerCase()==="boh"
+            ) {
+                const immagine = document.createElement("img");
+                immagine.src = "media/" + input.value.toLowerCase() + ".jpg";
+                immagine.classList.add("foto")
+                document.body.appendChild(immagine);
             }
         }
+
         const bottone = document.querySelector("button");
         bottone.onclick = function rimuoviCazzo() {
             const immagine = document.querySelector("img.foto")
