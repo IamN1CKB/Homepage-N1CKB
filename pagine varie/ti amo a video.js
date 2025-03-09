@@ -5,7 +5,7 @@ let titolo = document.getElementById("h1");
 let paragrafo = document.getElementById("p");
 
 
-let frase = "Ti amo Giada";
+let frase = "Giada, non ti permettere di mandare questo sito agli altri";
 let fraseStamp = "";
 async function ciclo() {
     for (let i = 0; i < frase.length; i++) {
