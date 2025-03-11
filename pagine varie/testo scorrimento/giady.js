@@ -16,6 +16,7 @@ async function ciclo() {
                 await pausa(20);
             }
             
+            await pausa(20);
             fraseStamp = fraseStamp + String.fromCharCode(char);
         }
         
